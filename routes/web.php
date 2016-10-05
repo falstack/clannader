@@ -13,3 +13,4 @@ Route::get('/foo', function () {
 Route::get('/bar', function () {
     return view('welcome');
 });
+

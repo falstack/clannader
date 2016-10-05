@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e777b215f7519d1380740e9f602949b3",
-    "content-hash": "3b912f02400f286d8430b33d883cb4c6",
+    "hash": "d89de183e5e0538b1f9312295e4d0f2b",
+    "content-hash": "3699bdc9f328f0f7acadaa4d17e2917e",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -711,6 +711,39 @@
                 "passport"
             ],
             "time": "2016-10-04 14:15:21"
+        },
+        {
+            "name": "laravist/geecaptcha",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JellyBool/geeCaptcha.git",
+                "reference": "931432be8cb44404773e892f49ba4afc78837d9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/JellyBool/geeCaptcha/931432be8cb44404773e892f49ba4afc78837d9c.zip",
+                "reference": "931432be8cb44404773e892f49ba4afc78837d9c",
+                "shasum": ""
+            },
+            "type": "php",
+            "autoload": {
+                "psr-4": {
+                    "Laravist\\GeeCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JellyBool",
+                    "email": "jellybool@outlook.com"
+                }
+            ],
+            "description": "A geetest captcha package by laravist",
+            "time": "2016-04-10 15:36:31"
         },
         {
             "name": "lcobucci/jwt",
@@ -3893,16 +3926,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.5.6",
+            "version": "5.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "146e0fe0bb7f44d1cefade0c93e86fe0b206dd79"
+                "reference": "3f67cee782c9abfaee5e32fd2f57cdd54bc257ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/146e0fe0bb7f44d1cefade0c93e86fe0b206dd79",
-                "reference": "146e0fe0bb7f44d1cefade0c93e86fe0b206dd79",
+                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/3f67cee782c9abfaee5e32fd2f57cdd54bc257ba.zip",
+                "reference": "3f67cee782c9abfaee5e32fd2f57cdd54bc257ba",
                 "shasum": ""
             },
             "require": {
@@ -3972,7 +4005,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-10-03 07:48:45"
+            "time": "2016-10-03 13:04:15"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

@@ -14,7 +14,7 @@ module.exports = {
             { test: /\.(png|jpe?g|gif|svg|swf|eot|ttf|woff)(\?.*)?$/, loader: 'url?limit=50000' },
             { test: /\.js$/, loader: "babel", exclude: /node_modules/ },
             { test: /\.css$/, loader: "style!css" },
-            { test: /\.scss/, loader: "style!css!sass" },
+            { test: /\.scss/, loader: "style!css!sass!postcss" },
             { test: /\.vue$/, loader: 'vue'}
         ]
     },
@@ -22,6 +22,9 @@ module.exports = {
         presets: ['es2015', 'stage-0'],
         plugins: ['transform-runtime']
     },
+    postcss: [
+        require('autoprefixer')
+    ],
     externals : {
         "vue" : "Vue",
         "vuex" : "Vuex",

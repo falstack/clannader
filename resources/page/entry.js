@@ -1,4 +1,5 @@
 import '../static/sass/style.scss'
+import '../static/js/geetest'
 
 import router from '../lib/router'
 import store from '../lib/store'
