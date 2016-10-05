@@ -1,14 +1,7 @@
-<style lang="sass" rel="scss" scoped>
-
-</style>
-
 <template>
     <div>
-        <h1>Hello App!</h1>
-        <p>
-            <router-link to="/foo">Go to Foo</router-link>
-            <router-link to="/bar">Go to Bar</router-link>
-        </p>
+        <router-link to="/foo">go to foo</router-link>
+        <router-link to="/bar">go to bar</router-link>
         <router-view></router-view>
     </div>
 </template>
@@ -26,7 +19,7 @@
         mounted () {
             console.log(this.$store.getters.getLogin);
             this.$http.get('/api/user').then((res) => {
-                console.log(res);
+                console.log(res.body);
             }, (res) => {
 
             });

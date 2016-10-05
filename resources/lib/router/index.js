@@ -1,12 +1,13 @@
 Vue.use(VueRouter);
 
-const Foo = { template: '<div>foo</div>' };
 const Bar = { template: '<div>bar</div>' };
+
+const routes = [
+    { path: '/foo', component: require('../../components/test.vue') },
+    { path: '/bar', component: Bar }
+];
 
 export default new VueRouter({
     mode: 'history',
-    routes: [
-        { path: '/foo', components: Foo },
-        { path: '/bar', components: Bar }
-    ]
+    routes
 });

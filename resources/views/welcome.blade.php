@@ -15,6 +15,6 @@
     <script src="http://cdn.bootcss.com/vue-router/2.0.0/vue-router.min.js"></script>
     <script src="http://cdn.bootcss.com/vuex/2.0.0/vuex.min.js"></script>
     <script src="http://cdn.bootcss.com/vue-resource/1.0.3/vue-resource.min.js"></script>
-    <script src="{{ elixir('dist/js/entry.js') }}"></script>
+    <script src="{{ asset('dev/js/entry.js') }}"></script>
 </body>
 </html>
