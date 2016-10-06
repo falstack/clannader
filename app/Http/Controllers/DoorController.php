@@ -46,12 +46,14 @@ class DoorController extends Controller
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => $request->get('password'),
-            'zone' => $this->createUserZone($request->get('name'))
+            'zone' => $this->createUserZone($request->get('name')),
+            'avatar' => 'http://cdn.clannader.com/avatar',
+            'banner' => 'http://cdn.clannader.com/B-banner',
+            'sex' => 0,
+            'autograph' => '这个人很懒，什么都没有留下。'
         ];
 
-        $user = $this->user->create($data);
-
-        return $user;
+        $this->user->create($data);
     }
 
     public function captcha()

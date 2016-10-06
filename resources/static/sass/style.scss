@@ -2,6 +2,8 @@
 @import "reboot";
 @import "container";
 @import "variables";
+@import "link";
+@import "class";
 
 body {
   font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
@@ -16,7 +18,7 @@ input[type=email],
 textarea {
   padding: 8px 12px;
   border-radius: 4px;
-  border: 1px solid $color-gray;
+  border: 1px solid $color-gray-hover;
 }
 
 input:-webkit-autofill {

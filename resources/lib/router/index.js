@@ -1,10 +1,7 @@
 Vue.use(VueRouter);
 
-const Bar = { template: '<div>bar</div>' };
-
 const routes = [
-    { path: '/foo', component: require('../../components/test.vue') },
-    { path: '/bar', component: Bar }
+    { path: '/', component: require('../../components/index.vue') },
 ];
 
 export default new VueRouter({

@@ -1,11 +1,13 @@
 <style lang="sass" rel="scss" scoped>
+    @import "../../static/sass/variables";
+
     #banner {
         background: linear-gradient(4deg,#00e6ff,#00a1d6);
         height: 170px;
     }
 
     #padding {
-        height: 45px;
+        height: $nav-height;
     }
 </style>
 

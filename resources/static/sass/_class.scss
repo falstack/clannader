@@ -1,0 +1,16 @@
+.face {
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.oneline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -9,3 +9,11 @@ Route::group(['prefix' => '/','middleware' => ['auth:api']], function () {
         return $request->user();
     });
 });
+
+Route::group(['prefix' => '/'], function () {
+
+    Route::group(['prefix' => '/post'], function () {
+
+        Route::get('/news', 'PostController@news');
+    });
+});

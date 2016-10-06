@@ -127,7 +127,7 @@
 
 <script>
 
-    import { setUserInfo, getUserInfo, clearUserInfo } from '../../static/js/storage'
+    import { setUserInfo } from '../../static/js/storage'
 
     export default {
         data () {
@@ -252,8 +252,7 @@
                     var bool = true;
                     this.$store.dispatch('setLogin', { bool });
                     document.getElementById('_auth').setAttribute('content', 1);
-
-                    return true
+                    this.$root.$refs.navbar.makeLogin();
                 }, (res) => {
                     if (res.status === 422) {
                         this.$root.$refs.toast.open({
@@ -271,7 +270,6 @@
                             content: "服务器异常，请稍后再试！"
                         });
                     }
-                    return false
                 });
             },
             register () {
@@ -331,7 +329,7 @@
                     name : this.signUp.name,
                     email : this.signUp.email,
                     password : this.signUp.password
-                }).then((res) => {
+                }).then(() => {
                     this.signIn.name = this.signUp.email;
                     this.signIn.password = this.signUp.password;
                     this.login();

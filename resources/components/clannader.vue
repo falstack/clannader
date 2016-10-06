@@ -1,11 +1,22 @@
+<style lang="sass" rel="scss" scoped>
+    #app {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+</style>
+
 <template>
-    <div>
+    <div id="app">
         <navbar ref="navbar"></navbar>
         <banner ref="banner"></banner>
         <navsign ref="navsign"></navsign>
-        <router-link to="/foo">go to foo</router-link>
-        <router-link to="/bar">go to bar</router-link>
-        <router-view></router-view>
+        <div class="container">
+            <div class="row">
+                <router-view></router-view>
+            </div>
+        </div>
+        <bottom ref="bottom"></bottom>
         <top></top>
         <toast ref="toast"></toast>
     </div>
@@ -21,17 +32,23 @@
     import navbar from './nav/narbar.vue'
     import banner from './nav/nav-banner.vue'
     import navsign from './nav/nav-sign.vue'
+    import bottom from './tools/bottom.vue'
 
     export default {
         components: {
-            top, toast, navbar, banner, navsign
+            top, toast, navbar, banner, navsign, bottom
         },
         created () {
-            let bool = document.getElementById('_auth').getAttribute('content') == 1;
-            this.$store.dispatch('setLogin', { bool });
+            this.checkLogin();
             this.userAngent();
         },
         methods: {
+            checkLogin() {
+                let bool = document.getElementById('_auth').getAttribute('content') == 1;
+                if (bool) {
+                    this.$store.dispatch('setLogin', { bool });
+                }
+            },
             userAngent() {
                 var userAgentInfo = navigator.userAgent;
                 var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
@@ -44,13 +61,6 @@
                 }
                 this.$store.dispatch('setMobile', { bool });
             }
-        },
-        mounted () {
-            this.$http.get('/api/user').then((res) => {
-                console.log(res.body);
-            }, (res) => {
-
-            });
         }
     }
 </script>

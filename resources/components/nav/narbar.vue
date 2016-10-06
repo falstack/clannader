@@ -1,6 +1,5 @@
 <style lang="sass" rel="scss">
     @import "../../static/sass/variables";
-    $nav-height : 45px;
 
     #nav-warp {
         position: absolute;
@@ -39,6 +38,7 @@
                     background-repeat: no-repeat;
                     background-size: contain;
                     background-position: center;
+                    margin-right: 18px;
                 }
 
                 .nav-left-ul {
@@ -65,6 +65,7 @@
             }
 
             #nav-right {
+                display: flex;
                 float: right;
 
                 #signIn, #signUp {
@@ -82,6 +83,7 @@
                 #signIn {
                     border: 1px solid #fff;
                     background-color: transparent;
+                    margin-left: 30px;
 
                     &:hover {
                         background: linear-gradient(#fff,#f7f7f7);
@@ -103,6 +105,57 @@
                         color: #fff;
                         border: 1px solid $color-blue-hover;
                         opacity: 1;
+                    }
+                }
+
+                #nav-user {
+                    position: relative;
+                    height: $nav-height;
+                    padding: 0 30px;
+
+                    .face {
+                        width: 36px;
+                        height: 36px;
+                        margin-top: ($nav-height - 36) / 2;
+                    }
+
+                    &:hover {
+                        #user-table {
+                            display: flex;
+                        }
+                    }
+
+                    #user-table {
+                        position: absolute;
+                        top: $nav-height;
+                        right: 15px;
+                        text-align: left;
+                        background: #fff;
+                        width: 210px;
+                        height: 82px;
+                        display: none;
+                        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+                        border-radius: 0 0 3px 3px;
+                        flex-direction: column;
+                        font-size: 14px;
+
+                        &:hover {
+                            display: flex;
+                        }
+
+                        .card {
+                            flex: 1;
+                            padding: 15px;
+                        }
+
+                        .bottom {
+                            height: 32px;
+                            line-height: 32px;
+                            justify-content: flex-end;
+                            padding: 0 15px;
+                            text-align: right;
+                            background-color: $color-gray-hover;
+                        }
                     }
                 }
             }
@@ -141,15 +194,26 @@
                                 <router-link class="nav-link" to="/article">文章</router-link>
                             </li>
                         </ul>
+                        <navmsg></navmsg>
                     </div>
                     <div id="nav-right">
-                        <div v-if="$store.getters.isLogin">
-                            已登录
+                        <navsearch></navsearch>
+                        <div v-if="$store.getters.isLogin" id="nav-user">
+                            <router-link class="face" :to="'/people/' + user.home"><img :src="user.face"></router-link>
+                            <div id="user-table">
+                                <div class="card">
+                                    <router-link :to="'/people/' + user.home">{{ user.name }}</router-link>
+                                </div>
+                                <div class="bottom">
+                                    <a @click="logout">退出</a>
+                                </div>
+                            </div>
                         </div>
                         <div v-else>
                             <button id="signIn" @click="showSignIn">登录</button>
                             <button id="signUp" @click="showSignUp">注册</button>
                         </div>
+                        <creator></creator>
                     </div>
                 </div>
             </div>
@@ -160,13 +224,28 @@
 
 <script>
 
+    import { clearUserInfo } from '../../static/js/storage'
+    import navsearch from './nav-search.vue'
+    import navmsg from './nav-msg.vue'
+    import creator from './nav-creator.vue'
 
     export default {
         components: {
-
+            navsearch, navmsg, creator
+        },
+        data () {
+            return {
+                user : {
+                    name : "",
+                    zone : "",
+                    face : ""
+                }
+            }
         },
         created () {
-
+            if (this.$store.getters.isLogin) {
+                this.makeLogin()
+            }
         },
         methods: {
             showSignIn () {
@@ -182,10 +261,24 @@
                 } else {
                     this.$root.$refs.navsign.showRegister()
                 }
+            },
+            makeLogin () {
+                this.user.name = this.$getUserInfo('name');
+                this.user.face = this.$getUserInfo('avatar');
+                this.user.home = this.$getUserInfo('zone');
+            },
+            logout () {
+                this.$http.get('/door/logout').then(() => {
+                    var bool = false;
+                    this.$store.dispatch('setLogin', { bool });
+                    clearUserInfo();
+                    document.getElementById('_auth').setAttribute('content', 0);
+                    this.$root.$refs.toast.open({
+                        theme: "success",
+                        content: "已退出登录！"
+                    });
+                });
             }
-        },
-        mounted () {
-
         }
     }
 </script>

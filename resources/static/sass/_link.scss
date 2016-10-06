@@ -1,0 +1,7 @@
+.blue-link {
+  color: $color-blue-deep;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
