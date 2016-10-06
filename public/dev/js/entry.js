@@ -2876,7 +2876,7 @@
 	                return;
 	            }
 	
-	            this.$http.post('/api/door/login', {
+	            this.$http.post('/door/login', {
 	                access: this.signIn.name,
 	                secret: this.signIn.password,
 	                method: this.signIn.method,
@@ -2968,7 +2968,7 @@
 	                return;
 	            }
 	
-	            this.$http.post('/api/door/register', {
+	            this.$http.post('/door/register', {
 	                name: this.signUp.name,
 	                email: this.signUp.email,
 	                password: this.signUp.password
@@ -3028,7 +3028,7 @@
 	                    });
 	                };
 	
-	                this.$http.get('/api/captcha?rand=' + Math.round(Math.random() * 100)).then(function (res) {
+	                this.$http.get('/door/captcha?rand=' + Math.round(Math.random() * 100)).then(function (res) {
 	                    var temp = JSON.parse(res.body);
 	                    initGeetest({
 	                        gt: temp.gt,

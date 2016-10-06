@@ -9,7 +9,8 @@
         "predis/predis": "^1.0",
         "laravel/framework": "5.3.*",
         "laravel/passport": "^1.0",
-        "laravist/geecaptcha": "^1.1"
+        "laravist/geecaptcha": "^1.1",
+        "overtrue/laravel-pinyin": "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

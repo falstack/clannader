@@ -18,11 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('zone')->unique();
-            $table->string('avatar');
-            $table->string('banner');
-            $table->string('autograph');
+            $table->string('avatar')->nullable();
+            $table->string('banner')->nullable();
+            $table->string('autograph')->nullable();
             $table->string('password');
-            $table->tinyInteger('sex');
+            $table->tinyInteger('sex')->default(null)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
