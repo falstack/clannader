@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    Auth::loginUsingId(1);
+    Auth::logout();
 
     return view('welcome');
 });
@@ -13,4 +13,3 @@ Route::get('/foo', function () {
 Route::get('/bar', function () {
     return view('welcome');
 });
-

@@ -18,4 +18,19 @@ Route::group(['prefix' => '/'], function () {
 
         return $captcha->GTServerIsNormal();
     });
+
+    Route::group(['prefix' => '/door', 'middleware' => ['throttle:5,3']], function () {
+
+        Route::post('/login', function () {
+
+        });
+
+        Route::post('/register', function () {
+
+        });
+
+        Route::get('/logout', function () {
+
+        });
+    });
 });

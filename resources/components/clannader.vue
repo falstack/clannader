@@ -2,6 +2,7 @@
     <div>
         <navbar ref="navbar"></navbar>
         <banner ref="banner"></banner>
+        <navsign ref="navsign"></navsign>
         <router-link to="/foo">go to foo</router-link>
         <router-link to="/bar">go to bar</router-link>
         <router-view></router-view>
@@ -19,10 +20,11 @@
     import toast from './tools/toast.vue'
     import navbar from './nav/narbar.vue'
     import banner from './nav/nav-banner.vue'
+    import navsign from './nav/nav-sign.vue'
 
     export default {
         components: {
-            top, toast, navbar, banner
+            top, toast, navbar, banner, navsign
         },
         created () {
             let bool = document.getElementById('_auth').getAttribute('content') == 1;

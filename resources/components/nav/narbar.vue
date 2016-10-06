@@ -147,31 +147,42 @@
                             已登录
                         </div>
                         <div v-else>
-                            <button id="signIn">登录</button>
-                            <button id="signUp">注册</button>
+                            <button id="signIn" @click="showSignIn">登录</button>
+                            <button id="signUp" @click="showSignUp">注册</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="nav-mask"></div>
-            <navsign></navsign>
         </div>
     </div>
 </template>
 
 <script>
 
-    import navsign from './nav-sign.vue'
 
     export default {
         components: {
-            navsign
+
         },
         created () {
 
         },
         methods: {
+            showSignIn () {
+                if (this.$store.getters.isMobile) {
 
+                } else {
+                    this.$root.$refs.navsign.showLogin()
+                }
+            },
+            showSignUp () {
+                if (this.$store.getters.isMobile) {
+
+                } else {
+                    this.$root.$refs.navsign.showRegister()
+                }
+            }
         },
         mounted () {
 
