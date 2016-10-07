@@ -1,7 +1,17 @@
-.face {
+.uface {
   display: block;
   overflow: hidden;
   border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.bface {
+  display: block;
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -13,4 +23,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.dot {
+  margin: 0 5px;
+
+  &:after {
+    content: "•";
+    color: $color-gray-word;
+  }
 }

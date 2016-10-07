@@ -4,10 +4,11 @@
 
         function getCookie(name) {
             var COOKIE = document.cookie.split("; ");
-            for (var i=0; i < COOKIE.length; i++) {
+            var i;
+            for (i in COOKIE) {
                 var result = COOKIE[i].split("=");
                 if (result.shift() === name) {
-                    return result;
+                    return result.toString();
                 }
             }
             return null;

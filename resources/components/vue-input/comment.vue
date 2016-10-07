@@ -1,0 +1,482 @@
+<style lang="sass" rel="scss" scoped>
+    @import '../../static/sass/variables';
+
+    $new-height : 86px;
+    $new-foot-height : 20px;
+    $new-foot-margin : 8px;
+
+    .comment-new {
+        border: 1px solid $color-gray-hover;
+        height: $new-height;
+        margin: 30px 0;
+    }
+
+    .reply-box {
+        border: 1px solid $color-gray-hover;
+        height: $new-height;
+        margin: 20px 0 10px;
+    }
+
+    .comment-warp {
+        display: flex;
+        height: $new-foot-height;
+        margin: 0 12px $new-foot-margin;
+        justify-content: space-between;
+    }
+
+    .comment-text {
+        font-size: 14px;
+        height: $new-height - $new-foot-height - $new-foot-margin;
+        line-height: 20px;
+        color: #555555;
+        border: none;
+        width: 100%;
+    }
+
+    .comment-msg {
+        color: $color-help;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .comment-box {
+        margin-left: 85px;
+        position: relative;
+        border-top: 1px solid $color-gray-hover;
+        padding: 22px 0 14px 0;
+
+        .uface {
+            position: absolute;
+            left: -70px;
+            top: 30px;
+            width: 48px;
+            height: 48px;
+            border: 1px solid $color-gray-hover;
+        }
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:hover {
+            .comment-hover {
+                display: inline-block;
+            }
+        }
+    }
+
+    .comment-header {
+        line-height: 18px;
+        padding-bottom: 4px;
+
+        .dot {
+            font-size: 12px;
+        }
+    }
+
+    .comment-name {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .comment-content {
+        line-height: 20px;
+        padding: 2px 0;
+        font-size: 14px;
+        min-height: 24px;
+    }
+
+    .comment-footer {
+        line-height: 26px;
+        color: $color-gray-word;
+        font-size: 12px;
+
+        button {
+            background-color: transparent;
+            color: $color-gray-word;
+            padding: 0 5px;
+            margin-left: 15px;
+        }
+
+        .comment-time {
+            padding: 0 5px;
+            margin-left: 15px;
+        }
+    }
+
+    .comment-hover {
+        display: none;
+    }
+
+    .comment-reply {
+        padding-left: 85px;
+
+        >div {
+            margin-bottom: 10px;
+
+            &:hover {
+                .comment-hover {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .reply-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            span {
+                font-size: 12px;
+            }
+        }
+
+        .uface {
+            width: 24px;
+            height: 24px;
+            border: 1px solid $color-gray-hover;
+            margin-right: 10px;
+        }
+    }
+
+    .reply-footer {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 24px;
+            height: 24px;
+            border: 1px solid $color-gray-hover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        input {
+            flex: 1;
+            color: #555555;
+            font-size: 14px;
+        }
+
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            .gray-word {
+                margin-left: 34px;
+            }
+        }
+    }
+</style>
+
+<template>
+    <div>
+        <div class="comment-new" ref="news">
+            <textarea class="comment-text" maxlength="50" :placeholder="placeholder" @click="msg = ''" v-model="content"></textarea>
+            <div class="comment-warp">
+                <div>
+                    <span class="gray-word">{{ count(content) }} / 50</span>
+                    <span class="comment-msg">{{ msg }}</span>
+                </div>
+                <button class="btn-sm-submit" @click="commentStore($event)">发表</button>
+            </div>
+        </div>
+        <div class="comment-list">
+            <div class="comment-item" v-for="item in list">
+                <div class="comment-box">
+                    <a class="uface" v-link="'/people/' + item.uHome"><img :src="item.uFace"></a>
+                    <div class="comment-header">
+                        <a class="comment-name black-href" v-link="'/people/' + item.uHome">{{ item.uName }}</a>
+                        <span class="gray-word">{{ master === item.uHome ? '(楼主)' : '' }}</span>
+                        <em class="dot" v-if="item.uWord"></em>
+                        <span class="gray-word">{{ item.uWord }}</span>
+                    </div>
+                    <div class="comment-content" v-html="item.content">
+                    </div>
+                    <div class="comment-footer">
+                        <span>#{{ item.id }}</span>
+                        <span class="comment-time">{{ $diffForHumans(item.time) }}</span>
+                        <button @click="agree($event, item)"><span>{{ item.hasLike ? '已赞' : '赞' }}</span>({{ item.like }})</button>
+                        <button @click="getReplyList($event, item)">{{ item.show ? '收起评论' : item.talk ? item.talk + ' 条评论' : '添加评论' }}</button>
+                        <button class="comment-hover" @click="destoryComment($event, item)" v-if="item.isMe">删除</button>
+                    </div>
+                </div>
+                <div class="comment-reply" v-if="item.show">
+                    <div v-for="reply in item.replyList">
+                        <div class="reply-header">
+                            <a class="uface" v-link="'/people/' + item.uHome"><img :src="reply.uFace"></a>
+                            <a class="comment-name black-href" v-link="'/people/' + reply.uHome">{{ reply.uName }}</a>
+                            <span class="gray-word">{{ master === reply.uHome ? '(楼主)' : reply.uHome === item.uHome ? '(层主)' : '' }}</span>
+                            <span class="gray-word">&nbsp;回复&nbsp;</span>
+                            <a class="comment-name black-href" v-link="'/people/' + reply.tHome">{{ reply.tName }}</a>
+                            <span class="gray-word">{{ master === reply.tHome ? '(楼主)' : reply.tHome === item.uHome ? '(层主)' : '' }}</span>
+                        </div>
+                        <div class="comment-content" v-html="reply.content">
+                        </div>
+                        <div class="comment-footer">
+                            <span>{{ $diffForHumans(reply.time) }}</span>
+                            <button @click="agree($event, reply)"><span>{{ reply.hasLike ? '已赞' : '赞' }}</span>({{ reply.like }})</button>
+                            <button class="comment-hover" @click="destoryReply($event, item, reply)" v-if="reply.isMe">删除</button>
+                            <button @click="reply.show = !reply.show" v-else>回复</button>
+                        </div>
+                        <div class="reply-footer" v-if="reply.show">
+                            <div>
+                                <img :src="$getUserInfo('avatar')">
+                                <input type="text" maxlength="20" v-model="reply.replyText" autofocus="autofocus">
+                            </div>
+                            <div>
+                                <span class="gray-word">{{ count(reply.replyText) }} / 20</span>
+                                <div>
+                                    <button class="btn-radius btn-gray" @click="reply.show = false">取消</button>
+                                    <button class="btn-sm-submit" @click="replyForReply($event, item, reply)">发表</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reply-box" v-if="!item.isMe">
+                        <textarea class="comment-text" maxlength="50" placeholder="留下你的评论..." @click="item.msg = ''" v-model="item.replyText"></textarea>
+                        <div class="comment-warp">
+                            <div>
+                                <span class="gray-word">{{ count(item.replyText) }} / 50</span>
+                                <span class="comment-msg">{{ item.msg }}</span>
+                            </div>
+                            <button class="btn-sm-submit" @click="sendReply($event, item)">发表</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+    export default {
+        props: {
+            placeholder: {
+                default : "留下你的评论..."
+            },
+            master : {
+                default : null
+            },
+            type : {
+                type : String,
+                required : true
+            },
+            id: {
+                default : null,
+                required : true
+            }
+        },
+        data () {
+            return {
+                list : [],
+                msg : "",
+                content : ""
+            }
+        },
+        created () {
+            this.commentList();
+        },
+        methods: {
+            count (item) {
+                return item.length
+            },
+            commentList () {
+                this.$http.post('/api/comment/list', {
+                    id : this.id,
+                    type : this.type
+                }).then((res) => {
+                    var i;
+                    for (i in res.body.data) {
+                        res.body.data[i].show = false;
+                        res.body.data[i].replyList = [];
+                        res.body.data[i].replyText = "";
+                        res.body.data[i].msg = "";
+                        this.list.push(res.body.data[i])
+                    }
+                });
+            },
+            getReplyList (el, item) {
+                if (item.show) {
+                    item.show = false;
+                } else {
+                    if (item.replyList.length || !item.talk) {
+                        item.show = true;
+                    } else {
+                        var button = el.currentTarget;
+                        button.setAttribute('disabled', 'disabled');
+                        this.$http.post('/api/comment/list', {
+                            id : item.id,
+                            type : 'Comment'
+                        }).then((res) => {
+                            var i;
+                            for (i in res.body.data) {
+                                res.body.data[i].show = false;
+                                res.body.data[i].replyText = "";
+                                item.replyList.push(res.body.data[i])
+                            }
+                            item.show = true;
+                            button.removeAttribute('disabled');
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，获取数据失败！"
+                            });
+                        });
+                    }
+                }
+            },
+            commentStore (el) {
+                if (this.$store.getters.isLogin) {
+                    if (this.content.length === 0) {
+                        this.msg = "输入不能为空！"
+                    } else if (this.content.length > 50) {
+                        this.msg = "输入过长";
+                    } else {
+                        var button = el.currentTarget;
+                        button.setAttribute('disabled', 'disabled');
+
+                        this.$http.post('/api/comment/store', {
+                            content : this.content.replace('\n','<br />'),
+                            id : this.id,
+                            type : this.type
+                        }).then((res) => {
+                            res.body.data.show = false;
+                            res.body.data.replyList = [];
+                            this.list.push(res.body.data);
+                            this.content = "";
+                            button.removeAttribute('disabled');
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送评论失败！"
+                            });
+                        });
+                    }
+                } else {
+                    this.$root.$refs.navbar.showSignIn();
+                }
+            },
+            destoryComment (el, item) {
+                if (this.$store.getters.isLogin) {
+                    var button = el.currentTarget;
+                    button.setAttribute('disabled', 'disabled');
+                    this.$http.post('/api/comment/delete', {
+                        id : item.id
+                    }).then(() => {
+                        this.list.$remove(item);
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，删除评论失败！"
+                        });
+                    });
+                } else {
+                    this.$root.$refs.navbar.showSignIn();
+                }
+            },
+            destoryReply (el, item, reply) {
+                if (this.$store.getters.isLogin) {
+                    var button = el.currentTarget;
+                    button.setAttribute('disabled', 'disabled');
+                    this.$http.post('/api/comment/delete', {
+                        id : reply.id
+                    }).then(() => {
+                        item.replyList.$remove(reply);
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，删除评论失败！"
+                        });
+                    });
+                } else {
+                    this.$root.$refs.navbar.showSignIn();
+                }
+            },
+            agree (el, item) {
+                if (this.$store.getters.isLogin) {
+                    if (item.isMe) {
+                        this.$root.$refs.toast.open({
+                            theme: "warning",
+                            content: "不能为自己点赞！"
+                        });
+                    } else {
+                        var button = el.currentTarget;
+                        button.setAttribute('disabled', 'disabled');
+                        item.hasLike ? item.like-- : item.like++;
+                        item.hasLike = !item.hasLike;
+                        this.$http.post('/api/comment/agree', {
+                            id : item.id,
+                            type : 'Comment'
+                        }).then(() => {
+                            button.removeAttribute('disabled');
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送数据失败！"
+                            });
+                        });
+                    }
+                } else {
+                    this.$root.$refs.navbar.showSignIn();
+                }
+            },
+            sendReply (el, item) {
+                if (this.$store.getters.isLogin) {
+                    if (item.replyText.length === 0) {
+                        item.msg = "输入不能为空！"
+                    } else if (item.replyText.length > 50) {
+                        item.msg = "输入过长";
+                    } else {
+                        var button = el.currentTarget;
+                        button.setAttribute('disabled', 'disabled');
+                        this.$http.post('/api/comment/reply/store', {
+                            content : item.replyText.replace('\n','<br />'),
+                            id : item.id,
+                            target : item.id
+                        }).then((res) => {
+                            item.replyList.push(res.body.data);
+                            item.replyText = "";
+                            button.removeAttribute('disabled');
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送数据失败！"
+                            });
+                        });
+                    }
+                } else {
+                    this.$root.$refs.navbar.showSignIn();
+                }
+            },
+            replyForReply (el, item, reply) {
+                if (this.$store.getters.isLogin) {
+                    if (reply.replyText.length !== 0 && reply.replyText.length < 21) {
+                        var button = el.currentTarget;
+                        button.setAttribute('disabled', 'disabled');
+                        this.$http.post('/api/comment/reply', {
+                            content : reply.replyText.replace('\n','<br />'),
+                            id : item.id,
+                            target : reply.id,
+                            type : 'Comment'
+                        }).then((res) => {
+                            item.replyList.push(res.body.data);
+                            reply.show = false;
+                            reply.replyText = "";
+                            button.removeAttribute('disabled');
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送数据失败！"
+                            });
+                        });
+                    }
+                } else {
+                    this.$root.$refs.navbar.showSignIn();
+                }
+            }
+        }
+    }
+</script>

@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('autograph');
             $table->string('password');
             $table->tinyInteger('sex');
-            $table->boolean('birSecret');
-            $table->timestamp('birthday');
+            $table->boolean('birSecret')->default(0);
+            $table->timestamp('birthday')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

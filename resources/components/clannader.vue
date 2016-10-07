@@ -10,22 +10,21 @@
     <div id="app">
         <navbar ref="navbar"></navbar>
         <banner ref="banner"></banner>
-        <navsign ref="navsign"></navsign>
+        <navsign v-if="lazy" ref="navsign"></navsign>
         <div class="container">
             <div class="row">
                 <router-view></router-view>
             </div>
         </div>
-        <bottom ref="bottom"></bottom>
-        <top></top>
-        <toast ref="toast"></toast>
+        <bottom v-if="lazy" ref="bottom"></bottom>
+        <toast v-if="lazy" ref="toast"></toast>
+        <top v-if="lazy"></top>
     </div>
 </template>
 
 <script>
 
     Vue.http.options.root = "http://" + window.location.host;
-    Vue.http.headers.common['X-CSRF-TOKEN'] = document.getElementById('_token').getAttribute('content');
 
     import top from './tools/top.vue'
     import toast from './tools/toast.vue'
@@ -38,16 +37,36 @@
         components: {
             top, toast, navbar, banner, navsign, bottom
         },
+        watch: {
+            '$store.getters.isLogin' (val) {
+                this.setAuthHeader(val);
+                this.makeWebSocket(val);
+            }
+        },
+        data () {
+            return {
+                lazy : false,
+                mobile : null,
+                socket : null
+            }
+        },
         created () {
+            this.lazy = true;
             this.checkLogin();
             this.userAngent();
         },
         methods: {
+            setAuthHeader (val) {
+                if (val) {
+                    Vue.http.headers.common['Authorization'] = 'Bearer ' + this.$getUserInfo('token');
+                } else {
+                    Vue.http.headers.common['Authorization'] = 'null';
+                }
+            },
             checkLogin() {
                 let bool = document.getElementById('_auth').getAttribute('content') == 1;
-                if (bool) {
-                    this.$store.dispatch('setLogin', { bool });
-                }
+                this.$store.dispatch('setLogin', { bool });
+                this.setAuthHeader(bool);
             },
             userAngent() {
                 var userAgentInfo = navigator.userAgent;
@@ -59,7 +78,26 @@
                         break;
                     }
                 }
-                this.$store.dispatch('setMobile', { bool });
+                this.mobile = bool;
+            },
+            makeWebSocket (bool) {
+                if (this.socket === null) {
+                    this.socket = io("http://" + window.location.host + ":3001");
+                }
+                if (bool) {
+
+                    this.socket.on('connection',function(data) {
+                        console.log('connection is ok');
+                    });
+
+                    this.socket.on(this.$getUserInfo('zone') + ':msg',function(data) {
+                        console.log(data);
+                    });
+
+                } else {
+                    this.socket.disconnect();
+                    this.socket = null;
+                }
             }
         }
     }

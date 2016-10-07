@@ -24,13 +24,20 @@
 
             .head {
                 display: flex;
-                justify-content: flex-start;
-                align-items: center;
+                justify-content: space-between;
 
-                .face {
+                >div {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .uface, .bface {
                     width: 24px;
                     height: 24px;
-                    margin-right: 10px;
+                }
+
+                .title {
+                    margin-left: 10px;
                 }
             }
         }
@@ -39,21 +46,26 @@
 
 <template>
     <div>
-        <div id="index-mobile" v-if="$store.getters.isMobile">
+        <div id="index-mobile" v-if="$root.$data.mobile">
 
         </div>
         <div id="index-pc" v-else>
             <div class="col-md-9">
                 <div class="post-item" v-for="post in post.data">
                     <div class="head">
-                        <router-link class="face" :to=" '/people/' + post.userHome "><img :src="post.userFace"></router-link>
-                        <router-link class="blue-link" :to=" '/post/' + post.id ">{{ post.title }}</router-link>
+                        <div>
+                            <router-link class="uface" :to=" '/people/' + post.uHome "><img :src="post.uFace"></router-link>
+                            <router-link class="blue-link title" :to=" '/post/' + post.id ">{{ post.title }}</router-link>
+                        </div>
+                        <router-link class="bface" :to=" '/bangumi/' + post.bid "><img :src="post.bFace"></router-link>
                     </div>
                     <div class="body">
                         <p class="oneline">{{ post.content }}</p>
                     </div>
                     <div class="foot">
-                        <span>{{ $diffForHumans(post.created_at) }}</span>
+                        <span>{{ $diffForHumans(post.time) }}</span>
+                        <span>回复{{ post.talk }}</span>
+                        <span>喜欢{{ post.like }}</span>
                     </div>
                 </div>
             </div>
@@ -94,9 +106,6 @@
                     });
                 });
             }
-        },
-        mounted () {
-
         }
     }
 </script>

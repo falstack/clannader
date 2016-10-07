@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Clannader\Models\Morph\Comment;
+use App\Clannader\Models\Post\Post;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +17,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         \Carbon\Carbon::setLocale('zh');
+
+        Relation::morphMap([
+            'Comment' => Comment::class,
+            'Post' => Post::class,
+        ]);
     }
 
     /**
@@ -26,7 +34,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
             $this->app->register(\Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class);
-            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
         }
         // ...
     }

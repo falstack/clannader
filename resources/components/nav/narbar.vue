@@ -113,7 +113,7 @@
                     height: $nav-height;
                     padding: 0 30px;
 
-                    .face {
+                    .uface {
                         width: 36px;
                         height: 36px;
                         margin-top: ($nav-height - 36) / 2;
@@ -175,7 +175,7 @@
 
 <template>
     <div id="nav-warp">
-        <div id="nav-mobile" v-if="$store.getters.isMobile">
+        <div id="nav-mobile" v-if="$root.$data.mobile">
             手机
         </div>
         <div id="nav-pc" v-else>
@@ -199,7 +199,7 @@
                     <div id="nav-right">
                         <navsearch></navsearch>
                         <div v-if="$store.getters.isLogin" id="nav-user">
-                            <router-link class="face" :to="'/people/' + user.home"><img :src="user.face"></router-link>
+                            <router-link class="uface" :to="'/people/' + user.home"><img :src="user.face"></router-link>
                             <div id="user-table">
                                 <div class="card">
                                     <router-link :to="'/people/' + user.home">{{ user.name }}</router-link>
@@ -249,14 +249,14 @@
         },
         methods: {
             showSignIn () {
-                if (this.$store.getters.isMobile) {
+                if (this.$root.$data.mobile) {
 
                 } else {
                     this.$root.$refs.navsign.showLogin()
                 }
             },
             showSignUp () {
-                if (this.$store.getters.isMobile) {
+                if (this.$root.$data.mobile) {
 
                 } else {
                     this.$root.$refs.navsign.showRegister()

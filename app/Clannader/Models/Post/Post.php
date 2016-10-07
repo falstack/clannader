@@ -17,19 +17,44 @@ class Post extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function scopeGetlist($query)
+    public function scopeGetList($query)
     {
         $query->join('users', 'users.id', '=', 'posts.user_id')
+            ->join('bangumis', 'bangumis.id', '=', 'posts.bangumi_id')
             ->select(
-                'users.name as userName',
-                'users.avatar as userFace',
-                'users.zone as userHome',
+                'users.name as uName',
+                'users.avatar as uFace',
+                'users.zone as uHome',
+                'bangumis.id as bid',
+                'bangumis.name as bName',
+                'bangumis.avatar as bFace',
                 'posts.id as id',
                 'posts.name as title',
                 'posts.content as content',
                 'posts.talk as talk',
                 'posts.like as like',
-                'posts.created_at as created_at'
+                'posts.created_at as time'
+            );
+    }
+
+    public function scopeGetOne($query)
+    {
+        $query->join('users', 'users.id', '=', 'posts.user_id')
+            ->join('bangumis', 'bangumis.id', '=', 'posts.bangumi_id')
+            ->select(
+                'users.name as uName',
+                'users.avatar as uFace',
+                'users.zone as uHome',
+                'bangumis.id as bid',
+                'bangumis.name as bName',
+                'bangumis.avatar as bFace',
+                'posts.id as id',
+                'posts.name as title',
+                'posts.content as content',
+                'posts.talk as talk',
+                'posts.like as like',
+                'posts.created_at as time',
+                'posts.user_id as isMe'
             );
     }
 }

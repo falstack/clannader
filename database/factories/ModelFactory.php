@@ -5,7 +5,7 @@ $factory->define(App\Clannader\Models\User::class, function (Faker\Generator $fa
         'name' =>  $faker->name ,
         'email' =>  $faker->safeEmail ,
         'zone' =>  $faker->word ,
-        'avatar' =>  $faker->imageUrl($width = 200, $height = 200) ,
+        'avatar' =>  $faker->imageUrl($width = 60, $height = 60) ,
         'banner' =>  $faker->imageUrl($width = 900, $height = 400) ,
         'autograph' =>  $faker->word ,
         'password' =>  bcrypt($faker->password) ,
@@ -32,8 +32,9 @@ $factory->define(App\Clannader\Models\Morph\Comment::class, function (Faker\Gene
 
 $factory->define(App\Clannader\Models\Post\Post::class, function (Faker\Generator $faker) {
     $user_ids = \App\Clannader\Models\User::pluck('id')->toArray();
+    $bangumi_ids = \App\Clannader\Models\Bangumi\Bangumi::pluck('id')->toArray();
     return [
-        'bangumi_id' =>  $faker->randomNumber() ,
+        'bangumi_id' =>  $faker->randomElement($bangumi_ids) ,
         'user_id' => $faker->randomElement($user_ids),
         'name' =>  $faker->name ,
         'content' =>  $faker->text ,
@@ -43,6 +44,17 @@ $factory->define(App\Clannader\Models\Post\Post::class, function (Faker\Generato
 $factory->define(App\Clannader\Models\Zone::class, function (Faker\Generator $faker) {
     return [
         'name' =>  $faker->name ,
+    ];
+});
+
+$factory->define(App\Clannader\Models\Bangumi\Bangumi::class, function (Faker\Generator $faker) {
+    return [
+        'name' =>  $faker->name ,
+        'summary' =>  $faker->word ,
+        'avatar' =>  $faker->imageUrl($width = 60, $height = 60) ,
+        'banner' =>  $faker->imageUrl($width = 900, $height = 400) ,
+        'follower' =>  $faker->randomNumber() ,
+        'score' =>  $faker->randomFloat(0.1, 10, 0) ,
     ];
 });
 

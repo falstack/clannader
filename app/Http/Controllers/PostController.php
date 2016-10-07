@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Clannader\Repository\PostRepository;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
 class PostController extends Controller
 {
     protected $postRepository;
@@ -19,5 +17,12 @@ class PostController extends Controller
     public function news(Request $request)
     {
         return $this->postRepository->getPostListByNews($request->get('offset'), $request->get('take'));
+    }
+
+    public function show(Request $request)
+    {
+        $user_id = $this->getUserIdByJWT();
+
+        return $this->postRepository->showPost($request->get('id'), $user_id);
     }
 }

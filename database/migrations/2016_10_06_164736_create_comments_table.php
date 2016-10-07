@@ -17,11 +17,8 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->text('content');
-            $table->string('hash');
             $table->unsignedInteger('link_id');
             $table->string('link_type');
-            $table->unsignedInteger('root_id')->default(0)->nullable();
-            $table->string('root_type')->default(0)->nullable();
             $table->unsignedInteger('target_id')->default(0);
             $table->unsignedInteger('talk')->default(0);
             $table->unsignedInteger('like')->default(0);

@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.16 on 2016-10-06.
+ * Generated for Laravel 5.3.17 on 2016-10-07.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -11912,6 +11912,288 @@ namespace {
          */
         public static function getNames(){
             return \Illuminate\View\Factory::getNames();
+        }
+        
+    }
+
+
+    class Pinyin extends \Overtrue\LaravelPinyin\Facades\Pinyin{
+        
+        /**
+         * Convert string to pinyin.
+         *
+         * @param string $string
+         * @param string $option
+         * @return array 
+         * @static 
+         */
+        public static function convert($string, $option = 'none'){
+            return \Overtrue\Pinyin\Pinyin::convert($string, $option);
+        }
+        
+        /**
+         * Convert string (person name) to pinyin.
+         *
+         * @param string $stringName
+         * @param string $option
+         * @return array 
+         * @static 
+         */
+        public static function name($stringName, $option = 'none'){
+            return \Overtrue\Pinyin\Pinyin::name($stringName, $option);
+        }
+        
+        /**
+         * Return a pinyin permalink from string.
+         *
+         * @param string $string
+         * @param string $delimiter
+         * @return string 
+         * @static 
+         */
+        public static function permalink($string, $delimiter = '-'){
+            return \Overtrue\Pinyin\Pinyin::permalink($string, $delimiter);
+        }
+        
+        /**
+         * Return first letters.
+         *
+         * @param string $string
+         * @param string $delimiter
+         * @return string 
+         * @static 
+         */
+        public static function abbr($string, $delimiter = ''){
+            return \Overtrue\Pinyin\Pinyin::abbr($string, $delimiter);
+        }
+        
+        /**
+         * Chinese to pinyin sentense.
+         *
+         * @param string $sentence
+         * @param string $option
+         * @return string 
+         * @static 
+         */
+        public static function sentence($sentence, $withTone = false){
+            return \Overtrue\Pinyin\Pinyin::sentence($sentence, $withTone);
+        }
+        
+        /**
+         * Loader setter.
+         *
+         * @param \Overtrue\Pinyin\DictLoaderInterface $loader
+         * @return $this 
+         * @static 
+         */
+        public static function setLoader($loader){
+            return \Overtrue\Pinyin\Pinyin::setLoader($loader);
+        }
+        
+        /**
+         * Return dict loader,.
+         *
+         * @return \Overtrue\Pinyin\DictLoaderInterface 
+         * @static 
+         */
+        public static function getLoader(){
+            return \Overtrue\Pinyin\Pinyin::getLoader();
+        }
+        
+        /**
+         * Split pinyin string to words.
+         *
+         * @param string $pinyin
+         * @param string $option
+         * @return array 
+         * @static 
+         */
+        public static function splitWords($pinyin, $option){
+            return \Overtrue\Pinyin\Pinyin::splitWords($pinyin, $option);
+        }
+        
+    }
+
+
+    class Purifier extends \Mews\Purifier\Facades\Purifier{
+        
+        /**
+         * 
+         *
+         * @param $dirty
+         * @param null $config
+         * @return mixed 
+         * @static 
+         */
+        public static function clean($dirty, $config = null){
+            return \Mews\Purifier\Purifier::clean($dirty, $config);
+        }
+        
+        /**
+         * Get HTMLPurifier instance.
+         *
+         * @return \HTMLPurifier 
+         * @static 
+         */
+        public static function getInstance(){
+            return \Mews\Purifier\Purifier::getInstance();
+        }
+        
+    }
+
+
+    class JWTAuth extends \Tymon\JWTAuth\Facades\JWTAuth{
+        
+        /**
+         * Find a user using the user identifier in the subject claim.
+         *
+         * @param bool|string $token
+         * @return mixed 
+         * @static 
+         */
+        public static function toUser($token = false){
+            return \Tymon\JWTAuth\JWTAuth::toUser($token);
+        }
+        
+        /**
+         * Generate a token using the user identifier as the subject claim.
+         *
+         * @param mixed $user
+         * @param array $customClaims
+         * @return string 
+         * @static 
+         */
+        public static function fromUser($user, $customClaims = array()){
+            return \Tymon\JWTAuth\JWTAuth::fromUser($user, $customClaims);
+        }
+        
+        /**
+         * Attempt to authenticate the user and return the token.
+         *
+         * @param array $credentials
+         * @param array $customClaims
+         * @return false|string 
+         * @static 
+         */
+        public static function attempt($credentials = array(), $customClaims = array()){
+            return \Tymon\JWTAuth\JWTAuth::attempt($credentials, $customClaims);
+        }
+        
+        /**
+         * Authenticate a user via a token.
+         *
+         * @param mixed $token
+         * @return mixed 
+         * @static 
+         */
+        public static function authenticate($token = false){
+            return \Tymon\JWTAuth\JWTAuth::authenticate($token);
+        }
+        
+        /**
+         * Refresh an expired token.
+         *
+         * @param mixed $token
+         * @return string 
+         * @static 
+         */
+        public static function refresh($token = false){
+            return \Tymon\JWTAuth\JWTAuth::refresh($token);
+        }
+        
+        /**
+         * Invalidate a token (add it to the blacklist).
+         *
+         * @param mixed $token
+         * @return bool 
+         * @static 
+         */
+        public static function invalidate($token = false){
+            return \Tymon\JWTAuth\JWTAuth::invalidate($token);
+        }
+        
+        /**
+         * Get the token.
+         *
+         * @return bool|string 
+         * @static 
+         */
+        public static function getToken(){
+            return \Tymon\JWTAuth\JWTAuth::getToken();
+        }
+        
+        /**
+         * Get the raw Payload instance.
+         *
+         * @param mixed $token
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */
+        public static function getPayload($token = false){
+            return \Tymon\JWTAuth\JWTAuth::getPayload($token);
+        }
+        
+        /**
+         * Parse the token from the request.
+         *
+         * @param string $query
+         * @return \JWTAuth 
+         * @static 
+         */
+        public static function parseToken($method = 'bearer', $header = 'authorization', $query = 'token'){
+            return \Tymon\JWTAuth\JWTAuth::parseToken($method, $header, $query);
+        }
+        
+        /**
+         * Set the identifier.
+         *
+         * @param string $identifier
+         * @return $this 
+         * @static 
+         */
+        public static function setIdentifier($identifier){
+            return \Tymon\JWTAuth\JWTAuth::setIdentifier($identifier);
+        }
+        
+        /**
+         * Get the identifier.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getIdentifier(){
+            return \Tymon\JWTAuth\JWTAuth::getIdentifier();
+        }
+        
+        /**
+         * Set the token.
+         *
+         * @param string $token
+         * @return $this 
+         * @static 
+         */
+        public static function setToken($token){
+            return \Tymon\JWTAuth\JWTAuth::setToken($token);
+        }
+        
+        /**
+         * Set the request instance.
+         *
+         * @param \Request $request
+         * @static 
+         */
+        public static function setRequest($request){
+            return \Tymon\JWTAuth\JWTAuth::setRequest($request);
+        }
+        
+        /**
+         * Get the JWTManager instance.
+         *
+         * @return \Tymon\JWTAuth\JWTManager 
+         * @static 
+         */
+        public static function manager(){
+            return \Tymon\JWTAuth\JWTAuth::manager();
         }
         
     }

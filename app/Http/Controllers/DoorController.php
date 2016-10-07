@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Clannader\Models\User;
 use App\Clannader\Models\Zone;
+use App\Clannader\Service\JWTService;
 use App\Http\Requests\RegisterRequest;
 use Auth;
 use Illuminate\Http\Request;
@@ -15,12 +16,21 @@ class DoorController extends Controller
 {
     protected $user;
     protected $zone;
+    protected $JWTService;
 
     public function __construct(User $user,
-                                Zone $zone)
+                                Zone $zone,
+                                JWTService $JWTService)
     {
         $this->user = $user;
         $this->zone = $zone;
+        $this->JWTService = $JWTService;
+    }
+
+
+    public function index()
+    {
+        return view('welcome');
     }
 
 
@@ -31,6 +41,8 @@ class DoorController extends Controller
         if (Auth::attempt($data, $request->get('remember'))) {
 
             $user = Auth::user();
+
+            $user->token = $this->JWTService->createToken($user);
 
             return $user;
 

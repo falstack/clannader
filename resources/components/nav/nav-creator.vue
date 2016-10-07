@@ -77,7 +77,7 @@
 
 <template>
     <div v-if="$store.getters.isLogin">
-        <div v-if="$store.getters.isMobile">
+        <div v-if="$root.$data.mobile">
 
         </div>
         <div v-else id="warp">
