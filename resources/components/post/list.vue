@@ -33,8 +33,8 @@
                 }
 
                 .uface, .bface {
-                    width: 24px;
-                    height: 24px;
+                    width: 38px;
+                    height: 38px;
                 }
 
                 .gray-link {
@@ -87,7 +87,7 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     export default {
         data () {
@@ -100,21 +100,28 @@
             }
         },
         created () {
-            this.getLatestPost();
+            this.getPost();
         },
         methods: {
-            getLatestPost () {
-                this.$http.get('/api/post/news', { params : {
+            getPost () {
+                this.$http.get('/api/post/all', { params : {
                     take : this.take,
                     offset : this.post.offset
                 }}).then((res) => {
                     this.post.data = res.body.data;
                     this.post.offset++;
-                }, () => {
-                    this.$root.$refs.toast.open({
-                        theme: "error",
-                        content: "服务器异常，获取帖子数据失败！"
-                    });
+                }, (res) => {
+                    if (res.status === 500) {
+                        this.$root.$refs.toast.replace({
+                            theme: "warning",
+                            content: "文章不存在！"
+                        });
+                    } else {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，获取帖子数据失败！"
+                        });
+                    }
                 });
             }
         }

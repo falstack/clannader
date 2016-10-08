@@ -62,6 +62,19 @@ return [
             'bucket' => 'your-bucket',
         ],
 
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => env('QINIU_DOMAIN'),
+                'https'     => 'dn-yourdomain.qbox.me',
+                'custom'    => env('QINIU_DOMAIN'),
+            ],
+            'access_key'=> env('QINIU_ACCESS'),
+            'secret_key'=> env('QINIU_SECRET'),
+            'bucket'    => env('QINIU_BUCKET'),
+            'notify_url'=> '',
+        ],
+
     ],
 
 ];

@@ -13,7 +13,8 @@
         "mews/purifier": "^2.0",
         "tymon/jwt-auth": "0.5.*",
         "dingo/api": "1.0.*@dev",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "zgldh/qiniu-laravel-storage": "^0.3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -20,13 +20,13 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     Vue.http.options.root = "http://" + window.location.host;
 
     import top from './tools/top.vue'
     import toast from './tools/toast.vue'
-    import navbar from './nav/narbar.vue'
+    import navbar from './nav/navbar.vue'
     import banner from './nav/nav-banner.vue'
     import navsign from './nav/nav-sign.vue'
     import bottom from './tools/bottom.vue'
@@ -38,12 +38,14 @@
         watch: {
             '$store.getters.isLogin' (val) {
                 this.setAuthHeader(val);
+                this.getUpToken(val);
             }
         },
         data () {
             return {
                 lazy : false,
-                load : true
+                load : true,
+                uptoken : null
             }
         },
         created () {
@@ -63,6 +65,7 @@
                 let bool = document.getElementById('_auth').getAttribute('content') == 1;
                 this.$store.dispatch('setLogin', { bool });
                 this.setAuthHeader(bool);
+                this.getUpToken(bool);
             },
             userAngent() {
                 var userAgentInfo = navigator.userAgent;
@@ -72,6 +75,13 @@
                         // redirect to mobile site
                         break;
                     }
+                }
+            },
+            getUpToken(bool) {
+                if (bool && this.uptoken === null) {
+                    this.$http.post('/api/uptoken').then((res) => {
+                        this.uptoken = res.body.uptoken
+                    });
                 }
             }
         }

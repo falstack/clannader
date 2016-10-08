@@ -1,12 +1,5 @@
-<style lang="sass" rel="scss" scoped>
-    @import "../../static/sass/variables";
-
-    #warp {
-        position: relative;
-        margin: 0 8px;
-    }
-
-    #more {
+<style lang="sass" rel="scss">
+    .nav-more {
         height: 48px;
         line-height: 48px;
         width: 48px;
@@ -22,6 +15,15 @@
                 height: 370px;
             }
         }
+    }
+</style>
+
+<style lang="sass" rel="scss" scoped>
+    @import "../../static/sass/variables";
+
+    #warp {
+        position: relative;
+        margin: 0 8px;
     }
 
     #box {
@@ -148,7 +150,7 @@
 
 <template>
     <div id="warp" v-if="$store.getters.isLogin">
-        <a id="more"></a>
+        <a class="nav-more"></a>
         <div id="box">
             <div class="arrow"><i><em></em></i></div>
             <div class="menu-header">

@@ -14,9 +14,9 @@ class PostController extends Controller
         $this->postRepository = $postRepository;
     }
 
-    public function news(Request $request)
+    public function all(Request $request)
     {
-        return $this->postRepository->getPostListByNews($request->get('offset'), $request->get('take'));
+        return $this->postRepository->getPosts($request->get('offset'), $request->get('take'));
     }
 
     public function show(Request $request)

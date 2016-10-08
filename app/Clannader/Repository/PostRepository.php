@@ -22,7 +22,7 @@ class PostRepository extends RelationRepository
         $this->apiSerializer = $apiSerializer;
     }
 
-    public function getPostListByNews($offset, $take)
+    public function getPosts($offset, $take)
     {
         $list =  $this->post->skip($take * $offset)->take($take)->get();
 

@@ -79,21 +79,24 @@
 <script>
 
     export default {
-        components: {
-
-        },
-        route: {
-            canReuse (transition) {
-                return transition.to.path.split('/')[2] === transition.from.path.split('/')[2];
-            }
-        },
         data () {
             return {
                 info : {}
             }
         },
-        created () {
+        watch: {
+            '$route' () {
+                this.getBangumiInfo();
+            },
+            '$store.getters.isLogin' () {
+                this.getBangumiInfo();
+            }
+        },
+        beforeCreate () {
+            this.$root.$refs.navbar.grayStyle();
             this.$root.$refs.banner.hidden();
+        },
+        created () {
             this.getBangumiInfo();
         },
         methods: {
@@ -104,36 +107,51 @@
                     this.info = res.body.data;
                     this.$refs.banner.style.backgroundImage = 'url(' + this.info.banner + ')';
                 }, (res) => {
-                    console.log(res.body);
-                });
-            },
-            followBangumi (el) {
-                var btn = el.currentTarget;
-                btn.setAttribute('disabled', 'disabled');
-                this.$http.post('/api/like', {
-                    id : this.$route.params.id,
-                    type : 'Bangumi'
-                }).then(() => {
-                    this.info.hasLike = !this.info.hasLike;
-                    if (this.info.hasLike) {
+                    if (res.status === 500) {
+                        this.$router.replace({ path: '/door/404' });
                         this.$root.$refs.toast.open({
-                            theme: "success",
-                            content: "关注成功！"
+                            theme: "warning",
+                            content: "不存在的番剧！"
                         });
                     } else {
                         this.$root.$refs.toast.open({
-                            theme: "success",
-                            content: "已取消关注！"
+                            theme: "error",
+                            content: "服务器异常，获取帖子数据失败！"
                         });
                     }
-                    btn.removeAttribute('disabled');
-                }, () => {
-                    this.$root.$refs.toast.open({
-                        theme: "error",
-                        content: "服务器异常，发送数据失败！"
-                    });
-                    btn.removeAttribute('disabled');
                 });
+            },
+            followBangumi (el) {
+                if (this.$store.getters.isLogin) {
+                    var btn = el.currentTarget;
+                    btn.setAttribute('disabled', 'disabled');
+                    this.$http.post('/api/like', {
+                        id : this.$route.params.id,
+                        type : 'Bangumi'
+                    }).then(() => {
+                        this.info.hasLike = !this.info.hasLike;
+                        if (this.info.hasLike) {
+                            this.$root.$refs.toast.open({
+                                theme: "success",
+                                content: "关注成功！"
+                            });
+                        } else {
+                            this.$root.$refs.toast.open({
+                                theme: "success",
+                                content: "已取消关注！"
+                            });
+                        }
+                        btn.removeAttribute('disabled');
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，发送数据失败！"
+                        });
+                        btn.removeAttribute('disabled');
+                    });
+                } else {
+                    this.$root.$refs.navsign.showLogin()
+                }
             },
             getBangumiPost () {
                 this.$http.get('/api/post/bangumi', { params : {
@@ -149,6 +167,7 @@
             }
         },
         destroyed () {
+            this.$root.$refs.navbar.normalStyle();
             this.$root.$refs.banner.show();
         }
     }
