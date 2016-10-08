@@ -26,8 +26,8 @@
       <file leaf-file-name="BangumiRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Clannader/Repository/BangumiRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="476">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -41,7 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/RelationController.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
@@ -91,6 +90,7 @@
         <option value="$PROJECT_DIR$/app/Clannader/Repository/Repository.php" />
         <option value="$PROJECT_DIR$/app/Clannader/Repository/CommentRepository.php" />
         <option value="$PROJECT_DIR$/app/Clannader/Repository/PostRepository.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/app/Clannader/Repository/BangumiRepository.php" />
       </list>
     </option>
@@ -547,12 +547,12 @@
       <workItem from="1475815117451" duration="1770000" />
       <workItem from="1475821458398" duration="1035000" />
       <workItem from="1475822612254" duration="12543000" />
-      <workItem from="1475837815322" duration="19934000" />
+      <workItem from="1475837815322" duration="20172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1772341000" />
+    <option name="totallyTimeSpent" value="1772579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -615,32 +615,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="182" column="57" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
-          <folding>
-            <marker date="1475848455000" expanded="true" signature="15:9503" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="23:443" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="479:907" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="961:1384" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="1435:1851" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="1911:2335" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="2371:2810" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="2843:3274" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="3316:3737" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="3809:4303" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="4404:4836" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="4860:6909" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="4872:4932" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="6282:6332" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="6358:6412" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="6919:7333" ph="..." />
-            <marker date="1475848455000" expanded="true" signature="7355:9499" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6188">
@@ -1731,10 +1705,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="392">
+            <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Clannader/Repository/BangumiRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="476">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>
