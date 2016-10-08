@@ -134,7 +134,8 @@
                 signIn : {
                     remember : true,
                     name : "",
-                    password : ""
+                    password : "",
+                    method : ""
                 },
                 signUp : {
                     captcha : true,
@@ -252,6 +253,9 @@
                     this.$store.dispatch('setLogin', { bool });
                     document.getElementById('_auth').setAttribute('content', 1);
                     this.$root.$refs.navbar.makeLogin();
+                    this.signIn.name = "";
+                    this.signIn.password = "";
+                    this.signIn.method = "";
                 }, (res) => {
                     if (res.status === 422) {
                         this.$root.$refs.toast.open({
@@ -332,6 +336,9 @@
                     this.signIn.name = this.signUp.email;
                     this.signIn.password = this.signUp.password;
                     this.login();
+                    this.signUp.name = "";
+                    this.signUp.email = "";
+                    this.signUp.password = "";
                 }, (res) => {
                     if (res.status === 422) {
                         if (res.body.email) {

@@ -178,7 +178,7 @@
             </div>
         </div>
         <div class="comment-list">
-            <div class="comment-item" v-for="item in list">
+            <div class="comment-item" v-for="(item, index) in list">
                 <div class="comment-box">
                     <a class="uface" v-link="'/people/' + item.uHome"><img :src="item.uFace"></a>
                     <div class="comment-header">
@@ -194,11 +194,11 @@
                         <span class="comment-time">{{ item.time }}</span>
                         <button @click="agree($event, item)"><span>{{ item.hasLike ? '已赞' : '赞' }}</span>({{ item.like }})</button>
                         <button @click="getReplyList($event, item)">{{ item.show ? '收起评论' : item.talk ? item.talk + ' 条评论' : '添加评论' }}</button>
-                        <button class="comment-hover" @click="destoryComment($event, item)" v-if="item.isMe">删除</button>
+                        <button class="comment-hover" @click="destoryComment($event, item, index)" v-if="item.isMe">删除</button>
                     </div>
                 </div>
                 <div class="comment-reply" v-if="item.show">
-                    <div v-for="reply in item.replyList">
+                    <div v-for="(reply, dito) in item.replyList">
                         <div class="reply-header">
                             <a class="uface" v-link="'/people/' + item.uHome"><img :src="reply.uFace"></a>
                             <a class="comment-name black-href" v-link="'/people/' + reply.uHome">{{ reply.uName }}</a>
@@ -212,7 +212,7 @@
                         <div class="comment-footer">
                             <span>{{ reply.time }}</span>
                             <button @click="agree($event, reply)"><span>{{ reply.hasLike ? '已赞' : '赞' }}</span>({{ reply.like }})</button>
-                            <button class="comment-hover" @click="destoryReply($event, item, reply)" v-if="reply.isMe">删除</button>
+                            <button class="comment-hover" @click="destoryReply($event, item, reply, dito)" v-if="reply.isMe">删除</button>
                             <button @click="reply.show = !reply.show" v-else>回复</button>
                         </div>
                         <div class="reply-footer" v-if="reply.show">
@@ -354,14 +354,14 @@
                     this.$root.$refs.navsign.showLogin();
                 }
             },
-            destoryComment (el, item) {
+            destoryComment (el, item, index) {
                 if (this.$store.getters.isLogin) {
-                    var button = el.currentTarget;
-                    button.setAttribute('disabled', 'disabled');
+                    var btn = el.currentTarget;
+                    btn.setAttribute('disabled', 'disabled');
                     this.$http.post('/api/comment/delete', {
                         id : item.id
                     }).then(() => {
-                        this.list.$remove(item);
+                        this.list.splice(index, 1)
                     }, () => {
                         this.$root.$refs.toast.open({
                             theme: "error",
@@ -372,14 +372,14 @@
                     this.$root.$refs.navsign.showLogin();
                 }
             },
-            destoryReply (el, item, reply) {
+            destoryReply (el, item, reply, index) {
                 if (this.$store.getters.isLogin) {
-                    var button = el.currentTarget;
-                    button.setAttribute('disabled', 'disabled');
+                    var btn = el.currentTarget;
+                    btn.setAttribute('disabled', 'disabled');
                     this.$http.post('/api/comment/delete', {
                         id : reply.id
                     }).then(() => {
-                        item.replyList.$remove(reply);
+                        item.replyList.splice(index, 1)
                     }, () => {
                         this.$root.$refs.toast.open({
                             theme: "error",
@@ -402,7 +402,7 @@
                         button.setAttribute('disabled', 'disabled');
                         item.hasLike ? item.like-- : item.like++;
                         item.hasLike = !item.hasLike;
-                        this.$http.post('/api/comment/agree', {
+                        this.$http.post('/api/like', {
                             id : item.id,
                             type : 'Comment'
                         }).then(() => {
@@ -427,7 +427,7 @@
                     } else {
                         var button = el.currentTarget;
                         button.setAttribute('disabled', 'disabled');
-                        this.$http.post('/api/comment/reply/store', {
+                        this.$http.post('/api/comment/reply', {
                             content : item.replyText.replace('\n','<br />'),
                             id : item.id,
                             target : item.id
@@ -451,7 +451,7 @@
                     if (reply.replyText.length !== 0 && reply.replyText.length < 21) {
                         var button = el.currentTarget;
                         button.setAttribute('disabled', 'disabled');
-                        this.$http.post('/api/comment/reply/store', {
+                        this.$http.post('/api/comment/reply', {
                             content : reply.replyText.replace('\n','<br />'),
                             id : item.id,
                             target : reply.id,

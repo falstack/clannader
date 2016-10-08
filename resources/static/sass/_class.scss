@@ -1,3 +1,10 @@
+.template-warp {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
 .uface {
   display: block;
   overflow: hidden;
@@ -32,5 +39,12 @@
   &:after {
     content: "•";
     color: $color-gray-word;
+  }
+}
+
+.summary {
+  p {
+    margin-top: 10px;
+    text-indent: 2em;
   }
 }

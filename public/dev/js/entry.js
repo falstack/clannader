@@ -650,7 +650,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\nhtml {\n  font-family: sans-serif;\n  line-height: 1.15;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block; }\n\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\nprogress {\n  vertical-align: baseline; }\n\ntemplate,\n[hidden] {\n  display: none; }\n\na {\n  background-color: transparent;\n  -webkit-text-decoration-skip: objects; }\n\na:active,\na:hover {\n  outline-width: 0; }\n\nabbr[title] {\n  border-bottom: none;\n  text-decoration: underline;\n  text-decoration: underline dotted; }\n\nb,\nstrong {\n  font-weight: inherit; }\n\nb,\nstrong {\n  font-weight: bolder; }\n\ndfn {\n  font-style: italic; }\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\nmark {\n  background-color: #ff0;\n  color: #000; }\n\nsmall {\n  font-size: 80%; }\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\nimg {\n  border-style: none; }\n\nsvg:not(:root) {\n  overflow: hidden; }\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\nfigure {\n  margin: 1em 40px; }\n\nhr {\n  box-sizing: content-box;\n  height: 0;\n  overflow: visible; }\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font: inherit;\n  margin: 0; }\n\noptgroup {\n  font-weight: bold; }\n\nbutton,\ninput {\n  overflow: visible; }\n\nbutton,\nselect {\n  text-transform: none; }\n\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\nlegend {\n  box-sizing: border-box;\n  color: inherit;\n  display: table;\n  max-width: 100%;\n  padding: 0;\n  white-space: normal; }\n\ntextarea {\n  overflow: auto; }\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0; }\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  outline-offset: -2px; }\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n::-webkit-input-placeholder {\n  color: inherit;\n  opacity: 0.54; }\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  font: inherit; }\n\nhtml, body {\n  height: 100%; }\n\ndiv, button, input, textarea, img {\n  box-sizing: border-box; }\n\nul, span {\n  margin: 0;\n  padding: 0; }\n\np, h1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nli {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  cursor: pointer;\n  color: #222;\n  font-size: 14px; }\n\na, select, input, textarea, button {\n  outline: none; }\n\nlabel {\n  display: inline-block;\n  cursor: pointer;\n  font-family: 'Hiragino Sans GB',Helvetica,Arial,sans-serif;\n  vertical-align: middle; }\n\nbutton {\n  border: none;\n  cursor: pointer;\n  padding: 0;\n  background-color: transparent;\n  font-size: 14px; }\n\ninput[type=checkbox], input[type=radio] {\n  cursor: pointer;\n  margin: 0 5px; }\n\ninput {\n  vertical-align: middle; }\n\ntextarea {\n  resize: none;\n  vertical-align: top; }\n\n:-webkit-full-screen video {\n  width: 100%;\n  height: 100%; }\n\n:-moz-full-screen video {\n  width: 100%;\n  height: 100%; }\n\nvideo {\n  background-color: #000; }\n\n.container {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n  position: relative;\n  flex: 1; }\n\n@media (min-width: 768px) {\n  .container {\n    width: 750px; } }\n\n@media (min-width: 992px) {\n  .container {\n    width: 970px; } }\n\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px; } }\n\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.row {\n  margin-left: -15px;\n  margin-right: -15px; }\n\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left; }\n\n.col-xs-12 {\n  width: 100%; }\n\n.col-xs-11 {\n  width: 91.66666667%; }\n\n.col-xs-10 {\n  width: 83.33333333%; }\n\n.col-xs-9 {\n  width: 75%; }\n\n.col-xs-8 {\n  width: 66.66666667%; }\n\n.col-xs-7 {\n  width: 58.33333333%; }\n\n.col-xs-6 {\n  width: 50%; }\n\n.col-xs-5 {\n  width: 41.66666667%; }\n\n.col-xs-4 {\n  width: 33.33333333%; }\n\n.col-xs-3 {\n  width: 25%; }\n\n.col-xs-2 {\n  width: 16.66666667%; }\n\n.col-xs-1 {\n  width: 8.33333333%; }\n\n.col-xs-pull-12 {\n  right: 100%; }\n\n.col-xs-pull-11 {\n  right: 91.66666667%; }\n\n.col-xs-pull-10 {\n  right: 83.33333333%; }\n\n.col-xs-pull-9 {\n  right: 75%; }\n\n.col-xs-pull-8 {\n  right: 66.66666667%; }\n\n.col-xs-pull-7 {\n  right: 58.33333333%; }\n\n.col-xs-pull-6 {\n  right: 50%; }\n\n.col-xs-pull-5 {\n  right: 41.66666667%; }\n\n.col-xs-pull-4 {\n  right: 33.33333333%; }\n\n.col-xs-pull-3 {\n  right: 25%; }\n\n.col-xs-pull-2 {\n  right: 16.66666667%; }\n\n.col-xs-pull-1 {\n  right: 8.33333333%; }\n\n.col-xs-pull-0 {\n  right: auto; }\n\n.col-xs-push-12 {\n  left: 100%; }\n\n.col-xs-push-11 {\n  left: 91.66666667%; }\n\n.col-xs-push-10 {\n  left: 83.33333333%; }\n\n.col-xs-push-9 {\n  left: 75%; }\n\n.col-xs-push-8 {\n  left: 66.66666667%; }\n\n.col-xs-push-7 {\n  left: 58.33333333%; }\n\n.col-xs-push-6 {\n  left: 50%; }\n\n.col-xs-push-5 {\n  left: 41.66666667%; }\n\n.col-xs-push-4 {\n  left: 33.33333333%; }\n\n.col-xs-push-3 {\n  left: 25%; }\n\n.col-xs-push-2 {\n  left: 16.66666667%; }\n\n.col-xs-push-1 {\n  left: 8.33333333%; }\n\n.col-xs-push-0 {\n  left: auto; }\n\n.col-xs-offset-12 {\n  margin-left: 100%; }\n\n.col-xs-offset-11 {\n  margin-left: 91.66666667%; }\n\n.col-xs-offset-10 {\n  margin-left: 83.33333333%; }\n\n.col-xs-offset-9 {\n  margin-left: 75%; }\n\n.col-xs-offset-8 {\n  margin-left: 66.66666667%; }\n\n.col-xs-offset-7 {\n  margin-left: 58.33333333%; }\n\n.col-xs-offset-6 {\n  margin-left: 50%; }\n\n.col-xs-offset-5 {\n  margin-left: 41.66666667%; }\n\n.col-xs-offset-4 {\n  margin-left: 33.33333333%; }\n\n.col-xs-offset-3 {\n  margin-left: 25%; }\n\n.col-xs-offset-2 {\n  margin-left: 16.66666667%; }\n\n.col-xs-offset-1 {\n  margin-left: 8.33333333%; }\n\n.col-xs-offset-0 {\n  margin-left: 0; }\n\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left; }\n  .col-sm-12 {\n    width: 100%; }\n  .col-sm-11 {\n    width: 91.66666667%; }\n  .col-sm-10 {\n    width: 83.33333333%; }\n  .col-sm-9 {\n    width: 75%; }\n  .col-sm-8 {\n    width: 66.66666667%; }\n  .col-sm-7 {\n    width: 58.33333333%; }\n  .col-sm-6 {\n    width: 50%; }\n  .col-sm-5 {\n    width: 41.66666667%; }\n  .col-sm-4 {\n    width: 33.33333333%; }\n  .col-sm-3 {\n    width: 25%; }\n  .col-sm-2 {\n    width: 16.66666667%; }\n  .col-sm-1 {\n    width: 8.33333333%; }\n  .col-sm-pull-12 {\n    right: 100%; }\n  .col-sm-pull-11 {\n    right: 91.66666667%; }\n  .col-sm-pull-10 {\n    right: 83.33333333%; }\n  .col-sm-pull-9 {\n    right: 75%; }\n  .col-sm-pull-8 {\n    right: 66.66666667%; }\n  .col-sm-pull-7 {\n    right: 58.33333333%; }\n  .col-sm-pull-6 {\n    right: 50%; }\n  .col-sm-pull-5 {\n    right: 41.66666667%; }\n  .col-sm-pull-4 {\n    right: 33.33333333%; }\n  .col-sm-pull-3 {\n    right: 25%; }\n  .col-sm-pull-2 {\n    right: 16.66666667%; }\n  .col-sm-pull-1 {\n    right: 8.33333333%; }\n  .col-sm-pull-0 {\n    right: auto; }\n  .col-sm-push-12 {\n    left: 100%; }\n  .col-sm-push-11 {\n    left: 91.66666667%; }\n  .col-sm-push-10 {\n    left: 83.33333333%; }\n  .col-sm-push-9 {\n    left: 75%; }\n  .col-sm-push-8 {\n    left: 66.66666667%; }\n  .col-sm-push-7 {\n    left: 58.33333333%; }\n  .col-sm-push-6 {\n    left: 50%; }\n  .col-sm-push-5 {\n    left: 41.66666667%; }\n  .col-sm-push-4 {\n    left: 33.33333333%; }\n  .col-sm-push-3 {\n    left: 25%; }\n  .col-sm-push-2 {\n    left: 16.66666667%; }\n  .col-sm-push-1 {\n    left: 8.33333333%; }\n  .col-sm-push-0 {\n    left: auto; }\n  .col-sm-offset-12 {\n    margin-left: 100%; }\n  .col-sm-offset-11 {\n    margin-left: 91.66666667%; }\n  .col-sm-offset-10 {\n    margin-left: 83.33333333%; }\n  .col-sm-offset-9 {\n    margin-left: 75%; }\n  .col-sm-offset-8 {\n    margin-left: 66.66666667%; }\n  .col-sm-offset-7 {\n    margin-left: 58.33333333%; }\n  .col-sm-offset-6 {\n    margin-left: 50%; }\n  .col-sm-offset-5 {\n    margin-left: 41.66666667%; }\n  .col-sm-offset-4 {\n    margin-left: 33.33333333%; }\n  .col-sm-offset-3 {\n    margin-left: 25%; }\n  .col-sm-offset-2 {\n    margin-left: 16.66666667%; }\n  .col-sm-offset-1 {\n    margin-left: 8.33333333%; }\n  .col-sm-offset-0 {\n    margin-left: 0; } }\n\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left; }\n  .col-md-12 {\n    width: 100%; }\n  .col-md-11 {\n    width: 91.66666667%; }\n  .col-md-10 {\n    width: 83.33333333%; }\n  .col-md-9 {\n    width: 75%; }\n  .col-md-8 {\n    width: 66.66666667%; }\n  .col-md-7 {\n    width: 58.33333333%; }\n  .col-md-6 {\n    width: 50%; }\n  .col-md-5 {\n    width: 41.66666667%; }\n  .col-md-4 {\n    width: 33.33333333%; }\n  .col-md-3 {\n    width: 25%; }\n  .col-md-2 {\n    width: 16.66666667%; }\n  .col-md-1 {\n    width: 8.33333333%; }\n  .col-md-pull-12 {\n    right: 100%; }\n  .col-md-pull-11 {\n    right: 91.66666667%; }\n  .col-md-pull-10 {\n    right: 83.33333333%; }\n  .col-md-pull-9 {\n    right: 75%; }\n  .col-md-pull-8 {\n    right: 66.66666667%; }\n  .col-md-pull-7 {\n    right: 58.33333333%; }\n  .col-md-pull-6 {\n    right: 50%; }\n  .col-md-pull-5 {\n    right: 41.66666667%; }\n  .col-md-pull-4 {\n    right: 33.33333333%; }\n  .col-md-pull-3 {\n    right: 25%; }\n  .col-md-pull-2 {\n    right: 16.66666667%; }\n  .col-md-pull-1 {\n    right: 8.33333333%; }\n  .col-md-pull-0 {\n    right: auto; }\n  .col-md-push-12 {\n    left: 100%; }\n  .col-md-push-11 {\n    left: 91.66666667%; }\n  .col-md-push-10 {\n    left: 83.33333333%; }\n  .col-md-push-9 {\n    left: 75%; }\n  .col-md-push-8 {\n    left: 66.66666667%; }\n  .col-md-push-7 {\n    left: 58.33333333%; }\n  .col-md-push-6 {\n    left: 50%; }\n  .col-md-push-5 {\n    left: 41.66666667%; }\n  .col-md-push-4 {\n    left: 33.33333333%; }\n  .col-md-push-3 {\n    left: 25%; }\n  .col-md-push-2 {\n    left: 16.66666667%; }\n  .col-md-push-1 {\n    left: 8.33333333%; }\n  .col-md-push-0 {\n    left: auto; }\n  .col-md-offset-12 {\n    margin-left: 100%; }\n  .col-md-offset-11 {\n    margin-left: 91.66666667%; }\n  .col-md-offset-10 {\n    margin-left: 83.33333333%; }\n  .col-md-offset-9 {\n    margin-left: 75%; }\n  .col-md-offset-8 {\n    margin-left: 66.66666667%; }\n  .col-md-offset-7 {\n    margin-left: 58.33333333%; }\n  .col-md-offset-6 {\n    margin-left: 50%; }\n  .col-md-offset-5 {\n    margin-left: 41.66666667%; }\n  .col-md-offset-4 {\n    margin-left: 33.33333333%; }\n  .col-md-offset-3 {\n    margin-left: 25%; }\n  .col-md-offset-2 {\n    margin-left: 16.66666667%; }\n  .col-md-offset-1 {\n    margin-left: 8.33333333%; }\n  .col-md-offset-0 {\n    margin-left: 0; } }\n\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left; }\n  .col-lg-12 {\n    width: 100%; }\n  .col-lg-11 {\n    width: 91.66666667%; }\n  .col-lg-10 {\n    width: 83.33333333%; }\n  .col-lg-9 {\n    width: 75%; }\n  .col-lg-8 {\n    width: 66.66666667%; }\n  .col-lg-7 {\n    width: 58.33333333%; }\n  .col-lg-6 {\n    width: 50%; }\n  .col-lg-5 {\n    width: 41.66666667%; }\n  .col-lg-4 {\n    width: 33.33333333%; }\n  .col-lg-3 {\n    width: 25%; }\n  .col-lg-2 {\n    width: 16.66666667%; }\n  .col-lg-1 {\n    width: 8.33333333%; }\n  .col-lg-pull-12 {\n    right: 100%; }\n  .col-lg-pull-11 {\n    right: 91.66666667%; }\n  .col-lg-pull-10 {\n    right: 83.33333333%; }\n  .col-lg-pull-9 {\n    right: 75%; }\n  .col-lg-pull-8 {\n    right: 66.66666667%; }\n  .col-lg-pull-7 {\n    right: 58.33333333%; }\n  .col-lg-pull-6 {\n    right: 50%; }\n  .col-lg-pull-5 {\n    right: 41.66666667%; }\n  .col-lg-pull-4 {\n    right: 33.33333333%; }\n  .col-lg-pull-3 {\n    right: 25%; }\n  .col-lg-pull-2 {\n    right: 16.66666667%; }\n  .col-lg-pull-1 {\n    right: 8.33333333%; }\n  .col-lg-pull-0 {\n    right: auto; }\n  .col-lg-push-12 {\n    left: 100%; }\n  .col-lg-push-11 {\n    left: 91.66666667%; }\n  .col-lg-push-10 {\n    left: 83.33333333%; }\n  .col-lg-push-9 {\n    left: 75%; }\n  .col-lg-push-8 {\n    left: 66.66666667%; }\n  .col-lg-push-7 {\n    left: 58.33333333%; }\n  .col-lg-push-6 {\n    left: 50%; }\n  .col-lg-push-5 {\n    left: 41.66666667%; }\n  .col-lg-push-4 {\n    left: 33.33333333%; }\n  .col-lg-push-3 {\n    left: 25%; }\n  .col-lg-push-2 {\n    left: 16.66666667%; }\n  .col-lg-push-1 {\n    left: 8.33333333%; }\n  .col-lg-push-0 {\n    left: auto; }\n  .col-lg-offset-12 {\n    margin-left: 100%; }\n  .col-lg-offset-11 {\n    margin-left: 91.66666667%; }\n  .col-lg-offset-10 {\n    margin-left: 83.33333333%; }\n  .col-lg-offset-9 {\n    margin-left: 75%; }\n  .col-lg-offset-8 {\n    margin-left: 66.66666667%; }\n  .col-lg-offset-7 {\n    margin-left: 58.33333333%; }\n  .col-lg-offset-6 {\n    margin-left: 50%; }\n  .col-lg-offset-5 {\n    margin-left: 41.66666667%; }\n  .col-lg-offset-4 {\n    margin-left: 33.33333333%; }\n  .col-lg-offset-3 {\n    margin-left: 25%; }\n  .col-lg-offset-2 {\n    margin-left: 16.66666667%; }\n  .col-lg-offset-1 {\n    margin-left: 8.33333333%; }\n  .col-lg-offset-0 {\n    margin-left: 0; } }\n\n.clearfix:before,\n.clearfix:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after {\n  content: \" \";\n  display: table; }\n\n.clearfix:after,\n.container:after,\n.container-fluid:after,\n.row:after {\n  clear: both; }\n\n.blue-link {\n  color: #00a1d6; }\n  .blue-link:hover {\n    text-decoration: underline; }\n\n.white-link {\n  color: #fff; }\n  .white-link:hover {\n    text-decoration: underline; }\n\n.gray-word {\n  color: #99a2aa;\n  background-color: transparent;\n  font-size: 12px; }\n\n.btn-bean {\n  height: 20px;\n  border-radius: 4px;\n  font-size: 13px;\n  line-height: 20px;\n  padding: 0 12px;\n  transition: .1s ease; }\n\n.btn-blue {\n  color: #fff;\n  background-color: #00bfef;\n  border: 1px solid #00bfef; }\n  .btn-blue:hover {\n    background-color: #00a7de;\n    border: 1px solid #00a7de; }\n\n.btn-gray {\n  color: #99a2aa;\n  background-color: #f6f9fa;\n  border: 1px solid #f6f9fa; }\n  .btn-gray:hover {\n    background-color: #e5e9ef;\n    border: 1px solid #e5e9ef; }\n\n.uface {\n  display: block;\n  overflow: hidden;\n  border-radius: 50%; }\n  .uface img {\n    width: 100%;\n    height: auto; }\n\n.bface {\n  display: block;\n  overflow: hidden; }\n  .bface img {\n    width: 100%;\n    height: auto; }\n\n.oneline {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n\n.dot {\n  margin: 0 5px;\n  font-size: 12px; }\n  .dot:after {\n    content: \"\\2022\";\n    color: #99a2aa; }\n\nbody {\n  font-family: \"Microsoft YaHei\",Arial,Helvetica,sans-serif;\n  overflow-x: hidden; }\n\ninput[type=text],\ninput[type=file],\ninput[type=url],\ninput[type=password],\ninput[type=email],\ntextarea {\n  padding: 8px 12px;\n  border-radius: 4px;\n  border: 1px solid #e5e9ef; }\n\ninput:-webkit-autofill {\n  box-shadow: 0 0 0 100px #e9fbfe inset !important;\n  background-color: #e9fbfe !important;\n  border-color: #e4f4f9 !important; }\n\ndiv:empty:before {\n  content: attr(placeholder);\n  color: #99a2aa; }\n\ndiv:focus:before {\n  content: none; }\n\ndiv:focus {\n  outline: 0; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\nhtml {\n  font-family: sans-serif;\n  line-height: 1.15;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block; }\n\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\nprogress {\n  vertical-align: baseline; }\n\ntemplate,\n[hidden] {\n  display: none; }\n\na {\n  background-color: transparent;\n  -webkit-text-decoration-skip: objects; }\n\na:active,\na:hover {\n  outline-width: 0; }\n\nabbr[title] {\n  border-bottom: none;\n  text-decoration: underline;\n  text-decoration: underline dotted; }\n\nb,\nstrong {\n  font-weight: inherit; }\n\nb,\nstrong {\n  font-weight: bolder; }\n\ndfn {\n  font-style: italic; }\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\nmark {\n  background-color: #ff0;\n  color: #000; }\n\nsmall {\n  font-size: 80%; }\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\nimg {\n  border-style: none; }\n\nsvg:not(:root) {\n  overflow: hidden; }\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\nfigure {\n  margin: 1em 40px; }\n\nhr {\n  box-sizing: content-box;\n  height: 0;\n  overflow: visible; }\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font: inherit;\n  margin: 0; }\n\noptgroup {\n  font-weight: bold; }\n\nbutton,\ninput {\n  overflow: visible; }\n\nbutton,\nselect {\n  text-transform: none; }\n\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\nlegend {\n  box-sizing: border-box;\n  color: inherit;\n  display: table;\n  max-width: 100%;\n  padding: 0;\n  white-space: normal; }\n\ntextarea {\n  overflow: auto; }\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0; }\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  outline-offset: -2px; }\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n::-webkit-input-placeholder {\n  color: inherit;\n  opacity: 0.54; }\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  font: inherit; }\n\nhtml, body {\n  height: 100%; }\n\ndiv, button, input, textarea, img {\n  box-sizing: border-box; }\n\nul, span {\n  margin: 0;\n  padding: 0; }\n\np, h1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nli {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  cursor: pointer;\n  color: #222;\n  font-size: 14px; }\n\na, select, input, textarea, button {\n  outline: none; }\n\nlabel {\n  display: inline-block;\n  cursor: pointer;\n  font-family: 'Hiragino Sans GB',Helvetica,Arial,sans-serif;\n  vertical-align: middle; }\n\nbutton {\n  border: none;\n  cursor: pointer;\n  padding: 0;\n  background-color: transparent;\n  font-size: 14px; }\n\ninput[type=checkbox], input[type=radio] {\n  cursor: pointer;\n  margin: 0 5px; }\n\ninput {\n  vertical-align: middle; }\n\ntextarea {\n  resize: none;\n  vertical-align: top; }\n\n:-webkit-full-screen video {\n  width: 100%;\n  height: 100%; }\n\n:-moz-full-screen video {\n  width: 100%;\n  height: 100%; }\n\nvideo {\n  background-color: #000; }\n\n.container {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n  position: relative;\n  flex: 1; }\n\n@media (min-width: 768px) {\n  .container {\n    width: 750px; } }\n\n@media (min-width: 992px) {\n  .container {\n    width: 970px; } }\n\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px; } }\n\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.row {\n  margin-left: -15px;\n  margin-right: -15px; }\n\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left; }\n\n.col-xs-12 {\n  width: 100%; }\n\n.col-xs-11 {\n  width: 91.66666667%; }\n\n.col-xs-10 {\n  width: 83.33333333%; }\n\n.col-xs-9 {\n  width: 75%; }\n\n.col-xs-8 {\n  width: 66.66666667%; }\n\n.col-xs-7 {\n  width: 58.33333333%; }\n\n.col-xs-6 {\n  width: 50%; }\n\n.col-xs-5 {\n  width: 41.66666667%; }\n\n.col-xs-4 {\n  width: 33.33333333%; }\n\n.col-xs-3 {\n  width: 25%; }\n\n.col-xs-2 {\n  width: 16.66666667%; }\n\n.col-xs-1 {\n  width: 8.33333333%; }\n\n.col-xs-pull-12 {\n  right: 100%; }\n\n.col-xs-pull-11 {\n  right: 91.66666667%; }\n\n.col-xs-pull-10 {\n  right: 83.33333333%; }\n\n.col-xs-pull-9 {\n  right: 75%; }\n\n.col-xs-pull-8 {\n  right: 66.66666667%; }\n\n.col-xs-pull-7 {\n  right: 58.33333333%; }\n\n.col-xs-pull-6 {\n  right: 50%; }\n\n.col-xs-pull-5 {\n  right: 41.66666667%; }\n\n.col-xs-pull-4 {\n  right: 33.33333333%; }\n\n.col-xs-pull-3 {\n  right: 25%; }\n\n.col-xs-pull-2 {\n  right: 16.66666667%; }\n\n.col-xs-pull-1 {\n  right: 8.33333333%; }\n\n.col-xs-pull-0 {\n  right: auto; }\n\n.col-xs-push-12 {\n  left: 100%; }\n\n.col-xs-push-11 {\n  left: 91.66666667%; }\n\n.col-xs-push-10 {\n  left: 83.33333333%; }\n\n.col-xs-push-9 {\n  left: 75%; }\n\n.col-xs-push-8 {\n  left: 66.66666667%; }\n\n.col-xs-push-7 {\n  left: 58.33333333%; }\n\n.col-xs-push-6 {\n  left: 50%; }\n\n.col-xs-push-5 {\n  left: 41.66666667%; }\n\n.col-xs-push-4 {\n  left: 33.33333333%; }\n\n.col-xs-push-3 {\n  left: 25%; }\n\n.col-xs-push-2 {\n  left: 16.66666667%; }\n\n.col-xs-push-1 {\n  left: 8.33333333%; }\n\n.col-xs-push-0 {\n  left: auto; }\n\n.col-xs-offset-12 {\n  margin-left: 100%; }\n\n.col-xs-offset-11 {\n  margin-left: 91.66666667%; }\n\n.col-xs-offset-10 {\n  margin-left: 83.33333333%; }\n\n.col-xs-offset-9 {\n  margin-left: 75%; }\n\n.col-xs-offset-8 {\n  margin-left: 66.66666667%; }\n\n.col-xs-offset-7 {\n  margin-left: 58.33333333%; }\n\n.col-xs-offset-6 {\n  margin-left: 50%; }\n\n.col-xs-offset-5 {\n  margin-left: 41.66666667%; }\n\n.col-xs-offset-4 {\n  margin-left: 33.33333333%; }\n\n.col-xs-offset-3 {\n  margin-left: 25%; }\n\n.col-xs-offset-2 {\n  margin-left: 16.66666667%; }\n\n.col-xs-offset-1 {\n  margin-left: 8.33333333%; }\n\n.col-xs-offset-0 {\n  margin-left: 0; }\n\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left; }\n  .col-sm-12 {\n    width: 100%; }\n  .col-sm-11 {\n    width: 91.66666667%; }\n  .col-sm-10 {\n    width: 83.33333333%; }\n  .col-sm-9 {\n    width: 75%; }\n  .col-sm-8 {\n    width: 66.66666667%; }\n  .col-sm-7 {\n    width: 58.33333333%; }\n  .col-sm-6 {\n    width: 50%; }\n  .col-sm-5 {\n    width: 41.66666667%; }\n  .col-sm-4 {\n    width: 33.33333333%; }\n  .col-sm-3 {\n    width: 25%; }\n  .col-sm-2 {\n    width: 16.66666667%; }\n  .col-sm-1 {\n    width: 8.33333333%; }\n  .col-sm-pull-12 {\n    right: 100%; }\n  .col-sm-pull-11 {\n    right: 91.66666667%; }\n  .col-sm-pull-10 {\n    right: 83.33333333%; }\n  .col-sm-pull-9 {\n    right: 75%; }\n  .col-sm-pull-8 {\n    right: 66.66666667%; }\n  .col-sm-pull-7 {\n    right: 58.33333333%; }\n  .col-sm-pull-6 {\n    right: 50%; }\n  .col-sm-pull-5 {\n    right: 41.66666667%; }\n  .col-sm-pull-4 {\n    right: 33.33333333%; }\n  .col-sm-pull-3 {\n    right: 25%; }\n  .col-sm-pull-2 {\n    right: 16.66666667%; }\n  .col-sm-pull-1 {\n    right: 8.33333333%; }\n  .col-sm-pull-0 {\n    right: auto; }\n  .col-sm-push-12 {\n    left: 100%; }\n  .col-sm-push-11 {\n    left: 91.66666667%; }\n  .col-sm-push-10 {\n    left: 83.33333333%; }\n  .col-sm-push-9 {\n    left: 75%; }\n  .col-sm-push-8 {\n    left: 66.66666667%; }\n  .col-sm-push-7 {\n    left: 58.33333333%; }\n  .col-sm-push-6 {\n    left: 50%; }\n  .col-sm-push-5 {\n    left: 41.66666667%; }\n  .col-sm-push-4 {\n    left: 33.33333333%; }\n  .col-sm-push-3 {\n    left: 25%; }\n  .col-sm-push-2 {\n    left: 16.66666667%; }\n  .col-sm-push-1 {\n    left: 8.33333333%; }\n  .col-sm-push-0 {\n    left: auto; }\n  .col-sm-offset-12 {\n    margin-left: 100%; }\n  .col-sm-offset-11 {\n    margin-left: 91.66666667%; }\n  .col-sm-offset-10 {\n    margin-left: 83.33333333%; }\n  .col-sm-offset-9 {\n    margin-left: 75%; }\n  .col-sm-offset-8 {\n    margin-left: 66.66666667%; }\n  .col-sm-offset-7 {\n    margin-left: 58.33333333%; }\n  .col-sm-offset-6 {\n    margin-left: 50%; }\n  .col-sm-offset-5 {\n    margin-left: 41.66666667%; }\n  .col-sm-offset-4 {\n    margin-left: 33.33333333%; }\n  .col-sm-offset-3 {\n    margin-left: 25%; }\n  .col-sm-offset-2 {\n    margin-left: 16.66666667%; }\n  .col-sm-offset-1 {\n    margin-left: 8.33333333%; }\n  .col-sm-offset-0 {\n    margin-left: 0; } }\n\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left; }\n  .col-md-12 {\n    width: 100%; }\n  .col-md-11 {\n    width: 91.66666667%; }\n  .col-md-10 {\n    width: 83.33333333%; }\n  .col-md-9 {\n    width: 75%; }\n  .col-md-8 {\n    width: 66.66666667%; }\n  .col-md-7 {\n    width: 58.33333333%; }\n  .col-md-6 {\n    width: 50%; }\n  .col-md-5 {\n    width: 41.66666667%; }\n  .col-md-4 {\n    width: 33.33333333%; }\n  .col-md-3 {\n    width: 25%; }\n  .col-md-2 {\n    width: 16.66666667%; }\n  .col-md-1 {\n    width: 8.33333333%; }\n  .col-md-pull-12 {\n    right: 100%; }\n  .col-md-pull-11 {\n    right: 91.66666667%; }\n  .col-md-pull-10 {\n    right: 83.33333333%; }\n  .col-md-pull-9 {\n    right: 75%; }\n  .col-md-pull-8 {\n    right: 66.66666667%; }\n  .col-md-pull-7 {\n    right: 58.33333333%; }\n  .col-md-pull-6 {\n    right: 50%; }\n  .col-md-pull-5 {\n    right: 41.66666667%; }\n  .col-md-pull-4 {\n    right: 33.33333333%; }\n  .col-md-pull-3 {\n    right: 25%; }\n  .col-md-pull-2 {\n    right: 16.66666667%; }\n  .col-md-pull-1 {\n    right: 8.33333333%; }\n  .col-md-pull-0 {\n    right: auto; }\n  .col-md-push-12 {\n    left: 100%; }\n  .col-md-push-11 {\n    left: 91.66666667%; }\n  .col-md-push-10 {\n    left: 83.33333333%; }\n  .col-md-push-9 {\n    left: 75%; }\n  .col-md-push-8 {\n    left: 66.66666667%; }\n  .col-md-push-7 {\n    left: 58.33333333%; }\n  .col-md-push-6 {\n    left: 50%; }\n  .col-md-push-5 {\n    left: 41.66666667%; }\n  .col-md-push-4 {\n    left: 33.33333333%; }\n  .col-md-push-3 {\n    left: 25%; }\n  .col-md-push-2 {\n    left: 16.66666667%; }\n  .col-md-push-1 {\n    left: 8.33333333%; }\n  .col-md-push-0 {\n    left: auto; }\n  .col-md-offset-12 {\n    margin-left: 100%; }\n  .col-md-offset-11 {\n    margin-left: 91.66666667%; }\n  .col-md-offset-10 {\n    margin-left: 83.33333333%; }\n  .col-md-offset-9 {\n    margin-left: 75%; }\n  .col-md-offset-8 {\n    margin-left: 66.66666667%; }\n  .col-md-offset-7 {\n    margin-left: 58.33333333%; }\n  .col-md-offset-6 {\n    margin-left: 50%; }\n  .col-md-offset-5 {\n    margin-left: 41.66666667%; }\n  .col-md-offset-4 {\n    margin-left: 33.33333333%; }\n  .col-md-offset-3 {\n    margin-left: 25%; }\n  .col-md-offset-2 {\n    margin-left: 16.66666667%; }\n  .col-md-offset-1 {\n    margin-left: 8.33333333%; }\n  .col-md-offset-0 {\n    margin-left: 0; } }\n\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left; }\n  .col-lg-12 {\n    width: 100%; }\n  .col-lg-11 {\n    width: 91.66666667%; }\n  .col-lg-10 {\n    width: 83.33333333%; }\n  .col-lg-9 {\n    width: 75%; }\n  .col-lg-8 {\n    width: 66.66666667%; }\n  .col-lg-7 {\n    width: 58.33333333%; }\n  .col-lg-6 {\n    width: 50%; }\n  .col-lg-5 {\n    width: 41.66666667%; }\n  .col-lg-4 {\n    width: 33.33333333%; }\n  .col-lg-3 {\n    width: 25%; }\n  .col-lg-2 {\n    width: 16.66666667%; }\n  .col-lg-1 {\n    width: 8.33333333%; }\n  .col-lg-pull-12 {\n    right: 100%; }\n  .col-lg-pull-11 {\n    right: 91.66666667%; }\n  .col-lg-pull-10 {\n    right: 83.33333333%; }\n  .col-lg-pull-9 {\n    right: 75%; }\n  .col-lg-pull-8 {\n    right: 66.66666667%; }\n  .col-lg-pull-7 {\n    right: 58.33333333%; }\n  .col-lg-pull-6 {\n    right: 50%; }\n  .col-lg-pull-5 {\n    right: 41.66666667%; }\n  .col-lg-pull-4 {\n    right: 33.33333333%; }\n  .col-lg-pull-3 {\n    right: 25%; }\n  .col-lg-pull-2 {\n    right: 16.66666667%; }\n  .col-lg-pull-1 {\n    right: 8.33333333%; }\n  .col-lg-pull-0 {\n    right: auto; }\n  .col-lg-push-12 {\n    left: 100%; }\n  .col-lg-push-11 {\n    left: 91.66666667%; }\n  .col-lg-push-10 {\n    left: 83.33333333%; }\n  .col-lg-push-9 {\n    left: 75%; }\n  .col-lg-push-8 {\n    left: 66.66666667%; }\n  .col-lg-push-7 {\n    left: 58.33333333%; }\n  .col-lg-push-6 {\n    left: 50%; }\n  .col-lg-push-5 {\n    left: 41.66666667%; }\n  .col-lg-push-4 {\n    left: 33.33333333%; }\n  .col-lg-push-3 {\n    left: 25%; }\n  .col-lg-push-2 {\n    left: 16.66666667%; }\n  .col-lg-push-1 {\n    left: 8.33333333%; }\n  .col-lg-push-0 {\n    left: auto; }\n  .col-lg-offset-12 {\n    margin-left: 100%; }\n  .col-lg-offset-11 {\n    margin-left: 91.66666667%; }\n  .col-lg-offset-10 {\n    margin-left: 83.33333333%; }\n  .col-lg-offset-9 {\n    margin-left: 75%; }\n  .col-lg-offset-8 {\n    margin-left: 66.66666667%; }\n  .col-lg-offset-7 {\n    margin-left: 58.33333333%; }\n  .col-lg-offset-6 {\n    margin-left: 50%; }\n  .col-lg-offset-5 {\n    margin-left: 41.66666667%; }\n  .col-lg-offset-4 {\n    margin-left: 33.33333333%; }\n  .col-lg-offset-3 {\n    margin-left: 25%; }\n  .col-lg-offset-2 {\n    margin-left: 16.66666667%; }\n  .col-lg-offset-1 {\n    margin-left: 8.33333333%; }\n  .col-lg-offset-0 {\n    margin-left: 0; } }\n\n.clearfix:before,\n.clearfix:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after {\n  content: \" \";\n  display: table; }\n\n.clearfix:after,\n.container:after,\n.container-fluid:after,\n.row:after {\n  clear: both; }\n\n.blue-link {\n  color: #00a1d6; }\n  .blue-link:hover {\n    text-decoration: underline; }\n\n.white-link {\n  color: #fff; }\n  .white-link:hover {\n    text-decoration: underline; }\n\n.gray-link {\n  color: #99a2aa;\n  background-color: transparent;\n  transition: .2s; }\n  .gray-link:hover {\n    color: #6d757a; }\n\n.normal-link {\n  color: #6d757a;\n  transition: .1s; }\n  .normal-link:hover {\n    color: #00bfef; }\n\n.gray-word {\n  color: #99a2aa;\n  background-color: transparent;\n  font-size: 12px; }\n\n.btn-bean {\n  height: 20px;\n  border-radius: 4px;\n  font-size: 13px;\n  line-height: 20px;\n  padding: 0 12px;\n  transition: .1s ease; }\n\n.btn-cap {\n  border-radius: 15px;\n  height: 30px;\n  width: 100px;\n  transition: .1s ease; }\n\n.btn-pink {\n  color: #fff;\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3; }\n  .btn-pink:hover {\n    background-color: #ff607f;\n    border: 1px solid #ff607f; }\n\n.btn-blue {\n  color: #fff;\n  background-color: #00bfef;\n  border: 1px solid #00bfef; }\n  .btn-blue:hover {\n    background-color: #00a7de;\n    border: 1px solid #00a7de; }\n\n.btn-gray {\n  color: #99a2aa;\n  background-color: #f6f9fa;\n  border: 1px solid #f6f9fa; }\n  .btn-gray:hover {\n    background-color: #e5e9ef;\n    border: 1px solid #e5e9ef; }\n\n.template-warp {\n  display: flex;\n  flex-direction: column;\n  flex: 1; }\n\n.uface {\n  display: block;\n  overflow: hidden;\n  border-radius: 50%; }\n  .uface img {\n    width: 100%;\n    height: auto; }\n\n.bface {\n  display: block;\n  overflow: hidden; }\n  .bface img {\n    width: 100%;\n    height: auto; }\n\n.oneline {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n\n.dot {\n  margin: 0 5px;\n  font-size: 12px; }\n  .dot:after {\n    content: \"\\2022\";\n    color: #99a2aa; }\n\n.summary p {\n  margin-top: 10px;\n  text-indent: 2em; }\n\nbody {\n  font-family: \"Microsoft YaHei\",Arial,Helvetica,sans-serif;\n  overflow-x: hidden; }\n\ninput[type=text],\ninput[type=file],\ninput[type=url],\ninput[type=password],\ninput[type=email],\ntextarea {\n  padding: 8px 12px;\n  border-radius: 4px;\n  border: 1px solid #e5e9ef; }\n\ninput:-webkit-autofill {\n  box-shadow: 0 0 0 100px #e9fbfe inset !important;\n  background-color: #e9fbfe !important;\n  border-color: #e4f4f9 !important; }\n\ndiv:empty:before {\n  content: attr(placeholder);\n  color: #99a2aa; }\n\ndiv:focus:before {\n  content: none; }\n\ndiv:focus {\n  outline: 0; }\n", ""]);
 	
 	// exports
 
@@ -1977,16 +1977,16 @@
 	                this.$root.$refs.navsign.showLogin();
 	            }
 	        },
-	        destoryComment: function destoryComment(el, item) {
+	        destoryComment: function destoryComment(el, item, index) {
 	            var _this4 = this;
 	
 	            if (this.$store.getters.isLogin) {
-	                var button = el.currentTarget;
-	                button.setAttribute('disabled', 'disabled');
+	                var btn = el.currentTarget;
+	                btn.setAttribute('disabled', 'disabled');
 	                this.$http.post('/api/comment/delete', {
 	                    id: item.id
 	                }).then(function () {
-	                    _this4.list.$remove(item);
+	                    _this4.list.splice(index, 1);
 	                }, function () {
 	                    _this4.$root.$refs.toast.open({
 	                        theme: "error",
@@ -1997,16 +1997,16 @@
 	                this.$root.$refs.navsign.showLogin();
 	            }
 	        },
-	        destoryReply: function destoryReply(el, item, reply) {
+	        destoryReply: function destoryReply(el, item, reply, index) {
 	            var _this5 = this;
 	
 	            if (this.$store.getters.isLogin) {
-	                var button = el.currentTarget;
-	                button.setAttribute('disabled', 'disabled');
+	                var btn = el.currentTarget;
+	                btn.setAttribute('disabled', 'disabled');
 	                this.$http.post('/api/comment/delete', {
 	                    id: reply.id
 	                }).then(function () {
-	                    item.replyList.$remove(reply);
+	                    item.replyList.splice(index, 1);
 	                }, function () {
 	                    _this5.$root.$refs.toast.open({
 	                        theme: "error",
@@ -2031,7 +2031,7 @@
 	                    button.setAttribute('disabled', 'disabled');
 	                    item.hasLike ? item.like-- : item.like++;
 	                    item.hasLike = !item.hasLike;
-	                    this.$http.post('/api/comment/agree', {
+	                    this.$http.post('/api/like', {
 	                        id: item.id,
 	                        type: 'Comment'
 	                    }).then(function () {
@@ -2058,7 +2058,7 @@
 	                } else {
 	                    var button = el.currentTarget;
 	                    button.setAttribute('disabled', 'disabled');
-	                    this.$http.post('/api/comment/reply/store', {
+	                    this.$http.post('/api/comment/reply', {
 	                        content: item.replyText.replace('\n', '<br />'),
 	                        id: item.id,
 	                        target: item.id
@@ -2084,7 +2084,7 @@
 	                if (reply.replyText.length !== 0 && reply.replyText.length < 21) {
 	                    var button = el.currentTarget;
 	                    button.setAttribute('disabled', 'disabled');
-	                    this.$http.post('/api/comment/reply/store', {
+	                    this.$http.post('/api/comment/reply', {
 	                        content: reply.replyText.replace('\n', '<br />'),
 	                        id: item.id,
 	                        target: reply.id,
@@ -2154,7 +2154,7 @@
 	    }
 	  }, ["发表"])])]), " ", _h('div', {
 	    staticClass: "comment-list"
-	  }, [_l((list), function(item) {
+	  }, [_l((list), function(item, index) {
 	    return _h('div', {
 	      staticClass: "comment-item"
 	    }, [_h('div', {
@@ -2210,12 +2210,12 @@
 	      staticClass: "comment-hover",
 	      on: {
 	        "click": function($event) {
-	          destoryComment($event, item)
+	          destoryComment($event, item, index)
 	        }
 	      }
 	    }, ["删除"]) : _e()])]), " ", (item.show) ? _h('div', {
 	      staticClass: "comment-reply"
-	    }, [_l((item.replyList), function(reply) {
+	    }, [_l((item.replyList), function(reply, dito) {
 	      return _h('div', [_h('div', {
 	        staticClass: "reply-header"
 	      }, [_h('a', {
@@ -2264,7 +2264,7 @@
 	        staticClass: "comment-hover",
 	        on: {
 	          "click": function($event) {
-	            destoryReply($event, item, reply)
+	            destoryReply($event, item, reply, dito)
 	          }
 	        }
 	      }, ["删除"]) : _h('button', {
@@ -3757,7 +3757,7 @@
 /* 87 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -3836,7 +3836,32 @@
 	        };
 	    },
 	
-	    methods: {}
+	    methods: {
+	        query: function query() {
+	            var _this = this;
+	
+	            if (this.q.length !== 0) {
+	                this.$http.get('/api/query/index', { params: {
+	                        q: this.q
+	                    } }).then(function (res) {
+	                    _this.$router.push({ path: '/bangumi/' + res.body.data });
+	                    _this.q = "";
+	                }, function (res) {
+	                    if (res.status === 404) {
+	                        _this.$root.$refs.toast.open({
+	                            theme: "info",
+	                            content: "没有找到数据！"
+	                        });
+	                    } else {
+	                        _this.$root.$refs.toast.open({
+	                            theme: "error",
+	                            content: "服务器异常，获取数据失败！"
+	                        });
+	                    }
+	                });
+	            }
+	        }
+	    }
 	};
 
 /***/ },
@@ -3862,15 +3887,21 @@
 	      "value": _s(q)
 	    },
 	    on: {
+	      "keyup": function($event) {
+	        if ($event.keyCode !== 13) return;
+	        query($event)
+	      },
 	      "input": function($event) {
 	        if ($event.target.composing) return;
 	        q = $event.target.value
 	      }
 	    }
-	  }), " ", _m(0)])
-	}},staticRenderFns: [function (){with(this) {
-	  return _h('button')
-	}}]}
+	  }), " ", _h('button', {
+	    on: {
+	      "click": query
+	    }
+	  })])
+	}},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -4153,7 +4184,7 @@
 	    },
 	    data: function data() {
 	        return {
-	            socket: null,
+	            socket: undefined,
 	            menu: [{
 	                style: "btn-msg",
 	                click: "btn-msg-click",
@@ -4169,6 +4200,9 @@
 	            }]
 	        };
 	    },
+	    created: function created() {
+	        this.makeWebSocket(this.$store.getters.isLogin);
+	    },
 	
 	    methods: {
 	        menuSwitch: function menuSwitch(index) {
@@ -4180,7 +4214,7 @@
 	            }
 	        },
 	        makeWebSocket: function makeWebSocket(bool) {
-	            if (this.socket === null) {
+	            if (typeof this.socket === 'undefined' && bool) {
 	                this.socket = io("http://" + window.location.host + ":3001");
 	            }
 	            if (bool) {
@@ -4193,8 +4227,10 @@
 	                    console.log(data);
 	                });
 	            } else {
-	                this.socket.disconnect();
-	                this.socket = null;
+	                if (typeof this.socket !== 'undefined') {
+	                    this.socket.disconnect();
+	                    this.socket = undefined;
+	                }
 	            }
 	        }
 	    }
@@ -4355,7 +4391,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#warp[data-v-13] {\n  position: relative;\n  width: 58px;\n  height: 48px;\n}\n#creator[data-v-13] {\n  display: block;\n  width: 58px;\n  height: 48px;\n  line-height: 48px;\n  background: linear-gradient(#00bfef, #00a7de);\n  border-radius: 0 0 8px 8px;\n  text-align: center;\n  color: #fff;\n  z-index: 20;\n  font-size: 14px;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n#creator[data-v-13]:hover {\n    background: linear-gradient(#3cd8ff, #00bfef);\n}\n#creator:hover + #menu[data-v-13] {\n      height: 45px;\n      visibility: visible;\n      opacity: 1;\n}\n#menu[data-v-13] {\n  position: absolute;\n  left: 0;\n  height: 0;\n  width: 58px;\n  top: 40px;\n  padding-top: 8px;\n  z-index: 15;\n  background-color: #fff;\n  border-radius: 0 0 4px 4px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);\n  overflow: hidden;\n  transition: .4s;\n  visibility: hidden;\n  opacity: 0;\n  box-sizing: content-box;\n}\n#menu a[data-v-13] {\n    display: block;\n    width: 58px;\n    height: 45px;\n    line-height: 45px;\n    text-align: center;\n    font-size: 13px;\n}\n#menu a[data-v-13]:hover {\n      background-color: #e5e9ef;\n}\n#menu[data-v-13]:hover {\n    visibility: visible;\n    opacity: 1;\n    height: 45px;\n}\n", "", {"version":3,"sources":["/./resources/components/nav/nav-creator.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;CAAE;AAEjB;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,8CAA8C;EAC9C,2BAA2B;EAC3B,mBAAmB;EACnB,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,QAAQ;EACR,OAAO;CAAE;AACT;IACE,8CAA8C;CAAE;AAChD;MACE,aAAa;MACb,oBAAoB;MACpB,WAAW;CAAE;AAEnB;EACE,mBAAmB;EACnB,QAAQ;EACR,UAAU;EACV,YAAY;EACZ,UAAU;EACV,iBAAiB;EACjB,YAAY;EACZ,uBAAuB;EACvB,2BAA2B;EAC3B,0CAA0C;EAC1C,iBAAiB;EACjB,gBAAgB;EAChB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;CAAE;AAC1B;IACE,eAAe;IACf,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,mBAAmB;IACnB,gBAAgB;CAAE;AAClB;MACE,0BAA0B;CAAE;AAChC;IACE,oBAAoB;IACpB,WAAW;IACX,aAAa;CAAE","file":"nav-creator.vue","sourcesContent":["#warp {\n  position: relative;\n  width: 58px;\n  height: 48px; }\n\n#creator {\n  display: block;\n  width: 58px;\n  height: 48px;\n  line-height: 48px;\n  background: linear-gradient(#00bfef, #00a7de);\n  border-radius: 0 0 8px 8px;\n  text-align: center;\n  color: #fff;\n  z-index: 20;\n  font-size: 14px;\n  position: absolute;\n  left: 0;\n  top: 0; }\n  #creator:hover {\n    background: linear-gradient(#3cd8ff, #00bfef); }\n    #creator:hover + #menu {\n      height: 45px;\n      visibility: visible;\n      opacity: 1; }\n\n#menu {\n  position: absolute;\n  left: 0;\n  height: 0;\n  width: 58px;\n  top: 40px;\n  padding-top: 8px;\n  z-index: 15;\n  background-color: #fff;\n  border-radius: 0 0 4px 4px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);\n  overflow: hidden;\n  transition: .4s;\n  visibility: hidden;\n  opacity: 0;\n  box-sizing: content-box; }\n  #menu a {\n    display: block;\n    width: 58px;\n    height: 45px;\n    line-height: 45px;\n    text-align: center;\n    font-size: 13px; }\n    #menu a:hover {\n      background-color: #e5e9ef; }\n  #menu:hover {\n    visibility: visible;\n    opacity: 1;\n    height: 45px; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n#warp[data-v-13] {\n  position: relative;\n  width: 58px;\n  height: 48px;\n}\n#creator[data-v-13] {\n  display: block;\n  width: 58px;\n  height: 48px;\n  line-height: 48px;\n  background: linear-gradient(#00bfef, #00a7de);\n  border-radius: 0 0 8px 8px;\n  text-align: center;\n  color: #fff;\n  z-index: 20;\n  font-size: 14px;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n#creator[data-v-13]:hover {\n    background: linear-gradient(#3cd8ff, #00bfef);\n}\n#creator:hover + #menu[data-v-13] {\n      height: 45px;\n      visibility: visible;\n      opacity: 1;\n}\n#menu[data-v-13] {\n  position: absolute;\n  left: 0;\n  height: 0;\n  width: 58px;\n  top: 40px;\n  padding-top: 8px;\n  z-index: 15;\n  background-color: #fff;\n  border-radius: 0 0 4px 4px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);\n  overflow: hidden;\n  transition: .3s;\n  visibility: hidden;\n  opacity: 0;\n  box-sizing: content-box;\n}\n#menu a[data-v-13] {\n    display: block;\n    width: 58px;\n    height: 45px;\n    line-height: 45px;\n    text-align: center;\n    font-size: 13px;\n}\n#menu a[data-v-13]:hover {\n      background-color: #e5e9ef;\n}\n#menu[data-v-13]:hover {\n    visibility: visible;\n    opacity: 1;\n    height: 45px;\n}\n", "", {"version":3,"sources":["/./resources/components/nav/nav-creator.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;CAAE;AAEjB;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,8CAA8C;EAC9C,2BAA2B;EAC3B,mBAAmB;EACnB,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,QAAQ;EACR,OAAO;CAAE;AACT;IACE,8CAA8C;CAAE;AAChD;MACE,aAAa;MACb,oBAAoB;MACpB,WAAW;CAAE;AAEnB;EACE,mBAAmB;EACnB,QAAQ;EACR,UAAU;EACV,YAAY;EACZ,UAAU;EACV,iBAAiB;EACjB,YAAY;EACZ,uBAAuB;EACvB,2BAA2B;EAC3B,0CAA0C;EAC1C,iBAAiB;EACjB,gBAAgB;EAChB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;CAAE;AAC1B;IACE,eAAe;IACf,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,mBAAmB;IACnB,gBAAgB;CAAE;AAClB;MACE,0BAA0B;CAAE;AAChC;IACE,oBAAoB;IACpB,WAAW;IACX,aAAa;CAAE","file":"nav-creator.vue","sourcesContent":["#warp {\n  position: relative;\n  width: 58px;\n  height: 48px; }\n\n#creator {\n  display: block;\n  width: 58px;\n  height: 48px;\n  line-height: 48px;\n  background: linear-gradient(#00bfef, #00a7de);\n  border-radius: 0 0 8px 8px;\n  text-align: center;\n  color: #fff;\n  z-index: 20;\n  font-size: 14px;\n  position: absolute;\n  left: 0;\n  top: 0; }\n  #creator:hover {\n    background: linear-gradient(#3cd8ff, #00bfef); }\n    #creator:hover + #menu {\n      height: 45px;\n      visibility: visible;\n      opacity: 1; }\n\n#menu {\n  position: absolute;\n  left: 0;\n  height: 0;\n  width: 58px;\n  top: 40px;\n  padding-top: 8px;\n  z-index: 15;\n  background-color: #fff;\n  border-radius: 0 0 4px 4px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);\n  overflow: hidden;\n  transition: .3s;\n  visibility: hidden;\n  opacity: 0;\n  box-sizing: content-box; }\n  #menu a {\n    display: block;\n    width: 58px;\n    height: 45px;\n    line-height: 45px;\n    text-align: center;\n    font-size: 13px; }\n    #menu a:hover {\n      background-color: #e5e9ef; }\n  #menu:hover {\n    visibility: visible;\n    opacity: 1;\n    height: 45px; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -4722,16 +4758,23 @@
 	exports.default = {
 	    data: function data() {
 	        return {
-	            open: true
+	            open: true,
+	            padding: false
 	        };
 	    },
 	
 	    methods: {
 	        show: function show() {
 	            this.open = true;
+	            this.padding = false;
+	        },
+	        block: function block() {
+	            this.open = false;
+	            this.padding = true;
 	        },
 	        hidden: function hidden() {
 	            this.open = false;
+	            this.padding = false;
 	        }
 	    }
 	};
@@ -4741,15 +4784,25 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {
-	  return _h('div', [(open) ? _h('div', {
+	  return _h('div', [_h('div', {
+	    directives: [{
+	      name: "show",
+	      value: (open),
+	      expression: "open"
+	    }],
 	    attrs: {
 	      "id": "banner"
 	    }
-	  }) : _h('div', {
+	  }), " ", _h('div', {
+	    directives: [{
+	      name: "show",
+	      value: (padding),
+	      expression: "padding"
+	    }],
 	    attrs: {
 	      "id": "padding"
 	    }
-	  }), " "])
+	  })])
 	}},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -4868,7 +4921,8 @@
 	            signIn: {
 	                remember: true,
 	                name: "",
-	                password: ""
+	                password: "",
+	                method: ""
 	            },
 	            signUp: {
 	                captcha: true,
@@ -4989,6 +5043,9 @@
 	                _this.$store.dispatch('setLogin', { bool: bool });
 	                document.getElementById('_auth').setAttribute('content', 1);
 	                _this.$root.$refs.navbar.makeLogin();
+	                _this.signIn.name = "";
+	                _this.signIn.password = "";
+	                _this.signIn.method = "";
 	            }, function (res) {
 	                if (res.status === 422) {
 	                    _this.$root.$refs.toast.open({
@@ -5071,6 +5128,9 @@
 	                _this2.signIn.name = _this2.signUp.email;
 	                _this2.signIn.password = _this2.signUp.password;
 	                _this2.login();
+	                _this2.signUp.name = "";
+	                _this2.signUp.email = "";
+	                _this2.signUp.password = "";
 	            }, function (res) {
 	                if (res.status === 422) {
 	                    if (res.body.email) {
@@ -7334,7 +7394,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#post-list[data-v-14] {\n  margin-top: 20px;\n}\n#post-list .post-item[data-v-14] {\n    min-height: 80px;\n    border-top: 1px solid #e5e9ef;\n    background-color: #fff;\n    transition: background-color .2s;\n    padding: 10px 20px;\n    display: flex;\n    flex-direction: column;\n}\n#post-list .post-item[data-v-14]:first-child {\n      border-top: none;\n}\n#post-list .post-item[data-v-14]:hover {\n      transition: 0s;\n      background-color: #f6f9fa;\n}\n#post-list .post-item .head[data-v-14] {\n      display: flex;\n      justify-content: space-between;\n}\n#post-list .post-item .head > div[data-v-14] {\n        display: flex;\n        align-items: center;\n}\n#post-list .post-item .head .uface[data-v-14], #post-list .post-item .head .bface[data-v-14] {\n        width: 24px;\n        height: 24px;\n}\n#post-list .post-item .head .title[data-v-14] {\n        margin-left: 10px;\n}\n", "", {"version":3,"sources":["/./resources/components/post/list.vue"],"names":[],"mappings":";AAAA;EACE,iBAAiB;CAAE;AACnB;IACE,iBAAiB;IACjB,8BAA8B;IAC9B,uBAAuB;IACvB,iCAAiC;IACjC,mBAAmB;IACnB,cAAc;IACd,uBAAuB;CAAE;AACzB;MACE,iBAAiB;CAAE;AACrB;MACE,eAAe;MACf,0BAA0B;CAAE;AAC9B;MACE,cAAc;MACd,+BAA+B;CAAE;AACjC;QACE,cAAc;QACd,oBAAoB;CAAE;AACxB;QACE,YAAY;QACZ,aAAa;CAAE;AACjB;QACE,kBAAkB;CAAE","file":"list.vue","sourcesContent":["#post-list {\n  margin-top: 20px; }\n  #post-list .post-item {\n    min-height: 80px;\n    border-top: 1px solid #e5e9ef;\n    background-color: #fff;\n    transition: background-color .2s;\n    padding: 10px 20px;\n    display: flex;\n    flex-direction: column; }\n    #post-list .post-item:first-child {\n      border-top: none; }\n    #post-list .post-item:hover {\n      transition: 0s;\n      background-color: #f6f9fa; }\n    #post-list .post-item .head {\n      display: flex;\n      justify-content: space-between; }\n      #post-list .post-item .head > div {\n        display: flex;\n        align-items: center; }\n      #post-list .post-item .head .uface, #post-list .post-item .head .bface {\n        width: 24px;\n        height: 24px; }\n      #post-list .post-item .head .title {\n        margin-left: 10px; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n#post-list[data-v-14] {\n  margin-top: 20px;\n}\n#post-list .post-item[data-v-14] {\n    min-height: 80px;\n    border-top: 1px solid #e5e9ef;\n    background-color: #fff;\n    transition: background-color .2s;\n    padding: 10px 20px;\n    display: flex;\n    flex-direction: column;\n}\n#post-list .post-item[data-v-14]:first-child {\n      border-top: none;\n}\n#post-list .post-item[data-v-14]:hover {\n      transition: 0s;\n      background-color: #f6f9fa;\n}\n#post-list .post-item .head[data-v-14] {\n      display: flex;\n      justify-content: space-between;\n      margin-bottom: 10px;\n}\n#post-list .post-item .head > div[data-v-14] {\n        display: flex;\n        align-items: center;\n}\n#post-list .post-item .head .uface[data-v-14], #post-list .post-item .head .bface[data-v-14] {\n        width: 24px;\n        height: 24px;\n}\n#post-list .post-item .head .gray-link[data-v-14] {\n        margin-left: 5px;\n        font-size: 13px;\n}\n#post-list .post-item .foot[data-v-14] {\n      margin-top: 10px;\n      display: flex;\n      justify-content: flex-end;\n}\n", "", {"version":3,"sources":["/./resources/components/post/list.vue"],"names":[],"mappings":";AAAA;EACE,iBAAiB;CAAE;AACnB;IACE,iBAAiB;IACjB,8BAA8B;IAC9B,uBAAuB;IACvB,iCAAiC;IACjC,mBAAmB;IACnB,cAAc;IACd,uBAAuB;CAAE;AACzB;MACE,iBAAiB;CAAE;AACrB;MACE,eAAe;MACf,0BAA0B;CAAE;AAC9B;MACE,cAAc;MACd,+BAA+B;MAC/B,oBAAoB;CAAE;AACtB;QACE,cAAc;QACd,oBAAoB;CAAE;AACxB;QACE,YAAY;QACZ,aAAa;CAAE;AACjB;QACE,iBAAiB;QACjB,gBAAgB;CAAE;AACtB;MACE,iBAAiB;MACjB,cAAc;MACd,0BAA0B;CAAE","file":"list.vue","sourcesContent":["#post-list {\n  margin-top: 20px; }\n  #post-list .post-item {\n    min-height: 80px;\n    border-top: 1px solid #e5e9ef;\n    background-color: #fff;\n    transition: background-color .2s;\n    padding: 10px 20px;\n    display: flex;\n    flex-direction: column; }\n    #post-list .post-item:first-child {\n      border-top: none; }\n    #post-list .post-item:hover {\n      transition: 0s;\n      background-color: #f6f9fa; }\n    #post-list .post-item .head {\n      display: flex;\n      justify-content: space-between;\n      margin-bottom: 10px; }\n      #post-list .post-item .head > div {\n        display: flex;\n        align-items: center; }\n      #post-list .post-item .head .uface, #post-list .post-item .head .bface {\n        width: 24px;\n        height: 24px; }\n      #post-list .post-item .head .gray-link {\n        margin-left: 5px;\n        font-size: 13px; }\n    #post-list .post-item .foot {\n      margin-top: 10px;\n      display: flex;\n      justify-content: flex-end; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -7348,6 +7408,16 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -7493,6 +7563,11 @@
 	        "src": post.uFace
 	      }
 	    })]), " ", _h('router-link', {
+	      staticClass: "gray-link",
+	      attrs: {
+	        "to": '/people/' + post.uHome
+	      }
+	    }, [_s(post.uName)]), " ", _m(0), " ", _h('router-link', {
 	      staticClass: "blue-link title",
 	      attrs: {
 	        "to": '/post/' + post.id
@@ -7512,9 +7587,19 @@
 	      staticClass: "oneline"
 	    }, [_s(post.content)])]), " ", _h('div', {
 	      staticClass: "foot"
-	    }, [_h('span', [_s(post.time)]), " ", _m(0), " ", _h('span', ["回复" + _s(post.talk)]), " ", _m(1), " ", _h('span', ["喜欢" + _s(post.like)])])])
-	  })])]), " ", _m(2)])])
+	    }, [_h('span', {
+	      staticClass: "gray-word"
+	    }, [_s(post.time)]), " ", _m(1), " ", _h('span', {
+	      staticClass: "gray-word"
+	    }, ["回复" + _s(post.talk)]), " ", _m(2), " ", _h('span', {
+	      staticClass: "gray-word"
+	    }, ["喜欢" + _s(post.like)])])])
+	  })])]), " ", _m(3)])])
 	}},staticRenderFns: [function (){with(this) {
+	  return _h('span', {
+	    staticClass: "dot"
+	  })
+	}},function (){with(this) {
 	  return _h('span', {
 	    staticClass: "dot"
 	  })
@@ -8055,16 +8140,19 @@
 	                this.$http.get('/api/query/index', { params: {
 	                        q: this.q
 	                    } }).then(function (res) {
-	                    if (res.body === 0) {
-	                        _this.$route.router.go({ path: '/bangumi/store' });
+	                    _this.$router.push({ path: '/bangumi/' + res.body.data });
+	                }, function (res) {
+	                    if (res.status === 404) {
+	                        _this.$root.$refs.toast.open({
+	                            theme: "info",
+	                            content: "没有找到数据！"
+	                        });
 	                    } else {
-	                        _this.$route.router.go({ path: '/bangumi/' + res.body });
+	                        _this.$root.$refs.toast.open({
+	                            theme: "error",
+	                            content: "服务器异常，获取数据失败！"
+	                        });
 	                    }
-	                }, function () {
-	                    _this.$root.$refs.toast.open({
-	                        theme: "error",
-	                        content: "服务器异常，获取数据失败！"
-	                    });
 	                });
 	            }
 	        }
@@ -8098,7 +8186,7 @@
 	    on: {
 	      "keyup": function($event) {
 	        if ($event.keyCode !== 13) return;
-	        query(q)
+	        query($event)
 	      },
 	      "input": function($event) {
 	        if ($event.target.composing) return;
@@ -8258,7 +8346,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"index.vue","sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n#banner[data-v-18] {\n  height: 400px;\n  position: absolute;\n  width: 100%;\n  overflow: hidden;\n  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n  z-index: 1;\n}\n#banner .img[data-v-18] {\n    height: 400px;\n    width: 110%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -200px -55%;\n    -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px);\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);\n    background-position: 50%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    z-index: -1;\n}\n#info[data-v-18] {\n  position: absolute;\n  width: 100%;\n  height: 400px;\n  color: #fff;\n  text-shadow: 0 1px 10px #000;\n  z-index: 5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n#info .title[data-v-18] {\n    margin: 20px 0;\n}\n#info .summary[data-v-18] {\n    margin-bottom: 20px;\n    max-width: 800px;\n    font-size: 13px;\n}\n#info .summary p[data-v-18] {\n      text-indent: 2em;\n}\n", "", {"version":3,"sources":["/./resources/components/bangumi/index.vue"],"names":[],"mappings":";AAAA;EACE,cAAc;EACd,mBAAmB;EACnB,YAAY;EACZ,iBAAiB;EACjB,gDAAgD;EAChD,WAAW;CAAE;AACb;IACE,cAAc;IACd,YAAY;IACZ,mBAAmB;IACnB,SAAS;IACT,UAAU;IACV,oBAAoB;IACpB,0BAA0B;IAC1B,uBAAuB;IACvB,sBAAsB;IACtB,kBAAkB;IAClB,gFAAgF;IAChF,yBAAyB;IACzB,uBAAuB;IACvB,6BAA6B;IAC7B,YAAY;CAAE;AAElB;EACE,mBAAmB;EACnB,YAAY;EACZ,cAAc;EACd,YAAY;EACZ,6BAA6B;EAC7B,WAAW;EACX,cAAc;EACd,uBAAuB;EACvB,wBAAwB;EACxB,oBAAoB;CAAE;AACtB;IACE,eAAe;CAAE;AACnB;IACE,oBAAoB;IACpB,iBAAiB;IACjB,gBAAgB;CAAE;AAClB;MACE,iBAAiB;CAAE","file":"index.vue","sourcesContent":["#banner {\n  height: 400px;\n  position: absolute;\n  width: 100%;\n  overflow: hidden;\n  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n  z-index: 1; }\n  #banner .img {\n    height: 400px;\n    width: 110%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -200px -55%;\n    -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px);\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);\n    background-position: 50%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    z-index: -1; }\n\n#info {\n  position: absolute;\n  width: 100%;\n  height: 400px;\n  color: #fff;\n  text-shadow: 0 1px 10px #000;\n  z-index: 5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  #info .title {\n    margin: 20px 0; }\n  #info .summary {\n    margin-bottom: 20px;\n    max-width: 800px;\n    font-size: 13px; }\n    #info .summary p {\n      text-indent: 2em; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -8267,7 +8355,7 @@
 /* 191 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -8284,19 +8372,152 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	
 	
 	exports.default = {
 	    components: {},
-	    props: {},
-	    computed: {},
-	    data: function data() {
-	        return {};
+	    route: {
+	        canReuse: function canReuse(transition) {
+	            return transition.to.path.split('/')[2] === transition.from.path.split('/')[2];
+	        }
 	    },
-	    created: function created() {},
+	    data: function data() {
+	        return {
+	            info: {}
+	        };
+	    },
+	    created: function created() {
+	        this.$root.$refs.banner.hidden();
+	        this.getBangumiInfo();
+	    },
 	
-	    methods: {},
-	    mounted: function mounted() {}
+	    methods: {
+	        getBangumiInfo: function getBangumiInfo() {
+	            var _this = this;
+	
+	            this.$http.post('/api/bangumi/info', {
+	                id: this.$route.params.id
+	            }).then(function (res) {
+	                _this.info = res.body.data;
+	                _this.$refs.banner.style.backgroundImage = 'url(' + _this.info.banner + ')';
+	            }, function (res) {
+	                console.log(res.body);
+	            });
+	        },
+	        followBangumi: function followBangumi(el) {
+	            var _this2 = this;
+	
+	            var btn = el.currentTarget;
+	            btn.setAttribute('disabled', 'disabled');
+	            this.$http.post('/api/like', {
+	                id: this.$route.params.id,
+	                type: 'Bangumi'
+	            }).then(function () {
+	                _this2.info.hasLike = !_this2.info.hasLike;
+	                if (_this2.info.hasLike) {
+	                    _this2.$root.$refs.toast.open({
+	                        theme: "success",
+	                        content: "关注成功！"
+	                    });
+	                } else {
+	                    _this2.$root.$refs.toast.open({
+	                        theme: "success",
+	                        content: "已取消关注！"
+	                    });
+	                }
+	                btn.removeAttribute('disabled');
+	            }, function () {
+	                _this2.$root.$refs.toast.open({
+	                    theme: "error",
+	                    content: "服务器异常，发送数据失败！"
+	                });
+	                btn.removeAttribute('disabled');
+	            });
+	        },
+	        getBangumiPost: function getBangumiPost() {
+	            var _this3 = this;
+	
+	            this.$http.get('/api/post/bangumi', { params: {
+	                    id: this.$route.params.id
+	                } }).then(function (res) {
+	                // success callback
+	            }, function () {
+	                _this3.$root.$refs.toast.open({
+	                    theme: "error",
+	                    content: "服务器异常，获取数据失败！"
+	                });
+	            });
+	        }
+	    },
+	    destroyed: function destroyed() {
+	        this.$root.$refs.banner.show();
+	    }
 	};
 
 /***/ },
@@ -8304,7 +8525,32 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {
-	  return _m(0)
+	  return _h('div', {
+	    staticClass: "template-warp"
+	  }, [_h('div', {
+	    attrs: {
+	      "id": "banner"
+	    }
+	  }, [_h('div', {
+	    ref: "banner",
+	    staticClass: "img"
+	  })]), " ", _h('div', {
+	    attrs: {
+	      "id": "info"
+	    }
+	  }, [_h('h1', {
+	    staticClass: "title"
+	  }, [_s(info.name)]), " ", _h('div', {
+	    staticClass: "summary",
+	    domProps: {
+	      "innerHTML": _s(info.summary)
+	    }
+	  }), " ", _h('button', {
+	    staticClass: "btn-cap btn-pink",
+	    on: {
+	      "click": followBangumi
+	    }
+	  }, [_s(info.hasLike ? '已关注' : '关注')])]), " ", _m(0)])
 	}},staticRenderFns: [function (){with(this) {
 	  return _h('div', {
 	    staticClass: "container"

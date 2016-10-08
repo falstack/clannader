@@ -178,7 +178,7 @@
         },
         data () {
             return {
-                socket : null,
+                socket : undefined,
                 menu : [
                     {
                         style : "btn-msg",
@@ -198,6 +198,9 @@
                 ]
             }
         },
+        created () {
+            this.makeWebSocket(this.$store.getters.isLogin);
+        },
         methods: {
             menuSwitch (index) {
                 if (!this.menu[index].show) {
@@ -208,7 +211,7 @@
                 }
             },
             makeWebSocket (bool) {
-                if (this.socket === null) {
+                if (typeof this.socket === 'undefined' && bool) {
                     this.socket = io("http://" + window.location.host + ":3001");
                 }
                 if (bool) {
@@ -222,8 +225,10 @@
                     });
 
                 } else {
-                    this.socket.disconnect();
-                    this.socket = null;
+                    if (typeof this.socket !== 'undefined') {
+                        this.socket.disconnect();
+                        this.socket = undefined;
+                    }
                 }
             }
         }

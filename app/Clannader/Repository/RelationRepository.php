@@ -33,7 +33,7 @@ class RelationRepository extends Repository
         } else {
             $data = array_merge($data, [
                 'from_id' => 0,
-                'from_type' => '',
+                'from_type' => null,
                 'target_id' => $new->link->user_id
             ]);
         }
@@ -43,11 +43,25 @@ class RelationRepository extends Repository
         event(new \App\Events\User\SendMessage($msg));
     }
 
+    public function pullMessage($id, $type, $user_id)
+    {
+        $msg = $this->foundMessage($id, $type, $user_id);
+
+        if (!is_null($msg)) {
+            $msg->delete();
+        }
+    }
+
+    public function foundMessage($id, $type, $user_id)
+    {
+        return Message::whereRaw('about_id = ? and about_type = ? and attack_id = ?', [$id, $type, $user_id])->first();
+    }
+
     public function listMergeLikeAndMe($list, $type, $user_id)
     {
         foreach ($list as $row) {
             $row->isMe = $row->user_id == $user_id;
-            $row->hasLike = (boolean)$this->checkHasLike($row->id, $type, $user_id);
+            $row = $this->checkHasLike($row, $type, $user_id);
         }
 
         return $list;
@@ -56,21 +70,22 @@ class RelationRepository extends Repository
     public function itemMergeLikeAndMe($row, $type, $user_id)
     {
         $row->isMe = $row->user_id == $user_id;
-        $row->hasLike = (boolean)$this->checkHasLike($row->id, $type, $user_id);
+        $row = $this->checkHasLike($row, $type, $user_id);
 
         return $row;
     }
 
-    public function checkHasLike($id, $type, $user_id)
+    public function checkHasLike($row, $type, $user_id)
     {
         if ($user_id) {
 
-            return Like::whereRaw('likeable_id = ? and likeable_type = ? and user_id = ?', [$id, $type, $user_id])->count();
+            $row->hasLike = (boolean)Like::whereRaw('likeable_id = ? and likeable_type = ? and user_id = ?', [$row->id, $type, $user_id])->count();
 
         } else {
 
-            return 0;
+            $row->hasLike = false;
         }
-    }
 
+        return $row;
+    }
 }

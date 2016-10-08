@@ -12,8 +12,8 @@ class CommentTransformer extends TransformerAbstract
         return [
             'id' => $comment->id,
             'content' => $comment->content,
-            'like' => $comment->like,
-            'talk' => $comment->talk,
+            'like' => (int)$comment->like,
+            'talk' => (int)$comment->talk,
             'isMe' => $comment->isMe,
             'hasLike' => $comment->hasLike,
             'uName' => $comment->user->name,

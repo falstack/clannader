@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Clannader\Models\Bangumi\Bangumi;
 use App\Clannader\Models\Morph\Comment;
 use App\Clannader\Models\Post\Post;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
         \Carbon\Carbon::setLocale('zh');
 
         Relation::morphMap([
+            'Bangumi' => Bangumi::class,
             'Comment' => Comment::class,
             'Post' => Post::class,
         ]);

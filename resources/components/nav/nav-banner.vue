@@ -13,8 +13,8 @@
 
 <template>
     <div>
-        <div id="banner" v-if="open"></div>
-        <div id="padding" v-else></div>
+        <div id="banner" v-show="open"></div>
+        <div id="padding" v-show="padding"></div>
     </div>
 </template>
 
@@ -23,15 +23,22 @@
     export default {
         data () {
             return {
-                open : true
+                open : true,
+                padding : false
             }
         },
         methods: {
             show () {
-                this.open = true
+                this.open = true;
+                this.padding = false;
+            },
+            block () {
+                this.open = false;
+                this.padding = true;
             },
             hidden () {
-                this.open = false
+                this.open = false;
+                this.padding = false;
             }
         }
     }

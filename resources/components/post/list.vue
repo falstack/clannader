@@ -25,6 +25,7 @@
             .head {
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 10px;
 
                 >div {
                     display: flex;
@@ -36,9 +37,16 @@
                     height: 24px;
                 }
 
-                .title {
-                    margin-left: 10px;
+                .gray-link {
+                    margin-left: 5px;
+                    font-size: 13px;
                 }
+            }
+
+            .foot {
+                margin-top: 10px;
+                display: flex;
+                justify-content: flex-end;
             }
         }
     }
@@ -53,6 +61,8 @@
                         <div class="head">
                             <div>
                                 <router-link class="uface" :to=" '/people/' + post.uHome "><img :src="post.uFace"></router-link>
+                                <router-link class="gray-link" :to=" '/people/' + post.uHome ">{{ post.uName }}</router-link>
+                                <span class="dot"></span>
                                 <router-link class="blue-link title" :to=" '/post/' + post.id ">{{ post.title }}</router-link>
                             </div>
                             <router-link class="bface" :to=" '/bangumi/' + post.bHome "><img :src="post.bFace"></router-link>
@@ -61,11 +71,11 @@
                             <p class="oneline">{{ post.content }}</p>
                         </div>
                         <div class="foot">
-                            <span>{{ post.time }}</span>
+                            <span class="gray-word">{{ post.time }}</span>
                             <span class="dot"></span>
-                            <span>回复{{ post.talk }}</span>
+                            <span class="gray-word">回复{{ post.talk }}</span>
                             <span class="dot"></span>
-                            <span>喜欢{{ post.like }}</span>
+                            <span class="gray-word">喜欢{{ post.like }}</span>
                         </div>
                     </div>
                 </div>

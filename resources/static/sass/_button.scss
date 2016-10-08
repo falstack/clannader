@@ -7,6 +7,24 @@
   transition: .1s ease;
 }
 
+.btn-cap {
+  border-radius: 15px;
+  height: 30px;
+  width: 100px;
+  transition: .1s ease;
+}
+
+.btn-pink {
+  color: #fff;
+  background-color: $color-pink;
+  border: 1px solid $color-pink;
+
+  &:hover {
+    background-color: $color-sakura-deep;
+    border: 1px solid $color-sakura-deep;
+  }
+}
+
 .btn-blue {
   color: #fff;
   background-color: $color-blue;

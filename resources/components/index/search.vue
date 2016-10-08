@@ -48,7 +48,7 @@
 
 <template v-cloak>
     <div id="searchBox">
-        <input autofocus="autofocus" type="text" class="query" v-model="q" placeholder="搜索二次元的一切" @keyup.enter="query(q)">
+        <input autofocus="autofocus" type="text" class="query" v-model="q" placeholder="搜索二次元的一切" @keyup.enter="query">
         <a id="go" @click="query"></a>
     </div>
 </template>
@@ -67,16 +67,19 @@
                     this.$http.get('/api/query/index', { params : {
                         q : this.q
                     }}).then((res) => {
-                        if (res.body === 0) {
-                            this.$route.router.go({ path: '/bangumi/store' });
+                        this.$router.push({ path: '/bangumi/' + res.body.data });
+                    }, (res) => {
+                        if (res.status === 404) {
+                            this.$root.$refs.toast.open({
+                                theme: "info",
+                                content: "没有找到数据！"
+                            });
                         } else {
-                            this.$route.router.go({ path: '/bangumi/' + res.body });
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，获取数据失败！"
+                            });
                         }
-                    }, () => {
-                        this.$root.$refs.toast.open({
-                            theme: "error",
-                            content: "服务器异常，获取数据失败！"
-                        });
                     });
                 }
             }

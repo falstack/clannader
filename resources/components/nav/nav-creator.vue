@@ -51,7 +51,7 @@
         border-radius: 0 0 4px 4px;
         box-shadow: 0 2px 4px rgba(0,0,0,.16);
         overflow: hidden;
-        transition: .4s;
+        transition: .3s;
         visibility: hidden;
         opacity: 0;
         box-sizing: content-box;

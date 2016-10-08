@@ -5,9 +5,12 @@ namespace App\Clannader\Models\Morph;
 use App\Clannader\Models\Relation\Like;
 use App\Clannader\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = ['user_id', 'target_id', 'content', 'link_id', 'link_type', 'talk', 'like'];
 
     public function link()
@@ -33,21 +36,5 @@ class Comment extends Model
     public function target()
     {
         return $this->hasOne(User::class, 'id', 'target_id');
-    }
-
-    public function scopeGetList($query)
-    {
-        $query->join('users', 'users.id', '=', 'comments.user_id')
-            ->select(
-                'users.name as uName',
-                'users.avatar as uFace',
-                'users.zone as uHome',
-                'comments.id as id',
-                'comments.content as content',
-                'comments.talk as talk',
-                'comments.like as like',
-                'comments.user_id as isMe',
-                'comments.created_at as time'
-            );
     }
 }

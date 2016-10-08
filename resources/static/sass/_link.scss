@@ -13,3 +13,22 @@
     text-decoration: underline;
   }
 }
+
+.gray-link {
+  color: $color-gray-word;
+  background-color: transparent;
+  transition: .2s;
+
+  &:hover {
+    color: $color-link-gray;
+  }
+}
+
+.normal-link {
+  color : $color-link-gray;
+  transition: .1s;
+
+  &:hover {
+    color: $color-blue;
+  }
+}

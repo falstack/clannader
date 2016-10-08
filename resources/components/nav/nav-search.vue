@@ -58,8 +58,8 @@
 
 <template>
     <div id="search">
-        <input type="text" placeholder="搜索" v-model="q">
-        <button></button>
+        <input type="text" placeholder="搜索" v-model="q" @keyup.enter="query">
+        <button @click="query"></button>
     </div>
 </template>
 
@@ -72,7 +72,28 @@
             }
         },
         methods: {
-
+            query () {
+                if (this.q.length !== 0) {
+                    this.$http.get('/api/query/index', { params : {
+                        q : this.q
+                    }}).then((res) => {
+                        this.$router.push({ path: '/bangumi/' + res.body.data });
+                        this.q = "";
+                    }, (res) => {
+                        if (res.status === 404) {
+                            this.$root.$refs.toast.open({
+                                theme: "info",
+                                content: "没有找到数据！"
+                            });
+                        } else {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，获取数据失败！"
+                            });
+                        }
+                    });
+                }
+            }
         }
     }
 </script>

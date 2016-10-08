@@ -20,14 +20,14 @@ class RelationController extends Controller
 
     public function list(Request $request)
     {
-        return $this->commentRepository->getCommentList($request->get('id'), $request->get('type'), $this->getUserIdByJWT());
+        return $this->commentRepository->list($request->get('id'), $request->get('type'), $this->getUserIdByJWT());
     }
 
     public function store(Request $request)
     {
         $user = $this->getAuthUser();
 
-        return $this->commentRepository->commentStore($request->all(), $user);
+        return $this->commentRepository->store($request->all(), $user);
     }
 
     public function agree(Request $request)
@@ -37,10 +37,17 @@ class RelationController extends Controller
         $this->likeRepository->agree($request->get('id'), $request->get('type'), $user);
     }
 
-    public function replyStore(Request $request)
+    public function reply(Request $request)
     {
         $user = $this->getAuthUser();
 
-        return $this->commentRepository->commentReplyStore($request->all(), $user);
+        return $this->commentRepository->reply($request->all(), $user);
+    }
+
+    public function delete(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        $this->commentRepository->delete($request->get('id'), $user);
     }
 }

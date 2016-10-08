@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Clannader\Repository\BangumiRepository;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 
 class BangumiController extends Controller
 {
+    protected $bangumiRepository;
 
-
-    public function info()
+    public function __construct(BangumiRepository $bangumiRepository)
     {
+        $this->bangumiRepository = $bangumiRepository;
+    }
 
+    public function info(Request $request)
+    {
+        return $this->bangumiRepository->getBangumiInfo($request->get('id'), $this->getUserIdByJWT());
     }
 }

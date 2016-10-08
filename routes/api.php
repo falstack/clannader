@@ -8,9 +8,16 @@ $api->version('v1', function ($api) {
 
         $api->get('/background', 'OtherController@backgroundShow');
 
+        $api->post('/like', 'RelationController@agree')->middleware('jwt.auth');
+
+        $api->group(['prefix' => '/query'], function ($api) {
+
+            $api->get('/index', 'QueryController@index');
+        });
+
         $api->group(['prefix' => '/bangumi'], function ($api) {
 
-            $api->post('/info', 'PostController@info');
+            $api->post('/info', 'BangumiController@info');
         });
 
         $api->group(['prefix' => '/post'], function ($api) {
@@ -26,14 +33,9 @@ $api->version('v1', function ($api) {
 
             $api->post('/store', 'RelationController@store')->middleware('jwt.auth');
 
-            $api->post('/agree', 'RelationController@agree')->middleware('jwt.auth');
+            $api->post('/delete', 'RelationController@delete')->middleware('jwt.auth');
 
-            $api->group(['prefix' => '/reply'], function ($api) {
-
-                $api->post('/list', 'RelationController@replyList');
-
-                $api->post('/store', 'RelationController@replyStore')->middleware('jwt.auth');
-            });
+            $api->post('/reply', 'RelationController@reply')->middleware('jwt.auth');
         });
     });
 
