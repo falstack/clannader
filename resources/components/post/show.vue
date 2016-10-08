@@ -3,10 +3,12 @@
 </style>
 
 <template>
-    <div>
-        <div class="col-md-9">
-            <p>{{ post.title }}</p>
-            <comment :type="'Post'" :master="post.uHome" :id="$route.params.id"></comment>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <p>{{ post.title }}</p>
+                <comment :type="'Post'" :master="post.uHome" :id="$route.params.id"></comment>
+            </div>
         </div>
     </div>
 </template>

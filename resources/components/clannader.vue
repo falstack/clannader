@@ -2,6 +2,7 @@
     #app {
         display: flex;
         min-height: 100vh;
+        background-color: #fff;
         flex-direction: column;
     }
 </style>
@@ -9,14 +10,11 @@
 <template>
     <div id="app">
         <navbar ref="navbar"></navbar>
-        <banner ref="banner"></banner>
+        <banner v-show="load" ref="banner"></banner>
+        <router-view></router-view>
+        <bottom v-show="load" ref="bottom"></bottom>
+
         <navsign v-if="lazy" ref="navsign"></navsign>
-        <div class="container">
-            <div class="row">
-                <router-view></router-view>
-            </div>
-        </div>
-        <bottom v-if="lazy" ref="bottom"></bottom>
         <toast v-if="lazy" ref="toast"></toast>
         <top v-if="lazy"></top>
     </div>
@@ -40,20 +38,18 @@
         watch: {
             '$store.getters.isLogin' (val) {
                 this.setAuthHeader(val);
-                this.makeWebSocket(val);
             }
         },
         data () {
             return {
                 lazy : false,
-                mobile : null,
-                socket : null
+                load : true
             }
         },
         created () {
+            this.userAngent();
             this.lazy = true;
             this.checkLogin();
-            this.userAngent();
         },
         methods: {
             setAuthHeader (val) {
@@ -71,32 +67,11 @@
             userAngent() {
                 var userAgentInfo = navigator.userAgent;
                 var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-                let bool = false;
                 for (var v = 0; v < Agents.length; v++) {
                     if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                        bool = true;
+                        // redirect to mobile site
                         break;
                     }
-                }
-                this.mobile = bool;
-            },
-            makeWebSocket (bool) {
-                if (this.socket === null) {
-                    this.socket = io("http://" + window.location.host + ":3001");
-                }
-                if (bool) {
-
-                    this.socket.on('connection',function(data) {
-                        console.log('connection is ok');
-                    });
-
-                    this.socket.on(this.$getUserInfo('zone') + ':msg',function(data) {
-                        console.log(data);
-                    });
-
-                } else {
-                    this.socket.disconnect();
-                    this.socket = null;
                 }
             }
         }

@@ -4,7 +4,11 @@ Route::group(['prefix' => '/', 'middleware' => ['throttle']], function () {
 
     Route::get('/', 'DoorController@index');
 
-    Route::group(['prefix' => '/post'], function () {
+    Route::get('/posts', 'DoorController@index');
+
+    Route::get('/post/{id}', 'DoorController@index');
+
+    Route::group(['prefix' => '/bangumi'], function () {
 
         Route::get('/{id}', 'DoorController@index');
     });

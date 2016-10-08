@@ -1,7 +1,7 @@
 <style lang="sass" rel="scss" scoped>
-    @import "../static/sass/variables";
+    @import "../../static/sass/variables";
 
-    #index-pc {
+    #post-list {
         margin-top: 20px;
 
         .post-item {
@@ -45,27 +45,28 @@
 </style>
 
 <template>
-    <div>
-        <div id="index-mobile" v-if="$root.$data.mobile">
-
-        </div>
-        <div id="index-pc" v-else>
+    <div class="container">
+        <div class="row">
             <div class="col-md-9">
-                <div class="post-item" v-for="post in post.data">
-                    <div class="head">
-                        <div>
-                            <router-link class="uface" :to=" '/people/' + post.uHome "><img :src="post.uFace"></router-link>
-                            <router-link class="blue-link title" :to=" '/post/' + post.id ">{{ post.title }}</router-link>
+                <div id="post-list">
+                    <div class="post-item" v-for="post in post.data">
+                        <div class="head">
+                            <div>
+                                <router-link class="uface" :to=" '/people/' + post.uHome "><img :src="post.uFace"></router-link>
+                                <router-link class="blue-link title" :to=" '/post/' + post.id ">{{ post.title }}</router-link>
+                            </div>
+                            <router-link class="bface" :to=" '/bangumi/' + post.bHome "><img :src="post.bFace"></router-link>
                         </div>
-                        <router-link class="bface" :to=" '/bangumi/' + post.bid "><img :src="post.bFace"></router-link>
-                    </div>
-                    <div class="body">
-                        <p class="oneline">{{ post.content }}</p>
-                    </div>
-                    <div class="foot">
-                        <span>{{ $diffForHumans(post.time) }}</span>
-                        <span>回复{{ post.talk }}</span>
-                        <span>喜欢{{ post.like }}</span>
+                        <div class="body">
+                            <p class="oneline">{{ post.content }}</p>
+                        </div>
+                        <div class="foot">
+                            <span>{{ post.time }}</span>
+                            <span class="dot"></span>
+                            <span>回复{{ post.talk }}</span>
+                            <span class="dot"></span>
+                            <span>喜欢{{ post.like }}</span>
+                        </div>
                     </div>
                 </div>
             </div>

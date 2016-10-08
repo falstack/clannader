@@ -2,6 +2,7 @@
 
 namespace App\Clannader\Models\Morph;
 
+use App\Clannader\Models\Relation\Like;
 use App\Clannader\Models\User;
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Clannader\Models\Morph;
+namespace App\Clannader\Models\Relation;
 
 use App\Clannader\Models\User;
 use Illuminate\Database\Eloquent\Model;

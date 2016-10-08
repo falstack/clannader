@@ -3,7 +3,7 @@
 namespace App\Clannader\Repository;
 
 
-use App\Clannader\Models\Morph\Like;
+use App\Clannader\Models\Relation\Like;
 
 class LikeRepository
 {

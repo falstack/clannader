@@ -4,24 +4,20 @@ namespace App\Clannader\Repository;
 
 use App\Clannader\ApiSerializer;
 use App\Clannader\Models\Morph\Comment;
-use App\Clannader\Models\Morph\Message;
 use App\Clannader\Transformer\CommentTransformer;
 use Mews\Purifier\Facades\Purifier;
 
-class CommentRepository extends Repository
+class CommentRepository extends RelationRepository
 {
     protected $comment;
-    protected $message;
     protected $commentTransformer;
     protected $apiSerializer;
 
     public function __construct(Comment $comment,
-                                Message $message,
                                 CommentTransformer $commentTransformer,
                                 ApiSerializer $apiSerializer)
     {
         $this->comment = $comment;
-        $this->message = $message;
         $this->commentTransformer = $commentTransformer;
         $this->apiSerializer = $apiSerializer;
     }
@@ -30,7 +26,7 @@ class CommentRepository extends Repository
     {
         $list = $this->comment->whereRaw('link_id = ? and link_type = ?', [$id, $type])->get();
 
-        return $this->response->collection($this->checkHasLikeAndIsMe($list, 'Comment', $user_id), $this->commentTransformer, [], function($resource, $fractal) {
+        return $this->response->collection($this->listMergeLikeAndMe($list, 'Comment', $user_id), $this->commentTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);
         });
     }
@@ -50,30 +46,9 @@ class CommentRepository extends Repository
 
         $this->pushMessage($new);
 
-        return $this->responseOK($this->resItem($new, false));
-    }
-
-    public function pushMessage($new)
-    {
-        if ($new->user_id == $new->link->user_id) return;
-
-        $data = [
-            'attack_id' => $new->user_id,
-            'target_id' => $new->link->user_id,
-            'about_id' => $new->link_id,
-            'about_type' => $new->link_type
-        ];
-
-        if ($new->link_type == 'Comment') {
-            $data = array_merge($data, [
-                'from_id' => $new->link->link_id,
-                'from_type' => $new->link->link_type
-            ]);
-        }
-
-        $msg = $this->message->create($data);
-
-        event(new \App\Events\User\SendMessage($msg));
+        return $this->response->item($this->itemMergeLikeAndMe($new, 'Comment', $user->id), $this->commentTransformer, [], function($resource, $fractal) {
+            $fractal->setSerializer($this->apiSerializer);
+        });
     }
 
     public function commentReplyStore($form, $user)
@@ -101,31 +76,8 @@ class CommentRepository extends Repository
 
         $this->pushMessage($new);
 
-        return $this->responseOK($this->resItem($new, true));
-    }
-
-    public function resItem($new, $bool)
-    {
-        $data =  [
-            'id' => $new->id,
-            'content' => $new->content,
-            'isMe' => true,
-            'hasLike' => false,
-            'like' => 0,
-            'talk' => 0,
-            'time' => $new->created_at->toDateTimeString(),
-            'uFace' => $new->user->avatar,
-            'uName' => $new->user->name,
-            'uHome' => $new->user->zone
-        ];
-
-        if ($bool) {
-            $data = array_merge($data, [
-                'tName' => $new->target->name,
-                'tHome' => $new->target->zone
-            ]);
-        }
-
-        return $data;
+        return $this->response->item($this->itemMergeLikeAndMe($new, 'Comment', $user->id), $this->commentTransformer, [], function($resource, $fractal) {
+            $fractal->setSerializer($this->apiSerializer);
+        });
     }
 }

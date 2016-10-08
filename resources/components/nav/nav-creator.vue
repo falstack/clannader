@@ -1,10 +1,11 @@
 <style lang="sass" rel="scss" scoped>
     @import "../../static/sass/variables";
 
+    $menu-count : 1;
+
     $creator-width : 58px;
     $creator-height : 48px;
     $create-radius: 8px;
-
 
     #warp {
         position: relative;
@@ -31,7 +32,7 @@
             background: linear-gradient(#3cd8ff,$color-blue);
 
             & + #menu {
-                height: $nav-height * 3;
+                height: $nav-height * $menu-count;
                 visibility: visible;
                 opacity: 1;
             }
@@ -53,12 +54,7 @@
         transition: .4s;
         visibility: hidden;
         opacity: 0;
-
-        &:hover {
-            height: $nav-height * 3;
-            visibility: visible;
-            opacity: 1;
-        }
+        box-sizing: content-box;
 
         a {
             display: block;
@@ -72,21 +68,22 @@
                 background-color: $color-gray-hover;
             }
         }
+
+        &:hover {
+            visibility: visible;
+            opacity: 1;
+            height: $nav-height * $menu-count;
+        }
     }
 </style>
 
 <template>
-    <div v-if="$store.getters.isLogin">
-        <div v-if="$root.$data.mobile">
-
-        </div>
-        <div v-else id="warp">
-            <a id="creator">创作</a>
-            <div id="menu">
-                <a>发帖</a>
-                <a>提问</a>
-                <a>写作</a>
-            </div>
+    <div v-if="$store.getters.isLogin" id="warp">
+        <a id="creator">创作</a>
+        <div id="menu">
+            <a>发帖</a>
+            <!--<a>提问</a>-->
+            <!--<a>写作</a>-->
         </div>
     </div>
 </template>

@@ -1,10 +1,13 @@
-.btn-sm-submit {
+.btn-bean {
   height: 20px;
   border-radius: 4px;
   font-size: 13px;
   line-height: 20px;
   padding: 0 12px;
   transition: .1s ease;
+}
+
+.btn-blue {
   color: #fff;
   background-color: $color-blue;
   border: 1px solid $color-blue;
@@ -12,5 +15,16 @@
   &:hover {
     background-color: $color-blue-hover;
     border: 1px solid $color-blue-hover;
+  }
+}
+
+.btn-gray {
+  color: $color-gray-word;
+  background-color: $color-gray-light;
+  border: 1px solid $color-gray-light;
+
+  &:hover {
+    background-color: $color-gray-hover;
+    border: 1px solid $color-gray-hover;
   }
 }

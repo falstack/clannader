@@ -1,18 +1,10 @@
 <style lang="sass" rel="scss">
     @import "../../static/sass/variables";
 
-    #nav-warp {
+    #nav-bar {
         position: absolute;
-        width: 100%;
-    }
-
-    #nav-mobile {
-
-    }
-
-    #nav-pc {
-        position: relative;
         height: $nav-height;
+        width: 100%;
 
         #nav-box {
             height: 100%;
@@ -51,9 +43,7 @@
                     color: #fff;
                     padding: 5px 20px;
                     border-radius: 10px;
-                    background-color: transparent;
                     transition: .4s;
-                    font-size: 14px;
                     margin: 0 5px;
 
                     &:hover {
@@ -77,12 +67,10 @@
                     text-align: center;
                     display: block;
                     float: left;
-                    font-size: 14px;
                 }
 
                 #signIn {
                     border: 1px solid #fff;
-                    background-color: transparent;
                     margin-left: 30px;
 
                     &:hover {
@@ -174,51 +162,46 @@
 </style>
 
 <template>
-    <div id="nav-warp">
-        <div id="nav-mobile" v-if="$root.$data.mobile">
-            手机
-        </div>
-        <div id="nav-pc" v-else>
-            <div id="nav-box" class="container">
-                <div class="row">
-                    <div id="nav-left">
-                        <router-link id="icon" to="/"></router-link>
-                        <ul class="nav-left-ul">
-                            <li>
-                                <router-link class="nav-link" to="/post">帖子</router-link>
-                            </li>
-                            <li>
-                                <router-link class="nav-link" to="/discuss">问答</router-link>
-                            </li>
-                            <li>
-                                <router-link class="nav-link" to="/article">文章</router-link>
-                            </li>
-                        </ul>
-                        <navmsg></navmsg>
-                    </div>
-                    <div id="nav-right">
-                        <navsearch></navsearch>
-                        <div v-if="$store.getters.isLogin" id="nav-user">
-                            <router-link class="uface" :to="'/people/' + user.home"><img :src="user.face"></router-link>
-                            <div id="user-table">
-                                <div class="card">
-                                    <router-link :to="'/people/' + user.home">{{ user.name }}</router-link>
-                                </div>
-                                <div class="bottom">
-                                    <a @click="logout">退出</a>
-                                </div>
+    <div id="nav-bar">
+        <div id="nav-box" class="container">
+            <div class="row">
+                <div id="nav-left">
+                    <router-link id="icon" to="/"></router-link>
+                    <ul class="nav-left-ul">
+                        <li>
+                            <router-link class="nav-link" to="/posts">帖子</router-link>
+                        </li>
+                        <!--<li>-->
+                            <!--<router-link class="nav-link" to="/discuss">问答</router-link>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<router-link class="nav-link" to="/article">文章</router-link>-->
+                        <!--</li>-->
+                    </ul>
+                    <navmsg></navmsg>
+                </div>
+                <div id="nav-right">
+                    <navsearch></navsearch>
+                    <div v-if="$store.getters.isLogin" id="nav-user">
+                        <router-link class="uface" :to="'/people/' + user.home"><img :src="user.face"></router-link>
+                        <div id="user-table">
+                            <div class="card">
+                                <router-link :to="'/people/' + user.home">{{ user.name }}</router-link>
+                            </div>
+                            <div class="bottom">
+                                <a @click="logout">退出</a>
                             </div>
                         </div>
-                        <div v-else>
-                            <button id="signIn" @click="showSignIn">登录</button>
-                            <button id="signUp" @click="showSignUp">注册</button>
-                        </div>
-                        <creator></creator>
                     </div>
+                    <div v-else>
+                        <button id="signIn" @click="$root.$refs.navsign.showLogin()">登录</button>
+                        <button id="signUp" @click="$root.$refs.navsign.showRegister()">注册</button>
+                    </div>
+                    <creator></creator>
                 </div>
             </div>
-            <div id="nav-mask"></div>
         </div>
+        <div id="nav-mask"></div>
     </div>
 </template>
 
@@ -248,20 +231,6 @@
             }
         },
         methods: {
-            showSignIn () {
-                if (this.$root.$data.mobile) {
-
-                } else {
-                    this.$root.$refs.navsign.showLogin()
-                }
-            },
-            showSignUp () {
-                if (this.$root.$data.mobile) {
-
-                } else {
-                    this.$root.$refs.navsign.showRegister()
-                }
-            },
             makeLogin () {
                 this.user.name = this.$getUserInfo('name');
                 this.user.face = this.$getUserInfo('avatar');

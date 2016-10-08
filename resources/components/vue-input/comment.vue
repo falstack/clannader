@@ -47,8 +47,7 @@
 
         .uface {
             position: absolute;
-            left: -70px;
-            top: 30px;
+            left: -85px;
             width: 48px;
             height: 48px;
             border: 1px solid $color-gray-hover;
@@ -68,10 +67,6 @@
     .comment-header {
         line-height: 18px;
         padding-bottom: 4px;
-
-        .dot {
-            font-size: 12px;
-        }
     }
 
     .comment-name {
@@ -84,6 +79,7 @@
         padding: 2px 0;
         font-size: 14px;
         min-height: 24px;
+        color: #222;
     }
 
     .comment-footer {
@@ -92,7 +88,6 @@
         font-size: 12px;
 
         button {
-            background-color: transparent;
             color: $color-gray-word;
             padding: 0 5px;
             margin-left: 15px;
@@ -179,7 +174,7 @@
                     <span class="gray-word">{{ count(content) }} / 50</span>
                     <span class="comment-msg">{{ msg }}</span>
                 </div>
-                <button class="btn-sm-submit" @click="commentStore($event)">发表</button>
+                <button class="btn-bean btn-blue" @click="commentStore($event)">发表</button>
             </div>
         </div>
         <div class="comment-list">
@@ -189,14 +184,14 @@
                     <div class="comment-header">
                         <a class="comment-name black-href" v-link="'/people/' + item.uHome">{{ item.uName }}</a>
                         <span class="gray-word">{{ master === item.uHome ? '(楼主)' : '' }}</span>
-                        <em class="dot" v-if="item.uWord"></em>
+                        <span class="dot" v-if="item.uWord"></span>
                         <span class="gray-word">{{ item.uWord }}</span>
                     </div>
                     <div class="comment-content" v-html="item.content">
                     </div>
                     <div class="comment-footer">
                         <span>#{{ item.id }}</span>
-                        <span class="comment-time">{{ $diffForHumans(item.time) }}</span>
+                        <span class="comment-time">{{ item.time }}</span>
                         <button @click="agree($event, item)"><span>{{ item.hasLike ? '已赞' : '赞' }}</span>({{ item.like }})</button>
                         <button @click="getReplyList($event, item)">{{ item.show ? '收起评论' : item.talk ? item.talk + ' 条评论' : '添加评论' }}</button>
                         <button class="comment-hover" @click="destoryComment($event, item)" v-if="item.isMe">删除</button>
@@ -210,12 +205,12 @@
                             <span class="gray-word">{{ master === reply.uHome ? '(楼主)' : reply.uHome === item.uHome ? '(层主)' : '' }}</span>
                             <span class="gray-word">&nbsp;回复&nbsp;</span>
                             <a class="comment-name black-href" v-link="'/people/' + reply.tHome">{{ reply.tName }}</a>
-                            <span class="gray-word">{{ master === reply.tHome ? '(楼主)' : reply.tHome === item.uHome ? '(层主)' : '' }}</span>
+                            <span class="gray-word">{{ master === reply.tHome ? '&nbsp;(楼主)' : reply.tHome === item.uHome ? '&nbsp;(层主)' : '' }}</span>
                         </div>
                         <div class="comment-content" v-html="reply.content">
                         </div>
                         <div class="comment-footer">
-                            <span>{{ $diffForHumans(reply.time) }}</span>
+                            <span>{{ reply.time }}</span>
                             <button @click="agree($event, reply)"><span>{{ reply.hasLike ? '已赞' : '赞' }}</span>({{ reply.like }})</button>
                             <button class="comment-hover" @click="destoryReply($event, item, reply)" v-if="reply.isMe">删除</button>
                             <button @click="reply.show = !reply.show" v-else>回复</button>
@@ -228,8 +223,8 @@
                             <div>
                                 <span class="gray-word">{{ count(reply.replyText) }} / 20</span>
                                 <div>
-                                    <button class="btn-radius btn-gray" @click="reply.show = false">取消</button>
-                                    <button class="btn-sm-submit" @click="replyForReply($event, item, reply)">发表</button>
+                                    <button class="btn-bean btn-gray" @click="reply.show = false">取消</button>
+                                    <button class="btn-bean btn-blue" @click="replyForReply($event, item, reply)">发表</button>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +236,7 @@
                                 <span class="gray-word">{{ count(item.replyText) }} / 50</span>
                                 <span class="comment-msg">{{ item.msg }}</span>
                             </div>
-                            <button class="btn-sm-submit" @click="sendReply($event, item)">发表</button>
+                            <button class="btn-bean btn-blue" @click="sendReply($event, item)">发表</button>
                         </div>
                     </div>
                 </div>
@@ -356,7 +351,7 @@
                         });
                     }
                 } else {
-                    this.$root.$refs.navbar.showSignIn();
+                    this.$root.$refs.navsign.showLogin();
                 }
             },
             destoryComment (el, item) {
@@ -374,7 +369,7 @@
                         });
                     });
                 } else {
-                    this.$root.$refs.navbar.showSignIn();
+                    this.$root.$refs.navsign.showLogin();
                 }
             },
             destoryReply (el, item, reply) {
@@ -392,7 +387,7 @@
                         });
                     });
                 } else {
-                    this.$root.$refs.navbar.showSignIn();
+                    this.$root.$refs.navsign.showLogin();
                 }
             },
             agree (el, item) {
@@ -420,7 +415,7 @@
                         });
                     }
                 } else {
-                    this.$root.$refs.navbar.showSignIn();
+                    this.$root.$refs.navsign.showLogin();
                 }
             },
             sendReply (el, item) {
@@ -448,7 +443,7 @@
                         });
                     }
                 } else {
-                    this.$root.$refs.navbar.showSignIn();
+                    this.$root.$refs.navsign.showLogin();
                 }
             },
             replyForReply (el, item, reply) {
@@ -456,7 +451,7 @@
                     if (reply.replyText.length !== 0 && reply.replyText.length < 21) {
                         var button = el.currentTarget;
                         button.setAttribute('disabled', 'disabled');
-                        this.$http.post('/api/comment/reply', {
+                        this.$http.post('/api/comment/reply/store', {
                             content : reply.replyText.replace('\n','<br />'),
                             id : item.id,
                             target : reply.id,
@@ -474,7 +469,7 @@
                         });
                     }
                 } else {
-                    this.$root.$refs.navbar.showSignIn();
+                    this.$root.$refs.navsign.showLogin();
                 }
             }
         }

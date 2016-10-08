@@ -2,7 +2,7 @@
 
 namespace App\Events\User;
 
-use App\Clannader\Models\Morph\Message;
+use App\Clannader\Models\Relation\Message;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;

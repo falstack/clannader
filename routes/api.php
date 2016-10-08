@@ -6,6 +6,13 @@ $api->version('v1', function ($api) {
 
     $api->group(['namespace' => 'App\Http\Controllers', 'middleware' => ['throttle:30']], function ($api) {
 
+        $api->get('/background', 'OtherController@backgroundShow');
+
+        $api->group(['prefix' => '/bangumi'], function ($api) {
+
+            $api->post('/info', 'PostController@info');
+        });
+
         $api->group(['prefix' => '/post'], function ($api) {
 
             $api->get('/news', 'PostController@news');

@@ -81,7 +81,6 @@
             width: 100px;
             height: 100%;
             float: left;
-            background-color: transparent;
             background-repeat: no-repeat;
             background-size: 22px;
             background-position: 39px;
@@ -172,11 +171,14 @@
 <script>
 
     export default {
-        props: {
-
+        watch: {
+            '$store.getters.isLogin' (val) {
+                this.makeWebSocket(val);
+            }
         },
         data () {
             return {
+                socket : null,
                 menu : [
                     {
                         style : "btn-msg",
@@ -196,9 +198,6 @@
                 ]
             }
         },
-        created () {
-
-        },
         methods: {
             menuSwitch (index) {
                 if (!this.menu[index].show) {
@@ -207,10 +206,26 @@
                     }
                     this.menu[index].show = true;
                 }
-            }
-        },
-        mounted () {
+            },
+            makeWebSocket (bool) {
+                if (this.socket === null) {
+                    this.socket = io("http://" + window.location.host + ":3001");
+                }
+                if (bool) {
 
+                    this.socket.on('connection',function(data) {
+                        console.log('connection is ok');
+                    });
+
+                    this.socket.on(this.$getUserInfo('zone') + ':msg',function(data) {
+                        console.log(data);
+                    });
+
+                } else {
+                    this.socket.disconnect();
+                    this.socket = null;
+                }
+            }
         }
     }
 </script>
