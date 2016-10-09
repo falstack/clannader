@@ -59,4 +59,11 @@ class PeopleRepository extends RelationRepository
             $fractal->setSerializer($this->apiSerializer);
         });
     }
+
+    public function readMessage($id, $user_id)
+    {
+        $this->message->whereRaw('id = ? and target_id = ?', [$id, $user_id])->update(array(
+            'read' => 1
+        ));
+    }
 }

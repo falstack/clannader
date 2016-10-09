@@ -20,9 +20,10 @@ class CreateUsersTable extends Migration
             $table->string('zone')->unique();
             $table->string('avatar');
             $table->string('banner');
-            $table->string('autograph');
+            $table->string('autograph')->nullable();
             $table->string('password');
             $table->tinyInteger('sex');
+            $table->unsignedInteger('like')->default(0);
             $table->boolean('birSecret')->default(0);
             $table->timestamp('birthday')->nullable();
             $table->rememberToken();

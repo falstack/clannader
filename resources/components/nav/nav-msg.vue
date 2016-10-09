@@ -87,8 +87,10 @@
             position: absolute;
             top: -14px;
             left: -15px;
-            border: 15px dashed transparent;
+            border-width: 15px;
+            border-color: transparent;
             border-bottom-color: #fff;
+            border-style: dashed dashed solid;
         }
     }
 
@@ -191,6 +193,10 @@
             }
         }
     }
+
+    .menu-foot {
+        height: 34px;
+    }
 </style>
 
 <template>
@@ -206,9 +212,13 @@
             <div class="menu-line"></div>
             <ul class="menu-body" v-show="menu[0].show">
                 <li v-for="msg in orderInbox">
-                    <router-link class="blue-link" :to="'/people/' + msg.uHome">{{ msg.uName }}</router-link>
+                    <span @click="readit(msg)">
+                        <router-link class="blue-link" :to="'/people/' + msg.uHome">{{ msg.uName }}</router-link>
+                    </span>
                     <span>{{ msg.method }}{{ msg.from_type === null ? '你的' : '你在' }}{{ msg.from_type === null ? msg.about_type : msg.from_type }}</span>
-                    <router-link class="blue-link" :to="'/post/' + msg.url">{{ msg.content }}</router-link>
+                    <span @click="readit(msg)">
+                        <router-link class="blue-link" :to="'/post/' + msg.url">{{ msg.content }}</router-link>
+                    </span>
                     <span v-if="msg.from_type">下面的{{ msg.about_type }}</span>
                 </li>
             </ul>
@@ -218,6 +228,10 @@
             <ul class="menu-body" v-show="menu[2].show">
                 <li>页面3</li>
             </ul>
+            <div class="menu-line"></div>
+            <div class="menu-foot">
+
+            </div>
         </div>
     </div>
 </template>
@@ -301,16 +315,28 @@
                 }
             },
             getUserMessage() {
-                this.$http.post('/api/people/message').then((res) => {
-                    var i;
-                    for (i in res.body.data) {
-                        res.body.data[i].url = res.body.data[i].from_type === null ? res.body.data[i].about_id : res.body.data[i].from_id + '#' + res.body.data[i].about_id;
-                        if (!res.body.data[i].read) {
-                            this.count++
+                if (this.inbox.length === 0 && this.$store.getters.isLogin) {
+                    this.$http.post('/api/people/message').then((res) => {
+                        var i;
+                        for (i in res.body.data) {
+                            res.body.data[i].url = res.body.data[i].from_type === null ? res.body.data[i].about_id : res.body.data[i].from_id + '#' + res.body.data[i].about_id;
+                            if (!res.body.data[i].read) {
+                                this.count++
+                            }
                         }
-                    }
-                    this.inbox = res.body.data
-                });
+                        this.inbox = res.body.data
+                    });
+                }
+            },
+            readit (item) {
+                if (!item.read) {
+                    this.$http.post('/api/people/message/read', {
+                        id : item.id
+                    }).then(() => {
+                        item.read = true;
+                        this.count--;
+                    });
+                }
             }
         }
     }

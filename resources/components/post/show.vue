@@ -13,7 +13,7 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     import comment from '../vue-input/comment.vue'
 
@@ -21,8 +21,10 @@
         components: {
             comment
         },
-        '$route' () {
-            this.getPost();
+        watch: {
+            '$route' () {
+                this.getPost();
+            }
         },
         data () {
             return {
@@ -38,11 +40,19 @@
                     id : this.$route.params.id
                 }).then((res) => {
                     this.post = res.body.data;
-                }, () => {
-                    this.$root.$refs.toast.open({
-                        theme: "error",
-                        content: "服务器异常，获取数据失败！"
-                    });
+                }, (res) => {
+                    if (res.status === 500) {
+                        this.$router.replace({ path: '/door/404' });
+                        this.$root.$refs.toast.open({
+                            theme: "warning",
+                            content: "帖子不存在！"
+                        });
+                    } else {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，获取数据失败！"
+                        });
+                    }
                 });
             }
         }

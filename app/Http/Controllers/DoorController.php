@@ -62,7 +62,7 @@ class DoorController extends Controller
             'avatar' => 'http://cdn.clannader.com/avatar',
             'banner' => 'http://cdn.clannader.com/B-banner',
             'sex' => 0,
-            'autograph' => '这个人很懒，什么都没有留下。'
+            'like' => 0
         ];
 
         $this->user->create($data);

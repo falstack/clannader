@@ -193,7 +193,7 @@
                         <span>#{{ item.id }}</span>
                         <span class="comment-time">{{ item.time }}</span>
                         <button @click="agree($event, item)"><span>{{ item.hasLike ? '已赞' : '赞' }}</span>({{ item.like }})</button>
-                        <button @click="getReplyList($event, item)">{{ item.show ? '收起评论' : item.talk ? item.talk + ' 条评论' : '添加评论' }}</button>
+                        <button @click="getReplyList($event, item)">{{ item.show ? '收起回复' : item.talk ? item.talk + ' 条回复' : '添加回复' }}</button>
                         <button class="comment-hover" @click="destoryComment($event, item, index)" v-if="item.isMe">删除</button>
                     </div>
                 </div>
@@ -224,19 +224,19 @@
                                 <span class="gray-word">{{ count(reply.replyText) }} / 20</span>
                                 <div>
                                     <button class="btn-bean btn-gray" @click="reply.show = false">取消</button>
-                                    <button class="btn-bean btn-blue" @click="replyForReply($event, item, reply)">发表</button>
+                                    <button class="btn-bean btn-blue" @click="reReply($event, item, reply)">发表</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="reply-box" v-if="!item.isMe">
-                        <textarea class="comment-text" maxlength="50" placeholder="留下你的评论..." @click="item.msg = ''" v-model="item.replyText"></textarea>
+                        <textarea class="comment-text" maxlength="50" placeholder="留下你的回复..." @click="item.msg = ''" v-model="item.replyText"></textarea>
                         <div class="comment-warp">
                             <div>
                                 <span class="gray-word">{{ count(item.replyText) }} / 50</span>
                                 <span class="comment-msg">{{ item.msg }}</span>
                             </div>
-                            <button class="btn-bean btn-blue" @click="sendReply($event, item)">发表</button>
+                            <button class="btn-bean btn-blue" @click="reply($event, item)">发表</button>
                         </div>
                     </div>
                 </div>
@@ -245,12 +245,12 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     export default {
         props: {
             placeholder: {
-                default : "留下你的评论..."
+                default : "留下你的回复..."
             },
             master : {
                 default : null
@@ -264,6 +264,11 @@
                 required : true
             }
         },
+        watch: {
+            '$route' () {
+                this.init();
+            }
+        },
         data () {
             return {
                 list : [],
@@ -272,13 +277,13 @@
             }
         },
         created () {
-            this.commentList();
+            this.init();
         },
         methods: {
             count (item) {
                 return item.length
             },
-            commentList () {
+            init () {
                 this.$http.post('/api/comment/list', {
                     id : this.id,
                     type : this.type
@@ -289,8 +294,8 @@
                         res.body.data[i].replyList = [];
                         res.body.data[i].replyText = "";
                         res.body.data[i].msg = "";
-                        this.list.push(res.body.data[i])
                     }
+                    this.list = res.body.data;
                 });
             },
             getReplyList (el, item) {
@@ -346,7 +351,7 @@
                         }, () => {
                             this.$root.$refs.toast.open({
                                 theme: "error",
-                                content: "服务器异常，发送评论失败！"
+                                content: "服务器异常，发送回复失败！"
                             });
                         });
                     }
@@ -365,7 +370,7 @@
                     }, () => {
                         this.$root.$refs.toast.open({
                             theme: "error",
-                            content: "服务器异常，删除评论失败！"
+                            content: "服务器异常，回复删除失败！"
                         });
                     });
                 } else {
@@ -383,7 +388,7 @@
                     }, () => {
                         this.$root.$refs.toast.open({
                             theme: "error",
-                            content: "服务器异常，删除评论失败！"
+                            content: "服务器异常，回复删除失败！"
                         });
                     });
                 } else {
@@ -418,7 +423,7 @@
                     this.$root.$refs.navsign.showLogin();
                 }
             },
-            sendReply (el, item) {
+            reply (el, item) {
                 if (this.$store.getters.isLogin) {
                     if (item.replyText.length === 0) {
                         item.msg = "输入不能为空！"
@@ -446,7 +451,7 @@
                     this.$root.$refs.navsign.showLogin();
                 }
             },
-            replyForReply (el, item, reply) {
+            reReply (el, item, reply) {
                 if (this.$store.getters.isLogin) {
                     if (reply.replyText.length !== 0 && reply.replyText.length < 21) {
                         var button = el.currentTarget;

@@ -26,7 +26,12 @@ $api->version('v1', function ($api) {
 
             $api->post('/info', 'PeopleController@info');
 
-            $api->post('/message', 'PeopleController@message')->middleware('jwt.auth');
+            $api->group(['prefix' => '/message', 'middleware' => ['jwt.auth']], function ($api) {
+
+                $api->post('/', 'PeopleController@message');
+
+                $api->post('/read', 'PeopleController@readMsg');
+            });
         });
 
         $api->group(['prefix' => '/post'], function ($api) {

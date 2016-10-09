@@ -13,8 +13,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\User\SendMessage' => [
-
+        'App\Events\User\PushMessage' => [
+            'App\Listeners\User\HandlePushMessage',
+        ],
+        'App\Events\User\PullMessage' => [
+            'App\Listeners\User\HandlePullMessage',
         ],
     ];
 

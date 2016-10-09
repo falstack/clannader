@@ -4,6 +4,8 @@ namespace App\Clannader\Repository;
 
 use App\Clannader\ApiSerializer;
 use App\Clannader\Models\Morph\Comment;
+use App\Clannader\Models\Relation\Message;
+use App\Clannader\Presenter\MessagePresenter;
 use App\Clannader\Transformer\CommentTransformer;
 use Mews\Purifier\Facades\Purifier;
 
@@ -12,14 +14,20 @@ class CommentRepository extends RelationRepository
     protected $comment;
     protected $commentTransformer;
     protected $apiSerializer;
+    protected $messagePresenter;
+    protected $message;
 
     public function __construct(Comment $comment,
                                 CommentTransformer $commentTransformer,
-                                ApiSerializer $apiSerializer)
+                                ApiSerializer $apiSerializer,
+                                MessagePresenter $messagePresenter,
+                                Message $message)
     {
         $this->comment = $comment;
         $this->commentTransformer = $commentTransformer;
         $this->apiSerializer = $apiSerializer;
+        $this->messagePresenter = $messagePresenter;
+        $this->message = $message;
     }
 
     public function list($id, $type, $user_id)
@@ -33,18 +41,27 @@ class CommentRepository extends RelationRepository
 
     public function store($form, $user)
     {
-        $data = [
+
+        $new = $this->comment->create([
             'user_id' => $user->id,
             'link_id' => $form['id'],
             'link_type' => $form['type'],
             'content' => Purifier::clean($form['content'])
-        ];
-
-        $new = $this->comment->create($data);
+        ]);
 
         $new->link->increment('talk');
 
-        $this->pushMessage($new);
+        if ($new->user_id != $new->link->user_id) {
+
+            event(new \App\Events\User\SendMessage($this->message->create([
+                'attack_id' => $new->user_id,
+                'about_id' => $new->link_id,
+                'target_id' => $new->link->user_id,
+                'about_type' => $new->link_type,
+                'from_type' => null,
+                'from_id' => 0
+            ])));
+        }
 
         return $this->response->item($this->itemMergeLikeAndMe($new, 'Comment', $user->id), $this->commentTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);
@@ -62,19 +79,24 @@ class CommentRepository extends RelationRepository
             $target_id = $target->user_id;
         }
 
-        $data = [
+        $new = $this->comment->create([
             'user_id' => $user->id,
             'target_id' => $target_id,
             'link_id' => $comment->id,
             'link_type' => 'Comment',
             'content' => Purifier::clean($form['content'])
-        ];
-
-        $new = $this->comment->create($data);
+        ]);
 
         $new->link->increment('talk');
 
-        $this->pushMessage($new);
+        event(new \App\Events\User\SendMessage($this->message->create([
+            'attack_id' => $new->user_id,
+            'about_id' => $new->link_id,
+            'about_type' => $new->link_type,
+            'from_id' => $new->link->link_id,
+            'from_type' => $new->link->link_type,
+            'target_id' => $new->target_id,
+        ])));
 
         return $this->response->item($this->itemMergeLikeAndMe($new, 'Comment', $user->id), $this->commentTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);

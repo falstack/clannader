@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Like extends Model
 {
-    protected $fillable = ['user_id', 'likeable_type', 'likeable_id'];
+    protected $fillable = ['user_id', 'link_type', 'link_id'];
 
-    public function likeable()
+    public function link()
     {
         return $this->morphTo();
     }

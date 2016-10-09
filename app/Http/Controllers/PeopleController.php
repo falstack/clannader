@@ -28,4 +28,11 @@ class PeopleController extends Controller
 
         return $this->peopleRepository->getUserMessage($user->id);
     }
+
+    public function readMsg(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        $this->peopleRepository->readMessage($request->get('id'), $user->id);
+    }
 }

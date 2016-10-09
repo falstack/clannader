@@ -16,13 +16,10 @@ class SendMessage implements ShouldBroadcast
     use InteractsWithSockets, SerializesModels;
 
     public $message;
-    protected $presenter;
 
-    public function __construct(Message $message,
-                                MessagePresenter $presenter)
+    public function __construct(Message $message)
     {
         $this->message = $message;
-        $this->presenter = $presenter;
     }
 
     public function broadcastAs() {
@@ -36,8 +33,8 @@ class SendMessage implements ShouldBroadcast
             'uHome' => $this->message->attack->zone,
             'about_id' => $this->message->about_id,
             'from_id' => $this->message->from_id,
-            'about_type' => $this->presenter->formatClass($this->message->about_type),
-            'from_type' => $this->presenter->formatClass($this->message->from_type),
+            'about_type' => MessagePresenter::formatClass($this->message->about_type),
+            'from_type' => MessagePresenter::formatClass($this->message->from_type),
             'content' => $this->message->from_id ? $this->message->from->name : $this->message->about->name,
             'method' => '回复了',
             'read' => $this->message->read,
