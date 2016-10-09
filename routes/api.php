@@ -25,6 +25,8 @@ $api->version('v1', function ($api) {
         $api->group(['prefix' => '/people'], function ($api) {
 
             $api->post('/info', 'PeopleController@info');
+
+            $api->post('/message', 'PeopleController@message')->middleware('jwt.auth');
         });
 
         $api->group(['prefix' => '/post'], function ($api) {

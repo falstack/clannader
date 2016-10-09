@@ -21,4 +21,11 @@ class PeopleController extends Controller
     {
         return $this->peopleRepository->getUserInfo($request->get('id'), $this->getUserIdByJWT());
     }
+
+    public function message(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        return $this->peopleRepository->getUserMessage($user->id);
+    }
 }

@@ -15,6 +15,7 @@
     <script src="http://cdn.bootcss.com/vuex/2.0.0/vuex.min.js"></script>
     <script src="http://cdn.bootcss.com/vue-resource/1.0.3/vue-resource.min.js"></script>
     <script src="http://cdn.bootcss.com/socket.io/1.4.8/socket.io.min.js"></script>
+    <script src="http://cdn.bootcss.com/lodash.js/4.16.2/lodash.min.js"></script>
     <script src="{{ asset('dev/js/entry.js') }}"></script>
 </body>
 </html>

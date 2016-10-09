@@ -10,22 +10,30 @@ namespace App\Clannader\Repository;
 
 
 use App\Clannader\ApiSerializer;
+use App\Clannader\Models\Relation\Message;
 use App\Clannader\Models\User;
 use App\Clannader\Transformer\People\InfoTransformer;
+use App\Clannader\Transformer\People\MessageTransformer;
 
 class PeopleRepository extends RelationRepository
 {
     protected $user;
     protected $infoTransformer;
     protected $apiSerializer;
+    protected $messageTransformer;
+    protected $message;
 
     public function __construct(User $user,
                                 InfoTransformer $infoTransformer,
-                                ApiSerializer $apiSerializer)
+                                ApiSerializer $apiSerializer,
+                                MessageTransformer $messageTransformer,
+                                Message $message)
     {
         $this->user = $user;
         $this->infoTransformer = $infoTransformer;
         $this->apiSerializer = $apiSerializer;
+        $this->messageTransformer = $messageTransformer;
+        $this->message = $message;
     }
 
     public function getUserInfo($zone, $user_id)
@@ -39,6 +47,15 @@ class PeopleRepository extends RelationRepository
         $item->isMe = $item->id == $user_id;
 
         return $this->response->item($this->checkHasLike($item, 'User', $user_id), $this->infoTransformer, [], function($resource, $fractal) {
+            $fractal->setSerializer($this->apiSerializer);
+        });
+    }
+
+    public function getUserMessage($user_id)
+    {
+        $list = $this->message->where('target_id', $user_id)->get();
+
+        return $this->response->collection($list, $this->messageTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);
         });
     }

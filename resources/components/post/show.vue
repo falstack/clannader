@@ -21,11 +21,8 @@
         components: {
             comment
         },
-        props: {
-
-        },
-        computed: {
-
+        '$route' () {
+            this.getPost();
         },
         data () {
             return {
@@ -48,9 +45,6 @@
                     });
                 });
             }
-        },
-        mounted () {
-
         }
     }
 </script>
