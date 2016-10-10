@@ -180,9 +180,9 @@
         <div class="comment-list">
             <div class="comment-item" v-for="(item, index) in list">
                 <div class="comment-box">
-                    <a class="uface" v-link="'/people/' + item.uHome"><img :src="item.uFace"></a>
+                    <router-link class="uface" :to="'/people/' + item.uHome"><img :src="item.uFace"></router-link>
                     <div class="comment-header">
-                        <a class="comment-name black-href" v-link="'/people/' + item.uHome">{{ item.uName }}</a>
+                        <router-link class="comment-name black-href" :to="'/people/' + item.uHome">{{ item.uName }}</router-link>
                         <span class="gray-word">{{ master === item.uHome ? '(楼主)' : '' }}</span>
                         <span class="dot" v-if="item.uWord"></span>
                         <span class="gray-word">{{ item.uWord }}</span>
@@ -200,11 +200,11 @@
                 <div class="comment-reply" v-if="item.show">
                     <div v-for="(reply, dito) in item.replyList">
                         <div class="reply-header">
-                            <a class="uface" v-link="'/people/' + item.uHome"><img :src="reply.uFace"></a>
-                            <a class="comment-name black-href" v-link="'/people/' + reply.uHome">{{ reply.uName }}</a>
+                            <router-link class="uface" :to="'/people/' + item.uHome"><img :src="reply.uFace"></router-link>
+                            <router-link class="comment-name black-href" :to="'/people/' + reply.uHome">{{ reply.uName }}</router-link>
                             <span class="gray-word">{{ master === reply.uHome ? '(楼主)' : reply.uHome === item.uHome ? '(层主)' : '' }}</span>
                             <span class="gray-word">&nbsp;回复&nbsp;</span>
-                            <a class="comment-name black-href" v-link="'/people/' + reply.tHome">{{ reply.tName }}</a>
+                            <router-link class="comment-name black-href" :to="'/people/' + reply.tHome">{{ reply.tName }}</router-link>
                             <span class="gray-word">{{ master === reply.tHome ? '&nbsp;(楼主)' : reply.tHome === item.uHome ? '&nbsp;(层主)' : '' }}</span>
                         </div>
                         <div class="comment-content" v-html="reply.content">

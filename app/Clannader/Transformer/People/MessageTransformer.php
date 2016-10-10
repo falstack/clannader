@@ -19,7 +19,7 @@ class MessageTransformer extends TransformerAbstract
             'about_type' => MessagePresenter::formatClass($message->about_type),
             'from_type' => MessagePresenter::formatClass($message->from_type),
             'content' => $message->from_id ? $message->from->name : $message->about->name,
-            'method' => '回复了',
+            'method' => $message->method,
             'read' => $message->read
         ];
     }

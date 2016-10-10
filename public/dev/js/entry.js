@@ -2450,11 +2450,15 @@
 	
 	var _comment2 = _interopRequireDefault(_comment);
 	
+	var _like = __webpack_require__(223);
+	
+	var _like2 = _interopRequireDefault(_like);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
 	    components: {
-	        comment: _comment2.default
+	        comment: _comment2.default, like: _like2.default
 	    },
 	    watch: {
 	        '$route': function $route() {
@@ -2892,26 +2896,22 @@
 	      staticClass: "comment-item"
 	    }, [_h('div', {
 	      staticClass: "comment-box"
-	    }, [_h('a', {
-	      directives: [{
-	        name: "link",
-	        value: ('/people/' + item.uHome),
-	        expression: "'/people/' + item.uHome"
-	      }],
-	      staticClass: "uface"
+	    }, [_h('router-link', {
+	      staticClass: "uface",
+	      attrs: {
+	        "to": '/people/' + item.uHome
+	      }
 	    }, [_h('img', {
 	      attrs: {
 	        "src": item.uFace
 	      }
 	    })]), " ", _h('div', {
 	      staticClass: "comment-header"
-	    }, [_h('a', {
-	      directives: [{
-	        name: "link",
-	        value: ('/people/' + item.uHome),
-	        expression: "'/people/' + item.uHome"
-	      }],
-	      staticClass: "comment-name black-href"
+	    }, [_h('router-link', {
+	      staticClass: "comment-name black-href",
+	      attrs: {
+	        "to": '/people/' + item.uHome
+	      }
 	    }, [_s(item.uName)]), " ", _h('span', {
 	      staticClass: "gray-word"
 	    }, [_s(master === item.uHome ? '(楼主)' : '')]), " ", (item.uWord) ? _h('span', {
@@ -2951,33 +2951,27 @@
 	    }, [_l((item.replyList), function(reply, dito) {
 	      return _h('div', [_h('div', {
 	        staticClass: "reply-header"
-	      }, [_h('a', {
-	        directives: [{
-	          name: "link",
-	          value: ('/people/' + item.uHome),
-	          expression: "'/people/' + item.uHome"
-	        }],
-	        staticClass: "uface"
+	      }, [_h('router-link', {
+	        staticClass: "uface",
+	        attrs: {
+	          "to": '/people/' + item.uHome
+	        }
 	      }, [_h('img', {
 	        attrs: {
 	          "src": reply.uFace
 	        }
-	      })]), " ", _h('a', {
-	        directives: [{
-	          name: "link",
-	          value: ('/people/' + reply.uHome),
-	          expression: "'/people/' + reply.uHome"
-	        }],
-	        staticClass: "comment-name black-href"
+	      })]), " ", _h('router-link', {
+	        staticClass: "comment-name black-href",
+	        attrs: {
+	          "to": '/people/' + reply.uHome
+	        }
 	      }, [_s(reply.uName)]), " ", _h('span', {
 	        staticClass: "gray-word"
-	      }, [_s(master === reply.uHome ? '(楼主)' : reply.uHome === item.uHome ? '(层主)' : '')]), " ", _m(0), " ", _h('a', {
-	        directives: [{
-	          name: "link",
-	          value: ('/people/' + reply.tHome),
-	          expression: "'/people/' + reply.tHome"
-	        }],
-	        staticClass: "comment-name black-href"
+	      }, [_s(master === reply.uHome ? '(楼主)' : reply.uHome === item.uHome ? '(层主)' : '')]), " ", _m(0), " ", _h('router-link', {
+	        staticClass: "comment-name black-href",
+	        attrs: {
+	          "to": '/people/' + reply.tHome
+	        }
 	      }, [_s(reply.tName)]), " ", _h('span', {
 	        staticClass: "gray-word"
 	      }, [_s(master === reply.tHome ? ' (楼主)' : reply.tHome === item.uHome ? ' (层主)' : '')])]), " ", _h('div', {
@@ -3112,7 +3106,15 @@
 	    staticClass: "row"
 	  }, [_h('div', {
 	    staticClass: "col-md-9"
-	  }, [_h('p', [_s(post.title)]), " ", _h('comment', {
+	  }, [_h('p', [_s(post.title)]), " ", _h('div', [_h('like', {
+	    attrs: {
+	      "type": 'Post',
+	      "me": post.isMe,
+	      "id": $route.params.id,
+	      "count": post.like,
+	      "flag": post.hasLike
+	    }
+	  })]), " ", _h('comment', {
 	    attrs: {
 	      "type": 'Post',
 	      "master": post.uHome,
@@ -3530,7 +3532,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.zone-left[data-v-5] {\n  padding-right: 60px;\n  margin-top: -50px;\n}\n.zone-left .uface[data-v-5] {\n    width: 100px;\n    height: 100px;\n    margin-left: 6px;\n    border: 4px solid #fff;\n}\n.zone-left .uname[data-v-5] {\n    margin: 20px 0;\n}\n.zone-left .uname .oneline[data-v-5] {\n      font-size: 20px;\n      line-height: 32px;\n      letter-spacing: 2px;\n      color: #666;\n      margin-left: 10px;\n      vertical-align: middle;\n      font-weight: bold;\n}\n.zone-left .uname .sex[data-v-5] {\n      width: 13px;\n      height: 13px;\n      margin-left: 5px;\n}\n.zone-left .uword[data-v-5] {\n    color: #aaa;\n    margin: 20px 0 0;\n    font-size: 12px;\n    margin-left: 10px;\n    line-height: 1.7;\n}\n.zone-left .user-menu[data-v-5] {\n    margin-top: 30px;\n    padding-top: 25px;\n    border-top: 1px solid #eee;\n}\n.zone-left .user-menu li[data-v-5]:hover {\n      background-color: #f6f9fa;\n}\n.zone-left .user-menu a[data-v-5] {\n      display: block;\n      color: #999;\n      font-size: 12px;\n      padding: 5px 0;\n      margin-left: 10px;\n}\n.zone-left .user-menu a[data-v-5]:hover {\n        color: #00bfef;\n}\n.zone-left .user-menu .router-link-active[data-v-5] {\n      color: #00a1d6;\n}\n.zone-left .user-menu .router-link-active[data-v-5]:hover {\n        color: #00a1d6;\n}\n", "", {"version":3,"sources":["/./resources/components/people/index.vue"],"names":[],"mappings":";AAAA;EACE,oBAAoB;EACpB,kBAAkB;CAAE;AACpB;IACE,aAAa;IACb,cAAc;IACd,iBAAiB;IACjB,uBAAuB;CAAE;AAC3B;IACE,eAAe;CAAE;AACjB;MACE,gBAAgB;MAChB,kBAAkB;MAClB,oBAAoB;MACpB,YAAY;MACZ,kBAAkB;MAClB,uBAAuB;MACvB,kBAAkB;CAAE;AACtB;MACE,YAAY;MACZ,aAAa;MACb,iBAAiB;CAAE;AACvB;IACE,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;CAAE;AACrB;IACE,iBAAiB;IACjB,kBAAkB;IAClB,2BAA2B;CAAE;AAC7B;MACE,0BAA0B;CAAE;AAC9B;MACE,eAAe;MACf,YAAY;MACZ,gBAAgB;MAChB,eAAe;MACf,kBAAkB;CAAE;AACpB;QACE,eAAe;CAAE;AACrB;MACE,eAAe;CAAE;AACjB;QACE,eAAe;CAAE","file":"index.vue","sourcesContent":[".zone-left {\n  padding-right: 60px;\n  margin-top: -50px; }\n  .zone-left .uface {\n    width: 100px;\n    height: 100px;\n    margin-left: 6px;\n    border: 4px solid #fff; }\n  .zone-left .uname {\n    margin: 20px 0; }\n    .zone-left .uname .oneline {\n      font-size: 20px;\n      line-height: 32px;\n      letter-spacing: 2px;\n      color: #666;\n      margin-left: 10px;\n      vertical-align: middle;\n      font-weight: bold; }\n    .zone-left .uname .sex {\n      width: 13px;\n      height: 13px;\n      margin-left: 5px; }\n  .zone-left .uword {\n    color: #aaa;\n    margin: 20px 0 0;\n    font-size: 12px;\n    margin-left: 10px;\n    line-height: 1.7; }\n  .zone-left .user-menu {\n    margin-top: 30px;\n    padding-top: 25px;\n    border-top: 1px solid #eee; }\n    .zone-left .user-menu li:hover {\n      background-color: #f6f9fa; }\n    .zone-left .user-menu a {\n      display: block;\n      color: #999;\n      font-size: 12px;\n      padding: 5px 0;\n      margin-left: 10px; }\n      .zone-left .user-menu a:hover {\n        color: #00bfef; }\n    .zone-left .user-menu .router-link-active {\n      color: #00a1d6; }\n      .zone-left .user-menu .router-link-active:hover {\n        color: #00a1d6; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.zone-left[data-v-5] {\n  padding-right: 60px;\n  margin-top: -50px;\n}\n.zone-left .user-card button[data-v-5] {\n    margin-left: 10px;\n}\n.zone-left .uface[data-v-5] {\n    width: 100px;\n    height: 100px;\n    margin-left: 6px;\n    border: 4px solid #fff;\n}\n.zone-left .uname[data-v-5] {\n    margin: 20px 0;\n}\n.zone-left .uname .oneline[data-v-5] {\n      font-size: 20px;\n      line-height: 32px;\n      letter-spacing: 2px;\n      color: #666;\n      margin-left: 10px;\n      vertical-align: middle;\n      font-weight: bold;\n}\n.zone-left .uname .sex[data-v-5] {\n      width: 13px;\n      height: 13px;\n      margin-left: 5px;\n}\n.zone-left .uword[data-v-5] {\n    color: #aaa;\n    margin: 20px 0 0;\n    font-size: 12px;\n    margin-left: 10px;\n    line-height: 1.7;\n}\n.zone-left .user-menu[data-v-5] {\n    margin-top: 30px;\n    padding-top: 25px;\n    border-top: 1px solid #eee;\n}\n.zone-left .user-menu li[data-v-5]:hover {\n      background-color: #f6f9fa;\n}\n.zone-left .user-menu a[data-v-5] {\n      display: block;\n      color: #999;\n      font-size: 12px;\n      padding: 5px 0;\n      margin-left: 10px;\n}\n.zone-left .user-menu a[data-v-5]:hover {\n        color: #00bfef;\n}\n.zone-left .user-menu .router-link-active[data-v-5] {\n      color: #00a1d6;\n}\n.zone-left .user-menu .router-link-active[data-v-5]:hover {\n        color: #00a1d6;\n}\n", "", {"version":3,"sources":["/./resources/components/people/index.vue"],"names":[],"mappings":";AAAA;EACE,oBAAoB;EACpB,kBAAkB;CAAE;AACpB;IACE,kBAAkB;CAAE;AACtB;IACE,aAAa;IACb,cAAc;IACd,iBAAiB;IACjB,uBAAuB;CAAE;AAC3B;IACE,eAAe;CAAE;AACjB;MACE,gBAAgB;MAChB,kBAAkB;MAClB,oBAAoB;MACpB,YAAY;MACZ,kBAAkB;MAClB,uBAAuB;MACvB,kBAAkB;CAAE;AACtB;MACE,YAAY;MACZ,aAAa;MACb,iBAAiB;CAAE;AACvB;IACE,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;CAAE;AACrB;IACE,iBAAiB;IACjB,kBAAkB;IAClB,2BAA2B;CAAE;AAC7B;MACE,0BAA0B;CAAE;AAC9B;MACE,eAAe;MACf,YAAY;MACZ,gBAAgB;MAChB,eAAe;MACf,kBAAkB;CAAE;AACpB;QACE,eAAe;CAAE;AACrB;MACE,eAAe;CAAE;AACjB;QACE,eAAe;CAAE","file":"index.vue","sourcesContent":[".zone-left {\n  padding-right: 60px;\n  margin-top: -50px; }\n  .zone-left .user-card button {\n    margin-left: 10px; }\n  .zone-left .uface {\n    width: 100px;\n    height: 100px;\n    margin-left: 6px;\n    border: 4px solid #fff; }\n  .zone-left .uname {\n    margin: 20px 0; }\n    .zone-left .uname .oneline {\n      font-size: 20px;\n      line-height: 32px;\n      letter-spacing: 2px;\n      color: #666;\n      margin-left: 10px;\n      vertical-align: middle;\n      font-weight: bold; }\n    .zone-left .uname .sex {\n      width: 13px;\n      height: 13px;\n      margin-left: 5px; }\n  .zone-left .uword {\n    color: #aaa;\n    margin: 20px 0 0;\n    font-size: 12px;\n    margin-left: 10px;\n    line-height: 1.7; }\n  .zone-left .user-menu {\n    margin-top: 30px;\n    padding-top: 25px;\n    border-top: 1px solid #eee; }\n    .zone-left .user-menu li:hover {\n      background-color: #f6f9fa; }\n    .zone-left .user-menu a {\n      display: block;\n      color: #999;\n      font-size: 12px;\n      padding: 5px 0;\n      margin-left: 10px; }\n      .zone-left .user-menu a:hover {\n        color: #00bfef; }\n    .zone-left .user-menu .router-link-active {\n      color: #00a1d6; }\n      .zone-left .user-menu .router-link-active:hover {\n        color: #00a1d6; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -3544,6 +3546,13 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -3708,6 +3717,36 @@
 	                    });
 	                }
 	            });
+	        },
+	        pink: function pink(e) {
+	            var _this2 = this;
+	
+	            if (this.$store.getters.isLogin) {
+	                if (this.people.isMe) {
+	                    this.$root.$refs.toast.open({
+	                        theme: "warning",
+	                        content: "不能关注你自己！"
+	                    });
+	                } else {
+	                    var btn = e.currentTarget;
+	                    btn.setAttribute('disabled', 'disabled');
+	                    this.$http.post('/api/like', {
+	                        id: this.$route.params.id,
+	                        type: 'User'
+	                    }).then(function () {
+	                        _this2.people.hasLike ? _this2.people.like-- : _this2.people.like++;
+	                        _this2.people.hasLike = !_this2.hasLike;
+	                        btn.removeAttribute("disabled");
+	                    }, function () {
+	                        _this2.$root.$refs.toast.open({
+	                            theme: "error",
+	                            content: "服务器异常，发送数据失败！"
+	                        });
+	                    });
+	                }
+	            } else {
+	                this.$root.$refs.navbar.showLogin();
+	            }
 	        }
 	    }
 	};
@@ -3740,7 +3779,11 @@
 	    staticClass: "oneline"
 	  }, [_s(people.uName)]), " ", _h('span', {
 	    class: ['sex', $getSexClass(people.sex)]
-	  })]), " ", _h('p', {
+	  })]), " ", (!people.isMe) ? _h('button', {
+	    on: {
+	      "click": pink
+	    }
+	  }, [_s(people.hasLike ? '已关注' : '关注')]) : _e(), " ", _h('p', {
 	    staticClass: "uword"
 	  }, [_s(people.uWord)])]), " ", _h('ul', {
 	    staticClass: "user-menu"
@@ -7004,7 +7047,7 @@
 	      attrs: {
 	        "to": '/people/' + msg.uHome
 	      }
-	    }, [_s(msg.uName)])]), " ", _h('span', [_s(msg.method) + _s(msg.from_type === null ? '你的' : '你在') + _s(msg.from_type === null ? msg.about_type : msg.from_type)]), " ", _h('span', {
+	    }, [_s(msg.uName)])]), " ", _h('span', [_s(msg.method) + "了" + _s(msg.from_type === null ? '你的' : '你在') + _s(msg.from_type === null ? msg.about_type : msg.from_type)]), " ", _h('span', {
 	      on: {
 	        "click": function($event) {
 	          readit(msg)
@@ -10071,6 +10114,229 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(211)('observable');
+
+/***/ },
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(224)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(226)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(227)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-25"
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-25", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-25", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] like.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(225);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(49)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-25&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./like.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-25&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./like.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(41)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\n.btn-likeable[data-v-25] {\n  position: relative;\n  height: 36px;\n  line-height: 34px;\n  padding-left: 35px;\n  padding-right: 18px;\n  text-align: center;\n  border-radius: 4px;\n  font-size: 13px;\n}\n.btn-likeable[data-v-25]:before {\n    content: '\\2665';\n    position: absolute;\n    left: 15px;\n    transform: scale(1.3, 1);\n}\n.btn-nolike[data-v-25] {\n  background-color: transparent;\n  border: 1px solid #ff8eb3;\n  color: #ff8eb3;\n}\n.btn-nolike[data-v-25]:hover {\n    background-color: rgba(253, 143, 179, 0.125);\n}\n.btn-liked[data-v-25] {\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3;\n  color: #fff;\n}\n.btn-liked[data-v-25]:hover {\n    background-color: #fff;\n    color: #ff8eb3;\n}\n", "", {"version":3,"sources":["/./resources/components/vue-input/like.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,aAAa;EACb,kBAAkB;EAClB,mBAAmB;EACnB,oBAAoB;EACpB,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;CAAE;AAClB;IACE,iBAAiB;IACjB,mBAAmB;IACnB,WAAW;IACX,yBAAyB;CAAE;AAE/B;EACE,8BAA8B;EAC9B,0BAA0B;EAC1B,eAAe;CAAE;AACjB;IACE,6CAA6C;CAAE;AAEnD;EACE,0BAA0B;EAC1B,0BAA0B;EAC1B,YAAY;CAAE;AACd;IACE,uBAAuB;IACvB,eAAe;CAAE","file":"like.vue","sourcesContent":[".btn-likeable {\n  position: relative;\n  height: 36px;\n  line-height: 34px;\n  padding-left: 35px;\n  padding-right: 18px;\n  text-align: center;\n  border-radius: 4px;\n  font-size: 13px; }\n  .btn-likeable:before {\n    content: '\\2665';\n    position: absolute;\n    left: 15px;\n    transform: scale(1.3, 1); }\n\n.btn-nolike {\n  background-color: transparent;\n  border: 1px solid #ff8eb3;\n  color: #ff8eb3; }\n  .btn-nolike:hover {\n    background-color: rgba(253, 143, 179, 0.125); }\n\n.btn-liked {\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3;\n  color: #fff; }\n  .btn-liked:hover {\n    background-color: #fff;\n    color: #ff8eb3; }\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 226 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	
+	exports.default = {
+	    props: {
+	        type: {
+	            required: true,
+	            type: String
+	        },
+	        flag: {
+	            required: true,
+	            type: Boolean
+	        },
+	        count: {
+	            required: true,
+	            type: Number
+	        },
+	        id: {
+	            required: true,
+	            type: String
+	        },
+	        me: {
+	            required: true,
+	            type: Boolean
+	        }
+	    },
+	    methods: {
+	        submit: function submit(e) {
+	            var _this = this;
+	
+	            if (this.$store.getters.isLogin) {
+	                if (this.me) {
+	                    this.$root.$refs.toast.open({
+	                        theme: "warning",
+	                        content: "不能给自己评分！"
+	                    });
+	                } else {
+	                    var btn = e.currentTarget;
+	                    btn.setAttribute('disabled', 'disabled');
+	                    this.$http.post('/api/like', {
+	                        id: this.id,
+	                        type: this.type
+	                    }).then(function (res) {
+	                        _this.flag ? _this.count-- : _this.count++;
+	                        _this.flag = !_this.flag;
+	                        btn.removeAttribute("disabled");
+	                    }, function () {
+	                        _this.$root.$refs.toast.open({
+	                            theme: "error",
+	                            content: "服务器异常，发送数据失败！"
+	                        });
+	                    });
+	                }
+	            } else {
+	                this.$root.$refs.navbar.showLogin();
+	            }
+	        }
+	    }
+	};
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){with(this) {
+	  return _h('button', {
+	    class: ['btn-likeable', flag ? 'btn-liked' : 'btn-nolike'],
+	    on: {
+	      "click": submit
+	    }
+	  }, [_s(count)])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-25", module.exports)
+	  }
+	}
 
 /***/ }
 /******/ ]);

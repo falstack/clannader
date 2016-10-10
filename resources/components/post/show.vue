@@ -7,6 +7,9 @@
         <div class="row">
             <div class="col-md-9">
                 <p>{{ post.title }}</p>
+                <div>
+                    <like :type="'Post'" :me="post.isMe" :id="$route.params.id" :count="post.like" :flag="post.hasLike"></like>
+                </div>
                 <comment :type="'Post'" :master="post.uHome" :id="$route.params.id"></comment>
             </div>
         </div>
@@ -16,10 +19,11 @@
 <script lang="babel">
 
     import comment from '../vue-input/comment.vue'
+    import like from '../vue-input/like.vue'
 
     export default {
         components: {
-            comment
+            comment, like
         },
         watch: {
             '$route' () {

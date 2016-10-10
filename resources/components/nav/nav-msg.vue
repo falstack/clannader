@@ -215,7 +215,7 @@
                     <span @click="readit(msg)">
                         <router-link class="blue-link" :to="'/people/' + msg.uHome">{{ msg.uName }}</router-link>
                     </span>
-                    <span>{{ msg.method }}{{ msg.from_type === null ? '你的' : '你在' }}{{ msg.from_type === null ? msg.about_type : msg.from_type }}</span>
+                    <span>{{ msg.method }}了{{ msg.from_type === null ? '你的' : '你在' }}{{ msg.from_type === null ? msg.about_type : msg.from_type }}</span>
                     <span @click="readit(msg)">
                         <router-link class="blue-link" :to="'/post/' + msg.url">{{ msg.content }}</router-link>
                     </span>

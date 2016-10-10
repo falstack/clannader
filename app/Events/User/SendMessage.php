@@ -36,7 +36,7 @@ class SendMessage implements ShouldBroadcast
             'about_type' => MessagePresenter::formatClass($this->message->about_type),
             'from_type' => MessagePresenter::formatClass($this->message->from_type),
             'content' => $this->message->from_id ? $this->message->from->name : $this->message->about->name,
-            'method' => '回复了',
+            'method' => $this->message->method,
             'read' => $this->message->read,
         ];
     }

@@ -54,6 +54,7 @@ class CommentRepository extends RelationRepository
         if ($new->user_id != $new->link->user_id) {
 
             event(new \App\Events\User\SendMessage($this->message->create([
+                'method' => '回复',
                 'attack_id' => $new->user_id,
                 'about_id' => $new->link_id,
                 'target_id' => $new->link->user_id,
@@ -90,6 +91,7 @@ class CommentRepository extends RelationRepository
         $new->link->increment('talk');
 
         event(new \App\Events\User\SendMessage($this->message->create([
+            'method' => '回复',
             'attack_id' => $new->user_id,
             'about_id' => $new->link_id,
             'about_type' => $new->link_type,

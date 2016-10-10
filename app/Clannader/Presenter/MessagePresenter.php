@@ -16,20 +16,17 @@ class MessagePresenter
         }
     }
 
-    public function commentStoreMsgData($comment)
+    public function formatMethod($arg)
     {
-        return [
-            'attack_id' => $comment->user_id,
-            'about_id' => $comment->link_id,
-            'target_id' => $comment->link->user_id,
-            'about_type' => $comment->link_type,
-            'from_type' => null,
-            'from_id' => 0
-        ];
-    }
-
-    public function reply()
-    {
-        
+        switch ($arg) {
+            case 'Post' :
+                return "赞";
+            case 'Comment' :
+                return '赞';
+            case 'User' :
+                return '关注';
+            default :
+                return '赞';
+        }
     }
 }

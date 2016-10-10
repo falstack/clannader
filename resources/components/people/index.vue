@@ -6,6 +6,12 @@
         padding-right: 60px;
         margin-top: -50px;
 
+        .user-card {
+            button {
+                margin-left: 10px;
+            }
+        }
+
         .uface {
             width: 100px;
             height: 100px;
@@ -85,6 +91,7 @@
                         <span class="oneline">{{ people.uName }}</span>
                         <span :class="['sex', $getSexClass(people.sex)]"></span>
                     </div>
+                    <button v-if="!people.isMe" @click="pink">{{ people.hasLike ? '已关注' : '关注' }}</button>
                     <p class="uword">{{ people.uWord }}</p>
                 </div>
                 <ul class="user-menu">
@@ -166,6 +173,34 @@
                         });
                     }
                 });
+            },
+            pink (e) {
+                if (this.$store.getters.isLogin) {
+                    if (this.people.isMe) {
+                        this.$root.$refs.toast.open({
+                            theme: "warning",
+                            content: "不能关注你自己！"
+                        });
+                    } else {
+                        var btn = e.currentTarget;
+                        btn.setAttribute('disabled', 'disabled');
+                        this.$http.post('/api/like', {
+                            id : this.$route.params.id,
+                            type : 'User'
+                        }).then(() => {
+                            this.people.hasLike ? this.people.like-- : this.people.like++;
+                            this.people.hasLike = !this.hasLike;
+                            btn.removeAttribute("disabled");
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送数据失败！"
+                            });
+                        });
+                    }
+                } else {
+                    this.$root.$refs.navbar.showLogin();
+                }
             }
         }
     }
