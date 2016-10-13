@@ -1,4 +1,4 @@
-<style lang="sass" rel="scss" scoped>
+<style lang="sass" rel="scss">
     @import '../../static/sass/variables';
 
     $new-height : 86px;
@@ -7,7 +7,6 @@
 
     .comment-new {
         border: 1px solid $color-gray-hover;
-        height: $new-height;
         margin: 30px 0;
     }
 
@@ -168,7 +167,8 @@
 <template>
     <div>
         <div class="comment-new" ref="news">
-            <textarea class="comment-text" maxlength="50" :placeholder="placeholder" @click="msg = ''" v-model="content"></textarea>
+            <!--<textarea class="comment-text" maxlength="50" :placeholder="placeholder" @click="msg = ''" v-model="content"></textarea>-->
+            <editor :width="665" :height="500" :content="content"></editor>
             <div class="comment-warp">
                 <div>
                     <span class="gray-word">{{ count(content) }} / 50</span>
@@ -247,7 +247,12 @@
 
 <script lang="babel">
 
+    import editor from '../vue-input/editor.vue'
+
     export default {
+        components : {
+            editor
+        },
         props: {
             placeholder: {
                 default : "留下你的回复..."
@@ -333,7 +338,7 @@
                     if (this.content.length === 0) {
                         this.msg = "输入不能为空！"
                     } else if (this.content.length > 50) {
-                        this.msg = "输入过长";
+                        this.msg = "输入过长"
                     } else {
                         var button = el.currentTarget;
                         button.setAttribute('disabled', 'disabled');

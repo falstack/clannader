@@ -1,0 +1,84 @@
+#vue-paginate {
+  margin-top: 20px;
+
+  .post-item {
+    min-height: 80px;
+    border-top: 1px solid $color-gray-hover;
+    background-color: #fff;
+    transition: background-color .2s;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:hover {
+      transition: 0s;
+      background-color: $color-gray-light;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      >div {
+        display: flex;
+        align-items: center;
+      }
+
+      .uface, .bface {
+        width: 38px;
+        height: 38px;
+      }
+
+      .gray-link {
+        margin-left: 5px;
+        font-size: 13px;
+      }
+    }
+
+    .foot {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .bangumi-item {
+    display: flex;
+    width: 240px;
+    float: left;
+    margin-bottom: 20px;
+
+    .bface {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .oneline {
+      max-width: 170px;
+    }
+  }
+
+  .user-item {
+    display: flex;
+    width: 240px;
+    float: left;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .uface {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .oneline {
+      max-width: 170px;
+    }
+  }
+}

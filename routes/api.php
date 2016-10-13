@@ -20,11 +20,15 @@ $api->version('v1', function ($api) {
         $api->group(['prefix' => '/bangumi'], function ($api) {
 
             $api->post('/info', 'BangumiController@info');
+
+            $api->get('/list', 'BangumiController@list');
         });
 
         $api->group(['prefix' => '/people'], function ($api) {
 
             $api->post('/info', 'PeopleController@info');
+
+            $api->get('/pink', 'PeopleController@pink');
 
             $api->group(['prefix' => '/message', 'middleware' => ['jwt.auth']], function ($api) {
 
@@ -36,7 +40,7 @@ $api->version('v1', function ($api) {
 
         $api->group(['prefix' => '/post'], function ($api) {
 
-            $api->get('/all', 'PostController@all');
+            $api->get('/list', 'PostController@list');
 
             $api->post('/show', 'PostController@show');
         });

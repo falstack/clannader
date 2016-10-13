@@ -18,4 +18,9 @@ class BangumiController extends Controller
     {
         return $this->bangumiRepository->getBangumiInfo($request->get('id'), $this->getUserIdByJWT());
     }
+
+    public function list(Request $request)
+    {
+        return $this->bangumiRepository->getBangumiList($request->all());
+    }
 }

@@ -80,7 +80,7 @@ class LikeRepository extends RelationRepository
 
             if ($agree->link_type == 'Bangumi') return;
 
-            $this->pullMessage($agree->linkable_id, $agree->linkable_type, $user->id);
+            $this->pullMessage($agree->link_id, $agree->link_type, $user->id);
         }
     }
 }

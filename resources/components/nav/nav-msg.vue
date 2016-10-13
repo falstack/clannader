@@ -223,10 +223,15 @@
                 </li>
             </ul>
             <ul class="menu-body" v-show="menu[1].show">
-                <li>页面2</li>
+                <li>暂无通知</li>
             </ul>
             <ul class="menu-body" v-show="menu[2].show">
-                <li>页面3</li>
+                <li v-for="msg in notice">
+                    <span @click="readit(msg)">
+                        <router-link class="blue-link" :to="'/people/' + msg.uHome">{{ msg.uName }}</router-link>
+                    </span>
+                    <span>{{ msg.method }}了你</span>
+                </li>
             </ul>
             <div class="menu-line"></div>
             <div class="menu-foot">
@@ -236,7 +241,7 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     export default {
         watch: {
@@ -301,7 +306,7 @@
 
                     this.socket.on(this.$getUserInfo('zone') + ':msg',function(data) {
                         data.url = data.from_type === null ? data.about_id : data.from_id + '#' + data.about_id;
-                        vm.inbox.push(data);
+                        vm.msgEmit(data);
                         if (!data.read) {
                             vm.count++
                         }
@@ -323,9 +328,16 @@
                             if (!res.body.data[i].read) {
                                 this.count++
                             }
+                            this.msgEmit(res.body.data[i])
                         }
-                        this.inbox = res.body.data
                     });
+                }
+            },
+            msgEmit (data) {
+                if (data.method === '关注') {
+                    this.notice.push(data)
+                } else {
+                    this.inbox.push(data)
                 }
             },
             readit (item) {

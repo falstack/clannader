@@ -35,4 +35,9 @@ class PeopleController extends Controller
 
         $this->peopleRepository->readMessage($request->get('id'), $user->id);
     }
+
+    public function pink(Request $request)
+    {
+        return $this->peopleRepository->pinkList($request->all());
+    }
 }

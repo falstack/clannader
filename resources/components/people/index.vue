@@ -110,7 +110,7 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     export default {
         watch: {
@@ -139,10 +139,10 @@
                     }
                 ],
                 myColumn : [
-                    {
-                        name : "收件箱",
-                        path : "/inbox"
-                    },
+//                    {
+//                        name : "收件箱",
+//                        path : "/inbox"
+//                    },
                     {
                         name : "个人资料",
                         path : "/edit"
@@ -189,7 +189,7 @@
                             type : 'User'
                         }).then(() => {
                             this.people.hasLike ? this.people.like-- : this.people.like++;
-                            this.people.hasLike = !this.hasLike;
+                            this.people.hasLike = !this.people.hasLike;
                             btn.removeAttribute("disabled");
                         }, () => {
                             this.$root.$refs.toast.open({

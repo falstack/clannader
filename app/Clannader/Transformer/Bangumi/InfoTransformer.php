@@ -15,8 +15,7 @@ class InfoTransformer extends TransformerAbstract
             'avatar' => $bangumi->avatar,
             'banner' => $bangumi->banner,
             'summary' => $bangumi->summary,
-            'hasLike' => $bangumi->hasLike,
-            'time' => $bangumi->created_at->toDateTimeString()
+            'hasLike' => $bangumi->hasLike
         ];
     }
 }

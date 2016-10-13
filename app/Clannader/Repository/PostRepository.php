@@ -4,6 +4,7 @@ namespace App\Clannader\Repository;
 
 use App\Clannader\ApiSerializer;
 use App\Clannader\Models\Post\Post;
+use App\Clannader\Models\User;
 use App\Clannader\Transformer\PostTransformer;
 
 class PostRepository extends RelationRepository
@@ -22,13 +23,31 @@ class PostRepository extends RelationRepository
         $this->apiSerializer = $apiSerializer;
     }
 
-    public function getPosts($offset, $take)
+    public function getPosts($form)
     {
-        $list =  $this->post->skip($take * $offset)->take($take)->get();
+        $role = isset($form['id']);
+        if ($role) {
+            if ($form['type'] == 'User') {
+                $id = User::where('zone', $form['id'])->value('id');
+                $type = 'user_id';
+            } else {
+                $id = $form['id'];
+                $type = 'bangumi_id';
+            }
+        } else {
+            $type = null;
+            $id = null;
+        }
+        $list =  $this->post->when($role, function ($query) use ($type, $id) {
+            return $query->where($type, $id);
+        })->offset($form['offset'])->limit($form['limit'])->orderBy($form['sortby'], $form['order'])->get();
+        $total = $this->post->when($role, function ($query) use ($type, $id) {
+            return $query->where($type, $id);
+        })->count();
 
         return $this->response->collection($list, $this->postTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);
-        });
+        })->addMeta('total', $total);
     }
 
     public function showPost($id, $user_id)
