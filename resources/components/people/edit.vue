@@ -104,15 +104,6 @@
 <script>
 
     export default {
-        components: {
-
-        },
-        props: {
-
-        },
-        watch: {
-
-        },
         data () {
             return {
                 form : {
@@ -126,9 +117,6 @@
                 upAvatar : false,
                 upBanner : false
             }
-        },
-        created () {
-
         },
         methods: {
             getUserReally () {

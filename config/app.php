@@ -182,6 +182,7 @@ return [
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+        Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
 
     ],
 
@@ -233,6 +234,7 @@ return [
         'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
         'Purifier' => Mews\Purifier\Facades\Purifier::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
 
     ],
 

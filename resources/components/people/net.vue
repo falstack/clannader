@@ -14,15 +14,6 @@
         components: {
             paginate
         },
-        props: {
-
-        },
-        watch: {
-
-        },
-        computed: {
-
-        },
         data () {
             return {
                 template:
@@ -38,15 +29,6 @@
                     words : "人"
                 }
             }
-        },
-        created () {
-
-        },
-        methods: {
-
-        },
-        mounted () {
-
         }
     }
 </script>
