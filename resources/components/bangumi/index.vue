@@ -96,7 +96,7 @@
                             "<router-link class='uface' :to=\" '/people/' + item.uHome \"><img :src='item.uFace'></router-link>" +
                             "<router-link class='gray-link' :to=\" '/people/' + item.uHome \">{{ item.uName }}</router-link>" +
                             "<span class='dot'></span>" +
-                            "<router-link class='blue-link title' :to=\" '/item/' + item.id \">{{ item.title }}</router-link>" +
+                            "<router-link class='blue-link title' :to=\" '/post/' + item.id \">{{ item.title }}</router-link>" +
                         "</div>" +
                     "</div>" +
                     "<div class='body'>" +

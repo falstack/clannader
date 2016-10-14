@@ -14,6 +14,7 @@
         <router-view></router-view>
         <bottom v-show="load" ref="bottom"></bottom>
 
+        <music v-if="lazy" :source="source" ref="music"></music>
         <navsign v-if="lazy" ref="navsign"></navsign>
         <toast v-if="lazy" ref="toast"></toast>
         <top v-if="lazy"></top>
@@ -30,10 +31,11 @@
     import banner from './nav/nav-banner.vue'
     import navsign from './nav/nav-sign.vue'
     import bottom from './tools/bottom.vue'
+    import music from './vue-media/music.vue'
 
     export default {
         components: {
-            top, toast, navbar, banner, navsign, bottom
+            top, toast, navbar, banner, navsign, bottom, music
         },
         watch: {
             '$store.getters.isLogin' (val) {
@@ -45,7 +47,13 @@
             return {
                 lazy : false,
                 load : true,
-                uptoken : null
+                uptoken : null,
+                source : {
+                    src : "http://cdn.clannader.com/music/piano",
+                    img : 'http://cdn.clannader.com/avatar',
+                    player : "広橋真紀子",
+                    album : "いのちの名前"
+                }
             }
         },
         created () {

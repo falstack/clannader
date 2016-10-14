@@ -5552,7 +5552,7 @@
 	    data: function data() {
 	        return {
 	            info: {},
-	            template: "<div class='post-item'>" + "<div class='head'>" + "<div>" + "<router-link class='uface' :to=\" '/people/' + item.uHome \"><img :src='item.uFace'></router-link>" + "<router-link class='gray-link' :to=\" '/people/' + item.uHome \">{{ item.uName }}</router-link>" + "<span class='dot'></span>" + "<router-link class='blue-link title' :to=\" '/item/' + item.id \">{{ item.title }}</router-link>" + "</div>" + "</div>" + "<div class='body'>" + "<p class='oneline'>{{ item.content }}</p>" + "</div>" + "<div class='foot'>" + "<span class='gray-word'>{{ item.time }}</span>" + "<span class='dot'></span>" + "<span class='gray-word'>回复{{ item.talk }}</span>" + "<span class='dot'></span>" + "<span class='gray-word'>喜欢{{ item.like }}</span>" + "</div>" + "</div>",
+	            template: "<div class='post-item'>" + "<div class='head'>" + "<div>" + "<router-link class='uface' :to=\" '/people/' + item.uHome \"><img :src='item.uFace'></router-link>" + "<router-link class='gray-link' :to=\" '/people/' + item.uHome \">{{ item.uName }}</router-link>" + "<span class='dot'></span>" + "<router-link class='blue-link title' :to=\" '/post/' + item.id \">{{ item.title }}</router-link>" + "</div>" + "</div>" + "<div class='body'>" + "<p class='oneline'>{{ item.content }}</p>" + "</div>" + "<div class='foot'>" + "<span class='gray-word'>{{ item.time }}</span>" + "<span class='dot'></span>" + "<span class='gray-word'>回复{{ item.talk }}</span>" + "<span class='dot'></span>" + "<span class='gray-word'>喜欢{{ item.like }}</span>" + "</div>" + "</div>",
 	            init: {
 	                id: this.$route.params.id,
 	                limit: 5,
@@ -7400,13 +7400,17 @@
 	
 	var _bottom2 = _interopRequireDefault(_bottom);
 	
+	var _music = __webpack_require__(245);
+	
+	var _music2 = _interopRequireDefault(_music);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	Vue.http.options.root = "http://" + window.location.host;
 	
 	exports.default = {
 	    components: {
-	        top: _top2.default, toast: _toast2.default, navbar: _navbar2.default, banner: _navBanner2.default, navsign: _navSign2.default, bottom: _bottom2.default
+	        top: _top2.default, toast: _toast2.default, navbar: _navbar2.default, banner: _navBanner2.default, navsign: _navSign2.default, bottom: _bottom2.default, music: _music2.default
 	    },
 	    watch: {
 	        '$store.getters.isLogin': function $storeGettersIsLogin(val) {
@@ -7418,7 +7422,13 @@
 	        return {
 	            lazy: false,
 	            load: true,
-	            uptoken: null
+	            uptoken: null,
+	            source: {
+	                src: "http://cdn.clannader.com/music/piano",
+	                img: 'http://cdn.clannader.com/avatar',
+	                player: "広橋真紀子",
+	                album: "いのちの名前"
+	            }
 	        };
 	    },
 	    created: function created() {
@@ -11236,7 +11246,12 @@
 	      expression: "load"
 	    }],
 	    ref: "bottom"
-	  }), " ", (lazy) ? _h('navsign', {
+	  }), " ", (lazy) ? _h('music', {
+	    ref: "music",
+	    attrs: {
+	      "source": source
+	    }
+	  }) : _e(), " ", (lazy) ? _h('navsign', {
 	    ref: "navsign"
 	  }) : _e(), " ", (lazy) ? _h('toast', {
 	    ref: "toast"
@@ -11435,6 +11450,554 @@
 	  module.hot.accept()
 	  if (module.hot.data) {
 	     require("vue-hot-reload-api").rerender("data-v-7", module.exports)
+	  }
+	}
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(246)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(248)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(249)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-28"
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-28", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-28", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] music.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(247);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(49)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-28&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./music.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-28&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./music.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(41)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\n#music[data-v-28] {\n  width: 563px;\n  height: 115px;\n  position: fixed;\n  bottom: 30px;\n  left: -541px;\n  background-color: #fff;\n  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.25);\n  border-radius: 0 4px 4px 0;\n  z-index: 1000;\n  transition: left .6s ease;\n  display: flex;\n}\n#music .toggle[data-v-28] {\n    width: 22px;\n    height: 100%;\n    border-radius: 0 4px 4px 0;\n    background-color: #00bfef;\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAECklEQVR4Xu2aj1EVMRCHdytQKkAqECpAKlArUCsQKxAqECpQKhAqUCsAKsAOgArW+Z6bmfjm/Ulyl+TwvcwwA8Plvdsvv/1ls3cqGz50w+OXLYCtAjacwDYFNlwAdUzQzJ6r6sNTgDt6CpjZTxHZVdW9TQVwIiKfReRUVfl90qOGAl6IyJ1H/UFVv02ZwOgACNbT4NADPxORc1X9PUUQtQC8F5GvcwGjBPzh15RgVAHgKmAXeLZk1VHDJUBU9aqnMmoCQPofE4IDFDAue8CoCSA2wwQOs0tQBqmCZzSpI6oBmDPDcxEJAb1yGvsrUoRrj1X1IpVc6XW1AQQzXFgTUDGKCCCA8kZEXs4Fgmm+ramG2gAIEFljhkeqSkBLh5mRNkA7jtSBGph7U7rKq+ZVBeBpQE6/8xRgNVdC8DmAA0IAQfBAGN0XWgBA4tfRKpyo6mnKaroi2CFIDbbMo5R5OddUB+ArygrG+c3fnzLUgGqYvzaNcoLn2lYAFlWGYdujXrhaVR26Ejhf3KjqQW6QXT0gyulghsvuh/+z0vwA5J98N7NQWO2NWUo3UcCcGaYu4Kw6DDAiFYx6wmwJgL3+R2r00XWhVMY4Q8k8Wp+hGQBXATLfpVniAYaqkD/D8XkVI+bfqipF0yijNQD29S+r3DyqDkOVyDbKD+AYoxZGrQEQ1L2IXKgqO0PyMDPUgvRRymgQmgKIzPC1iODm2ZWdmSF/qksr/YyYeg8AwQyL3dzMQnWZraR5yTUHEJnh/ZCixsxC93lQXdALQLj5g9JTnpslu8LZkPZ7LwChWzRIwl4dHg5RUhcAngYUNTh6kRn6Z8z8RFWL4yiemLx/LbnQ3fy7iBSboUNgNyhOpW4AIjO8G3LONzMAFB+TewMY7OT+FIomy9pO0yIx9gYQzJA2OGVy9jAzuk1JzZXJAfA0mHV7VHUnO/q/zyHtSZpgCNbMQrco2wy9FqBXSGVYNLqmQASBM8F1rhl6k2RfVdlSi8ZUAFRpd6UQmQqAwWaYEuykTNDlSyVI8Ax2gYfW7xY1V4CZ8ZSIYJcZF0+PinM6VwnNAPgZntI3rPiye6UlPlrPbx2QJgCirW7d/cz+P2RfT/qC6KLqAMyMd4Wy+n9DDjeTAmBmoQuce187Jf3C3C+Zqa1kUsoc7+KWPAh5VFW6x01GFQBeonJIWWd4i4IsPhiVEKsFIBxzc+/pke1xzIef626gFgAefpTImGMtZXGzMTqAAbk/qEFaSqwGgBLnv+VNsVbOH8OqAWDZ2yDLFqnLyoebqQEg9Q1RDI9eXtOcn1+F0QHwBQkFEG+AEnz3V+irAHAIPLQgHUItQNeH/h8vRXcPvFoKlLpxr3nVFNAroNzv3QLIJfa/Xf8HsXeZUPFFXZ4AAAAASUVORK5CYII=);\n    z-index: -1;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n}\n#music .M-main[data-v-28] {\n    padding: 10px;\n    width: 541px;\n    height: 100%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n}\n#music .M-face[data-v-28] {\n    width: 95px;\n    height: 95px;\n    margin-right: 10px;\n}\n#music .M-warp[data-v-28] {\n    height: 95px;\n    display: flex;\n}\n#music .M-control[data-v-28] {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n}\n#music .M-control button[data-v-28] {\n      background-repeat: no-repeat;\n      background-size: contain;\n}\n#music .M-control span[data-v-28] {\n      color: #99a2aa;\n      font-size: 12px;\n}\n#music .M-control .center[data-v-28] {\n      flex: 1;\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n}\n#music .M-control .bottom[data-v-28] {\n      text-align: right;\n}\n#music .M-curBar[data-v-28], #music .M-allBar[data-v-28] {\n    display: block;\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    height: 4px;\n}\n#music .M-curBar[data-v-28] {\n    width: 0;\n    background-color: #00bfef;\n}\n#music .M-allBar[data-v-28] {\n    width: 100%;\n    z-index: 2;\n    cursor: pointer;\n}\n#music .M-tip[data-v-28] {\n    position: absolute;\n    bottom: 12px;\n    width: 50px;\n    height: 17px;\n    line-height: 17px;\n    font-size: 10px;\n    text-align: center;\n    background-color: #fff;\n    border: solid 1px #e5e9ef;\n    border-radius: 3px;\n}\n#music .M-tip em[data-v-28] {\n      border-width: 8px;\n      border-color: transparent;\n      border-top-color: #e5e9ef;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: 17px;\n      top: 15px;\n}\n#music .M-tip i[data-v-28] {\n      border-width: 6px;\n      border-color: transparent;\n      border-top-color: #fff;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: -6px;\n      top: -8px;\n}\n#music .M-play[data-v-28] {\n    display: inline-block;\n    vertical-align: middle;\n    width: 120px;\n    height: 40px;\n    text-align: center;\n    margin: 0 70px 0 120px;\n}\n#music #paused[data-v-28] {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n}\n#music .play-wait[data-v-28] {\n    background-image: url(data:image/png;base64,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);\n}\n#music .play-go[data-v-28] {\n    background-image: url(data:image/png;base64,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);\n}\n#music .M-voice-control[data-v-28] {\n    display: inline-block;\n    vertical-align: middle;\n}\n#music .M-all-voice[data-v-28] {\n    position: relative;\n    display: inline-block;\n    width: 70px;\n    height: 3px;\n    vertical-align: middle;\n    background-color: #e5e9ef;\n    cursor: pointer;\n}\n#music .M-cur-voice[data-v-28] {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 35px;\n    height: 3px;\n    background-color: #00bfef;\n}\n#music #muted[data-v-28] {\n    width: 20px;\n    height: 20px;\n    vertical-align: middle;\n}\n#music .voice-go[data-v-28] {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAEk0lEQVR4Xu2b/3XTMBDHdfYApBMQJsCcBqCdgG5AOgHtBC0TtExQmKAwQcMAVs0EDRPQDiCLd3lynuOc5F+JHTvxv3H8rI/uvvdLBnG81gjAkcc6gSOQgkX0DiSKokkQBF+EEDMhxAQA5lrriyRJXvqw3l6BRFEUBUHwAADTwuJ/xHFMgDq/egOCiDMAuHetWGv9LkmSRddEegGCiPcA4LUArfVZkiTzUQMhvQjD8FEIEZUt1BhzoZT6Xnbftn/vzEKsXjwCwKTKIowxX5VSN1Xu3eY9nQAhvRBC3FaFQQscLRBEJBCXdXdxdECsXjwIIU7rwhidhXjyi8psRmMhTfSCozQKIE31YhdArMtS4ndujKEy4KpKGN9KlGmrF7sAIqUk/TrPP7tKbuMEEkXRlIouACBRLE2kKotDxRvbuoyU0jhAexM+Fsg2Tb/i+jdu2wIQcpM3xQeT+6RpSmVBwr3bBhAp5VMfFsG8eKtMFREvAeDWYSWLNE0/cC2GNSCIeAcA1Jvo/fJZCCJeAwDpw4vW+sq121JKqoU+O6B8U0ptJIwrIKQZYRg+907CvoALCLdpWmvabdYFEDEBgPfcuriKegVkn6zDl6lyYunTBRsBqa+yoSdCiHkcx2d5WCsg+6Id2cu5LMQTPZy64GtGFa0kD4QNU325UB2Xyb2js/WIiAsAeMusZ+0/gwNCCyrRBbb1GEXRqW1ObTDRWp9kEWeQQGynnsSS2/ENXcgIuEDmM9hBAqEFluw4ayWewPErjuNlmj9YINZ15gDwkUnq2PSc2hJhGFLiuXZRlFJKnYwBiGuUsdrx4uKllGxKn+nIoC3E5hj/uEgYx7GrTmOtKgu/gwbic5sjkIKZuCZ/LmHNIs3gLURK+VMI8anoNq7JHyLeAMC1S4gHDwQRWU3wuAxb0Y9GQ1w12EFqiKtlYYz5o5Ri254uixpF2HVVscYYtvlDuuGoll/jOF7OnAetIYj4zBy2Ea6GkZSS0nPqxhev4afuHuv4q5QqnkhaAnC1FI0xNLO5G6yF+I5W+GYvHotaFYODcxlb+j9xrlIippXqnjwQtujZt44ZN5HL3tGVjJVAXKuM80DYjG8PgdSeyHmy043wnO+6e08Fdg3G02TmLNnZS/XpjXcMUdar3BcgTHTxwaBDwRSauXNtbM9krWdgO0p0FJKbYXTKxDe5o/ZhEAQ0hKdO1zJccpdntPKqtZ6WjjLpofsCpe2w2zd4852BZbtKVpVpWEyzz16spS2QrR6HyJuf7W5PjDFlZ0TOXTPUJr62CyCtDszUXYTtb5I/s9P2us9rCyTvMpSwCSHuOjtSlV+sK+Z3DcRGzVmapnQwgD0ZwL3TVs6YFR9sQyNZS2P9aWshdTcgu38nQLYRrUYHxEKhxIh6nuyBFd8ujhJIBiUMw9piO1ogmRXUFdvRA8lUHwAqie1BAKkjtvm2XtOI0eR/O4syvpexpYFXbA/im7tCSUDf3znF9qC+yizLbI0xv5VSjT48auIm+f/04jLFl7YF5KUxZgoAC6317CC/7G67m7v4/15YyC4W1vSZ/wEC2bpucGsIagAAAABJRU5ErkJggg==);\n}\n#music .voice-no[data-v-28] {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAADyUlEQVR4Xu3b/VXbMBAAcJ01QOkG6QTVOw9QmKBs0HQCwgS0EwATABNAJ4AF7LoTkBFgAPv6jifnKX7+kGS3tkTyt6xYv0gn6aSAOHz2BODgsS9wAGn0iNlBlFJHSZKcAcApER0JIR7yPD+fq+fOCqKUUkmS3APAygQgous8zzdzoMwGgohrALhpazQRvVRV9akoipf/jTILCCLeAMC6r7FlWZ4URfEUNQjHCynloxBCDTU0ehAdLx4BgAPn4CdqEI4XQohLWwzWihYEERnCecaIDkTHi3shxPHg+GgpEBVI1/rCBSYaEJ940QYVBYhvvIgORMcLXnWeugyLoBZmSqmV3nTxIsorMI7BWdSQmbLr+6IsBiRNU54qJ+v6QYMg4hUAnPk2Ysrn2nqIUupYSnnB30NE26qqzsfsiBHxgvMwQgjeVV9nWfaw2+1yzJBSPk/ZqDF1NUF4bSOl/N2os9DlnNIEXZtMIjrfgSypd7TtZdI0fRBCfG1BdkIZ2HEXO5A0TVl/cFs+5ld3ebbZQxDxCQC+dNRhhWKRfng1Qcjlhf912RaQDQBc9nxvL4oFBld9FwwIvy0iFgDw2RXFBoOI/lRVdRwUiM7Q89CxRnHB4BkrKBDuGS4oXH4oZVn3jHr6Dg7EBUUPrc6JoonB5YME0Si8biqEEB98AnwbRtAgGoUXa3xU4YTShRE8iA9KH0YUIC4oQxhRgSRJYnPmM7iiDTao1oHU9QBMCNGLEjSIB0bt2IkSLMgIjF6UIEEsMX7pXHDflPyUZdmJuY4JDsQS4y7LsrVOKvWuU4joNs/z7zVKUCAuGGbQHVq8mSjBgPhgOKK8XeMKBgQRn5t30Rp7mLdh0rWvsRk+nJQyQThR67Qn8NlU2T5jZswsEuC9GLY9hYh+miBdSVzbNkxarplCTNO0K8VphWGD0sy6d94KnLSllpW15FTbzoycMAZQXsuyXO3dQrTIWVo2Z3yxtoMqRPxhnDPzdHnr+016GF7xZWEAeCnLclMUxXYPxCbw+L6A63OLOdtdCspiQHR+ge+f8zkIX5abZeZZFIjZvfmA2aa7J0nCQa/veMCmml2ZxYLYtkKff1wJIb7ZPtNXLniQunE8EwDA25WFMZ9oQBhB/9OBe4t3/IkKRAdmryOCuldFB2LMVkNnsa0jK0qQGkVK6RxsowXxDbbRg7gG23cB4hJs3w2IbbB9VyA2wbYsy49j7qD6Lgpn+Vem+bKI2HaZzivx44tgPjc7iBFXNkS0AoCtTtY4XcadAoPrWATIVI2Zop4DSEPxL5YQHsqr5mdTAAAAAElFTkSuQmCC);\n}\n", "", {"version":3,"sources":["/./resources/components/vue-media/music.vue"],"names":[],"mappings":";AAAA;EACE,aAAa;EACb,cAAc;EACd,gBAAgB;EAChB,aAAa;EACb,aAAa;EACb,uBAAuB;EACvB,4CAA4C;EAC5C,2BAA2B;EAC3B,cAAc;EACd,0BAA0B;EAC1B,cAAc;CAAE;AAChB;IACE,YAAY;IACZ,aAAa;IACb,2BAA2B;IAC3B,0BAA0B;IAC1B,89CAA89C;IAC99C,YAAY;IACZ,yBAAyB;IACzB,6BAA6B;IAC7B,4BAA4B;CAAE;AAChC;IACE,cAAc;IACd,aAAa;IACb,aAAa;IACb,QAAQ;IACR,cAAc;IACd,uBAAuB;CAAE;AAC3B;IACE,YAAY;IACZ,aAAa;IACb,mBAAmB;CAAE;AACvB;IACE,aAAa;IACb,cAAc;CAAE;AAClB;IACE,QAAQ;IACR,cAAc;IACd,uBAAuB;CAAE;AACzB;MACE,6BAA6B;MAC7B,yBAAyB;CAAE;AAC7B;MACE,eAAe;MACf,gBAAgB;CAAE;AACpB;MACE,QAAQ;MACR,cAAc;MACd,oBAAoB;MACpB,+BAA+B;CAAE;AACnC;MACE,kBAAkB;CAAE;AACxB;IACE,eAAe;IACf,mBAAmB;IACnB,QAAQ;IACR,UAAU;IACV,YAAY;CAAE;AAChB;IACE,SAAS;IACT,0BAA0B;CAAE;AAC9B;IACE,YAAY;IACZ,WAAW;IACX,gBAAgB;CAAE;AACpB;IACE,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,gBAAgB;IAChB,mBAAmB;IACnB,uBAAuB;IACvB,0BAA0B;IAC1B,mBAAmB;CAAE;AACrB;MACE,kBAAkB;MAClB,0BAA0B;MAC1B,0BAA0B;MAC1B,kCAAkC;MAClC,mBAAmB;MACnB,WAAW;MACX,UAAU;CAAE;AACd;MACE,kBAAkB;MAClB,0BAA0B;MAC1B,uBAAuB;MACvB,kCAAkC;MAClC,mBAAmB;MACnB,WAAW;MACX,UAAU;CAAE;AAChB;IACE,sBAAsB;IACtB,uBAAuB;IACvB,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,uBAAuB;CAAE;AAC3B;IACE,YAAY;IACZ,aAAa;IACb,mBAAmB;CAAE;AACvB;IACE,kxEAAkxE;CAAE;AACtxE;IACE,kpEAAkpE;CAAE;AACtpE;IACE,sBAAsB;IACtB,uBAAuB;CAAE;AAC3B;IACE,mBAAmB;IACnB,sBAAsB;IACtB,YAAY;IACZ,YAAY;IACZ,uBAAuB;IACvB,0BAA0B;IAC1B,gBAAgB;CAAE;AACpB;IACE,mBAAmB;IACnB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,YAAY;IACZ,0BAA0B;CAAE;AAC9B;IACE,YAAY;IACZ,aAAa;IACb,uBAAuB;CAAE;AAC3B;IACE,spDAAspD;CAAE;AAC1pD;IACE,s4CAAs4C;CAAE","file":"music.vue","sourcesContent":["#music {\n  width: 563px;\n  height: 115px;\n  position: fixed;\n  bottom: 30px;\n  left: -541px;\n  background-color: #fff;\n  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.25);\n  border-radius: 0 4px 4px 0;\n  z-index: 1000;\n  transition: left .6s ease;\n  display: flex; }\n  #music .toggle {\n    width: 22px;\n    height: 100%;\n    border-radius: 0 4px 4px 0;\n    background-color: #00bfef;\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAECklEQVR4Xu2aj1EVMRCHdytQKkAqECpAKlArUCsQKxAqECpQKhAqUCsAKsAOgArW+Z6bmfjm/Ulyl+TwvcwwA8Plvdsvv/1ls3cqGz50w+OXLYCtAjacwDYFNlwAdUzQzJ6r6sNTgDt6CpjZTxHZVdW9TQVwIiKfReRUVfl90qOGAl6IyJ1H/UFVv02ZwOgACNbT4NADPxORc1X9PUUQtQC8F5GvcwGjBPzh15RgVAHgKmAXeLZk1VHDJUBU9aqnMmoCQPofE4IDFDAue8CoCSA2wwQOs0tQBqmCZzSpI6oBmDPDcxEJAb1yGvsrUoRrj1X1IpVc6XW1AQQzXFgTUDGKCCCA8kZEXs4Fgmm+ramG2gAIEFljhkeqSkBLh5mRNkA7jtSBGph7U7rKq+ZVBeBpQE6/8xRgNVdC8DmAA0IAQfBAGN0XWgBA4tfRKpyo6mnKaroi2CFIDbbMo5R5OddUB+ArygrG+c3fnzLUgGqYvzaNcoLn2lYAFlWGYdujXrhaVR26Ejhf3KjqQW6QXT0gyulghsvuh/+z0vwA5J98N7NQWO2NWUo3UcCcGaYu4Kw6DDAiFYx6wmwJgL3+R2r00XWhVMY4Q8k8Wp+hGQBXATLfpVniAYaqkD/D8XkVI+bfqipF0yijNQD29S+r3DyqDkOVyDbKD+AYoxZGrQEQ1L2IXKgqO0PyMDPUgvRRymgQmgKIzPC1iODm2ZWdmSF/qksr/YyYeg8AwQyL3dzMQnWZraR5yTUHEJnh/ZCixsxC93lQXdALQLj5g9JTnpslu8LZkPZ7LwChWzRIwl4dHg5RUhcAngYUNTh6kRn6Z8z8RFWL4yiemLx/LbnQ3fy7iBSboUNgNyhOpW4AIjO8G3LONzMAFB+TewMY7OT+FIomy9pO0yIx9gYQzJA2OGVy9jAzuk1JzZXJAfA0mHV7VHUnO/q/zyHtSZpgCNbMQrco2wy9FqBXSGVYNLqmQASBM8F1rhl6k2RfVdlSi8ZUAFRpd6UQmQqAwWaYEuykTNDlSyVI8Ax2gYfW7xY1V4CZ8ZSIYJcZF0+PinM6VwnNAPgZntI3rPiye6UlPlrPbx2QJgCirW7d/cz+P2RfT/qC6KLqAMyMd4Wy+n9DDjeTAmBmoQuce187Jf3C3C+Zqa1kUsoc7+KWPAh5VFW6x01GFQBeonJIWWd4i4IsPhiVEKsFIBxzc+/pke1xzIef626gFgAefpTImGMtZXGzMTqAAbk/qEFaSqwGgBLnv+VNsVbOH8OqAWDZ2yDLFqnLyoebqQEg9Q1RDI9eXtOcn1+F0QHwBQkFEG+AEnz3V+irAHAIPLQgHUItQNeH/h8vRXcPvFoKlLpxr3nVFNAroNzv3QLIJfa/Xf8HsXeZUPFFXZ4AAAAASUVORK5CYII=);\n    z-index: -1;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center; }\n  #music .M-main {\n    padding: 10px;\n    width: 541px;\n    height: 100%;\n    flex: 1;\n    display: flex;\n    flex-direction: column; }\n  #music .M-face {\n    width: 95px;\n    height: 95px;\n    margin-right: 10px; }\n  #music .M-warp {\n    height: 95px;\n    display: flex; }\n  #music .M-control {\n    flex: 1;\n    display: flex;\n    flex-direction: column; }\n    #music .M-control button {\n      background-repeat: no-repeat;\n      background-size: contain; }\n    #music .M-control span {\n      color: #99a2aa;\n      font-size: 12px; }\n    #music .M-control .center {\n      flex: 1;\n      display: flex;\n      align-items: center;\n      justify-content: space-between; }\n    #music .M-control .bottom {\n      text-align: right; }\n  #music .M-curBar, #music .M-allBar {\n    display: block;\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    height: 4px; }\n  #music .M-curBar {\n    width: 0;\n    background-color: #00bfef; }\n  #music .M-allBar {\n    width: 100%;\n    z-index: 2;\n    cursor: pointer; }\n  #music .M-tip {\n    position: absolute;\n    bottom: 12px;\n    width: 50px;\n    height: 17px;\n    line-height: 17px;\n    font-size: 10px;\n    text-align: center;\n    background-color: #fff;\n    border: solid 1px #e5e9ef;\n    border-radius: 3px; }\n    #music .M-tip em {\n      border-width: 8px;\n      border-color: transparent;\n      border-top-color: #e5e9ef;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: 17px;\n      top: 15px; }\n    #music .M-tip i {\n      border-width: 6px;\n      border-color: transparent;\n      border-top-color: #fff;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: -6px;\n      top: -8px; }\n  #music .M-play {\n    display: inline-block;\n    vertical-align: middle;\n    width: 120px;\n    height: 40px;\n    text-align: center;\n    margin: 0 70px 0 120px; }\n  #music #paused {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%; }\n  #music .play-wait {\n    background-image: url(data:image/png;base64,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); }\n  #music .play-go {\n    background-image: url(data:image/png;base64,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); }\n  #music .M-voice-control {\n    display: inline-block;\n    vertical-align: middle; }\n  #music .M-all-voice {\n    position: relative;\n    display: inline-block;\n    width: 70px;\n    height: 3px;\n    vertical-align: middle;\n    background-color: #e5e9ef;\n    cursor: pointer; }\n  #music .M-cur-voice {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 35px;\n    height: 3px;\n    background-color: #00bfef; }\n  #music #muted {\n    width: 20px;\n    height: 20px;\n    vertical-align: middle; }\n  #music .voice-go {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAEk0lEQVR4Xu2b/3XTMBDHdfYApBMQJsCcBqCdgG5AOgHtBC0TtExQmKAwQcMAVs0EDRPQDiCLd3lynuOc5F+JHTvxv3H8rI/uvvdLBnG81gjAkcc6gSOQgkX0DiSKokkQBF+EEDMhxAQA5lrriyRJXvqw3l6BRFEUBUHwAADTwuJ/xHFMgDq/egOCiDMAuHetWGv9LkmSRddEegGCiPcA4LUArfVZkiTzUQMhvQjD8FEIEZUt1BhzoZT6Xnbftn/vzEKsXjwCwKTKIowxX5VSN1Xu3eY9nQAhvRBC3FaFQQscLRBEJBCXdXdxdECsXjwIIU7rwhidhXjyi8psRmMhTfSCozQKIE31YhdArMtS4ndujKEy4KpKGN9KlGmrF7sAIqUk/TrPP7tKbuMEEkXRlIouACBRLE2kKotDxRvbuoyU0jhAexM+Fsg2Tb/i+jdu2wIQcpM3xQeT+6RpSmVBwr3bBhAp5VMfFsG8eKtMFREvAeDWYSWLNE0/cC2GNSCIeAcA1Jvo/fJZCCJeAwDpw4vW+sq121JKqoU+O6B8U0ptJIwrIKQZYRg+907CvoALCLdpWmvabdYFEDEBgPfcuriKegVkn6zDl6lyYunTBRsBqa+yoSdCiHkcx2d5WCsg+6Id2cu5LMQTPZy64GtGFa0kD4QNU325UB2Xyb2js/WIiAsAeMusZ+0/gwNCCyrRBbb1GEXRqW1ObTDRWp9kEWeQQGynnsSS2/ENXcgIuEDmM9hBAqEFluw4ayWewPErjuNlmj9YINZ15gDwkUnq2PSc2hJhGFLiuXZRlFJKnYwBiGuUsdrx4uKllGxKn+nIoC3E5hj/uEgYx7GrTmOtKgu/gwbic5sjkIKZuCZ/LmHNIs3gLURK+VMI8anoNq7JHyLeAMC1S4gHDwQRWU3wuAxb0Y9GQ1w12EFqiKtlYYz5o5Ri254uixpF2HVVscYYtvlDuuGoll/jOF7OnAetIYj4zBy2Ea6GkZSS0nPqxhev4afuHuv4q5QqnkhaAnC1FI0xNLO5G6yF+I5W+GYvHotaFYODcxlb+j9xrlIippXqnjwQtujZt44ZN5HL3tGVjJVAXKuM80DYjG8PgdSeyHmy043wnO+6e08Fdg3G02TmLNnZS/XpjXcMUdar3BcgTHTxwaBDwRSauXNtbM9krWdgO0p0FJKbYXTKxDe5o/ZhEAQ0hKdO1zJccpdntPKqtZ6WjjLpofsCpe2w2zd4852BZbtKVpVpWEyzz16spS2QrR6HyJuf7W5PjDFlZ0TOXTPUJr62CyCtDszUXYTtb5I/s9P2us9rCyTvMpSwCSHuOjtSlV+sK+Z3DcRGzVmapnQwgD0ZwL3TVs6YFR9sQyNZS2P9aWshdTcgu38nQLYRrUYHxEKhxIh6nuyBFd8ujhJIBiUMw9piO1ogmRXUFdvRA8lUHwAqie1BAKkjtvm2XtOI0eR/O4syvpexpYFXbA/im7tCSUDf3znF9qC+yizLbI0xv5VSjT48auIm+f/04jLFl7YF5KUxZgoAC6317CC/7G67m7v4/15YyC4W1vSZ/wEC2bpucGsIagAAAABJRU5ErkJggg==); }\n  #music .voice-no {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAADyUlEQVR4Xu3b/VXbMBAAcJ01QOkG6QTVOw9QmKBs0HQCwgS0EwATABNAJ4AF7LoTkBFgAPv6jifnKX7+kGS3tkTyt6xYv0gn6aSAOHz2BODgsS9wAGn0iNlBlFJHSZKcAcApER0JIR7yPD+fq+fOCqKUUkmS3APAygQgous8zzdzoMwGgohrALhpazQRvVRV9akoipf/jTILCCLeAMC6r7FlWZ4URfEUNQjHCynloxBCDTU0ehAdLx4BgAPn4CdqEI4XQohLWwzWihYEERnCecaIDkTHi3shxPHg+GgpEBVI1/rCBSYaEJ940QYVBYhvvIgORMcLXnWeugyLoBZmSqmV3nTxIsorMI7BWdSQmbLr+6IsBiRNU54qJ+v6QYMg4hUAnPk2Ysrn2nqIUupYSnnB30NE26qqzsfsiBHxgvMwQgjeVV9nWfaw2+1yzJBSPk/ZqDF1NUF4bSOl/N2os9DlnNIEXZtMIjrfgSypd7TtZdI0fRBCfG1BdkIZ2HEXO5A0TVl/cFs+5ld3ebbZQxDxCQC+dNRhhWKRfng1Qcjlhf912RaQDQBc9nxvL4oFBld9FwwIvy0iFgDw2RXFBoOI/lRVdRwUiM7Q89CxRnHB4BkrKBDuGS4oXH4oZVn3jHr6Dg7EBUUPrc6JoonB5YME0Si8biqEEB98AnwbRtAgGoUXa3xU4YTShRE8iA9KH0YUIC4oQxhRgSRJYnPmM7iiDTao1oHU9QBMCNGLEjSIB0bt2IkSLMgIjF6UIEEsMX7pXHDflPyUZdmJuY4JDsQS4y7LsrVOKvWuU4joNs/z7zVKUCAuGGbQHVq8mSjBgPhgOKK8XeMKBgQRn5t30Rp7mLdh0rWvsRk+nJQyQThR67Qn8NlU2T5jZswsEuC9GLY9hYh+miBdSVzbNkxarplCTNO0K8VphWGD0sy6d94KnLSllpW15FTbzoycMAZQXsuyXO3dQrTIWVo2Z3yxtoMqRPxhnDPzdHnr+016GF7xZWEAeCnLclMUxXYPxCbw+L6A63OLOdtdCspiQHR+ge+f8zkIX5abZeZZFIjZvfmA2aa7J0nCQa/veMCmml2ZxYLYtkKff1wJIb7ZPtNXLniQunE8EwDA25WFMZ9oQBhB/9OBe4t3/IkKRAdmryOCuldFB2LMVkNnsa0jK0qQGkVK6RxsowXxDbbRg7gG23cB4hJs3w2IbbB9VyA2wbYsy49j7qD6Lgpn+Vem+bKI2HaZzivx44tgPjc7iBFXNkS0AoCtTtY4XcadAoPrWATIVI2Zop4DSEPxL5YQHsqr5mdTAAAAAElFTkSuQmCC); }\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 248 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	
+	exports.default = {
+	    props: {
+	        source: {
+	            default: null,
+	            required: true
+	        }
+	    },
+	    data: function data() {
+	        return {
+	            open: false,
+	            timeWidth: 541,
+	            voiceWidth: 70,
+	            tipShow: false,
+	            tipWidth: 25,
+	            tipText: "",
+	            init: true,
+	            status: {
+	                playing: false,
+	                silent: false
+	            },
+	            time: {
+	                cur: "00:00",
+	                all: "00:00"
+	            }
+	        };
+	    },
+	
+	    methods: {
+	        musicToggle: function musicToggle() {
+	            var box = this.$refs.box;
+	
+	            this.open ? box.style.left = "-541px" : box.style.left = "0px";
+	
+	            this.open = !this.open;
+	
+	            if (this.init) {
+	
+	                this.init = false;
+	
+	                this.$refs.audio.setAttribute('src', this.source.src);
+	
+	                this.$refs.banner.setAttribute('src', this.source.img);
+	            }
+	        },
+	        formatSeconds: function formatSeconds(second) {
+	            var minute = 0;
+	            var hour = 0;
+	            if (second > 60) {
+	                minute = parseInt(second / 60);
+	                second = (second % 60).toFixed(0);
+	                if (minute > 60) {
+	                    hour = parseInt(minute / 60);
+	                    minute = parseInt(minute % 60);
+	                }
+	            } else {
+	                second = parseInt(second);
+	            }
+	            second = second < 10 ? '0' + second : second;
+	            minute = minute < 10 ? '0' + minute : minute;
+	            return [hour, minute, second];
+	        }
+	    },
+	    mounted: function mounted() {
+	        var vm = this;
+	        var audio = this.$refs.audio;
+	        audio.volume = 0.5;
+	
+	        audio.oncanplay = function () {
+	            // 缓冲已足够开始时
+	        };
+	
+	        audio.oncanplaythrough = function () {
+	            // 缓冲已完成
+	        };
+	
+	        audio.onended = function () {
+	            // console.log("onended : 音乐播放完毕");
+	            vm.status.playing = false;
+	        };
+	
+	        audio.onloadedmetadata = function () {
+	            // 数据的分辨率或时间长度已加载完成
+	            var time = vm.formatSeconds(this.duration);
+	            vm.time.all = time[1] + ":" + time[2];
+	        };
+	
+	        audio.onplay = function () {
+	            // console.log("onplay : 播放开始");
+	        };
+	
+	        audio.onwaiting = function () {
+	            // console.log("onwaiting : 播放过程中开始缓冲");
+	        };
+	
+	        audio.ontimeupdate = function () {
+	            // 当播放位置改变时
+	            var time = vm.formatSeconds(this.currentTime);
+	            vm.$refs.curtime.style.width = vm.timeWidth * this.currentTime / this.duration + "px";
+	            vm.time.cur = time[1] + ":" + time[2];
+	        };
+	
+	        audio.onplaying = function () {
+	            // console.log('onplaying : 播放中...');
+	        };
+	
+	        this.$refs.muted.onclick = function () {
+	            vm.status.silent = !vm.status.silent;
+	            audio.muted = !audio.muted;
+	        };
+	
+	        vm.$refs.paused.onclick = function () {
+	            vm.status.playing = !vm.status.playing;
+	            audio.paused ? audio.play() : audio.pause();
+	        };
+	
+	        //            document.getElementById('loop').onclick = function () {
+	        //                audio.loop = !audio.loop;
+	        //            };
+	
+	        this.$refs.allvoice.onclick = function (e) {
+	            audio.volume = e.layerX / vm.voiceWidth;
+	            vm.$refs.curvoice.style.width = e.layerX + "px";
+	        };
+	
+	        this.$refs.alltime.onclick = function (e) {
+	            vm.$refs.curtime.style.width = e.layerX + "px";
+	            audio.currentTime = e.layerX / vm.timeWidth * audio.duration;
+	        };
+	
+	        this.$refs.alltime.onmousemove = function (e) {
+	            var time = vm.formatSeconds(audio.duration / vm.timeWidth * e.layerX);
+	            vm.tipShow = true;
+	            vm.$refs.tip.style.left = e.layerX - vm.tipWidth + "px";
+	            vm.tipText = time[1] + ":" + time[2];
+	        };
+	    }
+	};
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    ref: "box",
+	    attrs: {
+	      "id": "music"
+	    }
+	  }, [_h('audio', {
+	    ref: "audio"
+	  }), " ", _h('div', {
+	    staticClass: "M-main"
+	  }, [_h('div', {
+	    staticClass: "M-warp"
+	  }, [_h('img', {
+	    ref: "banner",
+	    staticClass: "M-face"
+	  }), " ", _h('div', {
+	    staticClass: "M-control"
+	  }, [_h('div', [_h('a', [_s(source.album)]), " ", _h('a', [_s(source.player)])]), " ", _h('div', {
+	    staticClass: "center"
+	  }, [_m(0), " ", _h('button', {
+	    ref: "paused",
+	    class: [status.playing ? 'play-go' : 'play-wait'],
+	    attrs: {
+	      "id": "paused"
+	    }
+	  }), " ", _h('div', {
+	    staticClass: "M-voice-control"
+	  }, [_h('button', {
+	    ref: "muted",
+	    class: [status.silent ? 'voice-no' : 'voice-go'],
+	    attrs: {
+	      "id": "muted"
+	    }
+	  }), " ", _h('span', {
+	    ref: "allvoice",
+	    staticClass: "M-all-voice"
+	  }, [_h('span', {
+	    ref: "curvoice",
+	    staticClass: "M-cur-voice"
+	  })])])]), " ", _h('div', {
+	    staticClass: "bottom"
+	  }, [_h('span', [_s(time.cur) + " / " + _s(time.all)])])])]), " ", _h('span', {
+	    ref: "alltime",
+	    staticClass: "M-allBar",
+	    on: {
+	      "mouseout": function($event) {
+	        tipShow = false
+	      }
+	    }
+	  }, [_h('span', {
+	    ref: "curtime",
+	    staticClass: "M-curBar"
+	  })]), " ", _h('div', {
+	    directives: [{
+	      name: "show",
+	      value: (tipShow),
+	      expression: "tipShow"
+	    }],
+	    ref: "tip",
+	    staticClass: "M-tip"
+	  }, [_s(tipText), _m(1)])]), " ", _h('button', {
+	    staticClass: "toggle",
+	    on: {
+	      "click": musicToggle
+	    }
+	  })])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('button')
+	}},function (){with(this) {
+	  return _h('em', [_h('i')])
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-28", module.exports)
 	  }
 	}
 

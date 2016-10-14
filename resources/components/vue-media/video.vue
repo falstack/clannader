@@ -350,7 +350,7 @@
                     loading : 0,
                     playing : 0,
                     voiceTemp : 0
-                },
+                }
             }
         },
         methods: {
