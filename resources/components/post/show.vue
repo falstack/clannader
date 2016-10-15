@@ -11,7 +11,7 @@
                 <div>
                     <like :type="'Post'" :me="post.isMe" :id="$route.params.id" :count="post.like" :flag="post.hasLike"></like>
                 </div>
-                <comment :type="'Post'" :master="post.uHome" :id="$route.params.id"></comment>
+                <comment :type="'Post'" :rich="true" :master="post.uHome" :id="$route.params.id"></comment>
             </div>
         </div>
     </div>

@@ -802,7 +802,7 @@
 
 <template>
     <div id="editor-container">
-        <textarea :style="{ height : height + 'px' }" ref="editor"></textarea>
+        <textarea :style="{ height : height + 'px' }" data-test='111' ref="editor"></textarea>
     </div>
 </template>
 
@@ -838,7 +838,8 @@
         },
         methods: {
             contentChange () {
-                this.content = this.editor.$txt.text() === "" ? null : this.editor.$txt.html()
+                let text = this.editor.$txt.html();
+                this.$parent.$data.content = text == "<p><br></p>" ? "" : text
             },
             printLog (title, info) {
                 window.console && console.log(title, info);

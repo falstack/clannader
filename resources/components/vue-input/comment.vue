@@ -167,11 +167,11 @@
 <template>
     <div>
         <div class="comment-new" ref="news">
-            <!--<textarea class="comment-text" maxlength="50" :placeholder="placeholder" @click="msg = ''" v-model="content"></textarea>-->
-            <editor :width="665" :height="500" :content="content"></editor>
+            <editor :width="665" :height="500" :content="content" v-if="rich"></editor>
+            <textarea class="comment-text" maxlength="50" :placeholder="placeholder" @click="msg = ''" v-model="content" v-else></textarea>
             <div class="comment-warp">
                 <div>
-                    <span class="gray-word">{{ count(content) }} / 50</span>
+                    <span class="gray-word" v-if="!rich">{{ count(content) }} / 50</span>
                     <span class="comment-msg">{{ msg }}</span>
                 </div>
                 <button class="btn-bean btn-blue" @click="commentStore($event)">发表</button>
@@ -187,7 +187,7 @@
                         <span class="dot" v-if="item.uWord"></span>
                         <span class="gray-word">{{ item.uWord }}</span>
                     </div>
-                    <div class="comment-content" v-html="item.content">
+                    <div class="comment-content article" v-html="item.content">
                     </div>
                     <div class="comment-footer">
                         <span>#{{ item.id }}</span>
@@ -207,7 +207,7 @@
                             <router-link class="comment-name black-href" :to="'/people/' + reply.tHome">{{ reply.tName }}</router-link>
                             <span class="gray-word">{{ master === reply.tHome ? '&nbsp;(楼主)' : reply.tHome === item.uHome ? '&nbsp;(层主)' : '' }}</span>
                         </div>
-                        <div class="comment-content" v-html="reply.content">
+                        <div class="comment-content article" v-html="reply.content">
                         </div>
                         <div class="comment-footer">
                             <span>{{ reply.time }}</span>
@@ -267,6 +267,9 @@
             id: {
                 default : null,
                 required : true
+            },
+            rich: {
+                default : false
             }
         },
         watch: {
@@ -336,30 +339,38 @@
             commentStore (el) {
                 if (this.$store.getters.isLogin) {
                     if (this.content.length === 0) {
-                        this.msg = "输入不能为空！"
-                    } else if (this.content.length > 50) {
-                        this.msg = "输入过长"
-                    } else {
-                        var button = el.currentTarget;
-                        button.setAttribute('disabled', 'disabled');
-
-                        this.$http.post('/api/comment/store', {
-                            content : this.content.replace('\n','<br />'),
-                            id : this.id,
-                            type : this.type
-                        }).then((res) => {
-                            res.body.data.show = false;
-                            res.body.data.replyList = [];
-                            this.list.push(res.body.data);
-                            this.content = "";
-                            button.removeAttribute('disabled');
-                        }, () => {
-                            this.$root.$refs.toast.open({
-                                theme: "error",
-                                content: "服务器异常，发送回复失败！"
-                            });
+                        this.$root.$refs.toast.open({
+                            theme: "warning",
+                            content: "输入不能为空！"
                         });
+                        return
                     }
+                    if (this.content.length > 50 && !this.rich) {
+                        this.$root.$refs.toast.open({
+                            theme: "warning",
+                            content: "输入过长！"
+                        });
+                        return
+                    }
+                    var button = el.currentTarget;
+                    button.setAttribute('disabled', 'disabled');
+
+                    this.$http.post('/api/comment/store', {
+                        content : this.content.replace('\n','<br />'),
+                        id : this.id,
+                        type : this.type
+                    }).then((res) => {
+                        res.body.data.show = false;
+                        res.body.data.replyList = [];
+                        this.list.push(res.body.data);
+                        this.content = "";
+                        button.removeAttribute('disabled');
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，发送回复失败！"
+                        });
+                    });
                 } else {
                     this.$root.$refs.navsign.showLogin();
                 }
