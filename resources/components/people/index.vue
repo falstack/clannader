@@ -2,6 +2,13 @@
 
     @import "../../static/sass/variables";
 
+    .zone-banner {
+        height: 340px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .zone-left {
         padding-right: 60px;
         margin-top: -50px;
@@ -79,32 +86,39 @@
             }
         }
     }
+
+    .zone-right {
+        margin-top: 20px;
+    }
 </style>
 
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 zone-left">
-                <div class="user-card">
-                    <router-link class="uface" :to="'/people/' + people.uHome"><img :src="people.uFace"></router-link>
-                    <div class="uname">
-                        <span class="oneline">{{ people.uName }}</span>
-                        <span :class="['sex', $getSexClass(people.sex)]"></span>
+    <div>
+        <div class="zone-banner" ref="banner"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 zone-left">
+                    <div class="user-card">
+                        <router-link class="uface" :to="'/people/' + people.uHome"><img :src="people.uFace"></router-link>
+                        <div class="uname">
+                            <span class="oneline">{{ people.uName }}</span>
+                            <span :class="['sex', $getSexClass(people.sex)]"></span>
+                        </div>
+                        <button v-if="!people.isMe" @click="pink">{{ people.hasLike ? '已关注' : '关注' }}</button>
+                        <p class="uword">{{ people.uWord }}</p>
                     </div>
-                    <button v-if="!people.isMe" @click="pink">{{ people.hasLike ? '已关注' : '关注' }}</button>
-                    <p class="uword">{{ people.uWord }}</p>
+                    <ul class="user-menu">
+                        <li v-for="item in column">
+                            <router-link :to="'/people/' + $route.params.id + item.path">{{ item.name }}</router-link>
+                        </li>
+                        <li v-for="item in myColumn" v-if="people.isMe">
+                            <router-link :to="'/people/' + $route.params.id + item.path">{{ item.name }}</router-link>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="user-menu">
-                    <li v-for="item in column">
-                        <router-link :to="'/people/' + $route.params.id + item.path">{{ item.name }}</router-link>
-                    </li>
-                    <li v-for="item in myColumn" v-if="people.isMe">
-                        <router-link :to="'/people/' + $route.params.id + item.path">{{ item.name }}</router-link>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-9 zone-right">
-                <router-view></router-view>
+                <div class="col-md-9 zone-right">
+                    <router-view></router-view>
+                </div>
             </div>
         </div>
     </div>
@@ -150,6 +164,9 @@
                 ],
             }
         },
+        beforeCreate () {
+            this.$root.$data.load = false
+        },
         created () {
             this.getPeopleInfo();
         },
@@ -158,7 +175,8 @@
                 this.$http.post('/api/people/info', {
                     id : this.$route.params.id
                 }).then((res) => {
-                    this.people = res.body.data
+                    this.people = res.body.data;
+                    this.$refs.banner.style.backgroundImage = 'url(' + this.people.banner + ')';
                 }, (res) => {
                     if (res.status === 500) {
                         this.$router.replace({ path: '/door/404' });
@@ -202,6 +220,9 @@
                     this.$root.$refs.navbar.showLogin();
                 }
             }
+        },
+        destroyed () {
+            this.$root.$data.load = true
         }
     }
 </script>

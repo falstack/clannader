@@ -59,8 +59,8 @@ class DoorController extends Controller
             'email' => $request->get('email'),
             'password' => $request->get('password'),
             'zone' => $this->createUserZone($request->get('name')),
-            'avatar' => 'http://cdn.clannader.com/avatar',
-            'banner' => 'http://cdn.clannader.com/B-banner',
+            'avatar' => 'avatar',
+            'banner' => 'B-banner',
             'sex' => 0,
             'like' => 0
         ];

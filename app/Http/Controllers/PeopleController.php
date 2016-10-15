@@ -22,7 +22,7 @@ class PeopleController extends Controller
         return $this->peopleRepository->getUserInfo($request->get('id'), $this->getUserIdByJWT());
     }
 
-    public function message(Request $request)
+    public function message()
     {
         $user = $this->getAuthUser();
 
@@ -39,5 +39,33 @@ class PeopleController extends Controller
     public function pink(Request $request)
     {
         return $this->peopleRepository->pinkList($request->all());
+    }
+
+    public function really()
+    {
+        $user = $this->getAuthUser();
+
+        return $this->peopleRepository->getUserReally($user);
+    }
+
+    public function timeline(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        return $this->peopleRepository->setTimeLine($request->get('content'), $request->get('type'), $user);
+    }
+
+    public function birthday(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        $this->peopleRepository->setBirthday($request->get('birthday'), $request->get('birSecret'), $user);
+    }
+
+    public function sex(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        return $this->peopleRepository->setSex($request->get('sex'), $user);
     }
 }

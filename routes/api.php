@@ -36,6 +36,17 @@ $api->version('v1', function ($api) {
 
                 $api->post('/read', 'PeopleController@readMsg');
             });
+
+            $api->group(['prefix' => '/edit', 'middleware' => ['jwt.auth']], function ($api) {
+
+                $api->post('/really', 'PeopleController@really');
+
+                $api->post('/timeline', 'PeopleController@timeline');
+
+                $api->post('/birthday', 'PeopleController@birthday');
+
+                $api->post('/sex', 'PeopleController@sex');
+            });
         });
 
         $api->group(['prefix' => '/post'], function ($api) {

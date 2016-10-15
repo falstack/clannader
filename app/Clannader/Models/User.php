@@ -21,6 +21,16 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
+    public function getAvatarAttribute($avatar)
+    {
+        return $avatar ? 'http://cdn.clannader.com/' . $avatar : 'http://cdn.clannader.com/avatar';
+    }
+
+    public function getBannerAttribute($banner)
+    {
+        return $banner ? 'http://cdn.clannader.com/' . $banner : 'http://cdn.clannader.com/B-banner';
+    }
+
     public function getSexAttribute($sex)
     {
         switch ($sex) {

@@ -44,7 +44,7 @@
             width: 225px;
         }
 
-        .summary-input {
+        .autograph-input {
             width: 293px;
         }
     }
@@ -54,28 +54,28 @@
     <div>
         <div class="edit-item">
             <label>昵称：<input type="text" class="name-input" placeholder="2-12个字符组成，1个汉字占2个字符" v-model="form.name" @keyup.enter="setUserName"></label>
-            <button class="btn-bean btn-blue" @click="setUserName" id="name-btn">确认</button>
+            <button class="btn-bean btn-blue" @click="setUserName">确认</button>
         </div>
         <div class="edit-item">
-            <label>简介：<input type="text" class="summary-input" placeholder="请缩减至20字以内..." v-model="form.summary" @keyup.enter="setSummary"></label>
-            <button class="btn-bean btn-blue" @click="setSummary" id="summary-btn">确认</button>
-            <span class="gray-word">&nbsp;&nbsp;&nbsp;{{ form.summary.length }} / 20</span>
+            <label>简介：<input type="text" class="autograph-input" placeholder="请缩减至20字以内..." v-model="form.autograph" @keyup.enter="setSummary"></label>
+            <button class="btn-bean btn-blue" @click="setSummary">确认</button>
+            <span class="gray-word">&nbsp;&nbsp;&nbsp;{{ form.autograph.length }} / 20</span>
         </div>
         <div class="edit-item">
-            <form id="avatarForm" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" ref="avatarForm">
                 <label>头像：</label>
-                <input type="file" name="file" id="avatarInput" @change="previewAvatar($event)">
+                <input type="file" name="file" @change="previewAvatar($event)" ref="avatarInput">
             </form>
             <button class="btn-bean btn-gray" v-show="upAvatar" @click="cancelAvatar">取消</button>
-            <button class="btn-bean btn-blue" @click="setUserAvatar" id="avatar-btn">确认</button>
+            <button class="btn-bean btn-blue" @click="setUserAvatar">确认</button>
         </div>
         <div class="edit-item">
-            <form id="bannerForm" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" ref="bannerForm">
                 <label>背景：</label>
-                <input type="file" name="file" id="bannerInput" @change="previewBanner($event)">
+                <input type="file" name="file" @change="previewBanner($event)" ref="bannerInput">
             </form>
             <button class="btn-bean btn-gray" v-show="upBanner" @click="cancelBanner">取消</button>
-            <button class="btn-bean btn-blue" @click="setUserBanner" id="banner-btn">确认</button>
+            <button class="btn-bean btn-blue" @click="setUserBanner">确认</button>
         </div>
         <div class="edit-item">
             <span class="line-label">
@@ -84,14 +84,14 @@
                 <label><input type="radio" name="sex" v-model="form.sex" value="2">女</label>
             </span>
             <label>保密：<input type="checkbox" v-model="form.sexSecret"></label>
-            <button class="btn-bean btn-blue" @click="setUserSex" id="sex-btn">确认</button>
+            <button class="btn-bean btn-blue" @click="setUserSex">确认</button>
         </div>
         <div class="edit-item">
             <span class="line-label">
                 <label>生日：<input type="date" placeholder="0000-00-00" v-model="form.birthday" @keyup.enter="setBirthday"></label>
             </span>
             <label>保密：<input type="checkbox" v-model="form.birSecret"></label>
-            <button class="btn-bean btn-blue" @click="setBirthday" id="birthday-btn">确认</button>
+            <button class="btn-bean btn-blue" @click="setBirthday">确认</button>
         </div>
         <div class="msg-info">
             <p><strong>生日</strong>和<strong>性别</strong>用于为番剧的详细分类和排名做基础。</p>
@@ -101,14 +101,16 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
+
+    import { setUserInfoItem } from '../../static/js/storage'
 
     export default {
         data () {
             return {
                 form : {
                     name : "",
-                    summary : "",
+                    autograph : "",
                     birthday : null,
                     birSecret : 0,
                     sex : null,
@@ -117,6 +119,9 @@
                 upAvatar : false,
                 upBanner : false
             }
+        },
+        created () {
+            this.getUserReally()
         },
         methods: {
             getUserReally () {
@@ -127,32 +132,33 @@
                     this.form.birSecret = res.data.data.birSecret;
                 });
             },
-            setUserName () {
+            setUserName (e) {
                 var regName = /^(\w|[\u4e00-\u9fa5])+$/g;
-                var match = trim(this.form.name.replace(/([\u4e00-\u9fa5])/g,'aa')).length;
+                var match = this.form.name.replace(/([\u4e00-\u9fa5])/g,'aa').trim().length;
                 if (this.form.name == "") {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "请输入昵称！"
                     });
                 } else if (match > 12 || match < 2) {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "昵称长度不符！"
                     });
                 } else if (!regName.test(this.form.name)) {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "昵称不合法！"
                     });
                 } else {
-                    var btn = document.getElementById('name-btn');
+                    var btn = e.currentTarget;
                     btn.setAttribute('disabled', 'disabled');
-                    this.$http.post('/api/people/edit/name', {
-                        name : this.form.name
-                    }).then(function () {
-                        document.querySelector('.zone-name').innerText = this.form.name;
-                        document.getElementById('userName').innerText = this.form.name;
+                    this.$http.post('/api/people/edit/timeline', {
+                        content : this.form.name,
+                        type : 'name'
+                    }).then(() => {
+                        this.$root.$refs.navbar.$data.user.name = this.form.name;
+                        this.$parent.$data.people.uName = this.form.name;
                         setUserInfoItem('name', this.form.name);
                         document.title = this.form.name + ' - CLANNADer';
                         this.form.name = "";
@@ -160,188 +166,214 @@
                             theme: "success",
                             content: "昵称修改成功！"
                         });
-                        btn.removeAttribute('disabled');
+                    btn.removeAttribute('disabled');
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，发送数据失败！"
+                        });
                     });
                 }
             },
-            setSummary () {
-                if (this.form.summary.length > 20) {
+            setSummary (e) {
+                if (this.form.autograph.length > 20) {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "请缩减至20字以内！"
                     });
-                } else if (this.form.summary.length === 0) {
+                } else if (this.form.autograph.length === 0) {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "简介不能为空！"
                     });
                 } else {
-                    var btn = document.getElementById('summary-btn');
-                    btn.setAttribute('disabled', 'disabled');
-                    this.$http.post('/api/people/edit/summary', {
-                        summary : this.form.summary
-                    }).then(function () {
-                        document.querySelector('.zone-summary').innerText = this.form.summary;
-                        setUserInfoItem('summary', this.form.summary);
-                        this.form.summary = "";
+                    var btn = e.currentTarget;
+                    this.$http.post('/api/people/edit/timeline', {
+                        content : this.form.autograph,
+                        type : 'autograph'
+                    }).then(() => {
+                        this.$parent.$data.people.uWord = this.form.autograph;
+                        setUserInfoItem('autograph', this.form.autograph);
+                        this.form.autograph = "";
                         this.$root.$refs.toast.open({
                             theme: "success",
                             content: "简介设置成功！"
                         });
                         btn.removeAttribute('disabled');
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，发送数据失败！"
+                        });
                     });
                 }
             },
-            setBirthday () {
+            setBirthday (e) {
                 if (this.form.birthday === null) {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "日期不能为空！"
                     });
                 } else {
-                    var btn = document.getElementById('birthday-btn');
+                    var btn = e.currentTarget;
                     btn.setAttribute('disabled', 'disabled');
                     this.$http.post('/api/people/edit/birthday', {
                         birthday : this.form.birthday,
                         birSecret : this.form.birSecret ? 1 : 0
-                    }).then(function () {
+                    }).then(() => {
                         this.$root.$refs.toast.open({
                             theme: "success",
                             content: "生日已修改成功！"
                         });
                         setUserInfoItem('birthday', this.form.birSecret == 1 ? '0000-00-00' : this.form.birthday);
                         btn.removeAttribute('disabled');
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，发送数据失败！"
+                        });
                     });
                 }
             },
-            setUserSex () {
+            setUserSex (e) {
                 if (this.form.sex === null) {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "请选择性别！"
                     });
                 } else {
-                    var btn = document.getElementById('sex-btn');
+                    var btn = e.currentTarget;
                     btn.setAttribute('disabled', 'disabled');
                     this.$http.post('/api/people/edit/sex', {
                         sex : parseInt(this.form.sex) + (this.form.sexSecret ? 2 : 0)
-                    }).then(function (res) {
+                    }).then((res) => {
                         this.$root.$refs.toast.open({
                             theme: "success",
                             content: "性别设置成功！"
                         });
                         setUserInfoItem('sex', res.data.data);
-                        document.querySelector('.zone-sex').className = 'zone-sex ' + sexClass(res.data.data);
+                        this.$parent.$data.people.sex = res.data.data;
                         btn.removeAttribute('disabled');
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "服务器异常，发送数据失败！"
+                        });
                     });
                 }
             },
             previewAvatar (e) {
                 this.upAvatar = true;
                 var reader = new FileReader();
+                var vm = this;
                 reader.onload = function(evt) {
-                    document.querySelector('.zone-avatar').setAttribute('src', evt.target.result);
-                    document.querySelector('.nav-avatar').setAttribute('src', evt.target.result);
+                    vm.$root.$refs.navbar.$data.user.face = evt.target.result;
+                    vm.$parent.$data.people.uFace = evt.target.result;
                 };
                 reader.readAsDataURL(e.target.files[0]);
             },
             cancelAvatar () {
-                document.getElementById('avatarInput').value = "";
-                document.querySelector('.zone-avatar').setAttribute('src', getUserInfo('avatar'));
-                document.querySelector('.nav-avatar').setAttribute('src', getUserInfo('avatar'));
+                this.$refs.avatarInput.value = "";
+                this.$root.$refs.navbar.$data.user.face = this.$getUserInfo('avatar');
+                this.$parent.$data.people.uFace = this.$getUserInfo('avatar');
                 this.upAvatar = false;
             },
             previewBanner (e) {
                 this.upBanner = true;
                 var reader = new FileReader();
+                var vm = this;
                 reader.onload = function(evt) {
-                    document.querySelector('.zone-banner').style.backgroundImage = 'url(' + evt.target.result + ')';
+                    vm.$parent.$refs.banner.style.backgroundImage = 'url(' + evt.target.result + ')';
                 };
                 reader.readAsDataURL(e.target.files[0]);
             },
             cancelBanner () {
-                document.getElementById('bannerInput').value = "";
-                document.querySelector('.zone-banner').style.backgroundImage = 'url(' + getUserInfo('banner') + ')';
+                this.$refs.bannerInput.value = "";
+                this.$parent.$refs.banner.style.backgroundImage = 'url(' + this.$getUserInfo('banner') + ')';
                 this.upBanner = false;
             },
-            setUserAvatar () {
-                if (document.getElementById('avatarInput').value == "") {
+            setUserAvatar (e) {
+                if (this.$refs.avatarInput.value == "") {
                     this.$root.$refs.toast.open({
-                        theme: "error",
+                        theme: "warning",
                         content: "还未选择图片！"
                     });
                 } else {
-                    var btn = document.getElementById('avatar-btn');
+                    var btn = e.currentTarget;
                     this.$root.$refs.toast.open({
-                        theme: "warning",
+                        theme: "info",
                         content: "头像上传中，请稍候！"
                     });
                     btn.setAttribute('disabled', 'disabled');
-                    var formData = new FormData(document.getElementById('avatarForm'));
-                    formData.append('token', this.getQiniuToken);
-                    this.$http.post('http://upload.qiniu.com/', formData).then(
-                            function (res) {
-                                this.$http.post('api/people/edit/avatar', {
-                                    avatar : res.data.key
-                                }).then(function (res) {
-                                    this.upAvatar = false;
-                                    this.$root.$refs.toast.open({
-                                        theme: "success",
-                                        content: "头像更新成功！"
-                                    });
-                                    setUserInfoItem('avatar', res.data.data);
-                                    btn.removeAttribute('disabled');
-                                }, function (res) {
-                                    this.$root.$refs.toast.open({
-                                        theme: "error",
-                                        content: res.data
-                                    });
-                                });
-                            },
-                            function (res) {
-                                console.log('来自七牛云的错误:' + res.data.error);
-                            }
-                    )
+                    var formData = new FormData(this.$refs.avatarForm);
+                    formData.append('token', this.$root.$data.uptoken);
+                    this.$http.post('http://upload.qiniu.com/', formData).then((res) => {
+                        this.$http.post('/api/people/edit/timeline', {
+                            content : res.data.key,
+                            type : 'avatar'
+                        }).then((res) => {
+                            this.upAvatar = false;
+                            this.$root.$refs.toast.open({
+                                theme: "success",
+                                content: "头像更新成功！"
+                            });
+                            setUserInfoItem('avatar', res.data.data);
+                            btn.removeAttribute('disabled');
+                            this.$refs.avatarInput.value = "";
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送数据失败！"
+                            });
+                        });
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "第三方存储服务异常，发送数据失败！"
+                        });
+                    });
                 }
             },
-            setUserBanner () {
-                if (document.getElementById('bannerInput').value == "") {
+            setUserBanner (e) {
+                if (this.$refs.bannerInput.value == "") {
                     this.$root.$refs.toast.open({
                         theme: "error",
                         content: "还未选择图片！"
                     });
                 } else {
-                    var btn = document.getElementById('banner-btn');
+                    var btn = e.currentTarget;
                     this.$root.$refs.toast.open({
                         theme: "warning",
                         content: "背景上传中，请稍候！"
                     });
                     btn.setAttribute('disabled', 'disabled');
-                    var formData = new FormData(document.getElementById('bannerForm'));
-                    formData.append('token', this.getQiniuToken);
-                    this.$http.post('http://upload.qiniu.com/', formData).then(
-                        function (res) {
-                            this.$http.post('api/people/edit/banner', {
-                                banner : res.data.key
-                            }).then(function (res) {
-                                this.upBanner = false;
-                                this.$root.$refs.toast.open({
-                                    theme: "success",
-                                    content: "背景上传成功！"
-                                });
-                                setUserInfoItem('banner', res.data.data);
-                                btn.removeAttribute('disabled');
-                            }, function (res) {
-                                this.$root.$refs.toast.open({
-                                    theme: "error",
-                                    content: res.data
-                                });
+                    var formData = new FormData(this.$refs.bannerForm);
+                    formData.append('token', this.$root.$data.uptoken);
+                    this.$http.post('http://upload.qiniu.com/', formData).then((res) => {
+                        this.$http.post('/api/people/edit/timeline', {
+                            content : res.data.key,
+                            type : 'banner'
+                        }).then((res) => {
+                            this.upBanner = false;
+                            this.$root.$refs.toast.open({
+                                theme: "success",
+                                content: "背景上传成功！"
                             });
-                        },
-                        function (res) {
-                            console.log('来自七牛云的错误:' + res.data.error);
-                        }
-                    )
+                            setUserInfoItem('banner', res.data.data);
+                            btn.removeAttribute('disabled');
+                            this.$refs.bannerInput.value = "";
+                        }, () => {
+                            this.$root.$refs.toast.open({
+                                theme: "error",
+                                content: "服务器异常，发送数据失败！"
+                            });
+                        });
+                    }, () => {
+                        this.$root.$refs.toast.open({
+                            theme: "error",
+                            content: "第三方存储服务异常，发送数据失败！"
+                        });
+                    });
                 }
             }
         }

@@ -10,6 +10,7 @@ namespace App\Clannader\Repository;
 
 
 use App\Clannader\ApiSerializer;
+use App\Clannader\Models\Morph\Timeline;
 use App\Clannader\Models\Relation\Like;
 use App\Clannader\Models\Relation\Message;
 use App\Clannader\Models\User;
@@ -24,13 +25,15 @@ class PeopleRepository extends RelationRepository
     protected $messageTransformer;
     protected $message;
     protected $likes;
+    protected $timeline;
 
     public function __construct(User $user,
                                 InfoTransformer $infoTransformer,
                                 ApiSerializer $apiSerializer,
                                 MessageTransformer $messageTransformer,
                                 Message $message,
-                                Like $likes)
+                                Like $likes,
+                                Timeline $timeline)
     {
         $this->user = $user;
         $this->infoTransformer = $infoTransformer;
@@ -38,6 +41,7 @@ class PeopleRepository extends RelationRepository
         $this->messageTransformer = $messageTransformer;
         $this->message = $message;
         $this->likes = $likes;
+        $this->timeline = $timeline;
     }
 
     public function getUserInfo($zone, $user_id)
@@ -71,6 +75,31 @@ class PeopleRepository extends RelationRepository
         ));
     }
 
+    public function getUserReally($user)
+    {
+        $data = \DB::table('users')->select('birthday', 'sex', 'birSecret')->where('id', $user->id)->first();
+
+        if ($data->sex == 1 || $data->sex == 2) {
+            $data->sexSecret = 0;
+        } else if ($data->sex == 3 || $data->sex == 4) {
+            $data->sexSecret = 2;
+        } else {
+            $data->sexSecret = false;
+        }
+
+        if ($data->sex == 1 || $data->sex == 3) {
+            $data->sex = 1;
+        } else if ($data->sex == 2 || $data->sex == 4) {
+            $data->sex = 2;
+        } else {
+            $data->sex = null;
+        }
+
+        $data->birthday = explode(' ',$data->birthday)[0];
+
+        return response()->json(['data' => $data], 200);
+    }
+
     public function pinkList($form)
     {
         $id = $this->getUserIdByZone($form['id']);
@@ -94,5 +123,38 @@ class PeopleRepository extends RelationRepository
     public function getUserIdByZone($zone)
     {
         return $this->user->where('zone', $zone)->value('id');
+    }
+
+    public function setTimeLine($content, $type, $user)
+    {
+        $this->timeline->create([
+            'user_id' => $user->id,
+            'link_id' => $user->id,
+            'link_type' => 'User',
+            'type' => $type,
+            'content' => $content
+        ]);
+
+        $user->update(array(
+            $type => $content
+        ));
+
+        return response()->json(['data' => $user->$type], 200);
+    }
+
+    public function setBirthday($birthday, $birSecret, $user)
+    {
+        $user->birthday = $birthday;
+        $user->birSecret = $birSecret;
+
+        $user->save();
+    }
+
+    public function setSex($sex, $user)
+    {
+        $user->sex = $sex;
+        $user->save();
+
+        return response()->json(['data' => $user->sex], 200);
     }
 }

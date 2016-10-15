@@ -23,8 +23,34 @@ export function setUserInfo(infoObject, remember) {
     }
 }
 
+export function setUserInfoItem(key, value) {
+    if (isRemember()) {
+        var userInfo = JSON.parse(localStorage.getItem("userInfo")).data;
+        userInfo[key] = value;
+        setLocalStorageForce('userInfo', userInfo);
+    } else {
+        setCookie(key, value);
+    }
+}
+
+function isRemember () {
+    return getCookie('zone') === null;
+}
+
 export function clearUserInfo() {
     localStorage.removeItem('userInfo');
+}
+
+function getCookie(name) {
+    var COOKIE = document.cookie.split("; ");
+    var i;
+    for (i in COOKIE) {
+        var result = COOKIE[i].split("=");
+        if (result.shift() === name) {
+            return result.toString();
+        }
+    }
+    return null;
 }
 
 function setCookie(name, value) {
