@@ -6,6 +6,7 @@ use App\Clannader\ApiSerializer;
 use App\Clannader\Models\Post\Post;
 use App\Clannader\Models\User;
 use App\Clannader\Transformer\PostTransformer;
+use Mews\Purifier\Facades\Purifier;
 
 class PostRepository extends RelationRepository
 {
@@ -57,5 +58,17 @@ class PostRepository extends RelationRepository
         return $this->response->item($this->itemMergeLikeAndMe($ret, 'Post', $user_id), $this->postTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);
         });
+    }
+
+    public function postStore($name, $content, $bid, $user)
+    {
+        $new = $this->post->create([
+            'user_id' => $user->id,
+            'name' => $name,
+            'bangumi_id' => $bid,
+            'content' => Purifier::clean($content)
+        ]);
+
+        return response()->json(['data' => $new->id], 200);
     }
 }

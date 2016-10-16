@@ -22,7 +22,6 @@
     .head {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 10px;
 
       >div {
         display: flex;
@@ -30,13 +29,29 @@
       }
 
       .uface, .bface {
-        width: 38px;
-        height: 38px;
+        width: 30px;
+        height: 30px;
       }
 
       .gray-link {
         margin-left: 5px;
         font-size: 13px;
+      }
+    }
+
+    .body {
+      overflow: hidden;
+
+      p {
+        margin-top: 10px;
+        float: left;
+
+        img {
+          height: 150px;
+          display: block;
+          margin-right: 5px;
+          float: left;
+        }
       }
     }
 

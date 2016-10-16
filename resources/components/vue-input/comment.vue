@@ -74,11 +74,7 @@
     }
 
     .comment-content {
-        line-height: 20px;
         padding: 2px 0;
-        font-size: 14px;
-        min-height: 24px;
-        color: #222;
     }
 
     .comment-footer {
@@ -90,6 +86,7 @@
             color: $color-gray-word;
             padding: 0 5px;
             margin-left: 15px;
+            font-size: 12px;
         }
 
         .comment-time {
@@ -166,13 +163,11 @@
 
 <template>
     <div>
-        <div class="comment-new" ref="news">
-            <editor :width="665" :height="500" :content="content" v-if="rich"></editor>
-            <textarea class="comment-text" maxlength="50" :placeholder="placeholder" @click="msg = ''" v-model="content" v-else></textarea>
+        <div class="comment-new" ref="news" v-if="!rich">
+            <textarea class="comment-text" maxlength="50" :placeholder="placeholder" v-model="content"></textarea>
             <div class="comment-warp">
                 <div>
-                    <span class="gray-word" v-if="!rich">{{ count(content) }} / 50</span>
-                    <span class="comment-msg">{{ msg }}</span>
+                    <span class="gray-word">{{ count(content) }} / 50</span>
                 </div>
                 <button class="btn-bean btn-blue" @click="commentStore($event)">发表</button>
             </div>
@@ -242,6 +237,13 @@
                 </div>
             </div>
         </div>
+        <div class="comment-new" ref="news" v-if="rich">
+            <editor :content="content"></editor>
+            <div class="comment-warp">
+                <div></div>
+                <button class="btn-bean btn-blue" @click="commentStore($event)">发表</button>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -280,7 +282,6 @@
         data () {
             return {
                 list : [],
-                msg : "",
                 content : ""
             }
         },

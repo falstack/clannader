@@ -25,4 +25,11 @@ class PostController extends Controller
 
         return $this->postRepository->showPost($request->get('id'), $user_id);
     }
+
+    public function store(Request $request)
+    {
+        $user = $this->getAuthUser();
+
+        return $this->postRepository->postStore($request->get('name'), $request->get('content'), $request->get('bid'), $user);
+    }
 }

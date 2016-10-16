@@ -14,15 +14,6 @@
         components: {
             paginate
         },
-        props: {
-
-        },
-        watch: {
-
-        },
-        computed: {
-
-        },
         data () {
             return {
                 template:
@@ -39,15 +30,6 @@
                     words : "部"
                 }
             }
-        },
-        created () {
-
-        },
-        methods: {
-
-        },
-        mounted () {
-
         }
     }
 </script>

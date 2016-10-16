@@ -802,7 +802,7 @@
 
 <template>
     <div id="editor-container">
-        <textarea :style="{ height : height + 'px' }" data-test='111' ref="editor"></textarea>
+        <textarea :style="{ height : height + 'px' }" ref="editor"></textarea>
     </div>
 </template>
 

@@ -54,6 +54,8 @@ $api->version('v1', function ($api) {
             $api->get('/list', 'PostController@list');
 
             $api->post('/show', 'PostController@show');
+
+            $api->post('/store', 'PostController@store')->middleware('jwt.auth');
         });
 
         $api->group(['prefix' => '/comment'], function ($api) {

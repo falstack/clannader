@@ -1,5 +1,40 @@
 <style lang="sass" rel="scss" scoped>
+    #post {
+        margin: 25px 0;
 
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+
+            .title {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            >div {
+                display: flex;
+                align-items: center;
+            }
+
+            .uface {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            .bface {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .foot {
+            margin: 30px 0;
+            text-align: right;
+        }
+    }
 
 </style>
 
@@ -7,9 +42,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <p>{{ post.title }}</p>
-                <div>
-                    <like :type="'Post'" :me="post.isMe" :id="$route.params.id" :count="post.like" :flag="post.hasLike"></like>
+                <div id="post">
+                    <div class="head">
+                        <div>
+                            <router-link class="uface" :to="'/people/' + post.uHome"><img :src="post.uFace"></router-link>
+                            <p class="title">{{ post.title }}</p>
+                        </div>
+                        <div>
+                            <span class="gray-word">{{ post.time }}</span>
+                            <span class="dot"></span>
+                            <router-link class="bface" :to="'/bangumi/' + post.bHome"><img :src="post.bFace"></router-link>
+                        </div>
+                    </div>
+                    <div class="article" v-html="post.content">
+                    </div>
+                    <div class="foot">
+                        <like :type="'Post'" :me="post.isMe" :id="$route.params.id" :count="post.like" :flag="post.hasLike"></like>
+                    </div>
                 </div>
                 <comment :type="'Post'" :rich="true" :master="post.uHome" :id="$route.params.id"></comment>
             </div>

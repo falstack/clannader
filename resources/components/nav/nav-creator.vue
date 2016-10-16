@@ -78,21 +78,26 @@
 </style>
 
 <template>
-    <div v-if="$store.getters.isLogin" id="warp">
-        <a id="creator">创作</a>
-        <div id="menu">
-            <a>发帖</a>
-            <!--<a>提问</a>-->
-            <!--<a>写作</a>-->
+    <div>
+        <div v-if="$store.getters.isLogin" id="warp">
+            <a id="creator">创作</a>
+            <div id="menu">
+                <a @click="$refs.post.open()">发帖</a>
+                <!--<a>提问</a>-->
+                <!--<a>写作</a>-->
+            </div>
         </div>
+        <post ref="post"></post>
     </div>
 </template>
 
 <script>
 
+    import post from '../post/create.vue'
+
     export default {
         components: {
-
+            post
         },
         props: {
 
