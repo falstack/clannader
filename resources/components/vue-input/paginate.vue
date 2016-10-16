@@ -214,6 +214,28 @@
             }
         },
         methods: {
+            postFilter (val) {
+                let pics = val.match(/<img(\w|\W)*?\/>/g);
+                // 没有图片, 正常显示
+                if (pics === null) {
+                    return val;
+                // 有图片, 格式处理
+                } else {
+                    let str = "<ul>";
+                    let i;
+                    for (i in pics) {
+                        str += "<li>" + pics[i] + "</li>"
+                    }
+                     str += "</ul>";
+                    // 图片前有文字
+                    if (val.split('<p><img').shift().length) {
+                        return val.split('<p><img').shift() + str;
+                    // 图片前没有文字
+                    } else {
+                        return str
+                    }
+                }
+            },
             initData (obj) {
 
                 if (this.template === null) {

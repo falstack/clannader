@@ -33,7 +33,7 @@
                             "<router-link class='bface' :to=\" '/bangumi/' + item.bHome \"><img :src='item.bFace'></router-link>" +
                         "</div>" +
                         "<div class='body'>" +
-                            "<p v-html='item.content'></p>" +
+                            "<p v-html='postFilter(item.content)'></p>" +
                         "</div>" +
                         "<div class='foot'>" +
                             "<span class='gray-word'>{{ item.time }}</span>" +

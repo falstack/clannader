@@ -10,18 +10,14 @@
     display: flex;
     flex-direction: column;
 
-    &:first-child {
-      border-top: none;
-    }
-
-    &:hover {
-      transition: 0s;
-      background-color: $color-gray-light;
-    }
-
     .head {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      a {
+        font-weight: 700;
+      }
 
       >div {
         display: flex;
@@ -40,23 +36,34 @@
     }
 
     .body {
-      overflow: hidden;
+      font-size: 13px;
 
       p {
-        margin-top: 10px;
-        float: left;
+        margin: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.7;
+        color: #222;
+      }
 
-        img {
-          height: 150px;
-          display: block;
-          margin-right: 5px;
-          float: left;
-        }
+      img {
+        height: 135px;
+        display: block;
+        margin-right: 10px;
+      }
+
+      ul {
+        height: 135px;
+        overflow: hidden;
+      }
+      
+      li {
+        float: left;
       }
     }
 
     .foot {
-      margin-top: 10px;
       display: flex;
       justify-content: flex-end;
     }
