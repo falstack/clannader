@@ -22,7 +22,7 @@
         data () {
             return {
                 template:
-                    "<div class='post-item'>" +
+                    "<div class='post-item' v-for='item in orderFilter'>" +
                         "<div class='head'>" +
                             "<div>" +
                                 "<router-link class='uface' :to=\" '/people/' + item.uHome \"><img :src='item.uFace'></router-link>" +
@@ -47,6 +47,9 @@
                     api : '/api/post/list'
                 }
             }
+        },
+        beforeCreate () {
+            this.$root.$data.load = true;
         }
     }
 </script>

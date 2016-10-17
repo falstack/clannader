@@ -204,6 +204,12 @@
                         <li>
                             <router-link class="nav-link" to="/posts">帖子</router-link>
                         </li>
+                        <li>
+                            <router-link class="nav-link" to="/door/star">番组</router-link>
+                        </li>
+                        <li>
+                            <router-link class="nav-link" to="/dollars">DOLLARS</router-link>
+                        </li>
                         <!--<li>-->
                             <!--<router-link class="nav-link" to="/discuss">问答</router-link>-->
                         <!--</li>-->
@@ -211,7 +217,7 @@
                             <!--<router-link class="nav-link" to="/article">文章</router-link>-->
                         <!--</li>-->
                     </ul>
-                    <navmsg></navmsg>
+                    <navmsg ref="navmsg"></navmsg>
                 </div>
                 <div class="nav-right">
                     <navsearch></navsearch>

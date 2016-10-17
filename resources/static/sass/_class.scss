@@ -23,7 +23,7 @@
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -120,4 +120,14 @@
     margin: 20px auto 30px;
     max-width: 100%;
   }
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+[v-cloak] {
+  display: none;
 }

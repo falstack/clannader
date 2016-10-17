@@ -85,6 +85,9 @@
                 post : {}
             }
         },
+        beforeCreate () {
+            this.$root.$data.load = true;
+        },
         created () {
             this.getPost();
         },

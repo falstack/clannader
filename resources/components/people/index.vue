@@ -162,11 +162,11 @@
                         name : "个人资料",
                         path : "/edit"
                     }
-                ],
+                ]
             }
         },
         beforeCreate () {
-            this.$root.$data.load = false
+            this.$root.$data.load = false;
         },
         created () {
             this.getPeopleInfo();
@@ -221,9 +221,6 @@
                     this.$root.$refs.navbar.showLogin();
                 }
             }
-        },
-        destroyed () {
-            this.$root.$data.load = true
         }
     }
 </script>

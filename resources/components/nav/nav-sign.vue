@@ -124,7 +124,7 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     import { setUserInfo } from '../../static/js/storage'
 
@@ -339,6 +339,10 @@
                     this.signUp.name = "";
                     this.signUp.email = "";
                     this.signUp.password = "";
+                    var vm = this;
+                    setTimeout(function () {
+                        vm.$router.push({ path: '/door/star' });
+                    }, 1000);
                 }, (res) => {
                     if (res.status === 422) {
                         if (res.body.email) {

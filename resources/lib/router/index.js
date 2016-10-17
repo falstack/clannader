@@ -2,7 +2,7 @@ Vue.use(VueRouter);
 
 const routes = [
     { path: '/', component: require('../../components/index/index.vue') },
-    { path: '/door/404', component: require('../../components/door/404.vue') },
+    { path: '/dollars', component: require('../../components/dollars.vue') },
     { path: '/posts', component: require('../../components/post/list.vue') },
     { path: '/post/:id(\\d+)', component: require('../../components/post/show.vue') },
     { path: '/bangumi/:id(\\d+)', component: require('../../components/bangumi/index.vue') },
@@ -29,7 +29,9 @@ const routes = [
                 component: require('../../components/people/inbox.vue')
             }
         ]
-    }
+    },
+    { path: '/door/404', component: require('../../components/door/404.vue') },
+    { path: '/door/star', component: require('../../components/door/star.vue') },
 ];
 
 export default new VueRouter({

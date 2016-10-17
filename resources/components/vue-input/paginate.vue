@@ -8,13 +8,6 @@
     $color-blue-hover: #00a7de;
 
     #vue-paginate {
-        margin: 0;
-        padding: 0;
-
-        >li {
-            float: none;
-            list-style: none;
-        }
 
         #total-sort {
             padding: 10px 0;
@@ -137,7 +130,7 @@
             }
         },
         template:
-        "<ul id='vue-paginate'>" +
+        "<div id='vue-paginate'>" +
             "<div v-if='total' id='total-sort'>" +
                 "<span class='total'>共 {{ total }} {{ words }}</span>" +
                 "<select class='sort' v-model='sortby' @change='listReset' v-if='sorts.length'>" +
@@ -161,7 +154,7 @@
                 "<span v-if='now !== page' @click='jumpPage(now + 1)'>»</span>" +
                 "<div class='block' v-else></div>" +
             "</div>" +
-        "</ul>",
+        "</div>",
         data () {
             return {
                 list : [],
@@ -193,7 +186,8 @@
                     data : 'data',
                     total : 'meta.total'
                 },
-                words : "篇"
+                words : "篇",
+                isGet : true
             }
         },
         watch: {
@@ -243,7 +237,7 @@
                     return false
                 }
 
-                this.$options.template = this.$options.template.split('<item>').shift() + "<li v-for='item in orderFilter''>" + this.template + "</li>" + this.$options.template.split('</item>').pop();
+                this.$options.template = this.$options.template.split('<item>').shift() + this.template + this.$options.template.split('</item>').pop();
 
                 if (obj === undefined) {
                     console.error('vue-paginate: ' + '未定义初始化数据');
@@ -277,6 +271,10 @@
                     this.limit = obj.limit
                 }
 
+                if (typeof obj.isGet === 'boolean') {
+                    this.isGet = obj.isGet
+                }
+
                 this.id = obj.id;
 
                 this.type = obj.type;
@@ -284,53 +282,76 @@
                 return true
             },
             getDatas (limit) {
-                this.$http.get(this.api, { params : {
-                    id : this.id,
-                    type : this.type,
-                    limit : limit,
-                    offset : this.list.length,
-                    sortby : this.sortby,
-                    order : this.order,
-                }}).then((res) => {
-                    if (this.list.length) {
-                        let i;
-                        for (i in res.body.data) {
-                            this.list.push(res.body.data[i])
+                if (this.isGet) {
+                    this.$http.get(this.api, { params : {
+                        id : this.id,
+                        type : this.type,
+                        limit : limit,
+                        offset : this.list.length,
+                        sortby : this.sortby,
+                        order : this.order
+                    }}).then((res) => {
+                        this.loadData(res)
+                    }, (res) => {
+                        if (res.status === 404) {
+                            console.error('vue-paginate: ' + '后台数据接口地址错误')
                         }
-                    } else {
-                        if (Object.getByKeyChain(res.body, this.res.data) === undefined) {
-                            console.error('vue-paginate: ' + 'data解析格式不正确');
-                            return
+                        else if (res.status === 500) {
+                            console.error('vue-paginate: ' + '后台数据接口参数有误')
                         }
-
-                        if (Object.getByKeyChain(res.body, this.res.total) === undefined) {
-                            console.error('vue-paginate: ' + 'total解析格式不正确');
-                            return
+                    });
+                } else {
+                    this.$http.post(this.api, {
+                        id : this.id,
+                        type : this.type,
+                        limit : limit,
+                        offset : this.list.length,
+                        sortby : this.sortby,
+                        order : this.order
+                    }).then((res) => {
+                        this.loadData(res)
+                    }, (res) => {
+                        if (res.status === 404) {
+                            console.error('vue-paginate: ' + '后台数据接口地址错误')
                         }
+                        else if (res.status === 500) {
+                            console.error('vue-paginate: ' + '后台数据接口参数有误')
+                        }
+                    });
+                }
+            },
+            loadData (res) {
+                if (this.list.length) {
+                    let i;
+                    for (i in res.body.data) {
+                        this.list.push(res.body.data[i])
+                    }
+                } else {
+                    if (Object.getByKeyChain(res.body, this.res.data) === undefined) {
+                        console.error('vue-paginate: ' + 'data解析格式不正确');
+                        return
+                    }
 
-                        this.list = Object.getByKeyChain(res.body, this.res.data);
-                        this.total = Object.getByKeyChain(res.body, this.res.total);
-                        let temp = this.total / this.limit;
-                        this.page = temp > 1 ? (temp) % 1 === 0 ? temp : parseInt(temp) + 1 : 0;
+                    if (Object.getByKeyChain(res.body, this.res.total) === undefined) {
+                        console.error('vue-paginate: ' + 'total解析格式不正确');
+                        return
+                    }
 
-                        if (this.sorts !== null) {
-                            let j;
-                            for (j in this.sorts) {
-                                let key = this.sorts[j].val;
-                                if (this.list[0][key] === undefined) {
-                                    console.error('vue-paginate: ' + '自定义排序字段不存在[' + key + ']')
-                                }
+                    this.list = Object.getByKeyChain(res.body, this.res.data);
+                    this.total = Object.getByKeyChain(res.body, this.res.total);
+                    let temp = this.total / this.limit;
+                    this.page = temp > 1 ? (temp) % 1 === 0 ? temp : parseInt(temp) + 1 : 0;
+
+                    if (this.sorts !== null) {
+                        let j;
+                        for (j in this.sorts) {
+                            let key = this.sorts[j].val;
+                            if (this.list[0][key] === undefined) {
+                                console.error('vue-paginate: ' + '自定义排序字段不存在[' + key + ']')
                             }
                         }
                     }
-                }, (res) => {
-                    if (res.status === 404) {
-                        console.error('vue-paginate: ' + '后台数据接口地址错误')
-                    }
-                    else if (res.status === 500) {
-                        console.error('vue-paginate: ' + '后台数据接口参数有误')
-                    }
-                });
+                }
             },
             jumpPage (arg) {
                 // 如果点击的按钮是当前页 return

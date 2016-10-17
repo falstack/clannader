@@ -35,7 +35,7 @@ class BangumiRepository extends RelationRepository
         });
     }
 
-    public function getBangumiList($form)
+    public function getBangumiList($form, $user_id)
     {
         $role = isset($form['id']);
 
@@ -52,6 +52,10 @@ class BangumiRepository extends RelationRepository
         $list =  $this->bangumi->when($role, function ($query) use ($like) {
             return $query->whereIn('id', $like);
         })->offset($form['offset'])->limit($form['limit'])->orderBy($form['sortby'], $form['order'])->get();
+
+        foreach ($list as $row) {
+            $row = $this->checkHasLike($row, 'Bangumi', $user_id);
+        }
 
         return $this->response->collection($list, $this->infoTransformer, [], function($resource, $fractal) {
             $fractal->setSerializer($this->apiSerializer);

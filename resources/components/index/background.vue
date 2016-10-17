@@ -102,7 +102,7 @@
             }
         },
         beforeCreate () {
-            this.$root.$data.load = false
+            this.$root.$data.load = false;
         },
         created () {
             this.$http.get('/api/background').then(function (res) {
@@ -119,9 +119,6 @@
                 this.bName = banner['bName'];
                 this.href = banner['href'];
             }
-        },
-        destroyed () {
-            this.$root.$data.load = true
         }
     }
 </script>

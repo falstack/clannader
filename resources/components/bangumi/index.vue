@@ -90,7 +90,7 @@
             return {
                 info : {},
                 template:
-                "<div class='post-item'>" +
+                "<div class='post-item' v-for='item in orderFilter'>" +
                     "<div class='head'>" +
                         "<div>" +
                             "<router-link class='uface' :to=\" '/people/' + item.uHome \"><img :src='item.uFace'></router-link>" +
@@ -127,6 +127,7 @@
             }
         },
         beforeCreate () {
+            this.$root.$data.load = true;
             this.$root.$refs.navbar.grayStyle();
             this.$root.$refs.banner.hidden();
         },

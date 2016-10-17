@@ -12,3 +12,12 @@
         404 Not Found
     </div>
 </template>
+
+<script>
+
+    export default {
+        beforeCreate () {
+            this.$root.$data.load = true;
+        }
+    }
+</script>

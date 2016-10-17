@@ -196,14 +196,14 @@
                 }
             },
             getUserBangumi () {
-                this.$http.get('/api/bangumi/list', { params : {
+                this.$http.post('/api/bangumi/list', {
                     id : this.$getUserInfo('zone'),
                     type : 'User',
                     offset : 0,
                     limit : 1000,
                     sortby : 'id',
                     order : 'desc'
-                }}).then((res) => {
+                }).then((res) => {
                     this.bangumiList = res.data.data;
 
                     if (res.data.data.length === 0) {

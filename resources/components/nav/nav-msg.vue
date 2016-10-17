@@ -247,6 +247,9 @@
         watch: {
             '$store.getters.isLogin' (val) {
                 this.makeWebSocket(val);
+                if (val) {
+                    this.getUserMessage()
+                }
             }
         },
         computed: {
@@ -328,7 +331,7 @@
                             if (!res.body.data[i].read) {
                                 this.count++
                             }
-                            this.msgEmit(res.body.data[i])
+                            this.msgEmit(res.body.data[i]);
                         }
                     });
                 }

@@ -17,7 +17,7 @@
         data () {
             return {
                 template:
-                "<div class='user-item'>" +
+                "<div class='user-item' v-for='item in orderFilter'>" +
                     "<router-link class='uface' :to='\"/people/\" + item.uHome'><img :src='item.uFace'></router-link>" +
                     "<router-link class='gray-link oneline' :to='\"/people/\" + item.uHome'>{{ item.uName }}</router-link>" +
                 "</div>",

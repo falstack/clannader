@@ -8,6 +8,8 @@ $api->version('v1', function ($api) {
 
         $api->get('/background', 'OtherController@backgroundShow');
 
+        $api->post('/dollars', 'OtherController@dollars')->middleware('jwt.auth');
+
         $api->post('/uptoken', 'OtherController@uptoken')->middleware('jwt.auth');
 
         $api->post('/like', 'RelationController@agree')->middleware('jwt.auth');
@@ -21,7 +23,7 @@ $api->version('v1', function ($api) {
 
             $api->post('/info', 'BangumiController@info');
 
-            $api->get('/list', 'BangumiController@list');
+            $api->post('/list', 'BangumiController@list');
         });
 
         $api->group(['prefix' => '/people'], function ($api) {
