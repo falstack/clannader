@@ -194,7 +194,7 @@
     }
 </style>
 
-<template v-cloak>
+<template>
     <div id="music" ref="box">
         <audio ref="audio"></audio>
         <div class="M-main">

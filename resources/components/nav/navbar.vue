@@ -8,6 +8,7 @@
         z-index: 100;
 
         .nav-icon {
+            display: block;
             width: 120px;
             height: 16px;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAUCAMAAABYpzQDAAAAAXNSR0IArs4c6QAAAF1QTFRF////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////bm5ubGxs9qS2NwAAABx0Uk5TIAAMFB4XDgkbEerRQ/ncdziuU+C+j4F+n7Gbbm+PKT8AAAJQSURBVEjHzdZtd7IwDAZgpuiU0Ep5Eeap/v+f+dxJWigOHdt5PpAvrjslXJKQmn08x2cSO8SR46yxRxw4TjHyMTJE/HwVebxMkhw43V4zy112u3jjbPL4GJti+SQ2w/LzeGJ98f8sWJeinFit75TVmy6wyOXZ1XRBQU4/sVH/GCS5qVeyPr1fdCkra4oSVyL5jFU1lgKrKOqEhdWMxRsDy/KFvQlZfmLB8Xg8xHO/3yeXsshqEW9FmbL64lqUyrItJSysZqxr0QWosk4nsmtZDBNV+riEdTH12Fspi6gqXGBVTZewwiqyZOOMVTVuBStIhDUro7C+2uMSqzTdqbWBhTrWEwvPp55Y2Ji1dsbChUhSGdzGcRnsDX/8kkVukXWzTKsDK5fCRVamZVTWYJlWz1g98uBF2e8rA9fFoiArn5Z/z0IduJAusqRwI0vLKCwtYBQmLHJcQ2Q8X0x3/E+s3simog6snAs3srSMYrnGjU+sqqmZhS9wRtb1LP+W1codSp5YyuLCTSwpo7C0rUoZZiMLL3Vpwm1+Yn2fXa9bHkklv6eRhe+dsLiMzMJG6XZPs5anA9otvol/Yi0OCHxdyT9w0yuLCzexdAVJHFnc9JGFZ3cIRfwz60jt93FKFCYQj67AQuESlqx4aOlKOn8cp4QcRNpb5SvWx3tWZeTwITz1yOpxrulRPdiJhVMmYfEKDR8OIpkT8fCxmsPFAfEb1vNR3XIRw2tFsUlybvrIynCniQWSi3M0NP0QmlyPahmn3esiLrq28jNwo79Ot8T6Bx2zbidNmDptAAAAAElFTkSuQmCC);
@@ -192,13 +193,65 @@
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFDMEVBODc5NDBDMDExRTY4NjhDQjBBNTYyRTc0QTM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFDMEVBODdBNDBDMDExRTY4NjhDQjBBNTYyRTc0QTM4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUMwRUE4Nzc0MEMwMTFFNjg2OENCMEE1NjJFNzRBMzgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUMwRUE4Nzg0MEMwMTFFNjg2OENCMEE1NjJFNzRBMzgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz43nWKXAAAAv0lEQVR42uzWQQrCMBAFUOMJ6snNDaw39AYxA12VChZjUugbmM3wyeI1E5pKKZczVwIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAp6tpEMaWp9qN2Wfoes1H5XRU34NeuNcdRq86j8nu6yQrEV9kYv+rZtxH57ivwyeVg+b8CPDdm88B89zdgWu1pjlnjfP423/0N8B8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAo9dbgAEA3Mf5yjHDzskAAAAASUVORK5CYII=);
         }
     }
+
+    .m-nav-left {
+        margin-left: 15px;
+        height: 100%;
+        float: left;
+
+        .nav-icon {
+            margin-top: 4.5px;
+        }
+    }
+
+    .m-nav-right {
+        margin-right: 15px;
+        height: 100%;
+        float: right;
+        display: flex;
+        margin-top: 7.5px;
+
+        .menu {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAbklEQVRYR+3WwQ2AMAwDQHsi2ADYsCOxmfnwAKHys5KHO0CSXpU0RPFhcX6kgAj0E5A0ACyu7iB5PGN/BCSdADZjAa+c/Z7AdfNZ3AhEoF8bZg5kDkSgXKC8De+FZHVJkNx/FxJX4nzHEYjATOACt74YIYRKxYQAAAAASUVORK5CYII=);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 30px;
+            height: 30px;
+            display: block;
+            transition: .2s;
+        }
+
+        .menu-show {
+            transform:rotate(90deg);
+        }
+
+        .sign-box {
+            width: 200px;
+            height: 100%;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: -200px;
+            margin-top: 45px;
+            transition: .2s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .sign-box-show {
+            left: 0;
+        }
+    }
 </style>
 
 <template>
     <div :class="['nav-bar', navstyle.gray ? 'nav-gray' : navstyle.white ? 'nav-white' : '']">
         <div class="container nav-box">
             <div class="row">
-                <div class="nav-left">
+                <div class="m-nav-left" v-if="$root.$data.isMobile">
+                    <router-link class="nav-icon" to="/"></router-link>
+                </div>
+                <div class="nav-left" v-else>
                     <router-link class="nav-icon" to="/"></router-link>
                     <ul class="nav-left-ul">
                         <li>
@@ -219,7 +272,14 @@
                     </ul>
                     <navmsg ref="navmsg"></navmsg>
                 </div>
-                <div class="nav-right">
+                <div class="m-nav-right" v-if="$root.$data.isMobile">
+                    <navmsg ref="navmsg"></navmsg>
+                    <a :class="[ 'menu', showMenu ? 'menu-show' : '' ]" @click="showMenu = !showMenu"></a>
+                    <div :class="[ 'sign-box', showMenu ? 'sign-box-show' : '' ]">
+                        <navmenu></navmenu>
+                    </div>
+                </div>
+                <div class="nav-right" v-else>
                     <navsearch></navsearch>
                     <div v-if="$store.getters.isLogin" id="nav-user">
                         <router-link class="uface" :to="'/people/' + user.home"><img :src="user.face"></router-link>
@@ -250,10 +310,11 @@
     import navsearch from './nav-search.vue'
     import navmsg from './nav-msg.vue'
     import creator from './nav-creator.vue'
+    import navmenu from './nav-menu.vue'
 
     export default {
         components: {
-            navsearch, navmsg, creator
+            navsearch, navmsg, creator, navmenu
         },
         data () {
             return {
@@ -265,7 +326,8 @@
                 navstyle : {
                     gray : false,
                     white : false
-                }
+                },
+                showMenu : false
             }
         },
         created () {
@@ -285,6 +347,7 @@
                     this.$store.dispatch('setLogin', { bool });
                     clearUserInfo();
                     document.getElementById('_auth').setAttribute('content', 0);
+                    this.$root.$refs.navsign.$data.signUp.captcha = true;
                     this.$root.$refs.toast.open({
                         theme: "success",
                         content: "已退出登录！"

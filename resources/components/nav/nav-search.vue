@@ -57,7 +57,7 @@
 </style>
 
 <template>
-    <div id="search">
+    <div id="search" v-if="!$root.$data.isMobile">
         <input type="text" placeholder="搜索" v-model="q" @keyup.enter="query">
         <button @click="query"></button>
     </div>

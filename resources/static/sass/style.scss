@@ -29,16 +29,3 @@ input:-webkit-autofill {
   background-color: #e9fbfe !important;
   border-color: #e4f4f9 !important;
 }
-
-div:empty:before{
-  content: attr(placeholder);
-  color: $color-gray-word;
-}
-
-div:focus:before{
-  content: none;
-}
-
-div:focus {
-  outline: 0;
-}

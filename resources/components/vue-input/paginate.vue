@@ -43,6 +43,7 @@
         #paginate {
             display: flex;
             justify-content: center;
+            margin-top: 10px;
 
             div {
                 display: flex;
@@ -342,7 +343,7 @@
                     let temp = this.total / this.limit;
                     this.page = temp > 1 ? (temp) % 1 === 0 ? temp : parseInt(temp) + 1 : 0;
 
-                    if (this.sorts !== null) {
+                    if (this.sorts !== null && res.body.data.length) {
                         let j;
                         for (j in this.sorts) {
                             let key = this.sorts[j].val;

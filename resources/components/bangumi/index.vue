@@ -1,9 +1,9 @@
 <style lang="sass" rel="scss" scoped>
 
     $banner-height: 400px;
+    $m-banner-height: 200px;
 
-    #banner {
-        height: 400px;
+    .banner {
         position: relative;
         width: 100%;
         overflow: hidden;
@@ -11,12 +11,10 @@
         z-index: 1;
 
         .img {
-            height: $banner-height;
             width: 110%;
             position: absolute;
             top: 50%;
             left: 50%;
-            margin: -$banner-height / 2 -55%;
             -webkit-filter: blur(5px);
             -moz-filter: blur(5px);
             -ms-filter: blur(5px);
@@ -29,10 +27,27 @@
         }
     }
 
-    #info {
+    .pc-banner {
+        height: $banner-height;
+
+        .img {
+            height: $banner-height;
+            margin: -$banner-height / 2 -55%;
+        }
+    }
+
+    .m-banner {
+        height: $m-banner-height;
+
+        .img {
+            height: $m-banner-height;
+            margin: -$m-banner-height / 2 -55%;
+        }
+    }
+
+    .info {
         position: absolute;
         width: 100%;
-        height: $banner-height;
         color: #fff;
         text-shadow: 0 1px 10px #000;
         z-index: 5;
@@ -55,16 +70,28 @@
             }
         }
     }
+
+    .pc-info {
+        height: $banner-height;
+    }
+
+    .m-info {
+        height: $m-banner-height;
+
+        .title {
+            font-size: 1em;
+        }
+    }
 </style>
 
 <template>
     <div class="template-warp">
-        <div id="banner">
+        <div :class="['banner', $root.$data.isMobile ? 'm-banner' : 'pc-banner']">
             <div class="img" ref="banner"></div>
         </div>
-        <div id="info">
+        <div :class="['info', $root.$data.isMobile ? 'm-info' : 'pc-info']">
             <h1 class="title">{{ info.name }}</h1>
-            <div class="summary" v-html="info.summary">
+            <div class="summary" v-if="!$root.$data.isMobile" v-html="info.summary">
             </div>
             <button class="btn-cap btn-pink" @click="followBangumi">{{ info.hasLike ? '已关注' : '关注' }}</button>
         </div>

@@ -283,7 +283,6 @@
                 var vm = this;
                 this.zone = this.$getUserInfo('zone');
                 this.$root.$refs.navbar.$refs.navmsg.$data.socket.on('0.0.0.0:dollars',function(data) {
-                    console.log(data);
                     vm.list.push(data);
                     vm.selectColor(data.userHome);
                 });

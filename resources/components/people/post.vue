@@ -19,7 +19,7 @@
                 template:
                 "<div class='post-item' v-for='item in orderFilter'>" +
                     "<div class='head'>" +
-                        "<router-link class='blue-link title' :to=\" '/post/' + item.id \">{{ item.title }}</router-link>" +
+                        "<router-link class='blue-link title oneline' :to=\" '/post/' + item.id \">{{ item.title }}</router-link>" +
                         "<router-link class='bface' :to=\" '/bangumi/' + item.bHome \"><img :src='item.bFace'></router-link>" +
                     "</div>" +
                     "<div class='body'>" +

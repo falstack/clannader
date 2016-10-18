@@ -12,12 +12,12 @@
         <navbar ref="navbar"></navbar>
         <banner v-show="load" ref="banner"></banner>
         <router-view></router-view>
-        <bottom v-show="load" ref="bottom"></bottom>
+        <bottom v-show="load && !isMobile" ref="bottom"></bottom>
 
-        <music v-if="lazy" :source="source" ref="music"></music>
+        <music v-if="lazy && !isMobile" :source="source" ref="music"></music>
         <navsign v-if="lazy" ref="navsign"></navsign>
         <toast v-if="lazy" ref="toast"></toast>
-        <top v-if="lazy"></top>
+        <top v-if="lazy && !isMobile"></top>
     </div>
 </template>
 
@@ -48,6 +48,7 @@
                 lazy : false,
                 load : true,
                 uptoken : null,
+                isMobile : null,
                 source : {
                     src : "http://cdn.clannader.com/music/piano",
                     img : 'http://cdn.clannader.com/avatar',
@@ -58,8 +59,8 @@
         },
         created () {
             this.userAngent();
-            this.lazy = true;
             this.checkLogin();
+            this.lazy = true;
         },
         methods: {
             setAuthHeader (val) {
@@ -78,12 +79,14 @@
             userAngent() {
                 var userAgentInfo = navigator.userAgent;
                 var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+                var bool = false;
                 for (var v = 0; v < Agents.length; v++) {
                     if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                        // redirect to mobile site
+                        bool = true;
                         break;
                     }
                 }
+                this.isMobile = bool;
             },
             getUpToken(bool) {
                 if (bool && this.uptoken === null) {

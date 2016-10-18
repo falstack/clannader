@@ -200,43 +200,48 @@
 </style>
 
 <template>
-    <div id="warp" v-if="$store.getters.isLogin">
-        <button class="nav-more">
-            <span class="count" v-show="count">{{ count }}</span>
-        </button>
-        <div id="box">
-            <div class="arrow"><i><em></em></i></div>
-            <div class="menu-header">
-                <button v-for="(btn, index) in menu" :class="[btn.style, btn.show ? btn.click : '']" @click="menuSwitch(index)"></button>
-            </div>
-            <div class="menu-line"></div>
-            <ul class="menu-body" v-show="menu[0].show">
-                <li v-for="msg in orderInbox">
+    <div>
+        <div id="warp" v-if="$store.getters.isLogin && !$root.$data.isMobile">
+            <button class="nav-more">
+                <span class="count" v-show="count">{{ count }}</span>
+            </button>
+            <div id="box">
+                <div class="arrow"><i><em></em></i></div>
+                <div class="menu-header">
+                    <button v-for="(btn, index) in menu" :class="[btn.style, btn.show ? btn.click : '']" @click="menuSwitch(index)"></button>
+                </div>
+                <div class="menu-line"></div>
+                <ul class="menu-body" v-show="menu[0].show">
+                    <li v-for="msg in orderInbox">
                     <span @click="readit(msg)">
                         <router-link class="blue-link" :to="'/people/' + msg.uHome">{{ msg.uName }}</router-link>
                     </span>
-                    <span>{{ msg.method }}了{{ msg.from_type === null ? '你的' : '你在' }}{{ msg.from_type === null ? msg.about_type : msg.from_type }}</span>
-                    <span @click="readit(msg)">
+                        <span>{{ msg.method }}了{{ msg.from_type === null ? '你的' : '你在' }}{{ msg.from_type === null ? msg.about_type : msg.from_type }}</span>
+                        <span @click="readit(msg)">
                         <router-link class="blue-link" :to="'/post/' + msg.url">{{ msg.content }}</router-link>
                     </span>
-                    <span v-if="msg.from_type">下面的{{ msg.about_type }}</span>
-                </li>
-            </ul>
-            <ul class="menu-body" v-show="menu[1].show">
-                <li>暂无通知</li>
-            </ul>
-            <ul class="menu-body" v-show="menu[2].show">
-                <li v-for="msg in notice">
+                        <span v-if="msg.from_type">下面的{{ msg.about_type }}</span>
+                    </li>
+                </ul>
+                <ul class="menu-body" v-show="menu[1].show">
+                    <li>暂无通知</li>
+                </ul>
+                <ul class="menu-body" v-show="menu[2].show">
+                    <li v-for="msg in notice">
                     <span @click="readit(msg)">
                         <router-link class="blue-link" :to="'/people/' + msg.uHome">{{ msg.uName }}</router-link>
                     </span>
-                    <span>{{ msg.method }}了你</span>
-                </li>
-            </ul>
-            <div class="menu-line"></div>
-            <div class="menu-foot">
+                        <span>{{ msg.method }}了你</span>
+                    </li>
+                </ul>
+                <div class="menu-line"></div>
+                <div class="menu-foot">
 
+                </div>
             </div>
+        </div>
+        <div v-if="$root.$data.isMobile">
+
         </div>
     </div>
 </template>

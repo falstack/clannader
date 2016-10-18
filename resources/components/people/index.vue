@@ -3,10 +3,17 @@
     @import "../../static/sass/variables";
 
     .zone-banner {
-        height: 340px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+    }
+
+    .pc-banner {
+        height: 340px;
+    }
+
+    .m-banner {
+        height: 200px;
     }
 
     .zone-left {
@@ -91,14 +98,91 @@
         margin-top: 20px;
         margin-bottom: 30px;
     }
+
+    .m-zone-head {
+        position: relative;
+        margin: 0 15px;
+        padding-left: 70px;
+        height: 25px;
+
+        .uface {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: 0;
+            top: -35px;
+        }
+
+        .uname {
+            position: absolute;
+            left: 70px;
+            top: -30px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-shadow: 0 1px 10px #000;
+            font-weight: 700;
+
+            .sex {
+                width: 14px;
+                height: 14px;
+                margin-left: 5px;
+            }
+        }
+
+        .uword {
+            line-height: 25px;
+        }
+    }
+
+    .menu-bar {
+        margin-top: 5px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 5px;
+
+        li {
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+
+            &:hover {
+                background-color: $color-gray-hover;
+            }
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
 </style>
 
 <template>
     <div>
-        <div class="zone-banner" ref="banner"></div>
+        <div :class="[ 'zone-banner', $root.$data.isMobile ? 'm-banner' : 'pc-banner' ]" ref="banner"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 zone-left">
+                <div class="m-zone-head" v-if="$root.$data.isMobile">
+                    <router-link class="uface" :to="'/people/' + people.uHome"><img :src="people.uFace"></router-link>
+                    <div class="uname">
+                        <span class="oneline">{{ people.uName }}</span>
+                        <span :class="['sex', $getSexClass(people.sex)]"></span>
+                    </div>
+                    <p class="uword oneline">{{ people.uWord }}</p>
+                </div>
+                <ul class="menu-bar" v-if="$root.$data.isMobile">
+                    <li v-for="item in column">
+                        <router-link :to="'/people/' + $route.params.id + item.path">{{ item.name }}</router-link>
+                    </li>
+                    <li v-for="item in myColumn" v-if="people.isMe">
+                        <router-link :to="'/people/' + $route.params.id + item.path">{{ item.name }}</router-link>
+                    </li>
+                </ul>
+                <div class="col-md-3 zone-left" v-else>
                     <div class="user-card">
                         <router-link class="uface" :to="'/people/' + people.uHome"><img :src="people.uFace"></router-link>
                         <div class="uname">

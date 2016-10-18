@@ -1,6 +1,51 @@
 <style lang="sass" rel="scss" scoped>
-    .msg-info {
-        width: 395px;
+
+    .pc-warp {
+        input[type=file] {
+            width: 288px;
+        }
+
+        .msg-info {
+            width: 395px;
+        }
+
+        .line-label {
+            display: inline-block;
+            width: 266px;
+            line-height: 39px;
+        }
+
+        .name-input {
+            width: 225px;
+        }
+
+        .autograph-input {
+            width: 293px;
+        }
+    }
+
+    .m-warp {
+        input[type=file] {
+            width: 248px;
+        }
+
+        .msg-info {
+            width: 355px;
+        }
+
+        .line-label {
+            display: inline-block;
+            width: 226px;
+            line-height: 39px;
+        }
+
+        .name-input {
+            width: 200px;
+        }
+
+        .autograph-input {
+            width: 200px;
+        }
     }
 
     .edit-item {
@@ -22,10 +67,6 @@
             border-right: none;
         }
 
-        input[type=file] {
-            width: 288px;
-        }
-
         input[type=date] {
             height: 39px;
         }
@@ -33,27 +74,13 @@
         button {
             margin-left: 10px;
         }
-
-        .line-label {
-            display: inline-block;
-            width: 266px;
-            line-height: 39px;
-        }
-
-        .name-input {
-            width: 225px;
-        }
-
-        .autograph-input {
-            width: 293px;
-        }
     }
 </style>
 
 <template>
-    <div>
+    <div :class="[ $root.$data.isMobile ? 'm-warp' : 'pc-warp' ]">
         <div class="edit-item">
-            <label>昵称：<input type="text" class="name-input" placeholder="2-12个字符组成，1个汉字占2个字符" v-model="form.name" @keyup.enter="setUserName"></label>
+            <label>昵称：<input type="text" class="name-input" placeholder="2-12个字符组成" v-model="form.name" @keyup.enter="setUserName"></label>
             <button class="btn-bean btn-blue" @click="setUserName">确认</button>
         </div>
         <div class="edit-item">
