@@ -26,8 +26,8 @@
       <file leaf-file-name="DoorController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            <state relative-caret-position="308">
+              <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -41,7 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/resources/components/vue-media/video.vue" />
         <option value="$PROJECT_DIR$/resources/static/js/storage.js" />
@@ -91,6 +90,7 @@
         <option value="$PROJECT_DIR$/resources/components/people/edit.vue" />
         <option value="$PROJECT_DIR$/resources/components/clannader.vue" />
         <option value="$PROJECT_DIR$/app/Broadcaster/serve.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DoorController.php" />
       </list>
     </option>
@@ -396,12 +396,12 @@
       <workItem from="1476184451025" duration="28000" />
       <workItem from="1476186155197" duration="63886000" />
       <workItem from="1476593229538" duration="4216000" />
-      <workItem from="1476664340863" duration="23156000" />
+      <workItem from="1476664340863" duration="23314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1938981000" />
+    <option name="totallyTimeSpent" value="1939139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -464,49 +464,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Clannader/Repository/PeopleRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding>
-            <marker date="1476499591000" expanded="false" signature="9:88" ph=" Created by PhpStorm. ..." />
-            <marker date="1476499591000" expanded="false" signature="134:428" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="479:4734" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="1062:1361" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="1411:1816" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="1493:1548" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="1634:1808" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="1739:1807" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="1862:2139" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="1993:2131" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2062:2130" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2187:2328" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="2280:2320" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2286:2319" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2370:3073" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="2537:2580" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2628:2671" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2679:2726" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2778:2815" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2863:2900" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="2908:2948" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="3110:3737" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="3568:3703" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="3634:3702" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="3714:3729" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="3779:3850" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="3894:3969" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="4026:4391" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="4065:4246" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="4066:4245" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="4272:4318" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="4278:4317" ph="..." />
-            <marker date="1476499591000" expanded="true" signature="4454:4566" ph="{...}" />
-            <marker date="1476499591000" expanded="true" signature="4607:4732" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Clannader/Transformer/People/MessageTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -2646,20 +2603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Broadcaster/serve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <marker date="1476802770000" expanded="true" signature="73:155" ph="{&quot;origins&quot;: 'clannader.dev:* http://clannader.com:* http://www.clannader.com:*'...}" />
-            <marker date="1476802770000" expanded="true" signature="268:312" ph="{...}" />
-            <marker date="1476802770000" expanded="true" signature="375:471" ph="{...}" />
-            <marker date="1476802770000" expanded="true" signature="513:517" ph="{...}" />
-            <marker date="1476802770000" expanded="true" signature="551:601" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OtherController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -2683,10 +2626,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Broadcaster/serve.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <folding>
+            <marker date="1476804096000" expanded="true" signature="73:155" ph="{&quot;origins&quot;: 'clannader.dev:* http://clannader.com:* http://www.clannader.com:*'...}" />
+            <marker date="1476804096000" expanded="true" signature="268:312" ph="{...}" />
+            <marker date="1476804096000" expanded="true" signature="375:471" ph="{...}" />
+            <marker date="1476804096000" expanded="true" signature="513:517" ph="{...}" />
+            <marker date="1476804096000" expanded="true" signature="551:601" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state relative-caret-position="308">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
           <folding />
         </state>
       </provider>
