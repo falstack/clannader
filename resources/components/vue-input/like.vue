@@ -96,7 +96,7 @@
                         });
                     }
                 } else {
-                    this.$root.$refs.navbar.showLogin();
+                    this.$root.$refs.navsign.showLogin()
                 }
             }
         }
