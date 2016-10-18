@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DoorController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoorController.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+            <state relative-caret-position="252">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -396,12 +396,12 @@
       <workItem from="1476184451025" duration="28000" />
       <workItem from="1476186155197" duration="63886000" />
       <workItem from="1476593229538" duration="4216000" />
-      <workItem from="1476664340863" duration="23314000" />
+      <workItem from="1476664340863" duration="23386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1939139000" />
+    <option name="totallyTimeSpent" value="1939211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -2640,18 +2640,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <marker date="1476804255000" expanded="false" signature="44:308" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="350:2781" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="566:677" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="707:751" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="797:1154" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="921:1060" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="1068:1147" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="1210:1619" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="1234:1574" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="1650:1815" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="1845:1881" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="1927:2359" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="2064:2251" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="2150:2212" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="2259:2352" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="2406:2779" ph="{...}" />
+            <marker date="1476804255000" expanded="true" signature="2457:2599" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="2479:2588" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="2607:2749" ph="..." />
+            <marker date="1476804255000" expanded="true" signature="2629:2738" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
           <folding />
         </state>
       </provider>

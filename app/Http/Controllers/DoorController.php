@@ -72,7 +72,6 @@ class DoorController extends Controller
     {
         $captcha = new GeeCaptcha('0dc7f04a36355ba964894f0d849a9e6f', '3d2a268f8f9bb74274fc4c3391adfe79');
 
-        
         return $captcha->GTServerIsNormal();
     }
 
