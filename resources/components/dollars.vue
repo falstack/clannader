@@ -66,7 +66,7 @@
 
     .m-item {
         width: 100%;
-        margin: 0 15px 12px;
+        margin-bottom: 12px;
     }
 
     .pc-item {
@@ -77,7 +77,6 @@
     .chat-item {
         position: relative;
         float: none;
-        box-sizing: border-box;
 
         .user {
             position: absolute;
