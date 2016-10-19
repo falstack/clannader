@@ -238,7 +238,7 @@
             </div>
         </div>
         <div class="comment-new" ref="news" v-if="rich">
-            <editor :content="content"></editor>
+            <editor :option="option" :content="content"></editor>
             <div class="comment-warp">
                 <div></div>
                 <button class="btn-bean btn-blue" @click="commentStore($event)">发表</button>
@@ -282,7 +282,8 @@
         data () {
             return {
                 list : [],
-                content : ""
+                content : "",
+                option : ['link', 'img', 'video', 'fullscreen']
             }
         },
         created () {
