@@ -30,6 +30,7 @@
             color: #fff;
             position: relative;
             font-size: 14px;
+            line-height: 40px;
         }
 
         a {
@@ -61,6 +62,7 @@
             width: $m-input-width;
             height: 100%;
             font-size: 13px;
+            line-height: 40px;
         }
 
         a {
