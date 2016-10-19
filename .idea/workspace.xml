@@ -26,8 +26,8 @@
       <file leaf-file-name="dollars.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/components/dollars.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="536">
+              <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -486,12 +486,12 @@
       <workItem from="1476184451025" duration="28000" />
       <workItem from="1476186155197" duration="63886000" />
       <workItem from="1476593229538" duration="4216000" />
-      <workItem from="1476664340863" duration="29538000" />
+      <workItem from="1476664340863" duration="29613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1945363000" />
+    <option name="totallyTimeSpent" value="1945438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -2766,8 +2766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/components/dollars.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="536">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
           <folding />
         </state>
       </provider>

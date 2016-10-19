@@ -77,6 +77,7 @@
     .chat-item {
         position: relative;
         float: none;
+        box-sizing: border-box;
 
         .user {
             position: absolute;
