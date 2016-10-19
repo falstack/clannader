@@ -263,6 +263,7 @@
                 }).then((res) => {
                     this.people = res.body.data;
                     this.$refs.banner.style.backgroundImage = 'url(' + this.people.banner + ')';
+                    document.title = this.people.uName + ' - CLANNADer'
                 }, (res) => {
                     if (res.status === 500) {
                         this.$router.replace({ path: '/door/404' });

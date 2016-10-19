@@ -13,6 +13,9 @@
     export default {
         components: {
             background
+        },
+        created () {
+            document.title = '首页 - CLANNADer'
         }
     }
 </script>

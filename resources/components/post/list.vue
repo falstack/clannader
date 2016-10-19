@@ -50,6 +50,9 @@
         },
         beforeCreate () {
             this.$root.$data.load = true;
+        },
+        created () {
+            document.title = '帖子列表 - CLANNADer'
         }
     }
 </script>

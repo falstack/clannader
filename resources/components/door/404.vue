@@ -18,6 +18,9 @@
     export default {
         beforeCreate () {
             this.$root.$data.load = true;
+        },
+        created () {
+            document.title = '该页面不存在 - CLANNADer'
         }
     }
 </script>

@@ -42,7 +42,7 @@
 </style>
 
 <template>
-    <button :class="['btn-likeable', flag ? 'btn-liked' : 'btn-nolike']" @click="submit">{{ count }}</button>
+    <button :class="['btn-likeable', flag ? 'btn-liked' : 'btn-nolike']" @click="submit" v-cloak>{{ count }}</button>
 </template>
 
 <script>

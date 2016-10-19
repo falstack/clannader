@@ -44,6 +44,9 @@
         beforeCreate () {
             this.$root.$data.load = true;
         },
+        created () {
+            document.title = '番剧列表 - CLANNADer'
+        },
         methods: {
             follow (el, item) {
                 if (this.$store.getters.isLogin) {

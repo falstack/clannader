@@ -107,7 +107,7 @@
     </div>
 </template>
 
-<script>
+<script lang="babel">
 
     import paginate from '../vue-input/paginate.vue'
 
@@ -170,6 +170,7 @@
                 }).then((res) => {
                     this.info = res.body.data;
                     this.$refs.banner.style.backgroundImage = 'url(' + this.info.banner + ')';
+                    document.title = this.info.name + ' 番剧 - CLANNADer';
                 }, (res) => {
                     if (res.status === 500) {
                         this.$router.replace({ path: '/door/404' });

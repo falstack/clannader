@@ -99,6 +99,7 @@
                     id : this.$route.params.id
                 }).then((res) => {
                     this.post = res.body.data;
+                    document.title = this.post.title + ' - CLANNADer'
                 }, (res) => {
                     if (res.status === 500) {
                         this.$router.replace({ path: '/door/404' });
