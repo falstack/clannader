@@ -3,30 +3,28 @@
         margin: 25px 0;
 
         .head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 5px;
 
             .title {
                 font-size: 18px;
                 font-weight: 700;
+                margin-bottom: 25px;
             }
 
-            >div {
+            .info {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
-            }
 
-            .uface {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-            }
+                >div {
+                    display: flex;
+                    align-items: center;
+                }
 
-            .bface {
-                width: 30px;
-                height: 30px;
+                .uface, .bface {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
 
@@ -44,14 +42,18 @@
             <div class="col-md-9">
                 <div id="post">
                     <div class="head">
-                        <div>
-                            <router-link class="uface" :to="'/people/' + post.uHome"><img :src="post.uFace"></router-link>
-                            <p class="title">{{ post.title }}</p>
-                        </div>
-                        <div>
-                            <span class="gray-word">{{ post.time }}</span>
-                            <span class="dot"></span>
-                            <router-link class="bface" :to="'/bangumi/' + post.bHome"><img :src="post.bFace"></router-link>
+                        <p class="title">{{ post.title }}</p>
+                        <div class="info">
+                            <div>
+                                <router-link class="uface" :to="'/people/' + post.uHome"><img :src="post.uFace"></router-link>
+                                <span class="dot"></span>
+                                <router-link :to="'/people/' + post.uHome">{{ post.uName }}</router-link>
+                            </div>
+                            <div>
+                                <span class="gray-word">{{ post.time }}</span>
+                                <span class="dot"></span>
+                                <router-link class="bface" :to="'/bangumi/' + post.bHome"><img :src="post.bFace"></router-link>
+                            </div>
                         </div>
                     </div>
                     <div class="article" v-html="post.content">
