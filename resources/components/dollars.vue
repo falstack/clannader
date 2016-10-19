@@ -25,6 +25,7 @@
 
     .m-chat {
         width: 100%;
+        padding: 0 15px;
     }
 
     .pc-chat {
@@ -65,7 +66,7 @@
 
     .m-item {
         width: 100%;
-        margin: 0 10px 12px;
+        margin: 0 15px 12px;
     }
 
     .pc-item {
