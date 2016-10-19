@@ -20,6 +20,6 @@
     <script src="http://cdn.bootcss.com/plupload/2.1.9/plupload.full.min.js"></script>
     <script src="http://cdn.bootcss.com/qiniu-js/1.0.14-beta/qiniu.min.js"></script>
     <script src="http://cdn.bootcss.com/wangeditor/2.1.20/js/wangEditor.min.js"></script>
-    <script src="{{ elixir('dist/js/entry.js') }}"></script>
+    <script src="{{ asset('dev/js/entry.js') }}"></script>
 </body>
 </html>

@@ -24,12 +24,12 @@
                 template:
                     "<div class='post-item' v-for='item in orderFilter'>" +
                         "<div class='head'>" +
-                            "<span class='head-left'>" +
+                            "<div>" +
                                 "<router-link class='uface' :to=\" '/people/' + item.uHome \"><img :src='item.uFace'></router-link>" +
                                 "<router-link class='gray-link' :to=\" '/people/' + item.uHome \">{{ item.uName }}</router-link>" +
                                 "<span class='dot'></span>" +
-                                "<router-link class='blue-link title oneline' :to=\" '/post/' + item.id \">{{ item.title }}</router-link>" +
-                            "</span>" +
+                                "<router-link class='blue-link title' :to=\" '/post/' + item.id \">{{ item.title }}</router-link>" +
+                            "</div>" +
                             "<router-link class='bface' :to=\" '/bangumi/' + item.bHome \"><img :src='item.bFace'></router-link>" +
                         "</div>" +
                         "<div class='body'>" +
