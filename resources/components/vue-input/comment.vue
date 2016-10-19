@@ -39,14 +39,14 @@
     }
 
     .comment-box {
-        margin-left: 85px;
+        margin-left: 65px;
         position: relative;
         border-top: 1px solid $color-gray-hover;
         padding: 22px 0 14px 0;
 
         .uface {
             position: absolute;
-            left: -85px;
+            left: -65px;
             width: 48px;
             height: 48px;
             border: 1px solid $color-gray-hover;
@@ -100,7 +100,7 @@
     }
 
     .comment-reply {
-        padding-left: 85px;
+        padding-left: 65px;
 
         >div {
             margin-bottom: 10px;

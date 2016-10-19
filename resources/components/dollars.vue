@@ -9,26 +9,38 @@
         background: linear-gradient(0deg, #ccc, #fff);
         z-index: 10;
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chat-box {
+        margin-top: 20px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .m-chat {
+        width: 100%;
+    }
+
+    .pc-chat {
+        width : 525px;
     }
 
     .content {
-        position: absolute;
-        left: 50%;
-        margin-left: -262px;
-        margin-top: 100px;
         background-color: #FFF;
         border: 2px solid #555;
-        width: $window-width - $avatar-length * 2 + 4px;
+        width: 100%;
         height: 100px;
         padding: 10px;
         border-radius: 10px;
     }
 
     .submit {
-        position: absolute;
-        top: 220px;
-        left: 50%;
-        margin-left: -100px;
         width: 200px;
         font-size: 12px;
         padding: 3px;
@@ -51,10 +63,18 @@
         box-sizing: border-box;
     }
 
-    .chat-item {
+    .m-item {
+        width: 100%;
+        margin: 0 10px 12px;
+    }
+
+    .pc-item {
         width: $window-width;
-        position: relative;
         margin: 0 auto 12px;
+    }
+
+    .chat-item {
+        position: relative;
         float: none;
 
         .user {
@@ -171,11 +191,13 @@
 <template>
     <div>
         <div class="chat">
-            <textarea class="content" v-model="content" @keyup.enter="post(1)" ref="input"></textarea>
-            <button class="submit" @click="post(0)">{{ success ? "POST!" : "Sending..." }}</button>
+            <div :class="['chat-box', $root.$data.isMobile ? 'm-chat' : 'pc-chat']">
+                <textarea class="content" v-model="content" @keyup.enter="post(1)" ref="input"></textarea>
+                <button class="submit" @click="post(0)">{{ success ? "POST!" : "Sending..." }}</button>
+            </div>
         </div>
         <ul class="window">
-            <li v-for="item in orderList" :class="[ 'chat-item', zone === item.userHome ? 'user-right' : 'user-left' ]">
+            <li v-for="item in orderList" :class="[ 'chat-item', zone === item.userHome ? 'user-right' : 'user-left', $root.$data.isMobile ? 'm-item' : 'pc-item' ]">
                 <div class="user">
                     <div class="avatar" @click="at(item.userName)"><img :src="item.userFace"></div>
                     <router-link class="name" :to="'/people/' + item.userHome">{{ item.userName }}</router-link>
