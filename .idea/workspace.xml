@@ -23,12 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <file leaf-file-name="clannader.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/components/clannader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="536">
+              <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+              <folding>
+                <element signature="e#743#776#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,9 +91,9 @@
         <option value="$PROJECT_DIR$/resources/static/sass/_paginate.scss" />
         <option value="$PROJECT_DIR$/resources/components/door/star.vue" />
         <option value="$PROJECT_DIR$/resources/components/people/edit.vue" />
-        <option value="$PROJECT_DIR$/resources/components/clannader.vue" />
         <option value="$PROJECT_DIR$/resources/components/vue-input/paginate.vue" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/components/clannader.vue" />
       </list>
     </option>
   </component>
@@ -446,12 +448,12 @@
       <workItem from="1476184451025" duration="28000" />
       <workItem from="1476186155197" duration="63886000" />
       <workItem from="1476593229538" duration="4216000" />
-      <workItem from="1476664340863" duration="27213000" />
+      <workItem from="1476664340863" duration="27252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1943038000" />
+    <option name="totallyTimeSpent" value="1943077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -2629,40 +2631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/components/clannader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-          <folding>
-            <marker date="1476839985000" expanded="true" signature="36:176" ph="..." />
-            <marker date="1476839985000" expanded="true" signature="47:168" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="188:650" ph="..." />
-            <marker date="1476839985000" expanded="true" signature="207:638" ph="..." />
-            <marker date="1476839985000" expanded="true" signature="673:3257" ph="..." />
-            <marker date="1476839985000" expanded="true" signature="750:1041" ph="..." />
-            <marker date="1476839985000" expanded="true" signature="1062:3248" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1084:1158" ph="{&quot;top&quot;: top...}" />
-            <marker date="1476839985000" expanded="true" signature="1175:1324" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1220:1314" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1342:1759" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1363:1749" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1514:1735" ph="{&quot;src&quot;: &quot;http://cdn.clannader.com/music/piano&quot;...}" />
-            <marker date="1476839985000" expanded="true" signature="1780:1883" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1902:3242" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1936:2195" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="1963:2085" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="2091:2181" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="2222:2468" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="2495:2967" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="2741:2915" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="2805:2897" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="2998:3232" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="3051:3218" ph="{...}" />
-            <marker date="1476839985000" expanded="true" signature="3119:3198" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/components/vue-input/paginate.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -2760,7 +2728,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1476840073000" expanded="true" signature="40:1351" ph="..." />
+            <marker date="1476840073000" expanded="true" signature="47:414" ph="..." />
+            <marker date="1476840073000" expanded="true" signature="421:1343" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/components/clannader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+          <folding>
+            <element signature="e#743#776#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
