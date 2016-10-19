@@ -1,60 +1,49 @@
 <style lang="sass" rel="scss" scoped>
 
+    .word-block {
+        width: 50px;
+        display: block;
+    }
+
+    .input-block {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .msg-info {
+        margin-right: 50px;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+
+    input[type=file] {
+        width: 100%;
+    }
+
+    form {
+        label {
+            width: 50px;
+        }
+    }
+
     .pc-warp {
-        input[type=file] {
-            width: 288px;
-        }
-
-        .msg-info {
-            width: 395px;
-        }
-
-        .line-label {
-            display: inline-block;
-            width: 266px;
-            line-height: 39px;
-        }
-
-        .name-input {
-            width: 225px;
-        }
-
-        .autograph-input {
-            width: 293px;
-        }
+        width: 450px;
     }
 
     .m-warp {
-        input[type=file] {
-            width: 248px;
-        }
-
-        .msg-info {
-            width: 355px;
-        }
-
-        .line-label {
-            display: inline-block;
-            width: 226px;
-            line-height: 39px;
-        }
-
-        .name-input {
-            width: 200px;
-        }
-
-        .autograph-input {
-            width: 200px;
-        }
+        width: 100%;
+        padding-left: 50px;
     }
 
     .edit-item {
+        display: flex;
         margin: 16px 0;
         height: 39px;
-
-        form {
-            display: inline-block;
-        }
+        align-items: center;
 
         label, input {
             color: #333;
@@ -80,45 +69,59 @@
 <template>
     <div :class="[ $root.$data.isMobile ? 'm-warp' : 'pc-warp' ]">
         <div class="edit-item">
-            <label>昵称：<input type="text" class="name-input" placeholder="2-12个字符组成" v-model="form.name" @keyup.enter="setUserName"></label>
+            <label>昵称：</label>
+            <div class="input-block">
+                <input type="text" class="name-input" placeholder="2-12个字符组成" v-model="form.name" @keyup.enter="setUserName">
+            </div>
             <button class="btn-bean btn-blue" @click="setUserName">确认</button>
+            <div class="word-block"></div>
         </div>
         <div class="edit-item">
-            <label>简介：<input type="text" class="autograph-input" placeholder="请缩减至20字以内..." v-model="form.autograph" @keyup.enter="setSummary"></label>
+            <label>简介：</label>
+            <div class="input-block">
+                <input type="text" class="autograph-input" placeholder="请缩减至20字以内..." v-model="form.autograph" @keyup.enter="setSummary">
+            </div>
             <button class="btn-bean btn-blue" @click="setSummary">确认</button>
-            <span class="gray-word">&nbsp;&nbsp;&nbsp;{{ form.autograph.length }} / 20</span>
+            <span class="gray-word word-block">&nbsp;&nbsp;&nbsp;{{ form.autograph.length }} / 20</span>
         </div>
         <div class="edit-item">
-            <form enctype="multipart/form-data" ref="avatarForm">
+            <form enctype="multipart/form-data" ref="avatarForm" class="input-block">
                 <label>头像：</label>
                 <input type="file" name="file" @change="previewAvatar($event)" ref="avatarInput">
             </form>
             <button class="btn-bean btn-gray" v-show="upAvatar" @click="cancelAvatar">取消</button>
             <button class="btn-bean btn-blue" @click="setUserAvatar">确认</button>
+            <div class="word-block"></div>
         </div>
         <div class="edit-item">
-            <form enctype="multipart/form-data" ref="bannerForm">
+            <form enctype="multipart/form-data" ref="bannerForm" class="input-block">
                 <label>背景：</label>
                 <input type="file" name="file" @change="previewBanner($event)" ref="bannerInput">
             </form>
             <button class="btn-bean btn-gray" v-show="upBanner" @click="cancelBanner">取消</button>
             <button class="btn-bean btn-blue" @click="setUserBanner">确认</button>
+            <div class="word-block"></div>
         </div>
         <div class="edit-item">
-            <span class="line-label">
-                <label>性别：</label>
-                <label><input type="radio" name="sex" v-model="form.sex" value="1">男</label>
-                <label><input type="radio" name="sex" v-model="form.sex" value="2">女</label>
-            </span>
-            <label>保密：<input type="checkbox" v-model="form.sexSecret"></label>
+            <label>性别：</label>
+            <div class="input-block">
+                <div>
+                    <label><input type="radio" name="sex" v-model="form.sex" value="1">男</label>
+                    <label><input type="radio" name="sex" v-model="form.sex" value="2">女</label>
+                </div>
+                <label>保密：<input type="checkbox" v-model="form.sexSecret"></label>
+            </div>
             <button class="btn-bean btn-blue" @click="setUserSex">确认</button>
+            <div class="word-block"></div>
         </div>
         <div class="edit-item">
-            <span class="line-label">
-                <label>生日：<input type="date" placeholder="0000-00-00" v-model="form.birthday" @keyup.enter="setBirthday"></label>
-            </span>
-            <label>保密：<input type="checkbox" v-model="form.birSecret"></label>
+            <label>生日：</label>
+            <div class="input-block">
+                <input type="date" placeholder="0000-00-00" v-model="form.birthday" @keyup.enter="setBirthday">
+                <label>保密：<input type="checkbox" v-model="form.birSecret"></label>
+            </div>
             <button class="btn-bean btn-blue" @click="setBirthday">确认</button>
+            <div class="word-block"></div>
         </div>
         <div class="msg-info">
             <p><strong>生日</strong>和<strong>性别</strong>用于为番剧的详细分类和排名做基础。</p>

@@ -47,6 +47,8 @@
 
     .info {
         position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         color: #fff;
         text-shadow: 0 1px 10px #000;

@@ -111,6 +111,7 @@
             position: absolute;
             left: 0;
             top: -35px;
+            border: 2px solid #fff;
         }
 
         .uname {

@@ -5,7 +5,11 @@
 <template>
     <div class="container">
         <div class="row">
-            <paginate :init="init" :template="template"></paginate>
+            <div class="container">
+                <div class="col-md-12">
+                    <paginate :init="init" :template="template"></paginate>
+                </div>
+            </div>
         </div>
     </div>
 </template>
