@@ -11,7 +11,6 @@
     flex-direction: column;
 
     .head {
-      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -20,7 +19,7 @@
         font-weight: 700;
       }
 
-      >div {
+      .head-left {
         display: flex;
         align-items: center;
         flex: 1;

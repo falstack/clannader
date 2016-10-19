@@ -86,9 +86,9 @@
 <template>
     <div class="warp">
         <div class="head" v-if="$store.getters.isLogin">
-            <router-link :to="'/people/' + $parent.$data.user.home" class="uface"><img :src="$getUserInfo('avatar')"></router-link>
+            <router-link :to="'/people/' + $parent.$data.user.home" class="uface" @click="close"><img :src="$getUserInfo('avatar')"></router-link>
             <div class="info">
-                <router-link :to="'/people/' + $parent.$data.user.home">{{ $parent.$data.user.name }}</router-link>
+                <router-link :to="'/people/' + $parent.$data.user.home" @click="close">{{ $parent.$data.user.name }}</router-link>
             </div>
         </div>
         <div class="head" v-else>
