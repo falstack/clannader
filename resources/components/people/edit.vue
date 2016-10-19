@@ -36,7 +36,6 @@
 
     .m-warp {
         width: 100%;
-        padding-left: 50px;
     }
 
     .edit-item {

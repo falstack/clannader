@@ -8,6 +8,8 @@
     $color-blue-hover: #00a7de;
 
     #vue-paginate {
+        width: 100%;
+        overflow: hidden;
 
         #total-sort {
             padding: 10px 0;
