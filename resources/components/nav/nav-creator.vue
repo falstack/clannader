@@ -78,51 +78,12 @@
 </style>
 
 <template>
-    <div>
-        <div v-if="$root.$data.isMobile">
-
-        </div>
-        <div v-else>
-            <div v-if="$store.getters.isLogin" id="warp">
-                <a id="creator">创作</a>
-                <div id="menu">
-                    <a @click="$refs.post.open()">发帖</a>
-                    <!--<a>提问</a>-->
-                    <!--<a>写作</a>-->
-                </div>
-            </div>
-            <post ref="post"></post>
+    <div v-if="$store.getters.isLogin" id="warp">
+        <a id="creator">创作</a>
+        <div id="menu">
+            <a @click="$root.$refs.post.open()">发帖</a>
+            <!--<a>提问</a>-->
+            <!--<a>写作</a>-->
         </div>
     </div>
 </template>
-
-<script>
-
-    import post from '../post/create.vue'
-
-    export default {
-        components: {
-            post
-        },
-        props: {
-
-        },
-        computed: {
-
-        },
-        data () {
-            return {
-
-            }
-        },
-        created () {
-
-        },
-        methods: {
-
-        },
-        mounted () {
-
-        }
-    }
-</script>

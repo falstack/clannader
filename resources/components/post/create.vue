@@ -111,6 +111,8 @@
         font-size: 13px;
         color: #222;
         line-height: 1.7;
+        display: flex;
+        justify-content: space-between;
     }
 </style>
 
@@ -133,10 +135,10 @@
                         <span>问题说明<span class="gray-word">（可选）：</span></span>
                     </div>
                     <div class="content">
-                        <editor :height="160" :content="content"></editor>
+                        <editor :option="option" :height="160" :content="content"></editor>
                     </div>
                     <div class="tip">
-                        <span>选择番剧<span class="gray-word">（从你关注的动漫中选择）：</span></span>
+                        <span>选择番剧<span class="gray-word" v-if="!$root.$data.isMobile">（从你关注的动漫中选择）：</span></span>
                         <select v-model="bid">
                             <option v-for="item in bangumiList" :value="item.id">{{ item.name }}</option>
                         </select>
@@ -166,7 +168,8 @@
                 content : "",
                 bid: null,
                 bangumiList : [],
-                new : true
+                new : true,
+                option : ['link', 'img', 'video', 'fullscreen']
             }
         },
         watch: {

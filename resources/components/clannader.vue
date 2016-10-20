@@ -18,6 +18,8 @@
         <navsign v-if="lazy" ref="navsign"></navsign>
         <toast v-if="lazy" ref="toast"></toast>
         <top v-if="lazy && !isMobile"></top>
+        <create v-if="lazy && isMobile"></create>
+        <post v-if="lazy" ref="post"></post>
     </div>
 </template>
 
@@ -32,10 +34,12 @@
     import navsign from './nav/nav-sign.vue'
     import bottom from './tools/bottom.vue'
     import music from './vue-media/music.vue'
+    import create from './tools/create.vue'
+    import post from './post/create.vue'
 
     export default {
         components: {
-            top, toast, navbar, banner, navsign, bottom, music
+            top, toast, navbar, banner, navsign, bottom, music, create, post
         },
         watch: {
             '$store.getters.isLogin' (val) {
