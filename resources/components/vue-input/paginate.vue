@@ -27,12 +27,6 @@
                 color: $color-gray-word;
                 font-size: 13px;
                 line-height: 24px;
-                overflow: hidden;
-                background-color: #fff;
-                border-color: #fff;
-                border-style: solid;
-                border-width: 1px;
-                border-radius: 3px;
 
                 &:hover {
                     border-color: $color-gray-light;
@@ -164,14 +158,14 @@
                 now : 1,
                 max : 1,
                 order : 'desc',
-                sortby : 'id',
+                sortby : 'updated_at',
                 limit : 10,
                 id : undefined,
                 api : null,
                 sorts : [
                     {
-                        val : "id",
-                        name : "最新发布"
+                        val : "updated_at",
+                        name : "最新动态"
                     },
                     {
                         val : "like",

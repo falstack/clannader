@@ -24,7 +24,7 @@ class PostTransformer extends TransformerAbstract
             'bFace' => $post->bangumi->avatar,
             'bHome' => $post->bangumi_id,
             'time' => $post->created_at->diffForHumans(),
-            'update' => $post->updated_at->toDateTimeString()
+            'updated_at' => $post->updated_at->toDateTimeString()
         ];
     }
 }

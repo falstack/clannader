@@ -1,6 +1,7 @@
 <style lang="sass" rel="scss" scoped>
     #post {
         margin: 25px 0;
+        width: 100%;
 
         .head {
             margin-bottom: 5px;

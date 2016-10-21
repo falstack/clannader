@@ -1,3 +1,9 @@
+<style lang="sass" rel="scss" scoped>
+    #vue-paginate {
+        margin-bottom: 20px;
+    }
+</style>
+
 <template>
     <div class="container">
         <div class="row">
