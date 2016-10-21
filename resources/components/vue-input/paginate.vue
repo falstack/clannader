@@ -27,6 +27,7 @@
                 color: $color-gray-word;
                 font-size: 13px;
                 line-height: 24px;
+                border-color: #fff;
 
                 &:hover {
                     border-color: $color-gray-light;
