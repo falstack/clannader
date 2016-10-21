@@ -24,8 +24,6 @@
     }
 
     .box {
-        margin-top: 14vh;
-        width: 650px;
         height: 450px;
         border-radius: 8px;
         box-shadow: 0 0 80px 0 rgba(0,0,0,.4);
@@ -33,6 +31,16 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
+    }
+
+    .m-box {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .pc-box {
+        margin-top: 14vh;
+        width: 650px;
     }
 
     .head {
@@ -121,7 +129,7 @@
         <div id="mask" v-show="show">
         </div>
         <div id="warp" v-show="show">
-            <div class="box">
+            <div :class="[ 'box', $root.$data.isMobile ? 'm-box' : 'pc-box' ]">
                 <div class="head">
                     <span class="name">发帖</span>
                     <span class="close" @click="close(false)">&times;</span>
@@ -132,7 +140,7 @@
                         <span class="gray-word">{{ count === 0 ? '' : count + ' / ' + '20' }}</span>
                     </div>
                     <div class="tip">
-                        <span>问题说明<span class="gray-word">（可选）：</span></span>
+                        <span>帖子详情<span class="gray-word">（可选）：</span></span>
                     </div>
                     <div class="content">
                         <editor :option="option" :height="160" :content="content"></editor>
