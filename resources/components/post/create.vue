@@ -143,7 +143,7 @@
                         <span>帖子详情<span class="gray-word">（可选）：</span></span>
                     </div>
                     <div class="content">
-                        <editor :option="option" :height="160" :content="content"></editor>
+                        <editor :option="option" :height="158" :content="content"></editor>
                     </div>
                     <div class="tip">
                         <span>选择番剧<span class="gray-word" v-if="!$root.$data.isMobile">（从你关注的动漫中选择）：</span></span>
