@@ -1526,7 +1526,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-24"
+	__vue_options__._scopeId = "data-v-25"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -1535,9 +1535,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-24", __vue_options__)
+	    hotAPI.createRecord("data-v-25", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-24", __vue_options__)
+	    hotAPI.reload("data-v-25", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] background.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1561,8 +1561,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-24&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./background.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-24&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./background.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-25&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./background.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-25&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./background.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -1580,7 +1580,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#background[data-v-24] {\n  position: relative;\n  z-index: 1;\n  flex: 1;\n  background-color: #333;\n  background-position: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.idea[data-v-24] {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  background-image: url(data:image/png;base64,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);\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n.m-idea[data-v-24] {\n  width: 200px;\n  height: 40px;\n  margin-left: -100px;\n  margin-top: -70px;\n}\n.pc-idea[data-v-24] {\n  width: 435px;\n  height: 65px;\n  margin-left: -217.5px;\n  margin-top: -100px;\n}\n#banner-card[data-v-24] {\n  display: block;\n  position: fixed;\n  width: 200px;\n  height: 50px;\n  bottom: 38px;\n  right: 8px;\n  border-radius: 4px;\n  background-color: rgba(23, 24, 25, 0.3);\n}\n#banner-card .uface[data-v-24] {\n    float: left;\n    width: 40px;\n    height: 40px;\n    margin: 5px 8px 0 10px;\n}\n#banner-card > div[data-v-24] {\n    margin-top: 8px;\n    float: left;\n}\n#banner-other div[data-v-24] {\n  height: 18px;\n  width: 132px;\n}\n#banner-other span[data-v-24] {\n  color: #fff;\n  font-size: 12px;\n}\n#banner-other a[data-v-24] {\n  font-size: 12px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n", "", {"version":3,"sources":["/./resources/components/index/background.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,WAAW;EACX,QAAQ;EACR,uBAAuB;EACvB,yBAAyB;EACzB,uBAAuB;EACvB,6BAA6B;CAAE;AAEjC;EACE,mBAAmB;EACnB,UAAU;EACV,SAAS;EACT,8yFAA8yF;EAC9yF,yBAAyB;EACzB,6BAA6B;CAAE;AAEjC;EACE,aAAa;EACb,aAAa;EACb,oBAAoB;EACpB,kBAAkB;CAAE;AAEtB;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,mBAAmB;CAAE;AAEvB;EACE,eAAe;EACf,gBAAgB;EAChB,aAAa;EACb,aAAa;EACb,aAAa;EACb,WAAW;EACX,mBAAmB;EACnB,wCAAwC;CAAE;AAC1C;IACE,YAAY;IACZ,YAAY;IACZ,aAAa;IACb,uBAAuB;CAAE;AAC3B;IACE,gBAAgB;IAChB,YAAY;CAAE;AAElB;EACE,aAAa;EACb,aAAa;CAAE;AAEjB;EACE,YAAY;EACZ,gBAAgB;CAAE;AAEpB;EACE,gBAAgB;EAChB,iBAAiB;EACjB,wBAAwB;EACxB,oBAAoB;CAAE","file":"background.vue","sourcesContent":["#background {\n  position: relative;\n  z-index: 1;\n  flex: 1;\n  background-color: #333;\n  background-position: 50%;\n  background-size: cover;\n  background-repeat: no-repeat; }\n\n.idea {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  background-image: url(data:image/png;base64,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);\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.m-idea {\n  width: 200px;\n  height: 40px;\n  margin-left: -100px;\n  margin-top: -70px; }\n\n.pc-idea {\n  width: 435px;\n  height: 65px;\n  margin-left: -217.5px;\n  margin-top: -100px; }\n\n#banner-card {\n  display: block;\n  position: fixed;\n  width: 200px;\n  height: 50px;\n  bottom: 38px;\n  right: 8px;\n  border-radius: 4px;\n  background-color: rgba(23, 24, 25, 0.3); }\n  #banner-card .uface {\n    float: left;\n    width: 40px;\n    height: 40px;\n    margin: 5px 8px 0 10px; }\n  #banner-card > div {\n    margin-top: 8px;\n    float: left; }\n\n#banner-other div {\n  height: 18px;\n  width: 132px; }\n\n#banner-other span {\n  color: #fff;\n  font-size: 12px; }\n\n#banner-other a {\n  font-size: 12px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n#background[data-v-25] {\n  position: relative;\n  z-index: 1;\n  flex: 1;\n  background-color: #333;\n  background-position: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.idea[data-v-25] {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  background-image: url(data:image/png;base64,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);\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n.m-idea[data-v-25] {\n  width: 200px;\n  height: 40px;\n  margin-left: -100px;\n  margin-top: -70px;\n}\n.pc-idea[data-v-25] {\n  width: 435px;\n  height: 65px;\n  margin-left: -217.5px;\n  margin-top: -100px;\n}\n#banner-card[data-v-25] {\n  display: block;\n  position: fixed;\n  width: 200px;\n  height: 50px;\n  bottom: 38px;\n  right: 8px;\n  border-radius: 4px;\n  background-color: rgba(23, 24, 25, 0.3);\n}\n#banner-card .uface[data-v-25] {\n    float: left;\n    width: 40px;\n    height: 40px;\n    margin: 5px 8px 0 10px;\n}\n#banner-card > div[data-v-25] {\n    margin-top: 8px;\n    float: left;\n}\n#banner-other div[data-v-25] {\n  height: 18px;\n  width: 132px;\n}\n#banner-other span[data-v-25] {\n  color: #fff;\n  font-size: 12px;\n}\n#banner-other a[data-v-25] {\n  font-size: 12px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n", "", {"version":3,"sources":["/./resources/components/index/background.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,WAAW;EACX,QAAQ;EACR,uBAAuB;EACvB,yBAAyB;EACzB,uBAAuB;EACvB,6BAA6B;CAAE;AAEjC;EACE,mBAAmB;EACnB,UAAU;EACV,SAAS;EACT,8yFAA8yF;EAC9yF,yBAAyB;EACzB,6BAA6B;CAAE;AAEjC;EACE,aAAa;EACb,aAAa;EACb,oBAAoB;EACpB,kBAAkB;CAAE;AAEtB;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,mBAAmB;CAAE;AAEvB;EACE,eAAe;EACf,gBAAgB;EAChB,aAAa;EACb,aAAa;EACb,aAAa;EACb,WAAW;EACX,mBAAmB;EACnB,wCAAwC;CAAE;AAC1C;IACE,YAAY;IACZ,YAAY;IACZ,aAAa;IACb,uBAAuB;CAAE;AAC3B;IACE,gBAAgB;IAChB,YAAY;CAAE;AAElB;EACE,aAAa;EACb,aAAa;CAAE;AAEjB;EACE,YAAY;EACZ,gBAAgB;CAAE;AAEpB;EACE,gBAAgB;EAChB,iBAAiB;EACjB,wBAAwB;EACxB,oBAAoB;CAAE","file":"background.vue","sourcesContent":["#background {\n  position: relative;\n  z-index: 1;\n  flex: 1;\n  background-color: #333;\n  background-position: 50%;\n  background-size: cover;\n  background-repeat: no-repeat; }\n\n.idea {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  background-image: url(data:image/png;base64,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);\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.m-idea {\n  width: 200px;\n  height: 40px;\n  margin-left: -100px;\n  margin-top: -70px; }\n\n.pc-idea {\n  width: 435px;\n  height: 65px;\n  margin-left: -217.5px;\n  margin-top: -100px; }\n\n#banner-card {\n  display: block;\n  position: fixed;\n  width: 200px;\n  height: 50px;\n  bottom: 38px;\n  right: 8px;\n  border-radius: 4px;\n  background-color: rgba(23, 24, 25, 0.3); }\n  #banner-card .uface {\n    float: left;\n    width: 40px;\n    height: 40px;\n    margin: 5px 8px 0 10px; }\n  #banner-card > div {\n    margin-top: 8px;\n    float: left; }\n\n#banner-other div {\n  height: 18px;\n  width: 132px; }\n\n#banner-other span {\n  color: #fff;\n  font-size: 12px; }\n\n#banner-other a {\n  font-size: 12px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -2086,7 +2086,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-24", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-25", module.exports)
 	  }
 	}
 
@@ -2636,7 +2636,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-4"
+	__vue_options__._scopeId = "data-v-5"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -2645,9 +2645,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-4", __vue_options__)
+	    hotAPI.createRecord("data-v-5", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-4", __vue_options__)
+	    hotAPI.reload("data-v-5", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] list.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2671,8 +2671,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./list.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./list.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./list.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./list.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2690,7 +2690,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#vue-paginate[data-v-4] {\n  margin-bottom: 20px;\n}\n", "", {"version":3,"sources":["/./resources/components/post/list.vue"],"names":[],"mappings":";AAAA;EACE,oBAAoB;CAAE","file":"list.vue","sourcesContent":["#vue-paginate {\n  margin-bottom: 20px; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n#vue-paginate[data-v-5] {\n  margin-bottom: 20px;\n}\n", "", {"version":3,"sources":["/./resources/components/post/list.vue"],"names":[],"mappings":";AAAA;EACE,oBAAoB;CAAE","file":"list.vue","sourcesContent":["#vue-paginate {\n  margin-bottom: 20px; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -2761,9 +2761,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-25", __vue_options__)
+	    hotAPI.createRecord("data-v-27", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-25", __vue_options__)
+	    hotAPI.reload("data-v-27", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] paginate.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2787,8 +2787,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-25!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paginate.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-25!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paginate.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-27!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paginate.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-27!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paginate.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3958,7 +3958,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-4", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-5", module.exports)
 	  }
 	}
 
@@ -3989,7 +3989,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-5"
+	__vue_options__._scopeId = "data-v-4"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -3998,9 +3998,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-5", __vue_options__)
+	    hotAPI.createRecord("data-v-4", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-5", __vue_options__)
+	    hotAPI.reload("data-v-4", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] show.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -4024,8 +4024,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./show.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./show.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./show.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./show.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -4043,7 +4043,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#post[data-v-5] {\n  margin: 25px 0;\n  width: 100%;\n}\n#post .head[data-v-5] {\n    margin-bottom: 5px;\n}\n#post .head .title[data-v-5] {\n      font-size: 18px;\n      font-weight: 700;\n      margin-bottom: 25px;\n}\n#post .head .info[data-v-5] {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n}\n#post .head .info > div[data-v-5] {\n        display: flex;\n        align-items: center;\n}\n#post .head .info .uface[data-v-5], #post .head .info .bface[data-v-5] {\n        width: 30px;\n        height: 30px;\n}\n#post .foot[data-v-5] {\n    margin: 30px 0;\n    text-align: right;\n}\n", "", {"version":3,"sources":["/./resources/components/post/show.vue"],"names":[],"mappings":";AAAA;EACE,eAAe;EACf,YAAY;CAAE;AACd;IACE,mBAAmB;CAAE;AACrB;MACE,gBAAgB;MAChB,iBAAiB;MACjB,oBAAoB;CAAE;AACxB;MACE,cAAc;MACd,+BAA+B;MAC/B,oBAAoB;CAAE;AACtB;QACE,cAAc;QACd,oBAAoB;CAAE;AACxB;QACE,YAAY;QACZ,aAAa;CAAE;AACrB;IACE,eAAe;IACf,kBAAkB;CAAE","file":"show.vue","sourcesContent":["#post {\n  margin: 25px 0;\n  width: 100%; }\n  #post .head {\n    margin-bottom: 5px; }\n    #post .head .title {\n      font-size: 18px;\n      font-weight: 700;\n      margin-bottom: 25px; }\n    #post .head .info {\n      display: flex;\n      justify-content: space-between;\n      align-items: center; }\n      #post .head .info > div {\n        display: flex;\n        align-items: center; }\n      #post .head .info .uface, #post .head .info .bface {\n        width: 30px;\n        height: 30px; }\n  #post .foot {\n    margin: 30px 0;\n    text-align: right; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n#post[data-v-4] {\n  margin: 25px 0;\n}\n#post .head[data-v-4] {\n    margin-bottom: 5px;\n}\n#post .head .title[data-v-4] {\n      font-size: 18px;\n      font-weight: 700;\n      margin-bottom: 25px;\n}\n#post .head .info[data-v-4] {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n}\n#post .head .info > div[data-v-4] {\n        display: flex;\n        align-items: center;\n}\n#post .head .info .uface[data-v-4], #post .head .info .bface[data-v-4] {\n        width: 30px;\n        height: 30px;\n}\n#post .foot[data-v-4] {\n    margin: 30px 0;\n    text-align: right;\n}\n", "", {"version":3,"sources":["/./resources/components/post/show.vue"],"names":[],"mappings":";AAAA;EACE,eAAe;CAAE;AACjB;IACE,mBAAmB;CAAE;AACrB;MACE,gBAAgB;MAChB,iBAAiB;MACjB,oBAAoB;CAAE;AACxB;MACE,cAAc;MACd,+BAA+B;MAC/B,oBAAoB;CAAE;AACtB;QACE,cAAc;QACd,oBAAoB;CAAE;AACxB;QACE,YAAY;QACZ,aAAa;CAAE;AACrB;IACE,eAAe;IACf,kBAAkB;CAAE","file":"show.vue","sourcesContent":["#post {\n  margin: 25px 0; }\n  #post .head {\n    margin-bottom: 5px; }\n    #post .head .title {\n      font-size: 18px;\n      font-weight: 700;\n      margin-bottom: 25px; }\n    #post .head .info {\n      display: flex;\n      justify-content: space-between;\n      align-items: center; }\n      #post .head .info > div {\n        display: flex;\n        align-items: center; }\n      #post .head .info .uface, #post .head .info .bface {\n        width: 30px;\n        height: 30px; }\n  #post .foot {\n    margin: 30px 0;\n    text-align: right; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -4151,9 +4151,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-27", __vue_options__)
+	    hotAPI.createRecord("data-v-26", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-27", __vue_options__)
+	    hotAPI.reload("data-v-26", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] comment.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -4177,8 +4177,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-27!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./comment.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-27!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./comment.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-26!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./comment.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-26!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./comment.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -5810,7 +5810,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-27", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-26", module.exports)
 	  }
 	}
 
@@ -5841,7 +5841,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-26"
+	__vue_options__._scopeId = "data-v-24"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -5850,9 +5850,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-26", __vue_options__)
+	    hotAPI.createRecord("data-v-24", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-26", __vue_options__)
+	    hotAPI.reload("data-v-24", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] like.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -5876,8 +5876,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-26&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./like.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-26&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./like.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-24&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./like.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-24&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./like.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -5895,7 +5895,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.btn-likeable[data-v-26] {\n  position: relative;\n  height: 36px;\n  line-height: 34px;\n  padding-left: 35px;\n  padding-right: 18px;\n  text-align: center;\n  border-radius: 4px;\n  font-size: 13px;\n}\n.btn-likeable[data-v-26]:before {\n    content: '\\2665';\n    position: absolute;\n    left: 15px;\n    transform: scale(1.3, 1);\n}\n.btn-nolike[data-v-26] {\n  background-color: transparent;\n  border: 1px solid #ff8eb3;\n  color: #ff8eb3;\n}\n.btn-nolike[data-v-26]:hover {\n    background-color: rgba(253, 143, 179, 0.125);\n}\n.btn-liked[data-v-26] {\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3;\n  color: #fff;\n}\n.btn-liked[data-v-26]:hover {\n    background-color: #fff;\n    color: #ff8eb3;\n}\n", "", {"version":3,"sources":["/./resources/components/vue-input/like.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,aAAa;EACb,kBAAkB;EAClB,mBAAmB;EACnB,oBAAoB;EACpB,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;CAAE;AAClB;IACE,iBAAiB;IACjB,mBAAmB;IACnB,WAAW;IACX,yBAAyB;CAAE;AAE/B;EACE,8BAA8B;EAC9B,0BAA0B;EAC1B,eAAe;CAAE;AACjB;IACE,6CAA6C;CAAE;AAEnD;EACE,0BAA0B;EAC1B,0BAA0B;EAC1B,YAAY;CAAE;AACd;IACE,uBAAuB;IACvB,eAAe;CAAE","file":"like.vue","sourcesContent":[".btn-likeable {\n  position: relative;\n  height: 36px;\n  line-height: 34px;\n  padding-left: 35px;\n  padding-right: 18px;\n  text-align: center;\n  border-radius: 4px;\n  font-size: 13px; }\n  .btn-likeable:before {\n    content: '\\2665';\n    position: absolute;\n    left: 15px;\n    transform: scale(1.3, 1); }\n\n.btn-nolike {\n  background-color: transparent;\n  border: 1px solid #ff8eb3;\n  color: #ff8eb3; }\n  .btn-nolike:hover {\n    background-color: rgba(253, 143, 179, 0.125); }\n\n.btn-liked {\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3;\n  color: #fff; }\n  .btn-liked:hover {\n    background-color: #fff;\n    color: #ff8eb3; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.btn-likeable[data-v-24] {\n  position: relative;\n  height: 36px;\n  line-height: 34px;\n  padding-left: 35px;\n  padding-right: 18px;\n  text-align: center;\n  border-radius: 4px;\n  font-size: 13px;\n}\n.btn-likeable[data-v-24]:before {\n    content: '\\2665';\n    position: absolute;\n    left: 15px;\n    transform: scale(1.3, 1);\n}\n.btn-nolike[data-v-24] {\n  background-color: transparent;\n  border: 1px solid #ff8eb3;\n  color: #ff8eb3;\n}\n.btn-nolike[data-v-24]:hover {\n    background-color: rgba(253, 143, 179, 0.125);\n}\n.btn-liked[data-v-24] {\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3;\n  color: #fff;\n}\n.btn-liked[data-v-24]:hover {\n    background-color: #fff;\n    color: #ff8eb3;\n}\n", "", {"version":3,"sources":["/./resources/components/vue-input/like.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,aAAa;EACb,kBAAkB;EAClB,mBAAmB;EACnB,oBAAoB;EACpB,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;CAAE;AAClB;IACE,iBAAiB;IACjB,mBAAmB;IACnB,WAAW;IACX,yBAAyB;CAAE;AAE/B;EACE,8BAA8B;EAC9B,0BAA0B;EAC1B,eAAe;CAAE;AACjB;IACE,6CAA6C;CAAE;AAEnD;EACE,0BAA0B;EAC1B,0BAA0B;EAC1B,YAAY;CAAE;AACd;IACE,uBAAuB;IACvB,eAAe;CAAE","file":"like.vue","sourcesContent":[".btn-likeable {\n  position: relative;\n  height: 36px;\n  line-height: 34px;\n  padding-left: 35px;\n  padding-right: 18px;\n  text-align: center;\n  border-radius: 4px;\n  font-size: 13px; }\n  .btn-likeable:before {\n    content: '\\2665';\n    position: absolute;\n    left: 15px;\n    transform: scale(1.3, 1); }\n\n.btn-nolike {\n  background-color: transparent;\n  border: 1px solid #ff8eb3;\n  color: #ff8eb3; }\n  .btn-nolike:hover {\n    background-color: rgba(253, 143, 179, 0.125); }\n\n.btn-liked {\n  background-color: #ff8eb3;\n  border: 1px solid #ff8eb3;\n  color: #fff; }\n  .btn-liked:hover {\n    background-color: #fff;\n    color: #ff8eb3; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -6030,7 +6030,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-26", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-24", module.exports)
 	  }
 	}
 
@@ -6114,7 +6114,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-5", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-4", module.exports)
 	  }
 	}
 
@@ -6145,7 +6145,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-6"
+	__vue_options__._scopeId = "data-v-8"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -6154,9 +6154,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-6", __vue_options__)
+	    hotAPI.createRecord("data-v-8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-6", __vue_options__)
+	    hotAPI.reload("data-v-8", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] index.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -6180,8 +6180,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6199,7 +6199,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.banner[data-v-6] {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n  z-index: 1;\n}\n.banner .img[data-v-6] {\n    width: 110%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px);\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);\n    background-position: 50%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    z-index: -1;\n}\n.pc-banner[data-v-6] {\n  height: 400px;\n}\n.pc-banner .img[data-v-6] {\n    height: 400px;\n    margin: -200px -55%;\n}\n.m-banner[data-v-6] {\n  height: 200px;\n}\n.m-banner .img[data-v-6] {\n    height: 200px;\n    margin: -100px -55%;\n}\n.info[data-v-6] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  color: #fff;\n  text-shadow: 0 1px 10px #000;\n  z-index: 5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.info .title[data-v-6] {\n    margin: 20px 0;\n}\n.info .summary[data-v-6] {\n    margin-bottom: 20px;\n    max-width: 800px;\n    font-size: 13px;\n}\n.info .summary p[data-v-6] {\n      text-indent: 2em;\n}\n.pc-info[data-v-6] {\n  height: 400px;\n}\n.m-info[data-v-6] {\n  height: 200px;\n}\n.m-info .title[data-v-6] {\n    font-size: 1em;\n}\n", "", {"version":3,"sources":["/./resources/components/bangumi/index.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,YAAY;EACZ,iBAAiB;EACjB,gDAAgD;EAChD,WAAW;CAAE;AACb;IACE,YAAY;IACZ,mBAAmB;IACnB,SAAS;IACT,UAAU;IACV,0BAA0B;IAC1B,uBAAuB;IACvB,sBAAsB;IACtB,kBAAkB;IAClB,gFAAgF;IAChF,yBAAyB;IACzB,uBAAuB;IACvB,6BAA6B;IAC7B,YAAY;CAAE;AAElB;EACE,cAAc;CAAE;AAChB;IACE,cAAc;IACd,oBAAoB;CAAE;AAE1B;EACE,cAAc;CAAE;AAChB;IACE,cAAc;IACd,oBAAoB;CAAE;AAE1B;EACE,mBAAmB;EACnB,QAAQ;EACR,OAAO;EACP,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,WAAW;EACX,cAAc;EACd,uBAAuB;EACvB,wBAAwB;EACxB,oBAAoB;CAAE;AACtB;IACE,eAAe;CAAE;AACnB;IACE,oBAAoB;IACpB,iBAAiB;IACjB,gBAAgB;CAAE;AAClB;MACE,iBAAiB;CAAE;AAEzB;EACE,cAAc;CAAE;AAElB;EACE,cAAc;CAAE;AAChB;IACE,eAAe;CAAE","file":"index.vue","sourcesContent":[".banner {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n  z-index: 1; }\n  .banner .img {\n    width: 110%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px);\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);\n    background-position: 50%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    z-index: -1; }\n\n.pc-banner {\n  height: 400px; }\n  .pc-banner .img {\n    height: 400px;\n    margin: -200px -55%; }\n\n.m-banner {\n  height: 200px; }\n  .m-banner .img {\n    height: 200px;\n    margin: -100px -55%; }\n\n.info {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  color: #fff;\n  text-shadow: 0 1px 10px #000;\n  z-index: 5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .info .title {\n    margin: 20px 0; }\n  .info .summary {\n    margin-bottom: 20px;\n    max-width: 800px;\n    font-size: 13px; }\n    .info .summary p {\n      text-indent: 2em; }\n\n.pc-info {\n  height: 400px; }\n\n.m-info {\n  height: 200px; }\n  .m-info .title {\n    font-size: 1em; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.banner[data-v-8] {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n  z-index: 1;\n}\n.banner .img[data-v-8] {\n    width: 110%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px);\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);\n    background-position: 50%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    z-index: -1;\n}\n.pc-banner[data-v-8] {\n  height: 400px;\n}\n.pc-banner .img[data-v-8] {\n    height: 400px;\n    margin: -200px -55%;\n}\n.m-banner[data-v-8] {\n  height: 200px;\n}\n.m-banner .img[data-v-8] {\n    height: 200px;\n    margin: -100px -55%;\n}\n.info[data-v-8] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  color: #fff;\n  text-shadow: 0 1px 10px #000;\n  z-index: 5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.info .title[data-v-8] {\n    margin: 20px 0;\n}\n.info .summary[data-v-8] {\n    margin-bottom: 20px;\n    max-width: 800px;\n    font-size: 13px;\n}\n.info .summary p[data-v-8] {\n      text-indent: 2em;\n}\n.pc-info[data-v-8] {\n  height: 400px;\n}\n.m-info[data-v-8] {\n  height: 200px;\n}\n.m-info .title[data-v-8] {\n    font-size: 1em;\n}\n", "", {"version":3,"sources":["/./resources/components/bangumi/index.vue"],"names":[],"mappings":";AAAA;EACE,mBAAmB;EACnB,YAAY;EACZ,iBAAiB;EACjB,gDAAgD;EAChD,WAAW;CAAE;AACb;IACE,YAAY;IACZ,mBAAmB;IACnB,SAAS;IACT,UAAU;IACV,0BAA0B;IAC1B,uBAAuB;IACvB,sBAAsB;IACtB,kBAAkB;IAClB,gFAAgF;IAChF,yBAAyB;IACzB,uBAAuB;IACvB,6BAA6B;IAC7B,YAAY;CAAE;AAElB;EACE,cAAc;CAAE;AAChB;IACE,cAAc;IACd,oBAAoB;CAAE;AAE1B;EACE,cAAc;CAAE;AAChB;IACE,cAAc;IACd,oBAAoB;CAAE;AAE1B;EACE,mBAAmB;EACnB,QAAQ;EACR,OAAO;EACP,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,WAAW;EACX,cAAc;EACd,uBAAuB;EACvB,wBAAwB;EACxB,oBAAoB;CAAE;AACtB;IACE,eAAe;CAAE;AACnB;IACE,oBAAoB;IACpB,iBAAiB;IACjB,gBAAgB;CAAE;AAClB;MACE,iBAAiB;CAAE;AAEzB;EACE,cAAc;CAAE;AAElB;EACE,cAAc;CAAE;AAChB;IACE,eAAe;CAAE","file":"index.vue","sourcesContent":[".banner {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);\n  z-index: 1; }\n  .banner .img {\n    width: 110%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px);\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);\n    background-position: 50%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    z-index: -1; }\n\n.pc-banner {\n  height: 400px; }\n  .pc-banner .img {\n    height: 400px;\n    margin: -200px -55%; }\n\n.m-banner {\n  height: 200px; }\n  .m-banner .img {\n    height: 200px;\n    margin: -100px -55%; }\n\n.info {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  color: #fff;\n  text-shadow: 0 1px 10px #000;\n  z-index: 5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .info .title {\n    margin: 20px 0; }\n  .info .summary {\n    margin-bottom: 20px;\n    max-width: 800px;\n    font-size: 13px; }\n    .info .summary p {\n      text-indent: 2em; }\n\n.pc-info {\n  height: 400px; }\n\n.m-info {\n  height: 200px; }\n  .m-info .title {\n    font-size: 1em; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -6376,7 +6376,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-6", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-8", module.exports)
 	  }
 	}
 
@@ -6695,7 +6695,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-8"
+	__vue_options__._scopeId = "data-v-6"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -6704,9 +6704,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-8", __vue_options__)
+	    hotAPI.createRecord("data-v-6", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-8", __vue_options__)
+	    hotAPI.reload("data-v-6", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] bangumi.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -6730,8 +6730,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bangumi.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bangumi.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bangumi.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bangumi.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6812,7 +6812,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-8", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-6", module.exports)
 	  }
 	}
 
@@ -6843,7 +6843,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-9"
+	__vue_options__._scopeId = "data-v-11"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -6852,9 +6852,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-9", __vue_options__)
+	    hotAPI.createRecord("data-v-11", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-9", __vue_options__)
+	    hotAPI.reload("data-v-11", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] edit.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -6878,8 +6878,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./edit.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./edit.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-11&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./edit.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-11&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./edit.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6897,7 +6897,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.word-block[data-v-9] {\n  width: 50px;\n  display: block;\n}\n.input-block[data-v-9] {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.msg-info[data-v-9] {\n  margin-right: 50px;\n}\ninput[type=text][data-v-9] {\n  width: 100%;\n}\ninput[type=file][data-v-9] {\n  width: 100%;\n}\nform label[data-v-9] {\n  width: 50px;\n}\n.pc-warp[data-v-9] {\n  width: 450px;\n}\n.m-warp[data-v-9] {\n  width: 100%;\n}\n.edit-item[data-v-9] {\n  display: flex;\n  margin: 16px 0;\n  height: 39px;\n  align-items: center;\n}\n.edit-item label[data-v-9], .edit-item input[data-v-9] {\n    color: #333;\n    font-size: 12px;\n}\n.edit-item input[data-v-9] {\n    border-left: none;\n    border-top: none;\n    border-right: none;\n}\n.edit-item input[type=date][data-v-9] {\n    height: 39px;\n}\n.edit-item button[data-v-9] {\n    margin-left: 10px;\n}\n", "", {"version":3,"sources":["/./resources/components/people/edit.vue"],"names":[],"mappings":";AAAA;EACE,YAAY;EACZ,eAAe;CAAE;AAEnB;EACE,QAAQ;EACR,cAAc;EACd,+BAA+B;EAC/B,oBAAoB;CAAE;AAExB;EACE,mBAAmB;CAAE;AAEvB;EACE,YAAY;CAAE;AAEhB;EACE,YAAY;CAAE;AAEhB;EACE,YAAY;CAAE;AAEhB;EACE,aAAa;CAAE;AAEjB;EACE,YAAY;CAAE;AAEhB;EACE,cAAc;EACd,eAAe;EACf,aAAa;EACb,oBAAoB;CAAE;AACtB;IACE,YAAY;IACZ,gBAAgB;CAAE;AACpB;IACE,kBAAkB;IAClB,iBAAiB;IACjB,mBAAmB;CAAE;AACvB;IACE,aAAa;CAAE;AACjB;IACE,kBAAkB;CAAE","file":"edit.vue","sourcesContent":[".word-block {\n  width: 50px;\n  display: block; }\n\n.input-block {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n\n.msg-info {\n  margin-right: 50px; }\n\ninput[type=text] {\n  width: 100%; }\n\ninput[type=file] {\n  width: 100%; }\n\nform label {\n  width: 50px; }\n\n.pc-warp {\n  width: 450px; }\n\n.m-warp {\n  width: 100%; }\n\n.edit-item {\n  display: flex;\n  margin: 16px 0;\n  height: 39px;\n  align-items: center; }\n  .edit-item label, .edit-item input {\n    color: #333;\n    font-size: 12px; }\n  .edit-item input {\n    border-left: none;\n    border-top: none;\n    border-right: none; }\n  .edit-item input[type=date] {\n    height: 39px; }\n  .edit-item button {\n    margin-left: 10px; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.word-block[data-v-11] {\n  width: 50px;\n  display: block;\n}\n.input-block[data-v-11] {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.msg-info[data-v-11] {\n  margin-right: 50px;\n}\ninput[type=text][data-v-11] {\n  width: 100%;\n}\ninput[type=file][data-v-11] {\n  width: 100%;\n}\nform label[data-v-11] {\n  width: 50px;\n}\n.pc-warp[data-v-11] {\n  width: 450px;\n}\n.m-warp[data-v-11] {\n  width: 100%;\n}\n.edit-item[data-v-11] {\n  display: flex;\n  margin: 16px 0;\n  height: 39px;\n  align-items: center;\n}\n.edit-item label[data-v-11], .edit-item input[data-v-11] {\n    color: #333;\n    font-size: 12px;\n}\n.edit-item input[data-v-11] {\n    border-left: none;\n    border-top: none;\n    border-right: none;\n}\n.edit-item input[type=date][data-v-11] {\n    height: 39px;\n}\n.edit-item button[data-v-11] {\n    margin-left: 10px;\n}\n", "", {"version":3,"sources":["/./resources/components/people/edit.vue"],"names":[],"mappings":";AAAA;EACE,YAAY;EACZ,eAAe;CAAE;AAEnB;EACE,QAAQ;EACR,cAAc;EACd,+BAA+B;EAC/B,oBAAoB;CAAE;AAExB;EACE,mBAAmB;CAAE;AAEvB;EACE,YAAY;CAAE;AAEhB;EACE,YAAY;CAAE;AAEhB;EACE,YAAY;CAAE;AAEhB;EACE,aAAa;CAAE;AAEjB;EACE,YAAY;CAAE;AAEhB;EACE,cAAc;EACd,eAAe;EACf,aAAa;EACb,oBAAoB;CAAE;AACtB;IACE,YAAY;IACZ,gBAAgB;CAAE;AACpB;IACE,kBAAkB;IAClB,iBAAiB;IACjB,mBAAmB;CAAE;AACvB;IACE,aAAa;CAAE;AACjB;IACE,kBAAkB;CAAE","file":"edit.vue","sourcesContent":[".word-block {\n  width: 50px;\n  display: block; }\n\n.input-block {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n\n.msg-info {\n  margin-right: 50px; }\n\ninput[type=text] {\n  width: 100%; }\n\ninput[type=file] {\n  width: 100%; }\n\nform label {\n  width: 50px; }\n\n.pc-warp {\n  width: 450px; }\n\n.m-warp {\n  width: 100%; }\n\n.edit-item {\n  display: flex;\n  margin: 16px 0;\n  height: 39px;\n  align-items: center; }\n  .edit-item label, .edit-item input {\n    color: #333;\n    font-size: 12px; }\n  .edit-item input {\n    border-left: none;\n    border-top: none;\n    border-right: none; }\n  .edit-item input[type=date] {\n    height: 39px; }\n  .edit-item button {\n    margin-left: 10px; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -7601,7 +7601,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-9", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-11", module.exports)
 	  }
 	}
 
@@ -7632,7 +7632,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-10"
+	__vue_options__._scopeId = "data-v-9"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -7641,9 +7641,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-10", __vue_options__)
+	    hotAPI.createRecord("data-v-9", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-10", __vue_options__)
+	    hotAPI.reload("data-v-9", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] post.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -7667,8 +7667,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-10&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./post.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-10&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./post.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./post.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./post.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -7750,7 +7750,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-10", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-9", module.exports)
 	  }
 	}
 
@@ -7781,7 +7781,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-11"
+	__vue_options__._scopeId = "data-v-14"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -7790,9 +7790,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-11", __vue_options__)
+	    hotAPI.createRecord("data-v-14", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-11", __vue_options__)
+	    hotAPI.reload("data-v-14", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] net.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -7816,8 +7816,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-11&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./net.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-11&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./net.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-14&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./net.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-14&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./net.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -7896,7 +7896,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-11", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-14", module.exports)
 	  }
 	}
 
@@ -7927,7 +7927,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-12"
+	__vue_options__._scopeId = "data-v-13"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -7936,9 +7936,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-12", __vue_options__)
+	    hotAPI.createRecord("data-v-13", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-12", __vue_options__)
+	    hotAPI.reload("data-v-13", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] inbox.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -7962,8 +7962,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-12&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./inbox.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-12&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./inbox.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-13&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./inbox.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-13&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./inbox.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8029,7 +8029,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-12", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-13", module.exports)
 	  }
 	}
 
@@ -8060,7 +8060,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-13"
+	__vue_options__._scopeId = "data-v-12"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -8069,9 +8069,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-13", __vue_options__)
+	    hotAPI.createRecord("data-v-12", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-13", __vue_options__)
+	    hotAPI.reload("data-v-12", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] 404.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -8095,8 +8095,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-13&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./404.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-13&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./404.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-12&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./404.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-12&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./404.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8114,7 +8114,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.container[data-v-13] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 86px;\n}\n", "", {"version":3,"sources":["/./resources/components/door/404.vue"],"names":[],"mappings":";AAAA;EACE,cAAc;EACd,oBAAoB;EACpB,wBAAwB;EACxB,gBAAgB;CAAE","file":"404.vue","sourcesContent":[".container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 86px; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.container[data-v-12] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 86px;\n}\n", "", {"version":3,"sources":["/./resources/components/door/404.vue"],"names":[],"mappings":";AAAA;EACE,cAAc;EACd,oBAAoB;EACpB,wBAAwB;EACxB,gBAAgB;CAAE","file":"404.vue","sourcesContent":[".container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 86px; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -8168,7 +8168,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-13", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-12", module.exports)
 	  }
 	}
 
@@ -8199,7 +8199,7 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-14"
+	__vue_options__._scopeId = "data-v-10"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -8208,9 +8208,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-14", __vue_options__)
+	    hotAPI.createRecord("data-v-10", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-14", __vue_options__)
+	    hotAPI.reload("data-v-10", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] star.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -8234,8 +8234,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-14&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./star.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-14&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./star.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-10&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./star.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-10&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./star.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8373,7 +8373,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-14", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-10", module.exports)
 	  }
 	}
 
@@ -8567,12 +8567,109 @@
 	            load: true,
 	            uptoken: null,
 	            isMobile: null,
-	            source: {
-	                src: "http://cdn.clannader.com/music/piano",
-	                img: 'http://cdn.clannader.com/avatar',
+	            source: [{
+	                id: 1,
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/2581c16ff9a07997c0a4e9d26427ff7a/5800e0ce/resource/a2/48/55/72/3743317910.aac",
+	                img: "https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1895382595,3961079290&fm=85&s=938543A65337079C1C4B73B20300F01A",
+	                player: "Origa",
+	                name: "Inner Universe"
+	            }, {
+	                id: 2,
+	                src: "http://ip.h5.rf03.sycdn.kuwo.cn/a818f7290b61e4ca34cb8f1c19756ec3/580cb797/resource/a3/27/73/2660804116.aac",
+	                img: "http://p3.music.126.net/4hhcI_Elp8nknnvtvOekhQ==/7884597883392048.jpg?param=130y130",
+	                player: "Donna Burke",
+	                name: "Glassy sky"
+	            }, {
+	                id: 3,
+	                src: "http://ip.h5.rv03.sycdn.kuwo.cn/c4b492633cbf7f4a2786f1f3491a1cd4/580cb75d/resource/a3/14/40/311454290.aac",
+	                img: "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3532494881,3489311661&fm=58",
+	                player: "高橋洋子",
+	                name: "残酷天使的行动纲领"
+	            }, {
+	                id: 4,
+	                src: "http://ip.h5.rv03.sycdn.kuwo.cn/58e05748f597ea146dfe1ed5ba733add/580c182c/resource/a3/14/40/311454290.aac",
+	                img: "https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=401076776,2742246545&fm=85&s=AD97815ADAE2EE4D4A0FC7AC0300E04A",
+	                player: "山本润子",
+	                name: "翼をください"
+	            }, {
+	                id: 5,
+	                src: "http://ip.h5.rb03.sycdn.kuwo.cn/dc5327c29d9201f0759993a777ecf532/580cb701/resource/a2/9/4/38847848.aac",
+	                img: "http://img1.kuwo.cn/star/starheads/240/93/38/518470327.jpg",
 	                player: "広橋真紀子",
-	                album: "いのちの名前"
-	            }
+	                name: "いのちの名前"
+	            }, {
+	                id: 6,
+	                name: "時雨",
+	                player: "川嶋あい",
+	                src: "http://ip.h5.rh03.sycdn.kuwo.cn/eb10d10a5ab966534e278b8978fabe5e/580c1a35/resource/a1/21/95/2035879402.aac",
+	                img: "https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2057334100,848181386&fm=85&s=CEF08D56532478AAD2489CC30300A0B0"
+	            }, {
+	                id: 7,
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/9a97a0eb4dcece8dfaef0c9a6952cc3a/580cb664/resource/a1/48/46/81/2196659701.aac",
+	                img: "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=992590722,947736457&fm=58",
+	                player: "KOKIA",
+	                name: "ありがとう"
+	            }, {
+	                id: 8,
+	                img: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4278710545,1130476452&fm=58",
+	                name: "Life Is Like A Boat",
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/9324bdb5a688bf5259d99cfd11a92ba1/580cb6bf/resource/a2/48/74/43/1754866078.aac",
+	                player: "Rie fu"
+	            }, {
+	                id: 9,
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/dd6a1e1cd34206e3752bb56872f5e420/580c1c36/resource/a3/48/80/29/883227969.aac",
+	                img: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=189055273,1230914480&fm=58",
+	                player: "Lia",
+	                name: "鸟之诗"
+	            }, {
+	                id: 10,
+	                player: "松泽由美",
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/d2d6fc3b6e08ca235964c5bd20785aab/580cb7ea/resource/a3/48/50/37/1797466515.aac",
+	                name: "地球仪",
+	                img: "https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=2103269090,4291149936&fm=96"
+	            }, {
+	                id: 11,
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/653a1f6ee345f1f413a5af99a568ff93/580cb88e/resource/a1/57/16/4109199843.aac",
+	                img: "http://img4.imgtn.bdimg.com/it/u=4283983956,3392286656&fm=21&gp=0.jpg",
+	                name: "Memories",
+	                player: "大槻真希"
+	            }, {
+	                id: 12,
+	                src: "http://ip.h5.re03.sycdn.kuwo.cn/d595a27f4c80bd53c4fefd207b2ef6c4/580cb9a7/resource/a2/80/42/677634484.aac",
+	                img: "http://img.xiami.net/images/album/img10/89610/5317001465801929_2.jpg",
+	                name: "歳月-云流れ-",
+	                player: "Foxtail-Grass Studio"
+	            }, {
+	                id: 13,
+	                name: "One More Time，One More Chance",
+	                src: "http://ip.h5.rh03.sycdn.kuwo.cn/fa6df1b7c203f6c34de201c1b969681e/580cba6e/resource/a3/46/72/3911608828.aac",
+	                img: "https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1510007095,1060268610&fm=85&s=CF846089105493DECDB72597030050AB",
+	                player: "山崎まさよし"
+	            }, {
+	                id: 14,
+	                src: "http://ip.h5.ra03.sycdn.kuwo.cn/f2a6a07235dcc634074ed9537d3f4e33/580cbae3/resource/a1/43/51/1936674992.aac",
+	                img: "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2630152203,3669016822&fm=58",
+	                player: "Key Sounds Label",
+	                name: "潮鳴り"
+	            }, {
+	                id: 15,
+	                src: "http://ip.h5.re03.sycdn.kuwo.cn/da76d89e6153cb7fbf75e6387508fead/580cbb31/resource/a3/61/4/1141712876.aac",
+	                img: "http://img.xiami.net/images/album/img42/62242/3103841472630198_2.jpg",
+	                name: "町， 時の流れ， 人",
+	                player: "Key Sounds Label"
+	            }, {
+	                id: 16,
+	                src: "http://ip.h5.re03.sycdn.kuwo.cn/8a2f9e789208e77aaca5730694e1cc6d/580cbb95/resource/a1/40/67/157696700.aac",
+	                img: "http://img.xiami.net/images/album/img42/62242/3103841472630198_2.jpg",
+	                name: "空に光る",
+	                player: "Key Sounds Label"
+	            }, {
+	                id: 17,
+	                name: "Gamble Rumble",
+	                src: "http://ip.h5.re03.sycdn.kuwo.cn/aba5946aa5f94f23d21734ec460f60b0/580cbc9f/resource/a1/90/56/937982610.aac",
+	                img: "http://img3.kuwo.cn/star/starheads/240/9/58/1999698343.jpg",
+	                player: "m.o.v.e"
+	            }]
 	        };
 	    },
 	    created: function created() {
@@ -12210,9 +12307,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-20", __vue_options__)
+	    hotAPI.createRecord("data-v-21", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-20", __vue_options__)
+	    hotAPI.reload("data-v-21", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] bottom.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -12236,8 +12333,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-20!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bottom.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-20!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bottom.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-21!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bottom.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-21!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bottom.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12343,7 +12440,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-20", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-21", module.exports)
 	  }
 	}
 
@@ -12374,7 +12471,6 @@
 	}
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-21"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -12383,9 +12479,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-21", __vue_options__)
+	    hotAPI.createRecord("data-v-20", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-21", __vue_options__)
+	    hotAPI.reload("data-v-20", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] music.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -12409,8 +12505,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-21&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./music.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-21&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./music.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-20!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./music.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-20!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./music.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12428,7 +12524,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n#music[data-v-21] {\n  width: 563px;\n  height: 115px;\n  position: fixed;\n  bottom: 30px;\n  left: -541px;\n  background-color: #fff;\n  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.25);\n  border-radius: 0 4px 4px 0;\n  z-index: 1000;\n  transition: left .6s ease;\n  display: flex;\n}\n#music .toggle[data-v-21] {\n    width: 22px;\n    height: 100%;\n    border-radius: 0 4px 4px 0;\n    background-color: #00bfef;\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAECklEQVR4Xu2aj1EVMRCHdytQKkAqECpAKlArUCsQKxAqECpQKhAqUCsAKsAOgArW+Z6bmfjm/Ulyl+TwvcwwA8Plvdsvv/1ls3cqGz50w+OXLYCtAjacwDYFNlwAdUzQzJ6r6sNTgDt6CpjZTxHZVdW9TQVwIiKfReRUVfl90qOGAl6IyJ1H/UFVv02ZwOgACNbT4NADPxORc1X9PUUQtQC8F5GvcwGjBPzh15RgVAHgKmAXeLZk1VHDJUBU9aqnMmoCQPofE4IDFDAue8CoCSA2wwQOs0tQBqmCZzSpI6oBmDPDcxEJAb1yGvsrUoRrj1X1IpVc6XW1AQQzXFgTUDGKCCCA8kZEXs4Fgmm+ramG2gAIEFljhkeqSkBLh5mRNkA7jtSBGph7U7rKq+ZVBeBpQE6/8xRgNVdC8DmAA0IAQfBAGN0XWgBA4tfRKpyo6mnKaroi2CFIDbbMo5R5OddUB+ArygrG+c3fnzLUgGqYvzaNcoLn2lYAFlWGYdujXrhaVR26Ejhf3KjqQW6QXT0gyulghsvuh/+z0vwA5J98N7NQWO2NWUo3UcCcGaYu4Kw6DDAiFYx6wmwJgL3+R2r00XWhVMY4Q8k8Wp+hGQBXATLfpVniAYaqkD/D8XkVI+bfqipF0yijNQD29S+r3DyqDkOVyDbKD+AYoxZGrQEQ1L2IXKgqO0PyMDPUgvRRymgQmgKIzPC1iODm2ZWdmSF/qksr/YyYeg8AwQyL3dzMQnWZraR5yTUHEJnh/ZCixsxC93lQXdALQLj5g9JTnpslu8LZkPZ7LwChWzRIwl4dHg5RUhcAngYUNTh6kRn6Z8z8RFWL4yiemLx/LbnQ3fy7iBSboUNgNyhOpW4AIjO8G3LONzMAFB+TewMY7OT+FIomy9pO0yIx9gYQzJA2OGVy9jAzuk1JzZXJAfA0mHV7VHUnO/q/zyHtSZpgCNbMQrco2wy9FqBXSGVYNLqmQASBM8F1rhl6k2RfVdlSi8ZUAFRpd6UQmQqAwWaYEuykTNDlSyVI8Ax2gYfW7xY1V4CZ8ZSIYJcZF0+PinM6VwnNAPgZntI3rPiye6UlPlrPbx2QJgCirW7d/cz+P2RfT/qC6KLqAMyMd4Wy+n9DDjeTAmBmoQuce187Jf3C3C+Zqa1kUsoc7+KWPAh5VFW6x01GFQBeonJIWWd4i4IsPhiVEKsFIBxzc+/pke1xzIef626gFgAefpTImGMtZXGzMTqAAbk/qEFaSqwGgBLnv+VNsVbOH8OqAWDZ2yDLFqnLyoebqQEg9Q1RDI9eXtOcn1+F0QHwBQkFEG+AEnz3V+irAHAIPLQgHUItQNeH/h8vRXcPvFoKlLpxr3nVFNAroNzv3QLIJfa/Xf8HsXeZUPFFXZ4AAAAASUVORK5CYII=);\n    z-index: -1;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n}\n#music .M-main[data-v-21] {\n    padding: 10px;\n    width: 541px;\n    height: 100%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n}\n#music .M-face[data-v-21] {\n    width: 95px;\n    height: 95px;\n    margin-right: 10px;\n}\n#music .M-warp[data-v-21] {\n    height: 95px;\n    display: flex;\n}\n#music .M-control[data-v-21] {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n}\n#music .M-control button[data-v-21] {\n      background-repeat: no-repeat;\n      background-size: contain;\n}\n#music .M-control span[data-v-21] {\n      color: #99a2aa;\n      font-size: 12px;\n}\n#music .M-control .center[data-v-21] {\n      flex: 1;\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n}\n#music .M-control .bottom[data-v-21] {\n      text-align: right;\n}\n#music .M-curBar[data-v-21], #music .M-allBar[data-v-21] {\n    display: block;\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    height: 4px;\n}\n#music .M-curBar[data-v-21] {\n    width: 0;\n    background-color: #00bfef;\n}\n#music .M-allBar[data-v-21] {\n    width: 100%;\n    z-index: 2;\n    cursor: pointer;\n}\n#music .M-tip[data-v-21] {\n    position: absolute;\n    bottom: 12px;\n    width: 50px;\n    height: 17px;\n    line-height: 17px;\n    font-size: 10px;\n    text-align: center;\n    background-color: #fff;\n    border: solid 1px #e5e9ef;\n    border-radius: 3px;\n}\n#music .M-tip em[data-v-21] {\n      border-width: 8px;\n      border-color: transparent;\n      border-top-color: #e5e9ef;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: 17px;\n      top: 15px;\n}\n#music .M-tip i[data-v-21] {\n      border-width: 6px;\n      border-color: transparent;\n      border-top-color: #fff;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: -6px;\n      top: -8px;\n}\n#music .M-play[data-v-21] {\n    display: inline-block;\n    vertical-align: middle;\n    width: 120px;\n    height: 40px;\n    text-align: center;\n    margin: 0 70px 0 120px;\n}\n#music #paused[data-v-21] {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n}\n#music .play-wait[data-v-21] {\n    background-image: url(data:image/png;base64,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);\n}\n#music .play-go[data-v-21] {\n    background-image: url(data:image/png;base64,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);\n}\n#music .M-voice-control[data-v-21] {\n    display: inline-block;\n    vertical-align: middle;\n}\n#music .M-all-voice[data-v-21] {\n    position: relative;\n    display: inline-block;\n    width: 70px;\n    height: 3px;\n    vertical-align: middle;\n    background-color: #e5e9ef;\n    cursor: pointer;\n}\n#music .M-cur-voice[data-v-21] {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 35px;\n    height: 3px;\n    background-color: #00bfef;\n}\n#music #muted[data-v-21] {\n    width: 20px;\n    height: 20px;\n    vertical-align: middle;\n}\n#music .voice-go[data-v-21] {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAEk0lEQVR4Xu2b/3XTMBDHdfYApBMQJsCcBqCdgG5AOgHtBC0TtExQmKAwQcMAVs0EDRPQDiCLd3lynuOc5F+JHTvxv3H8rI/uvvdLBnG81gjAkcc6gSOQgkX0DiSKokkQBF+EEDMhxAQA5lrriyRJXvqw3l6BRFEUBUHwAADTwuJ/xHFMgDq/egOCiDMAuHetWGv9LkmSRddEegGCiPcA4LUArfVZkiTzUQMhvQjD8FEIEZUt1BhzoZT6Xnbftn/vzEKsXjwCwKTKIowxX5VSN1Xu3eY9nQAhvRBC3FaFQQscLRBEJBCXdXdxdECsXjwIIU7rwhidhXjyi8psRmMhTfSCozQKIE31YhdArMtS4ndujKEy4KpKGN9KlGmrF7sAIqUk/TrPP7tKbuMEEkXRlIouACBRLE2kKotDxRvbuoyU0jhAexM+Fsg2Tb/i+jdu2wIQcpM3xQeT+6RpSmVBwr3bBhAp5VMfFsG8eKtMFREvAeDWYSWLNE0/cC2GNSCIeAcA1Jvo/fJZCCJeAwDpw4vW+sq121JKqoU+O6B8U0ptJIwrIKQZYRg+907CvoALCLdpWmvabdYFEDEBgPfcuriKegVkn6zDl6lyYunTBRsBqa+yoSdCiHkcx2d5WCsg+6Id2cu5LMQTPZy64GtGFa0kD4QNU325UB2Xyb2js/WIiAsAeMusZ+0/gwNCCyrRBbb1GEXRqW1ObTDRWp9kEWeQQGynnsSS2/ENXcgIuEDmM9hBAqEFluw4ayWewPErjuNlmj9YINZ15gDwkUnq2PSc2hJhGFLiuXZRlFJKnYwBiGuUsdrx4uKllGxKn+nIoC3E5hj/uEgYx7GrTmOtKgu/gwbic5sjkIKZuCZ/LmHNIs3gLURK+VMI8anoNq7JHyLeAMC1S4gHDwQRWU3wuAxb0Y9GQ1w12EFqiKtlYYz5o5Ri254uixpF2HVVscYYtvlDuuGoll/jOF7OnAetIYj4zBy2Ea6GkZSS0nPqxhev4afuHuv4q5QqnkhaAnC1FI0xNLO5G6yF+I5W+GYvHotaFYODcxlb+j9xrlIippXqnjwQtujZt44ZN5HL3tGVjJVAXKuM80DYjG8PgdSeyHmy043wnO+6e08Fdg3G02TmLNnZS/XpjXcMUdar3BcgTHTxwaBDwRSauXNtbM9krWdgO0p0FJKbYXTKxDe5o/ZhEAQ0hKdO1zJccpdntPKqtZ6WjjLpofsCpe2w2zd4852BZbtKVpVpWEyzz16spS2QrR6HyJuf7W5PjDFlZ0TOXTPUJr62CyCtDszUXYTtb5I/s9P2us9rCyTvMpSwCSHuOjtSlV+sK+Z3DcRGzVmapnQwgD0ZwL3TVs6YFR9sQyNZS2P9aWshdTcgu38nQLYRrUYHxEKhxIh6nuyBFd8ujhJIBiUMw9piO1ogmRXUFdvRA8lUHwAqie1BAKkjtvm2XtOI0eR/O4syvpexpYFXbA/im7tCSUDf3znF9qC+yizLbI0xv5VSjT48auIm+f/04jLFl7YF5KUxZgoAC6317CC/7G67m7v4/15YyC4W1vSZ/wEC2bpucGsIagAAAABJRU5ErkJggg==);\n}\n#music .voice-no[data-v-21] {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAADyUlEQVR4Xu3b/VXbMBAAcJ01QOkG6QTVOw9QmKBs0HQCwgS0EwATABNAJ4AF7LoTkBFgAPv6jifnKX7+kGS3tkTyt6xYv0gn6aSAOHz2BODgsS9wAGn0iNlBlFJHSZKcAcApER0JIR7yPD+fq+fOCqKUUkmS3APAygQgous8zzdzoMwGgohrALhpazQRvVRV9akoipf/jTILCCLeAMC6r7FlWZ4URfEUNQjHCynloxBCDTU0ehAdLx4BgAPn4CdqEI4XQohLWwzWihYEERnCecaIDkTHi3shxPHg+GgpEBVI1/rCBSYaEJ940QYVBYhvvIgORMcLXnWeugyLoBZmSqmV3nTxIsorMI7BWdSQmbLr+6IsBiRNU54qJ+v6QYMg4hUAnPk2Ysrn2nqIUupYSnnB30NE26qqzsfsiBHxgvMwQgjeVV9nWfaw2+1yzJBSPk/ZqDF1NUF4bSOl/N2os9DlnNIEXZtMIjrfgSypd7TtZdI0fRBCfG1BdkIZ2HEXO5A0TVl/cFs+5ld3ebbZQxDxCQC+dNRhhWKRfng1Qcjlhf912RaQDQBc9nxvL4oFBld9FwwIvy0iFgDw2RXFBoOI/lRVdRwUiM7Q89CxRnHB4BkrKBDuGS4oXH4oZVn3jHr6Dg7EBUUPrc6JoonB5YME0Si8biqEEB98AnwbRtAgGoUXa3xU4YTShRE8iA9KH0YUIC4oQxhRgSRJYnPmM7iiDTao1oHU9QBMCNGLEjSIB0bt2IkSLMgIjF6UIEEsMX7pXHDflPyUZdmJuY4JDsQS4y7LsrVOKvWuU4joNs/z7zVKUCAuGGbQHVq8mSjBgPhgOKK8XeMKBgQRn5t30Rp7mLdh0rWvsRk+nJQyQThR67Qn8NlU2T5jZswsEuC9GLY9hYh+miBdSVzbNkxarplCTNO0K8VphWGD0sy6d94KnLSllpW15FTbzoycMAZQXsuyXO3dQrTIWVo2Z3yxtoMqRPxhnDPzdHnr+016GF7xZWEAeCnLclMUxXYPxCbw+L6A63OLOdtdCspiQHR+ge+f8zkIX5abZeZZFIjZvfmA2aa7J0nCQa/veMCmml2ZxYLYtkKff1wJIb7ZPtNXLniQunE8EwDA25WFMZ9oQBhB/9OBe4t3/IkKRAdmryOCuldFB2LMVkNnsa0jK0qQGkVK6RxsowXxDbbRg7gG23cB4hJs3w2IbbB9VyA2wbYsy49j7qD6Lgpn+Vem+bKI2HaZzivx44tgPjc7iBFXNkS0AoCtTtY4XcadAoPrWATIVI2Zop4DSEPxL5YQHsqr5mdTAAAAAElFTkSuQmCC);\n}\n", "", {"version":3,"sources":["/./resources/components/vue-media/music.vue"],"names":[],"mappings":";AAAA;EACE,aAAa;EACb,cAAc;EACd,gBAAgB;EAChB,aAAa;EACb,aAAa;EACb,uBAAuB;EACvB,4CAA4C;EAC5C,2BAA2B;EAC3B,cAAc;EACd,0BAA0B;EAC1B,cAAc;CAAE;AAChB;IACE,YAAY;IACZ,aAAa;IACb,2BAA2B;IAC3B,0BAA0B;IAC1B,89CAA89C;IAC99C,YAAY;IACZ,yBAAyB;IACzB,6BAA6B;IAC7B,4BAA4B;CAAE;AAChC;IACE,cAAc;IACd,aAAa;IACb,aAAa;IACb,QAAQ;IACR,cAAc;IACd,uBAAuB;CAAE;AAC3B;IACE,YAAY;IACZ,aAAa;IACb,mBAAmB;CAAE;AACvB;IACE,aAAa;IACb,cAAc;CAAE;AAClB;IACE,QAAQ;IACR,cAAc;IACd,uBAAuB;CAAE;AACzB;MACE,6BAA6B;MAC7B,yBAAyB;CAAE;AAC7B;MACE,eAAe;MACf,gBAAgB;CAAE;AACpB;MACE,QAAQ;MACR,cAAc;MACd,oBAAoB;MACpB,+BAA+B;CAAE;AACnC;MACE,kBAAkB;CAAE;AACxB;IACE,eAAe;IACf,mBAAmB;IACnB,QAAQ;IACR,UAAU;IACV,YAAY;CAAE;AAChB;IACE,SAAS;IACT,0BAA0B;CAAE;AAC9B;IACE,YAAY;IACZ,WAAW;IACX,gBAAgB;CAAE;AACpB;IACE,mBAAmB;IACnB,aAAa;IACb,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,gBAAgB;IAChB,mBAAmB;IACnB,uBAAuB;IACvB,0BAA0B;IAC1B,mBAAmB;CAAE;AACrB;MACE,kBAAkB;MAClB,0BAA0B;MAC1B,0BAA0B;MAC1B,kCAAkC;MAClC,mBAAmB;MACnB,WAAW;MACX,UAAU;CAAE;AACd;MACE,kBAAkB;MAClB,0BAA0B;MAC1B,uBAAuB;MACvB,kCAAkC;MAClC,mBAAmB;MACnB,WAAW;MACX,UAAU;CAAE;AAChB;IACE,sBAAsB;IACtB,uBAAuB;IACvB,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,uBAAuB;CAAE;AAC3B;IACE,YAAY;IACZ,aAAa;IACb,mBAAmB;CAAE;AACvB;IACE,kxEAAkxE;CAAE;AACtxE;IACE,kpEAAkpE;CAAE;AACtpE;IACE,sBAAsB;IACtB,uBAAuB;CAAE;AAC3B;IACE,mBAAmB;IACnB,sBAAsB;IACtB,YAAY;IACZ,YAAY;IACZ,uBAAuB;IACvB,0BAA0B;IAC1B,gBAAgB;CAAE;AACpB;IACE,mBAAmB;IACnB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,YAAY;IACZ,0BAA0B;CAAE;AAC9B;IACE,YAAY;IACZ,aAAa;IACb,uBAAuB;CAAE;AAC3B;IACE,spDAAspD;CAAE;AAC1pD;IACE,s4CAAs4C;CAAE","file":"music.vue","sourcesContent":["#music {\n  width: 563px;\n  height: 115px;\n  position: fixed;\n  bottom: 30px;\n  left: -541px;\n  background-color: #fff;\n  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.25);\n  border-radius: 0 4px 4px 0;\n  z-index: 1000;\n  transition: left .6s ease;\n  display: flex; }\n  #music .toggle {\n    width: 22px;\n    height: 100%;\n    border-radius: 0 4px 4px 0;\n    background-color: #00bfef;\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAECklEQVR4Xu2aj1EVMRCHdytQKkAqECpAKlArUCsQKxAqECpQKhAqUCsAKsAOgArW+Z6bmfjm/Ulyl+TwvcwwA8Plvdsvv/1ls3cqGz50w+OXLYCtAjacwDYFNlwAdUzQzJ6r6sNTgDt6CpjZTxHZVdW9TQVwIiKfReRUVfl90qOGAl6IyJ1H/UFVv02ZwOgACNbT4NADPxORc1X9PUUQtQC8F5GvcwGjBPzh15RgVAHgKmAXeLZk1VHDJUBU9aqnMmoCQPofE4IDFDAue8CoCSA2wwQOs0tQBqmCZzSpI6oBmDPDcxEJAb1yGvsrUoRrj1X1IpVc6XW1AQQzXFgTUDGKCCCA8kZEXs4Fgmm+ramG2gAIEFljhkeqSkBLh5mRNkA7jtSBGph7U7rKq+ZVBeBpQE6/8xRgNVdC8DmAA0IAQfBAGN0XWgBA4tfRKpyo6mnKaroi2CFIDbbMo5R5OddUB+ArygrG+c3fnzLUgGqYvzaNcoLn2lYAFlWGYdujXrhaVR26Ejhf3KjqQW6QXT0gyulghsvuh/+z0vwA5J98N7NQWO2NWUo3UcCcGaYu4Kw6DDAiFYx6wmwJgL3+R2r00XWhVMY4Q8k8Wp+hGQBXATLfpVniAYaqkD/D8XkVI+bfqipF0yijNQD29S+r3DyqDkOVyDbKD+AYoxZGrQEQ1L2IXKgqO0PyMDPUgvRRymgQmgKIzPC1iODm2ZWdmSF/qksr/YyYeg8AwQyL3dzMQnWZraR5yTUHEJnh/ZCixsxC93lQXdALQLj5g9JTnpslu8LZkPZ7LwChWzRIwl4dHg5RUhcAngYUNTh6kRn6Z8z8RFWL4yiemLx/LbnQ3fy7iBSboUNgNyhOpW4AIjO8G3LONzMAFB+TewMY7OT+FIomy9pO0yIx9gYQzJA2OGVy9jAzuk1JzZXJAfA0mHV7VHUnO/q/zyHtSZpgCNbMQrco2wy9FqBXSGVYNLqmQASBM8F1rhl6k2RfVdlSi8ZUAFRpd6UQmQqAwWaYEuykTNDlSyVI8Ax2gYfW7xY1V4CZ8ZSIYJcZF0+PinM6VwnNAPgZntI3rPiye6UlPlrPbx2QJgCirW7d/cz+P2RfT/qC6KLqAMyMd4Wy+n9DDjeTAmBmoQuce187Jf3C3C+Zqa1kUsoc7+KWPAh5VFW6x01GFQBeonJIWWd4i4IsPhiVEKsFIBxzc+/pke1xzIef626gFgAefpTImGMtZXGzMTqAAbk/qEFaSqwGgBLnv+VNsVbOH8OqAWDZ2yDLFqnLyoebqQEg9Q1RDI9eXtOcn1+F0QHwBQkFEG+AEnz3V+irAHAIPLQgHUItQNeH/h8vRXcPvFoKlLpxr3nVFNAroNzv3QLIJfa/Xf8HsXeZUPFFXZ4AAAAASUVORK5CYII=);\n    z-index: -1;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center; }\n  #music .M-main {\n    padding: 10px;\n    width: 541px;\n    height: 100%;\n    flex: 1;\n    display: flex;\n    flex-direction: column; }\n  #music .M-face {\n    width: 95px;\n    height: 95px;\n    margin-right: 10px; }\n  #music .M-warp {\n    height: 95px;\n    display: flex; }\n  #music .M-control {\n    flex: 1;\n    display: flex;\n    flex-direction: column; }\n    #music .M-control button {\n      background-repeat: no-repeat;\n      background-size: contain; }\n    #music .M-control span {\n      color: #99a2aa;\n      font-size: 12px; }\n    #music .M-control .center {\n      flex: 1;\n      display: flex;\n      align-items: center;\n      justify-content: space-between; }\n    #music .M-control .bottom {\n      text-align: right; }\n  #music .M-curBar, #music .M-allBar {\n    display: block;\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    height: 4px; }\n  #music .M-curBar {\n    width: 0;\n    background-color: #00bfef; }\n  #music .M-allBar {\n    width: 100%;\n    z-index: 2;\n    cursor: pointer; }\n  #music .M-tip {\n    position: absolute;\n    bottom: 12px;\n    width: 50px;\n    height: 17px;\n    line-height: 17px;\n    font-size: 10px;\n    text-align: center;\n    background-color: #fff;\n    border: solid 1px #e5e9ef;\n    border-radius: 3px; }\n    #music .M-tip em {\n      border-width: 8px;\n      border-color: transparent;\n      border-top-color: #e5e9ef;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: 17px;\n      top: 15px; }\n    #music .M-tip i {\n      border-width: 6px;\n      border-color: transparent;\n      border-top-color: #fff;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: -6px;\n      top: -8px; }\n  #music .M-play {\n    display: inline-block;\n    vertical-align: middle;\n    width: 120px;\n    height: 40px;\n    text-align: center;\n    margin: 0 70px 0 120px; }\n  #music #paused {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%; }\n  #music .play-wait {\n    background-image: url(data:image/png;base64,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); }\n  #music .play-go {\n    background-image: url(data:image/png;base64,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); }\n  #music .M-voice-control {\n    display: inline-block;\n    vertical-align: middle; }\n  #music .M-all-voice {\n    position: relative;\n    display: inline-block;\n    width: 70px;\n    height: 3px;\n    vertical-align: middle;\n    background-color: #e5e9ef;\n    cursor: pointer; }\n  #music .M-cur-voice {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 35px;\n    height: 3px;\n    background-color: #00bfef; }\n  #music #muted {\n    width: 20px;\n    height: 20px;\n    vertical-align: middle; }\n  #music .voice-go {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAEk0lEQVR4Xu2b/3XTMBDHdfYApBMQJsCcBqCdgG5AOgHtBC0TtExQmKAwQcMAVs0EDRPQDiCLd3lynuOc5F+JHTvxv3H8rI/uvvdLBnG81gjAkcc6gSOQgkX0DiSKokkQBF+EEDMhxAQA5lrriyRJXvqw3l6BRFEUBUHwAADTwuJ/xHFMgDq/egOCiDMAuHetWGv9LkmSRddEegGCiPcA4LUArfVZkiTzUQMhvQjD8FEIEZUt1BhzoZT6Xnbftn/vzEKsXjwCwKTKIowxX5VSN1Xu3eY9nQAhvRBC3FaFQQscLRBEJBCXdXdxdECsXjwIIU7rwhidhXjyi8psRmMhTfSCozQKIE31YhdArMtS4ndujKEy4KpKGN9KlGmrF7sAIqUk/TrPP7tKbuMEEkXRlIouACBRLE2kKotDxRvbuoyU0jhAexM+Fsg2Tb/i+jdu2wIQcpM3xQeT+6RpSmVBwr3bBhAp5VMfFsG8eKtMFREvAeDWYSWLNE0/cC2GNSCIeAcA1Jvo/fJZCCJeAwDpw4vW+sq121JKqoU+O6B8U0ptJIwrIKQZYRg+907CvoALCLdpWmvabdYFEDEBgPfcuriKegVkn6zDl6lyYunTBRsBqa+yoSdCiHkcx2d5WCsg+6Id2cu5LMQTPZy64GtGFa0kD4QNU325UB2Xyb2js/WIiAsAeMusZ+0/gwNCCyrRBbb1GEXRqW1ObTDRWp9kEWeQQGynnsSS2/ENXcgIuEDmM9hBAqEFluw4ayWewPErjuNlmj9YINZ15gDwkUnq2PSc2hJhGFLiuXZRlFJKnYwBiGuUsdrx4uKllGxKn+nIoC3E5hj/uEgYx7GrTmOtKgu/gwbic5sjkIKZuCZ/LmHNIs3gLURK+VMI8anoNq7JHyLeAMC1S4gHDwQRWU3wuAxb0Y9GQ1w12EFqiKtlYYz5o5Ri254uixpF2HVVscYYtvlDuuGoll/jOF7OnAetIYj4zBy2Ea6GkZSS0nPqxhev4afuHuv4q5QqnkhaAnC1FI0xNLO5G6yF+I5W+GYvHotaFYODcxlb+j9xrlIippXqnjwQtujZt44ZN5HL3tGVjJVAXKuM80DYjG8PgdSeyHmy043wnO+6e08Fdg3G02TmLNnZS/XpjXcMUdar3BcgTHTxwaBDwRSauXNtbM9krWdgO0p0FJKbYXTKxDe5o/ZhEAQ0hKdO1zJccpdntPKqtZ6WjjLpofsCpe2w2zd4852BZbtKVpVpWEyzz16spS2QrR6HyJuf7W5PjDFlZ0TOXTPUJr62CyCtDszUXYTtb5I/s9P2us9rCyTvMpSwCSHuOjtSlV+sK+Z3DcRGzVmapnQwgD0ZwL3TVs6YFR9sQyNZS2P9aWshdTcgu38nQLYRrUYHxEKhxIh6nuyBFd8ujhJIBiUMw9piO1ogmRXUFdvRA8lUHwAqie1BAKkjtvm2XtOI0eR/O4syvpexpYFXbA/im7tCSUDf3znF9qC+yizLbI0xv5VSjT48auIm+f/04jLFl7YF5KUxZgoAC6317CC/7G67m7v4/15YyC4W1vSZ/wEC2bpucGsIagAAAABJRU5ErkJggg==); }\n  #music .voice-no {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAADyUlEQVR4Xu3b/VXbMBAAcJ01QOkG6QTVOw9QmKBs0HQCwgS0EwATABNAJ4AF7LoTkBFgAPv6jifnKX7+kGS3tkTyt6xYv0gn6aSAOHz2BODgsS9wAGn0iNlBlFJHSZKcAcApER0JIR7yPD+fq+fOCqKUUkmS3APAygQgous8zzdzoMwGgohrALhpazQRvVRV9akoipf/jTILCCLeAMC6r7FlWZ4URfEUNQjHCynloxBCDTU0ehAdLx4BgAPn4CdqEI4XQohLWwzWihYEERnCecaIDkTHi3shxPHg+GgpEBVI1/rCBSYaEJ940QYVBYhvvIgORMcLXnWeugyLoBZmSqmV3nTxIsorMI7BWdSQmbLr+6IsBiRNU54qJ+v6QYMg4hUAnPk2Ysrn2nqIUupYSnnB30NE26qqzsfsiBHxgvMwQgjeVV9nWfaw2+1yzJBSPk/ZqDF1NUF4bSOl/N2os9DlnNIEXZtMIjrfgSypd7TtZdI0fRBCfG1BdkIZ2HEXO5A0TVl/cFs+5ld3ebbZQxDxCQC+dNRhhWKRfng1Qcjlhf912RaQDQBc9nxvL4oFBld9FwwIvy0iFgDw2RXFBoOI/lRVdRwUiM7Q89CxRnHB4BkrKBDuGS4oXH4oZVn3jHr6Dg7EBUUPrc6JoonB5YME0Si8biqEEB98AnwbRtAgGoUXa3xU4YTShRE8iA9KH0YUIC4oQxhRgSRJYnPmM7iiDTao1oHU9QBMCNGLEjSIB0bt2IkSLMgIjF6UIEEsMX7pXHDflPyUZdmJuY4JDsQS4y7LsrVOKvWuU4joNs/z7zVKUCAuGGbQHVq8mSjBgPhgOKK8XeMKBgQRn5t30Rp7mLdh0rWvsRk+nJQyQThR67Qn8NlU2T5jZswsEuC9GLY9hYh+miBdSVzbNkxarplCTNO0K8VphWGD0sy6d94KnLSllpW15FTbzoycMAZQXsuyXO3dQrTIWVo2Z3yxtoMqRPxhnDPzdHnr+016GF7xZWEAeCnLclMUxXYPxCbw+L6A63OLOdtdCspiQHR+ge+f8zkIX5abZeZZFIjZvfmA2aa7J0nCQa/veMCmml2ZxYLYtkKff1wJIb7ZPtNXLniQunE8EwDA25WFMZ9oQBhB/9OBe4t3/IkKRAdmryOCuldFB2LMVkNnsa0jK0qQGkVK6RxsowXxDbbRg7gG23cB4hJs3w2IbbB9VyA2wbYsy49j7qD6Lgpn+Vem+bKI2HaZzivx44tgPjc7iBFXNkS0AoCtTtY4XcadAoPrWATIVI2Zop4DSEPxL5YQHsqr5mdTAAAAAElFTkSuQmCC); }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n@charset \"UTF-8\";\n#music {\n  width: 563px;\n  height: 115px;\n  position: fixed;\n  bottom: 30px;\n  background-color: #fff;\n  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.25);\n  border-radius: 0 4px 4px 0;\n  z-index: 1000;\n  transition: left .6s ease;\n  display: flex;\n  font-family: -apple-system,\"Helvetica Neue\",Arial,\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",\"WenQuanYi Micro Hei\",sans-serif;\n}\n#music a {\n    cursor: pointer;\n}\n#music div {\n    box-sizing: border-box;\n}\n#music button {\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n    background-color: transparent;\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0;\n}\n#music .toggle {\n    width: 22px;\n    height: 100%;\n    border-radius: 0 4px 4px 0;\n    background-color: #00bfef;\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAECklEQVR4Xu2aj1EVMRCHdytQKkAqECpAKlArUCsQKxAqECpQKhAqUCsAKsAOgArW+Z6bmfjm/Ulyl+TwvcwwA8Plvdsvv/1ls3cqGz50w+OXLYCtAjacwDYFNlwAdUzQzJ6r6sNTgDt6CpjZTxHZVdW9TQVwIiKfReRUVfl90qOGAl6IyJ1H/UFVv02ZwOgACNbT4NADPxORc1X9PUUQtQC8F5GvcwGjBPzh15RgVAHgKmAXeLZk1VHDJUBU9aqnMmoCQPofE4IDFDAue8CoCSA2wwQOs0tQBqmCZzSpI6oBmDPDcxEJAb1yGvsrUoRrj1X1IpVc6XW1AQQzXFgTUDGKCCCA8kZEXs4Fgmm+ramG2gAIEFljhkeqSkBLh5mRNkA7jtSBGph7U7rKq+ZVBeBpQE6/8xRgNVdC8DmAA0IAQfBAGN0XWgBA4tfRKpyo6mnKaroi2CFIDbbMo5R5OddUB+ArygrG+c3fnzLUgGqYvzaNcoLn2lYAFlWGYdujXrhaVR26Ejhf3KjqQW6QXT0gyulghsvuh/+z0vwA5J98N7NQWO2NWUo3UcCcGaYu4Kw6DDAiFYx6wmwJgL3+R2r00XWhVMY4Q8k8Wp+hGQBXATLfpVniAYaqkD/D8XkVI+bfqipF0yijNQD29S+r3DyqDkOVyDbKD+AYoxZGrQEQ1L2IXKgqO0PyMDPUgvRRymgQmgKIzPC1iODm2ZWdmSF/qksr/YyYeg8AwQyL3dzMQnWZraR5yTUHEJnh/ZCixsxC93lQXdALQLj5g9JTnpslu8LZkPZ7LwChWzRIwl4dHg5RUhcAngYUNTh6kRn6Z8z8RFWL4yiemLx/LbnQ3fy7iBSboUNgNyhOpW4AIjO8G3LONzMAFB+TewMY7OT+FIomy9pO0yIx9gYQzJA2OGVy9jAzuk1JzZXJAfA0mHV7VHUnO/q/zyHtSZpgCNbMQrco2wy9FqBXSGVYNLqmQASBM8F1rhl6k2RfVdlSi8ZUAFRpd6UQmQqAwWaYEuykTNDlSyVI8Ax2gYfW7xY1V4CZ8ZSIYJcZF0+PinM6VwnNAPgZntI3rPiye6UlPlrPbx2QJgCirW7d/cz+P2RfT/qC6KLqAMyMd4Wy+n9DDjeTAmBmoQuce187Jf3C3C+Zqa1kUsoc7+KWPAh5VFW6x01GFQBeonJIWWd4i4IsPhiVEKsFIBxzc+/pke1xzIef626gFgAefpTImGMtZXGzMTqAAbk/qEFaSqwGgBLnv+VNsVbOH8OqAWDZ2yDLFqnLyoebqQEg9Q1RDI9eXtOcn1+F0QHwBQkFEG+AEnz3V+irAHAIPLQgHUItQNeH/h8vRXcPvFoKlLpxr3nVFNAroNzv3QLIJfa/Xf8HsXeZUPFFXZ4AAAAASUVORK5CYII=);\n    z-index: -1;\n}\n#music .M-main {\n    padding: 10px;\n    width: 541px;\n    height: 100%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    position: relative;\n}\n#music .M-face {\n    width: 95px;\n    height: 95px;\n    margin-right: 10px;\n}\n#music .M-warp {\n    height: 95px;\n    display: flex;\n}\n#music .M-control {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n}\n#music .M-control span {\n      color: #99a2aa;\n      font-size: 12px;\n}\n#music .M-control .header {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      font-size: 14px;\n}\n#music .M-control .header .menu-btn {\n        background-repeat: no-repeat;\n        background-position: center;\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAgCAYAAABkWOo9AAABRUlEQVRYR+2WwU3DMBiF308XKBPQDSgbMAIXnAPCoZe63MoG3YD0BOWSpBKHhgMZoRvQERgBjgjBjwJYDVUj1dUvlEb2LYrz8vy9+MWEHRm0Iz7hjUon1QyiN9PsgoAQjHwQqnGZ0iSdJUx0IEWOwAujg6sqvUqid/dZlz/wZB+kFo76Z2pRXE+mD0OAr6VMWp1PoHepVbJOdyujBek9IK6F0W9y6WwEomMwz00YjFai/7knNda8oyzdjM0kBUtCxxOVoNi8b/Q2zSIQDol4bM6D3K4wjh/bb633okc7guSeB1r1nAv/T6kzXkyo9q1IrQp/xcyr0aptjdau8IvoidAFcVSOvvQbPZGLnnKjTyPn6OUMyCj5HpXhuFTxRP+VaFXh/x4BRU/4AHzh1+qEn4Co4wvfYcf5enKAtdFUT3QjTA6TvgCUWZsh4jKUuwAAAABJRU5ErkJggg==);\n        background-size: 20px;\n        width: 20px;\n        height: 20px;\n        transition: .4s;\n}\n#music .M-control .header .menu-click {\n        transform: rotate(-90deg);\n        -ms-transform: rotate(-90deg);\n        -moz-transform: rotate(-90deg);\n        -webkit-transform: rotate(-90deg);\n        -o-transform: rotate(-90deg);\n}\n#music .M-control .center {\n      flex: 1;\n      display: flex;\n}\n#music .M-control .center .M-model {\n        margin-right: 20px;\n}\n#music .M-control .center .M-play-control {\n        flex: 1;\n        display: flex;\n        align-items: center;\n        justify-content: space-around;\n}\n#music .M-control .center .M-play-control .play-wait {\n          background-image: url(data:image/png;base64,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);\n}\n#music .M-control .center .M-play-control .play-go {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAGEElEQVR4Xu1bjVHkNhSW7AJCKjhSQXxyAbdXwUEFgQoCFQQqOKjgoIKDCkIKkHAqOK6CgwKsl/kcrUfWSmtprV0cNp5hmAFb0vv0/n8428FTVVXFGHtXFAV+H3LOD33bElHDGHsmogci+t40zdO2j8e3sUFVVQdlWf7GGFsQ0YJzfrDhPg3A0Fo/NE1zv+Eaaz/LCkBd1yD6yPxkPS8RPTPGbrTW1zk5IwsAIJyILkKsnRWJfxe7a9sWQDxMXXsSAFVVLYqi+BJDOBH9xRjrZBws7R68LMsDIqo45xURQU/8GkEcgDifwhEbAWBk/Ms6VocSw01pre82uSmzx8ISqZ8CivOZc34hpbyOAGzllWQAzK1/XaPYbtu2vWqaBred5QEYRVFAt0DM3gUWBTecNk0DXRH9JAFQ1/XvjLGrwOog/GIKO8acWghxEgKCiJ601scp4EcDIISArGPzwUNEf2utzzZh8xiCQ+8IIcANZ4yxgWjAWmitP8aCEAXAGuKvlVI4xKs8cLCKorjxKUwiOlVK3YwdbBSAAPEvjLETKeXd2Aa7+H9d1yAUPkj/xHLCWgAMm/3hEPHStu0ilsV2AQD28J01BoQgAHVdQ+t+/S8QvzwjFCTnHObZ5gQoxvch6+AFoKqqw6IoHh1TN8ubdzlMCHHFOYe1sp87KeWxjxu9ANR1/ScCGfuDtm2hWSe7nrsQiYBO8CrFFQACbHSplLrYxeFz7GEcpwfbOhh98IsrCgMAzIffbNaHD6+UGnBDjkNuew2YyLIsHx19sGK2BwD4NGnbtlAg2dzabRNurx+gB1zQJ1p6AAK3/6qOzlSwDE2NEz/cSil7j7YHQAhxxjn/bG0KrX+YGlxMPXTu7306rW3bngt6AOq6hrwgZ9c9RDRJ8RlTOvDOsK5S6tJjunAj3ijP934qSHVdI0LsYwYiOldKdUFdB4BPYdgopW5o1lyUZQlzOniklD7LA439wbeP7/3U83h0QSOlfN8D4DoPOTQ/8gZzAQDcWJblN8ev6ZR7dxse9o+KpNbdxJwAwDmFEFCGfZptKQbcpJ5+OOgMTEUqy81NBAwAyB/Ygd29lPKIu0EPEhxKqV4ZbkL8HAFwORKeoVLqZ+4qCCLKYvvnJgJG1MnldHAAkhqfcpm/5TpzBMDVAwjwwAEDE5Qr6psjAJ7LPgcACH76YuVbBsAj7pcQgRW5yJHaniMHRAGQw/OaoxXwmUK4+yscsPcATI0BZm4FBs5QxwFCiCc7Xt47Jbj3ZnCfHCE36Fs6Qq5c7J0r7FaA+mTBpoHQHM2gxy95kVIe/B8OB5IFby4h4kn6dHnBLiPkqac9SCk/vhURGE2J7VtS1E762HUBN2c2yRrMKRgSQvxwyn3DtLgRg0FhJFRMjBULUxdY6SnyFVlN45O3f3hqUTa6MGKSo6iZ2QWESVwQC9a23jOlMfQ52OD6S2OBzCnbm+KocV7Q5T3gAsbYZIuwrRseqUukl8cNF/j6bCbVCXcNgBFnlOXs9L632OttkXEjRBCQK0zeBRiB1r5jX1tfsEmqLEs0RdgKMakDcxeE+vYINEkNFJ/9XVKbXEzf3WsRvkZ8v2utq6Q2uSURmzYfvgYIQojPpnfY3n60tW+0VTbUhso5P51Dq6yx9SDedbpGiQdSowDgJR8I+DsRXSmlzl/jxo3ZhqlDZ+hKMTdbs/SSuBAIGIMxYys7baIUQqDUDffdnUiLuvklXVEcYOkEt5Gqv3wiwkTXZY6q0jqOWjeghTEdrfVRSltfEgCG7dD6gopyaIYHQNzmbKs1js2nkcm0+7ZtT1K72pIBsFxm9Oj3ZXX31jC+gqEpIrp7fHzExFjSA6IZYx8wK+SbVLEWewEwy66vpE1ilWBoUTNAhYmN0CCT/SnGYQEK2teRexgMNxVFcWjG5brxWp9i85xjo1uPcoRSkFw3yJSyTsK7GNC6ySFmG4lA6KAm+YA0e1A0Eoh0XwWrQ79gJC/bUHVWAJYnNs4Jokp0mePHqzDHwEDuDuE45xwh+Vbmk7YCgEuYSbpCxjEa28l6gHgEYJ2OgH+RqtHHAPX9/x+Mrc0NCfIQ+wAAAABJRU5ErkJggg==);\n}\n#music .M-control .center .M-play-control .prev {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABZklEQVRYR+2W4U3DMBCF79kD0A3oBljnAdoNYAPYAJig3QA2aNkANigD2PIIXYEJjE5KpAgSx0kcKqHkZ2L7vrx7vjvQhR9cOD4tAIsCSQWMMSsANzHGrxBCGGJYY8xaa71xzr2l9iUBrLVHIrqXA5xzWekSaKXUDsCT7IsxPnvvX7sgkocy8wnAJheAmR+I6AXAqhHwwzl3NytAJfeBiLY/A8UYP733v97X6yYrwMx7ALuuP5wNwBizVUodAKxTJisOICbTWovcnXltAhUFYGZxtji8abLk7SwGQESnNpP11YaSAH2xWr//HwCpaAD2RHQ1RIpiCkgprgqOlNXbXIiiAHVQa61cQekTvWrMAiAgVT0QiKQaswHUalQV8Qjgui0tswPUaiilpCc8/nkzagZsU2OSAmMGEgFqdshJA4kYTfxGROcQwjn36lVpkZHMOOfeR49kQwKOXZs15409PGffArAo8A2FNd8hJ3FJnAAAAABJRU5ErkJggg==);\n}\n#music .M-control .center .M-play-control .next {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABRklEQVRYR+2W0W3DIBCG7zboBu0IFgzQjtARnA3SDewJ6o6QDTKCOwDoukG6QTIAdxUSSDSV7QTZuA/mFQ4+fu6OH2HlgSufDxvApsCkAlrrV+ccEdHpnoStquoJER9F5IuIzkOxowBKqT0ivvtgEWmste2tEFprCWsPxpg6F6BHxOcYLCInZt4RUT8FEgFE5NNa+zILQALSMXM7Ju2iAOFJRtVYHCCR9Oic88/yK9FKAvgEPSPizhhzjGBFAa7UePMluxZAVKMBgC7kyvxVMFWC6fwiZfjvAfytYwMrrcAltOxujSQ8OOf2sR8UAxCRb2aur/+HIgAi0lprfcn9GYsC+MQKtx70CEsBXACgTlvuUEnOBZAakg9mbsa+4BRmFkPiN1RK1czcZ1iyCgAeAMDbuTxLdk/Hy107aUpzN741bgPYFPgB0WE7MPsLEL4AAAAASUVORK5CYII=);\n}\n#music .M-control .center .M-play-control .M-model-list {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACvUlEQVRYR8VX0XHbMAwFxAHiThBvUIYcIO4ETSdwMkGTCeps4ExQe4KmE8QdgAw7QdwNmgFI9KCjfJRMW2KtO+tXFPEAvPcAIZz5wTPHhyIASqklIn703j8459wY4IsAaK1XADDnwES0CiEwkL+nACkCwIGklLOqqlaIeElEHHxprX38XxDFAJpASqkFIt4DwAURbUMId865TSmQXgBSyokQ4jMRTTOXTyKI5tUXY8xzCYiDAKSU06qqviHi7ZALiei3tVamZ7lKAHAZQnh0zm1z92QBKKVuEfF7JNsf7nMIoY/1224QpZRj1USuPFhrmcStZw9AEvydiO5zHw2pSMIVTmYZuXLXva8FgBkuhHgBgHfv/WwsrUsppRCCCXrhvf+UkrUFQCm1ZXl576+6weMl18aYJ85OKVUrIFeNEMLPzPdNcs4Yc9V8twOgtb4BgB8AsDbG7BFPKbVBRAaASaWy3SCiX9baWfdlYmQ7taQAapfLZR8NiGU4bcrHII5wYY+Q8Q5uxWua5A5AZOzUGDMpIVnpWa01u+db04a0AnSodLHnzOS5tfZD9IhXRMyCJaInay1zZO9JW8kvSwCwqcy4txHAnqaTaBtrLZ8fDoAVwKzmDEvLWnJea92qdAkJmUC1DON8mBNRtgU5GfaS8OwyjERrjKjlVmPIsPGOLtGzVszDI4TAIPoG0KD2s4tWVfXCqun6zMFhxCAQcdFY76BIedazHHmsT4jo+DA6MMFYHbz/rbvjljNDxOw8QES29htEZAc9OFmPLiRCCNZyvYR2pxh7gRDibUBl1t77RdFCkl4aJTfrrlpxRf/KZ+PCUU/J5OE98blva+7dCY9lOMZiehKAKE9eWus5EcFuvPe8IWd3wG5CJwNoLoxS4z+n69iWPcbnqjkagFRBAFD/MwxZ0UcHMEAVrSNnB/APsNHMMIbwA6MAAAAASUVORK5CYII=);\n}\n#music .M-control .center .M-play-control .M-model-loop {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACqUlEQVRYR8WX4XEaMRCFd08FQCowHUSWCjCpwKSC2BXEriC4A6cCmwpCByYFSFEqCO7ALkDazDI6RnfW3emAGfjHSGg/rd7uPhDO/MEzx4dRAEqpR0T87L2/d865U8CPAtBaPwPANw5MRM8hBAZ5OwZkFAAH0loviIgzcUFEHPzRWvtwKMRogDqQUmqJiHcAMCGibQjh1jm3GQsyCCClnAohrololjl8GiHqpa/GmPUYiE4AKeWsqqofiHhTciAR/bXWynQvZwkALkIID865be6cLIBS6gYRn6LYXvmdQwhDqt+2gyilHFdN1Mq9tZZF3Ph8AEiCvxPRXe5HJRlJtMKXeYxauW2f1wCQUs6FEC8A8O69n5fUOmtkqBSllFIIwQKdeO+/pGJtACiltlxe3vvLvuAMWlXVNQAsAODVWjsfykpyOWeMuaz37wG4vgHgFwCsjDG9wtNac/2v68ooAYg9ZNfI0iykAPVi7+0zKp+XAsSn+JNecg8QFTszxkyH0pk2IwAoBohZICL6XUOnGWgslEDEOh8FoJTaIOKVMWYX+xwA3Bv2mU6fgDvVxFr7qeT2vOeQDGitO5/g7CKs2+9gGR4qwsRP7IdWVyNqdKv2k3Aac89UCyu3VjeitAIaIuQvyaa3EAJDZAcQ78sF6fIDXP9VVb0g4rTdZTuHEU8wRFwaY36WijK3TynFpoXH+pSI+odRxwTj6mD/t2qPW74ZIk6ycx6RW/uCS46HW9dk7TUkQgg2FDsT2p5ibFiEEP8KsrPy3i9HGZL00GjJ5m2rFS3692haOEurFgz7xPXQqB70hH03PIUxPQogVg6bVnY8u6cCgI33nh1y1gO2L3Q0QH1gNCls1a/is3xQfFasBSIatYU9JQDs/jOUWPSTZWAUZbL57AD/AUhEsDD2Jvd3AAAAAElFTkSuQmCC);\n}\n#music .M-control .center .M-play-control .M-model-rand {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfElEQVRYR+2W7XEaMRCGd08FmBKcCqyRCjCuwJcKAhXEHQQqCFRgqCBOBSYFSKNUYFJB7AKkzSwjEUXcGe4c8DgT/bqZO90+erUfL8IrL3zl+PBvA0gpJQAMnHOrNqWPqoBSaoWIlwBw570fO+ceS5BTAQARPSLi2Bhzl0OcDCAL+ocaWwCllEPEi5a7cgCw8N4vm2RMe6SUAyHENQDURDRExEHL/1bGmCt+lwNMAGDYtCHeY5JxYoyZl99JKYdVVd0i4jm/I6Lv8fms/JaIptZajndYGfLJqqqqEXEGAGdEtLDWjtOPlVIjRLyNgachhIVzbp0l4eZTIvoRQhjlVdEpByIIZ/aF9/6Kf6S1rgHgCwA8ee+Hzjm+rs3KAYhoHkKYlFfYCYB/mtSw1i7i8wMiYhk8ArBidXnqv1YFSqkJIn4iojED9WnrnRXIgyil1pzpxpi2bN/L1BsgltxPAPhqjOE86LVeAjAUQtznJdWH4O0CZLX/vuzvXZTorYDWmofKtff+HTedLkFfXIZSynMhxAMRfbPWNrbvQ4F6KZA6XOqG0Xisyy4X+8Rl9AKNKnUG0Fpzw/kAAEtjzIhPqrUmAHARaGs6Eih7AQCYWWunpTIHA/C0E0J85m7M0ocQ6nRipdQMET9G03FjjFmWsyAGZkh2Rtt5sQXgoUJEO34AETmgzMbs3Fp7U54kVkWalux+XNy30yXz1p0DsEw7szuNUURcee95mrVmfBxODMeju83cbLyCtZYN628/wJtZ3vJkzznafZne5LI4eJyOm2s4OAf2BWt6XxiSJyLiRNw4obROAhCTlp3QzvUdFSAm9uA5r3BUgEOu7T/ALzGKdjDAGQYvAAAAAElFTkSuQmCC);\n}\n#music .M-control .center .M-voice-control {\n        display: flex;\n        align-items: center;\n}\n#music .M-control .center .M-voice-control .M-all-voice {\n          position: relative;\n          display: inline-block;\n          width: 70px;\n          height: 3px;\n          vertical-align: middle;\n          background-color: #e5e9ef;\n          cursor: pointer;\n          margin-left: 5px;\n}\n#music .M-control .center .M-voice-control .M-cur-voice {\n          position: absolute;\n          left: 0;\n          top: 0;\n          width: 35px;\n          height: 3px;\n          background-color: #00bfef;\n}\n#music .M-control .center .M-voice-control .voice-go {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAEk0lEQVR4Xu2b/3XTMBDHdfYApBMQJsCcBqCdgG5AOgHtBC0TtExQmKAwQcMAVs0EDRPQDiCLd3lynuOc5F+JHTvxv3H8rI/uvvdLBnG81gjAkcc6gSOQgkX0DiSKokkQBF+EEDMhxAQA5lrriyRJXvqw3l6BRFEUBUHwAADTwuJ/xHFMgDq/egOCiDMAuHetWGv9LkmSRddEegGCiPcA4LUArfVZkiTzUQMhvQjD8FEIEZUt1BhzoZT6Xnbftn/vzEKsXjwCwKTKIowxX5VSN1Xu3eY9nQAhvRBC3FaFQQscLRBEJBCXdXdxdECsXjwIIU7rwhidhXjyi8psRmMhTfSCozQKIE31YhdArMtS4ndujKEy4KpKGN9KlGmrF7sAIqUk/TrPP7tKbuMEEkXRlIouACBRLE2kKotDxRvbuoyU0jhAexM+Fsg2Tb/i+jdu2wIQcpM3xQeT+6RpSmVBwr3bBhAp5VMfFsG8eKtMFREvAeDWYSWLNE0/cC2GNSCIeAcA1Jvo/fJZCCJeAwDpw4vW+sq121JKqoU+O6B8U0ptJIwrIKQZYRg+907CvoALCLdpWmvabdYFEDEBgPfcuriKegVkn6zDl6lyYunTBRsBqa+yoSdCiHkcx2d5WCsg+6Id2cu5LMQTPZy64GtGFa0kD4QNU325UB2Xyb2js/WIiAsAeMusZ+0/gwNCCyrRBbb1GEXRqW1ObTDRWp9kEWeQQGynnsSS2/ENXcgIuEDmM9hBAqEFluw4ayWewPErjuNlmj9YINZ15gDwkUnq2PSc2hJhGFLiuXZRlFJKnYwBiGuUsdrx4uKllGxKn+nIoC3E5hj/uEgYx7GrTmOtKgu/gwbic5sjkIKZuCZ/LmHNIs3gLURK+VMI8anoNq7JHyLeAMC1S4gHDwQRWU3wuAxb0Y9GQ1w12EFqiKtlYYz5o5Ri254uixpF2HVVscYYtvlDuuGoll/jOF7OnAetIYj4zBy2Ea6GkZSS0nPqxhev4afuHuv4q5QqnkhaAnC1FI0xNLO5G6yF+I5W+GYvHotaFYODcxlb+j9xrlIippXqnjwQtujZt44ZN5HL3tGVjJVAXKuM80DYjG8PgdSeyHmy043wnO+6e08Fdg3G02TmLNnZS/XpjXcMUdar3BcgTHTxwaBDwRSauXNtbM9krWdgO0p0FJKbYXTKxDe5o/ZhEAQ0hKdO1zJccpdntPKqtZ6WjjLpofsCpe2w2zd4852BZbtKVpVpWEyzz16spS2QrR6HyJuf7W5PjDFlZ0TOXTPUJr62CyCtDszUXYTtb5I/s9P2us9rCyTvMpSwCSHuOjtSlV+sK+Z3DcRGzVmapnQwgD0ZwL3TVs6YFR9sQyNZS2P9aWshdTcgu38nQLYRrUYHxEKhxIh6nuyBFd8ujhJIBiUMw9piO1ogmRXUFdvRA8lUHwAqie1BAKkjtvm2XtOI0eR/O4syvpexpYFXbA/im7tCSUDf3znF9qC+yizLbI0xv5VSjT48auIm+f/04jLFl7YF5KUxZgoAC6317CC/7G67m7v4/15YyC4W1vSZ/wEC2bpucGsIagAAAABJRU5ErkJggg==);\n}\n#music .M-control .center .M-voice-control .voice-no {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAADyUlEQVR4Xu3b/VXbMBAAcJ01QOkG6QTVOw9QmKBs0HQCwgS0EwATABNAJ4AF7LoTkBFgAPv6jifnKX7+kGS3tkTyt6xYv0gn6aSAOHz2BODgsS9wAGn0iNlBlFJHSZKcAcApER0JIR7yPD+fq+fOCqKUUkmS3APAygQgous8zzdzoMwGgohrALhpazQRvVRV9akoipf/jTILCCLeAMC6r7FlWZ4URfEUNQjHCynloxBCDTU0ehAdLx4BgAPn4CdqEI4XQohLWwzWihYEERnCecaIDkTHi3shxPHg+GgpEBVI1/rCBSYaEJ940QYVBYhvvIgORMcLXnWeugyLoBZmSqmV3nTxIsorMI7BWdSQmbLr+6IsBiRNU54qJ+v6QYMg4hUAnPk2Ysrn2nqIUupYSnnB30NE26qqzsfsiBHxgvMwQgjeVV9nWfaw2+1yzJBSPk/ZqDF1NUF4bSOl/N2os9DlnNIEXZtMIjrfgSypd7TtZdI0fRBCfG1BdkIZ2HEXO5A0TVl/cFs+5ld3ebbZQxDxCQC+dNRhhWKRfng1Qcjlhf912RaQDQBc9nxvL4oFBld9FwwIvy0iFgDw2RXFBoOI/lRVdRwUiM7Q89CxRnHB4BkrKBDuGS4oXH4oZVn3jHr6Dg7EBUUPrc6JoonB5YME0Si8biqEEB98AnwbRtAgGoUXa3xU4YTShRE8iA9KH0YUIC4oQxhRgSRJYnPmM7iiDTao1oHU9QBMCNGLEjSIB0bt2IkSLMgIjF6UIEEsMX7pXHDflPyUZdmJuY4JDsQS4y7LsrVOKvWuU4joNs/z7zVKUCAuGGbQHVq8mSjBgPhgOKK8XeMKBgQRn5t30Rp7mLdh0rWvsRk+nJQyQThR67Qn8NlU2T5jZswsEuC9GLY9hYh+miBdSVzbNkxarplCTNO0K8VphWGD0sy6d94KnLSllpW15FTbzoycMAZQXsuyXO3dQrTIWVo2Z3yxtoMqRPxhnDPzdHnr+016GF7xZWEAeCnLclMUxXYPxCbw+L6A63OLOdtdCspiQHR+ge+f8zkIX5abZeZZFIjZvfmA2aa7J0nCQa/veMCmml2ZxYLYtkKff1wJIb7ZPtNXLniQunE8EwDA25WFMZ9oQBhB/9OBe4t3/IkKRAdmryOCuldFB2LMVkNnsa0jK0qQGkVK6RxsowXxDbbRg7gG23cB4hJs3w2IbbB9VyA2wbYsy49j7qD6Lgpn+Vem+bKI2HaZzivx44tgPjc7iBFXNkS0AoCtTtY4XcadAoPrWATIVI2Zop4DSEPxL5YQHsqr5mdTAAAAAElFTkSuQmCC);\n}\n#music .M-control .footer {\n      text-align: right;\n}\n#music .M-curBar, #music .M-allBar {\n    display: block;\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    height: 4px;\n}\n#music .M-curBar {\n    width: 0;\n    background-color: #00bfef;\n}\n#music .M-allBar {\n    width: 100%;\n    z-index: 2;\n    cursor: pointer;\n}\n#music .M-tip {\n    position: absolute;\n    bottom: 12px;\n    width: 50px;\n    height: 17px;\n    line-height: 17px;\n    font-size: 10px;\n    text-align: center;\n    background-color: #fff;\n    border: solid 1px #e5e9ef;\n    border-radius: 3px;\n}\n#music .M-tip em {\n      border-width: 8px;\n      border-color: transparent;\n      border-top-color: #e5e9ef;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: 17px;\n      top: 15px;\n}\n#music .M-tip i {\n      border-width: 6px;\n      border-color: transparent;\n      border-top-color: #fff;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: -6px;\n      top: -8px;\n}\n#music .M-menu {\n    position: absolute;\n    left: 0;\n    bottom: 100%;\n    width: 100%;\n    height: 0;\n    background-color: #fff;\n    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.25);\n    border-radius: 0 5px 0 0;\n    transition: height .8s;\n    overflow: hidden;\n    display: flex;\n    flex-direction: column;\n}\n#music .M-menu .header {\n      height: 33px;\n      background-color: #00bfef;\n      padding: 10px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n}\n#music .M-menu .header .list {\n        color: #fff;\n        font-size: 14px;\n        font-weight: 700;\n}\n#music .M-menu .header .close {\n        width: 20px;\n        height: 20px;\n        display: block;\n        border-radius: 50%;\n        background-color: #fff;\n        color: #00bfef;\n        font-size: 20px;\n        text-align: center;\n        line-height: 20px;\n        cursor: pointer;\n        font-family: Microsoft YaHei,Arial,Helvetica,sans-serif;\n}\n#music .M-menu .body {\n      overflow-y: auto;\n      flex: 1;\n}\n#music .M-menu .body > div {\n        padding: 5px 10px;\n}\n#music .M-menu .body .title {\n        height: 30px;\n        border-bottom: 1px solid #edece9;\n        position: relative;\n        display: flex;\n        font-size: 14px;\n        color: #333;\n}\n#music .M-menu .body .title .select {\n          left: 15px;\n          top: 8px;\n          z-index: 5;\n}\n#music .M-menu .body .item {\n        color: #99a2aa;\n        background-color: #fff;\n        font-size: 13px;\n        display: flex;\n        height: 30px;\n        line-height: 20px;\n}\n#music .M-menu .body .item:hover {\n          background-color: #edece9;\n          color: #6d757a;\n}\n#music .M-menu .body .item:hover .hover {\n            display: block;\n}\n#music .M-menu .body .item .hover {\n          display: none;\n          position: absolute;\n          right: 20px;\n          top: 0;\n          height: 20px;\n}\n#music .M-menu .body .item .hover .play {\n            margin-right: 5px;\n            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABSElEQVRYR+2WMW7CMBSG/0fYyw3gBnCD9iidUZFYMjQTLGmkMCARMdObhBvADcIN2gM0DxnVVdK6lg1OPJCMeXb85/fn34/g+SHP66MT0DnQqAOzMHpmxrAKOhFOmzTeyXcNC3jNAXqsnzTeb9K3p1YETMNo0uNyUBVQUu9jm8aHVgTMQs8OfDMw+sVA0SID9w6hyT1jdAxVMDFjma3ihW4RZxCqYALKPFsluV7AhYHbIXwJozWYx3Wa6b1Ks0qIah6Ijlkaz61ywPsWiEQLwA/VvwwCPq2TpFDVvkCfIu10NWcO6EBzBqEq0/t9FNKB//Le6i7QgaZjwJkDQgCBJ3WaaSdIt60x6CBIV82TtT8MqJoHoNyLs25bk02HVUNia7NMQmdbYJLbTYz5uQu8O6DLe9saES5Nh/eGxGTLjK5jkw9dO6YTcAZlW0kwunbEUgAAAABJRU5ErkJggg==);\n}\n#music .M-menu .body .item .hover .menu {\n            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC0UlEQVRYR91WUVLaUBQ9N6H+1h1oV6BdQXEF1RWovx2Y4gzMQH7EjxKnpNO0pP2trqC4AuIKSlcg7gA/pUlO5wKJgaIBK9VpPt/c3Hfuueee+wSP/Mkj34//F0ChYrkgNwTomjl+co+Pe7PYXhoDxYrFiQtJt+XYB9MglgKgUK7mRYwOiDOAPgV1gTwn0M39Wtly3Xo/BrIUAMWKtQfgG4kjz2nUS6X6apC79kVkIz77JwBC4OXXZqOrl41ADLoiWDPN6EWsiaUwcNtoF8u1EkQ+gjxoObarcQmAYtlqQ/CapJ/LcT8MpQPIeoZPnLSajf10zLDSZ4MOyL5OgMDwPzvvzoYsVKvrYWhcqDZaTmN7JgCA56bJvSAwfKXrTgCpRHFcIsDJEehFEepfPtino+ngeatp5ycAPJQjFspWXQSHKjYY7Eoke8qs5ifYFsj2kgHUTkRkl4y2POfY14vfVKxNg9TzjVGhS2SgWKn5gLxqNRsTAr9tFO81BSMxyZpp8nLaYrXHJC49p/GHgMejWMoFK25sRnMD0J/D3PUhMOzpaqIZog9B2zSjo0ForJrAj7TKs7Q1FwDtoUl09GKCVzpeJHoiWCewqTYLok/AFUF92u3uApEJYFT54GJ4OXGUpi9OnBjM+IDCHe+93c6qfmIM4/UJQd9r2jvTybOqUl0EgbRV6WmrzQJx44Rj9ZL86Tn2ZgJgfJ729duSFsqWtmVtegL+qgWF8niuM2iN20Dy1HNs3YZzfZkaSFbrjF0+Yb8wvqtOFqF/biuOWQDYI8SNgHNds2Pf3wUQV7zfajZO5ip9HJTJQFJlxXIFeDsruY4myO3YepcCQJMOHTDQZSJ5CHUseyLiL1p1GuDcDCxS1SKxTwfA9Ds+CPXplPL8RcpKxaptz3qOxyEJA4VyrTt8tYJXESQ/XCoP8Gk+r2nfLK+pnE+nBQ9Q7L1SPDoDvwGgOncwDjIoMgAAAABJRU5ErkJggg==);\n}\n#music .M-menu .body .item .select {\n          left: 5px;\n          top: 3px;\n}\n#music .M-menu .body .left {\n        flex: 1;\n        display: flex;\n        justify-content: space-between;\n        padding-right: 100px;\n        padding-left: 30px;\n        position: relative;\n        width: 380px;\n        overflow: hidden;\n}\n#music .M-menu .body .left .icon {\n          display: block;\n          width: 14px;\n          height: 14px;\n          background-repeat: no-repeat;\n          background-position: center;\n          float: left;\n          margin-right: 8px;\n}\n#music .M-menu .body .left .icon-pause {\n          background-image: url(data:image/gif;base64,R0lGODlhDgAOAJEAAAAAAP///0up5v///yH5BAEAAAMALAAAAAAOAA4AAAIenI+pqyKMHDySybrusw8PrH2dM4omWYbomZIsq7YFADs=);\n}\n#music .M-menu .body .left .icon-play {\n          background-image: url(data:image/gif;base64,R0lGODlhDgAOAIABAEup5v///yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkEzQUQ5MjJEQjlBMTFFMThEMDRBNjJDNENEOTY3NjYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkEzQUQ5MjFEQjlBMTFFMThEMDRBNjJDNENEOTY3NjYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmRpZDozMjFGRTgzMjhCREJFMTExQkI4Njk1NTQ5Q0Y0QUZDNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozMjFGRTgzMjhCREJFMTExQkI4Njk1NTQ5Q0Y0QUZDNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAkoAAEALAAAAAAOAA4AAAIejI+pqwCMHDySybrusw8HrH2dM4omWYbomZIsq7YFACH5BAkoAAEALAAAAAAOAA4AAAIejI+py+0IwIqHKhsoztLo7oEfJEpjdJpqynHs96oFACH5BAUoAAEALAAAAAAOAA4AAAIdjI+py+0PFQBwLmtwploHC07c+I1hiYrkqaYrUAAAOw==);\n}\n#music .M-menu .body .right {\n        width: 120px;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n}\n#music .M-menu .body .select {\n        display: block;\n        position: absolute;\n        width: 12px;\n        height: 12px;\n        border-radius: 4px;\n        border: 1px solid #99a2aa;\n}\n#music .M-menu .body .selected:before {\n        content: '';\n        position: absolute;\n        display: block;\n        left: 2px;\n        top: 2px;\n        width: 7px;\n        height: 7px;\n        border-radius: 3px;\n        background-color: #00bfef;\n}\n#music .menu-show {\n    height: 500px;\n}\n#music .lg-btn {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n}\n#music .sm-btn {\n    width: 20px;\n    height: 20px;\n}\n.M-dot {\n  margin: 0 5px;\n  font-size: 12px;\n}\n.M-dot:after {\n    content: \"\\2022\";\n    color: #99a2aa;\n}\n.M-open {\n  left: 0;\n}\n.M-close {\n  left: -541px;\n}\n", "", {"version":3,"sources":["/./resources/components/vue-media/music.vue"],"names":[],"mappings":"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","file":"music.vue","sourcesContent":["@charset \"UTF-8\";\n#music {\n  width: 563px;\n  height: 115px;\n  position: fixed;\n  bottom: 30px;\n  background-color: #fff;\n  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.25);\n  border-radius: 0 4px 4px 0;\n  z-index: 1000;\n  transition: left .6s ease;\n  display: flex;\n  font-family: -apple-system,\"Helvetica Neue\",Arial,\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",\"WenQuanYi Micro Hei\",sans-serif; }\n  #music a {\n    cursor: pointer; }\n  #music div {\n    box-sizing: border-box; }\n  #music button {\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n    background-color: transparent;\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0; }\n  #music .toggle {\n    width: 22px;\n    height: 100%;\n    border-radius: 0 4px 4px 0;\n    background-color: #00bfef;\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAECklEQVR4Xu2aj1EVMRCHdytQKkAqECpAKlArUCsQKxAqECpQKhAqUCsAKsAOgArW+Z6bmfjm/Ulyl+TwvcwwA8Plvdsvv/1ls3cqGz50w+OXLYCtAjacwDYFNlwAdUzQzJ6r6sNTgDt6CpjZTxHZVdW9TQVwIiKfReRUVfl90qOGAl6IyJ1H/UFVv02ZwOgACNbT4NADPxORc1X9PUUQtQC8F5GvcwGjBPzh15RgVAHgKmAXeLZk1VHDJUBU9aqnMmoCQPofE4IDFDAue8CoCSA2wwQOs0tQBqmCZzSpI6oBmDPDcxEJAb1yGvsrUoRrj1X1IpVc6XW1AQQzXFgTUDGKCCCA8kZEXs4Fgmm+ramG2gAIEFljhkeqSkBLh5mRNkA7jtSBGph7U7rKq+ZVBeBpQE6/8xRgNVdC8DmAA0IAQfBAGN0XWgBA4tfRKpyo6mnKaroi2CFIDbbMo5R5OddUB+ArygrG+c3fnzLUgGqYvzaNcoLn2lYAFlWGYdujXrhaVR26Ejhf3KjqQW6QXT0gyulghsvuh/+z0vwA5J98N7NQWO2NWUo3UcCcGaYu4Kw6DDAiFYx6wmwJgL3+R2r00XWhVMY4Q8k8Wp+hGQBXATLfpVniAYaqkD/D8XkVI+bfqipF0yijNQD29S+r3DyqDkOVyDbKD+AYoxZGrQEQ1L2IXKgqO0PyMDPUgvRRymgQmgKIzPC1iODm2ZWdmSF/qksr/YyYeg8AwQyL3dzMQnWZraR5yTUHEJnh/ZCixsxC93lQXdALQLj5g9JTnpslu8LZkPZ7LwChWzRIwl4dHg5RUhcAngYUNTh6kRn6Z8z8RFWL4yiemLx/LbnQ3fy7iBSboUNgNyhOpW4AIjO8G3LONzMAFB+TewMY7OT+FIomy9pO0yIx9gYQzJA2OGVy9jAzuk1JzZXJAfA0mHV7VHUnO/q/zyHtSZpgCNbMQrco2wy9FqBXSGVYNLqmQASBM8F1rhl6k2RfVdlSi8ZUAFRpd6UQmQqAwWaYEuykTNDlSyVI8Ax2gYfW7xY1V4CZ8ZSIYJcZF0+PinM6VwnNAPgZntI3rPiye6UlPlrPbx2QJgCirW7d/cz+P2RfT/qC6KLqAMyMd4Wy+n9DDjeTAmBmoQuce187Jf3C3C+Zqa1kUsoc7+KWPAh5VFW6x01GFQBeonJIWWd4i4IsPhiVEKsFIBxzc+/pke1xzIef626gFgAefpTImGMtZXGzMTqAAbk/qEFaSqwGgBLnv+VNsVbOH8OqAWDZ2yDLFqnLyoebqQEg9Q1RDI9eXtOcn1+F0QHwBQkFEG+AEnz3V+irAHAIPLQgHUItQNeH/h8vRXcPvFoKlLpxr3nVFNAroNzv3QLIJfa/Xf8HsXeZUPFFXZ4AAAAASUVORK5CYII=);\n    z-index: -1; }\n  #music .M-main {\n    padding: 10px;\n    width: 541px;\n    height: 100%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    position: relative; }\n  #music .M-face {\n    width: 95px;\n    height: 95px;\n    margin-right: 10px; }\n  #music .M-warp {\n    height: 95px;\n    display: flex; }\n  #music .M-control {\n    flex: 1;\n    display: flex;\n    flex-direction: column; }\n    #music .M-control span {\n      color: #99a2aa;\n      font-size: 12px; }\n    #music .M-control .header {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      font-size: 14px; }\n      #music .M-control .header .menu-btn {\n        background-repeat: no-repeat;\n        background-position: center;\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAgCAYAAABkWOo9AAABRUlEQVRYR+2WwU3DMBiF308XKBPQDSgbMAIXnAPCoZe63MoG3YD0BOWSpBKHhgMZoRvQERgBjgjBjwJYDVUj1dUvlEb2LYrz8vy9+MWEHRm0Iz7hjUon1QyiN9PsgoAQjHwQqnGZ0iSdJUx0IEWOwAujg6sqvUqid/dZlz/wZB+kFo76Z2pRXE+mD0OAr6VMWp1PoHepVbJOdyujBek9IK6F0W9y6WwEomMwz00YjFai/7knNda8oyzdjM0kBUtCxxOVoNi8b/Q2zSIQDol4bM6D3K4wjh/bb633okc7guSeB1r1nAv/T6kzXkyo9q1IrQp/xcyr0aptjdau8IvoidAFcVSOvvQbPZGLnnKjTyPn6OUMyCj5HpXhuFTxRP+VaFXh/x4BRU/4AHzh1+qEn4Co4wvfYcf5enKAtdFUT3QjTA6TvgCUWZsh4jKUuwAAAABJRU5ErkJggg==);\n        background-size: 20px;\n        width: 20px;\n        height: 20px;\n        transition: .4s; }\n      #music .M-control .header .menu-click {\n        transform: rotate(-90deg);\n        -ms-transform: rotate(-90deg);\n        -moz-transform: rotate(-90deg);\n        -webkit-transform: rotate(-90deg);\n        -o-transform: rotate(-90deg); }\n    #music .M-control .center {\n      flex: 1;\n      display: flex; }\n      #music .M-control .center .M-model {\n        margin-right: 20px; }\n      #music .M-control .center .M-play-control {\n        flex: 1;\n        display: flex;\n        align-items: center;\n        justify-content: space-around; }\n        #music .M-control .center .M-play-control .play-wait {\n          background-image: url(data:image/png;base64,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); }\n        #music .M-control .center .M-play-control .play-go {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAGEElEQVR4Xu1bjVHkNhSW7AJCKjhSQXxyAbdXwUEFgQoCFQQqOKjgoIKDCkIKkHAqOK6CgwKsl/kcrUfWSmtprV0cNp5hmAFb0vv0/n8428FTVVXFGHtXFAV+H3LOD33bElHDGHsmogci+t40zdO2j8e3sUFVVQdlWf7GGFsQ0YJzfrDhPg3A0Fo/NE1zv+Eaaz/LCkBd1yD6yPxkPS8RPTPGbrTW1zk5IwsAIJyILkKsnRWJfxe7a9sWQDxMXXsSAFVVLYqi+BJDOBH9xRjrZBws7R68LMsDIqo45xURQU/8GkEcgDifwhEbAWBk/Ms6VocSw01pre82uSmzx8ISqZ8CivOZc34hpbyOAGzllWQAzK1/XaPYbtu2vWqaBred5QEYRVFAt0DM3gUWBTecNk0DXRH9JAFQ1/XvjLGrwOog/GIKO8acWghxEgKCiJ601scp4EcDIISArGPzwUNEf2utzzZh8xiCQ+8IIcANZ4yxgWjAWmitP8aCEAXAGuKvlVI4xKs8cLCKorjxKUwiOlVK3YwdbBSAAPEvjLETKeXd2Aa7+H9d1yAUPkj/xHLCWgAMm/3hEPHStu0ilsV2AQD28J01BoQgAHVdQ+t+/S8QvzwjFCTnHObZ5gQoxvch6+AFoKqqw6IoHh1TN8ubdzlMCHHFOYe1sp87KeWxjxu9ANR1/ScCGfuDtm2hWSe7nrsQiYBO8CrFFQACbHSplLrYxeFz7GEcpwfbOhh98IsrCgMAzIffbNaHD6+UGnBDjkNuew2YyLIsHx19sGK2BwD4NGnbtlAg2dzabRNurx+gB1zQJ1p6AAK3/6qOzlSwDE2NEz/cSil7j7YHQAhxxjn/bG0KrX+YGlxMPXTu7306rW3bngt6AOq6hrwgZ9c9RDRJ8RlTOvDOsK5S6tJjunAj3ijP934qSHVdI0LsYwYiOldKdUFdB4BPYdgopW5o1lyUZQlzOniklD7LA439wbeP7/3U83h0QSOlfN8D4DoPOTQ/8gZzAQDcWJblN8ev6ZR7dxse9o+KpNbdxJwAwDmFEFCGfZptKQbcpJ5+OOgMTEUqy81NBAwAyB/Ygd29lPKIu0EPEhxKqV4ZbkL8HAFwORKeoVLqZ+4qCCLKYvvnJgJG1MnldHAAkhqfcpm/5TpzBMDVAwjwwAEDE5Qr6psjAJ7LPgcACH76YuVbBsAj7pcQgRW5yJHaniMHRAGQw/OaoxXwmUK4+yscsPcATI0BZm4FBs5QxwFCiCc7Xt47Jbj3ZnCfHCE36Fs6Qq5c7J0r7FaA+mTBpoHQHM2gxy95kVIe/B8OB5IFby4h4kn6dHnBLiPkqac9SCk/vhURGE2J7VtS1E762HUBN2c2yRrMKRgSQvxwyn3DtLgRg0FhJFRMjBULUxdY6SnyFVlN45O3f3hqUTa6MGKSo6iZ2QWESVwQC9a23jOlMfQ52OD6S2OBzCnbm+KocV7Q5T3gAsbYZIuwrRseqUukl8cNF/j6bCbVCXcNgBFnlOXs9L632OttkXEjRBCQK0zeBRiB1r5jX1tfsEmqLEs0RdgKMakDcxeE+vYINEkNFJ/9XVKbXEzf3WsRvkZ8v2utq6Q2uSURmzYfvgYIQojPpnfY3n60tW+0VTbUhso5P51Dq6yx9SDedbpGiQdSowDgJR8I+DsRXSmlzl/jxo3ZhqlDZ+hKMTdbs/SSuBAIGIMxYys7baIUQqDUDffdnUiLuvklXVEcYOkEt5Gqv3wiwkTXZY6q0jqOWjeghTEdrfVRSltfEgCG7dD6gopyaIYHQNzmbKs1js2nkcm0+7ZtT1K72pIBsFxm9Oj3ZXX31jC+gqEpIrp7fHzExFjSA6IZYx8wK+SbVLEWewEwy66vpE1ilWBoUTNAhYmN0CCT/SnGYQEK2teRexgMNxVFcWjG5brxWp9i85xjo1uPcoRSkFw3yJSyTsK7GNC6ySFmG4lA6KAm+YA0e1A0Eoh0XwWrQ79gJC/bUHVWAJYnNs4Jokp0mePHqzDHwEDuDuE45xwh+Vbmk7YCgEuYSbpCxjEa28l6gHgEYJ2OgH+RqtHHAPX9/x+Mrc0NCfIQ+wAAAABJRU5ErkJggg==); }\n        #music .M-control .center .M-play-control .prev {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABZklEQVRYR+2W4U3DMBCF79kD0A3oBljnAdoNYAPYAJig3QA2aNkANigD2PIIXYEJjE5KpAgSx0kcKqHkZ2L7vrx7vjvQhR9cOD4tAIsCSQWMMSsANzHGrxBCGGJYY8xaa71xzr2l9iUBrLVHIrqXA5xzWekSaKXUDsCT7IsxPnvvX7sgkocy8wnAJheAmR+I6AXAqhHwwzl3NytAJfeBiLY/A8UYP733v97X6yYrwMx7ALuuP5wNwBizVUodAKxTJisOICbTWovcnXltAhUFYGZxtji8abLk7SwGQESnNpP11YaSAH2xWr//HwCpaAD2RHQ1RIpiCkgprgqOlNXbXIiiAHVQa61cQekTvWrMAiAgVT0QiKQaswHUalQV8Qjgui0tswPUaiilpCc8/nkzagZsU2OSAmMGEgFqdshJA4kYTfxGROcQwjn36lVpkZHMOOfeR49kQwKOXZs15409PGffArAo8A2FNd8hJ3FJnAAAAABJRU5ErkJggg==); }\n        #music .M-control .center .M-play-control .next {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABRklEQVRYR+2W0W3DIBCG7zboBu0IFgzQjtARnA3SDewJ6o6QDTKCOwDoukG6QTIAdxUSSDSV7QTZuA/mFQ4+fu6OH2HlgSufDxvApsCkAlrrV+ccEdHpnoStquoJER9F5IuIzkOxowBKqT0ivvtgEWmste2tEFprCWsPxpg6F6BHxOcYLCInZt4RUT8FEgFE5NNa+zILQALSMXM7Ju2iAOFJRtVYHCCR9Oic88/yK9FKAvgEPSPizhhzjGBFAa7UePMluxZAVKMBgC7kyvxVMFWC6fwiZfjvAfytYwMrrcAltOxujSQ8OOf2sR8UAxCRb2aur/+HIgAi0lprfcn9GYsC+MQKtx70CEsBXACgTlvuUEnOBZAakg9mbsa+4BRmFkPiN1RK1czcZ1iyCgAeAMDbuTxLdk/Hy107aUpzN741bgPYFPgB0WE7MPsLEL4AAAAASUVORK5CYII=); }\n        #music .M-control .center .M-play-control .M-model-list {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACvUlEQVRYR8VX0XHbMAwFxAHiThBvUIYcIO4ETSdwMkGTCeps4ExQe4KmE8QdgAw7QdwNmgFI9KCjfJRMW2KtO+tXFPEAvPcAIZz5wTPHhyIASqklIn703j8459wY4IsAaK1XADDnwES0CiEwkL+nACkCwIGklLOqqlaIeElEHHxprX38XxDFAJpASqkFIt4DwAURbUMId865TSmQXgBSyokQ4jMRTTOXTyKI5tUXY8xzCYiDAKSU06qqviHi7ZALiei3tVamZ7lKAHAZQnh0zm1z92QBKKVuEfF7JNsf7nMIoY/1224QpZRj1USuPFhrmcStZw9AEvydiO5zHw2pSMIVTmYZuXLXva8FgBkuhHgBgHfv/WwsrUsppRCCCXrhvf+UkrUFQCm1ZXl576+6weMl18aYJ85OKVUrIFeNEMLPzPdNcs4Yc9V8twOgtb4BgB8AsDbG7BFPKbVBRAaASaWy3SCiX9baWfdlYmQ7taQAapfLZR8NiGU4bcrHII5wYY+Q8Q5uxWua5A5AZOzUGDMpIVnpWa01u+db04a0AnSodLHnzOS5tfZD9IhXRMyCJaInay1zZO9JW8kvSwCwqcy4txHAnqaTaBtrLZ8fDoAVwKzmDEvLWnJea92qdAkJmUC1DON8mBNRtgU5GfaS8OwyjERrjKjlVmPIsPGOLtGzVszDI4TAIPoG0KD2s4tWVfXCqun6zMFhxCAQcdFY76BIedazHHmsT4jo+DA6MMFYHbz/rbvjljNDxOw8QES29htEZAc9OFmPLiRCCNZyvYR2pxh7gRDibUBl1t77RdFCkl4aJTfrrlpxRf/KZ+PCUU/J5OE98blva+7dCY9lOMZiehKAKE9eWus5EcFuvPe8IWd3wG5CJwNoLoxS4z+n69iWPcbnqjkagFRBAFD/MwxZ0UcHMEAVrSNnB/APsNHMMIbwA6MAAAAASUVORK5CYII=); }\n        #music .M-control .center .M-play-control .M-model-loop {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACqUlEQVRYR8WX4XEaMRCFd08FQCowHUSWCjCpwKSC2BXEriC4A6cCmwpCByYFSFEqCO7ALkDazDI6RnfW3emAGfjHSGg/rd7uPhDO/MEzx4dRAEqpR0T87L2/d865U8CPAtBaPwPANw5MRM8hBAZ5OwZkFAAH0loviIgzcUFEHPzRWvtwKMRogDqQUmqJiHcAMCGibQjh1jm3GQsyCCClnAohrololjl8GiHqpa/GmPUYiE4AKeWsqqofiHhTciAR/bXWynQvZwkALkIID865be6cLIBS6gYRn6LYXvmdQwhDqt+2gyilHFdN1Mq9tZZF3Ph8AEiCvxPRXe5HJRlJtMKXeYxauW2f1wCQUs6FEC8A8O69n5fUOmtkqBSllFIIwQKdeO+/pGJtACiltlxe3vvLvuAMWlXVNQAsAODVWjsfykpyOWeMuaz37wG4vgHgFwCsjDG9wtNac/2v68ooAYg9ZNfI0iykAPVi7+0zKp+XAsSn+JNecg8QFTszxkyH0pk2IwAoBohZICL6XUOnGWgslEDEOh8FoJTaIOKVMWYX+xwA3Bv2mU6fgDvVxFr7qeT2vOeQDGitO5/g7CKs2+9gGR4qwsRP7IdWVyNqdKv2k3Aac89UCyu3VjeitAIaIuQvyaa3EAJDZAcQ78sF6fIDXP9VVb0g4rTdZTuHEU8wRFwaY36WijK3TynFpoXH+pSI+odRxwTj6mD/t2qPW74ZIk6ycx6RW/uCS46HW9dk7TUkQgg2FDsT2p5ibFiEEP8KsrPy3i9HGZL00GjJ5m2rFS3692haOEurFgz7xPXQqB70hH03PIUxPQogVg6bVnY8u6cCgI33nh1y1gO2L3Q0QH1gNCls1a/is3xQfFasBSIatYU9JQDs/jOUWPSTZWAUZbL57AD/AUhEsDD2Jvd3AAAAAElFTkSuQmCC); }\n        #music .M-control .center .M-play-control .M-model-rand {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfElEQVRYR+2W7XEaMRCGd08FmBKcCqyRCjCuwJcKAhXEHQQqCFRgqCBOBSYFSKNUYFJB7AKkzSwjEUXcGe4c8DgT/bqZO90+erUfL8IrL3zl+PBvA0gpJQAMnHOrNqWPqoBSaoWIlwBw570fO+ceS5BTAQARPSLi2Bhzl0OcDCAL+ocaWwCllEPEi5a7cgCw8N4vm2RMe6SUAyHENQDURDRExEHL/1bGmCt+lwNMAGDYtCHeY5JxYoyZl99JKYdVVd0i4jm/I6Lv8fms/JaIptZajndYGfLJqqqqEXEGAGdEtLDWjtOPlVIjRLyNgachhIVzbp0l4eZTIvoRQhjlVdEpByIIZ/aF9/6Kf6S1rgHgCwA8ee+Hzjm+rs3KAYhoHkKYlFfYCYB/mtSw1i7i8wMiYhk8ArBidXnqv1YFSqkJIn4iojED9WnrnRXIgyil1pzpxpi2bN/L1BsgltxPAPhqjOE86LVeAjAUQtznJdWH4O0CZLX/vuzvXZTorYDWmofKtff+HTedLkFfXIZSynMhxAMRfbPWNrbvQ4F6KZA6XOqG0Xisyy4X+8Rl9AKNKnUG0Fpzw/kAAEtjzIhPqrUmAHARaGs6Eih7AQCYWWunpTIHA/C0E0J85m7M0ocQ6nRipdQMET9G03FjjFmWsyAGZkh2Rtt5sQXgoUJEO34AETmgzMbs3Fp7U54kVkWalux+XNy30yXz1p0DsEw7szuNUURcee95mrVmfBxODMeju83cbLyCtZYN628/wJtZ3vJkzznafZne5LI4eJyOm2s4OAf2BWt6XxiSJyLiRNw4obROAhCTlp3QzvUdFSAm9uA5r3BUgEOu7T/ALzGKdjDAGQYvAAAAAElFTkSuQmCC); }\n      #music .M-control .center .M-voice-control {\n        display: flex;\n        align-items: center; }\n        #music .M-control .center .M-voice-control .M-all-voice {\n          position: relative;\n          display: inline-block;\n          width: 70px;\n          height: 3px;\n          vertical-align: middle;\n          background-color: #e5e9ef;\n          cursor: pointer;\n          margin-left: 5px; }\n        #music .M-control .center .M-voice-control .M-cur-voice {\n          position: absolute;\n          left: 0;\n          top: 0;\n          width: 35px;\n          height: 3px;\n          background-color: #00bfef; }\n        #music .M-control .center .M-voice-control .voice-go {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAAEk0lEQVR4Xu2b/3XTMBDHdfYApBMQJsCcBqCdgG5AOgHtBC0TtExQmKAwQcMAVs0EDRPQDiCLd3lynuOc5F+JHTvxv3H8rI/uvvdLBnG81gjAkcc6gSOQgkX0DiSKokkQBF+EEDMhxAQA5lrriyRJXvqw3l6BRFEUBUHwAADTwuJ/xHFMgDq/egOCiDMAuHetWGv9LkmSRddEegGCiPcA4LUArfVZkiTzUQMhvQjD8FEIEZUt1BhzoZT6Xnbftn/vzEKsXjwCwKTKIowxX5VSN1Xu3eY9nQAhvRBC3FaFQQscLRBEJBCXdXdxdECsXjwIIU7rwhidhXjyi8psRmMhTfSCozQKIE31YhdArMtS4ndujKEy4KpKGN9KlGmrF7sAIqUk/TrPP7tKbuMEEkXRlIouACBRLE2kKotDxRvbuoyU0jhAexM+Fsg2Tb/i+jdu2wIQcpM3xQeT+6RpSmVBwr3bBhAp5VMfFsG8eKtMFREvAeDWYSWLNE0/cC2GNSCIeAcA1Jvo/fJZCCJeAwDpw4vW+sq121JKqoU+O6B8U0ptJIwrIKQZYRg+907CvoALCLdpWmvabdYFEDEBgPfcuriKegVkn6zDl6lyYunTBRsBqa+yoSdCiHkcx2d5WCsg+6Id2cu5LMQTPZy64GtGFa0kD4QNU325UB2Xyb2js/WIiAsAeMusZ+0/gwNCCyrRBbb1GEXRqW1ObTDRWp9kEWeQQGynnsSS2/ENXcgIuEDmM9hBAqEFluw4ayWewPErjuNlmj9YINZ15gDwkUnq2PSc2hJhGFLiuXZRlFJKnYwBiGuUsdrx4uKllGxKn+nIoC3E5hj/uEgYx7GrTmOtKgu/gwbic5sjkIKZuCZ/LmHNIs3gLURK+VMI8anoNq7JHyLeAMC1S4gHDwQRWU3wuAxb0Y9GQ1w12EFqiKtlYYz5o5Ri254uixpF2HVVscYYtvlDuuGoll/jOF7OnAetIYj4zBy2Ea6GkZSS0nPqxhev4afuHuv4q5QqnkhaAnC1FI0xNLO5G6yF+I5W+GYvHotaFYODcxlb+j9xrlIippXqnjwQtujZt44ZN5HL3tGVjJVAXKuM80DYjG8PgdSeyHmy043wnO+6e08Fdg3G02TmLNnZS/XpjXcMUdar3BcgTHTxwaBDwRSauXNtbM9krWdgO0p0FJKbYXTKxDe5o/ZhEAQ0hKdO1zJccpdntPKqtZ6WjjLpofsCpe2w2zd4852BZbtKVpVpWEyzz16spS2QrR6HyJuf7W5PjDFlZ0TOXTPUJr62CyCtDszUXYTtb5I/s9P2us9rCyTvMpSwCSHuOjtSlV+sK+Z3DcRGzVmapnQwgD0ZwL3TVs6YFR9sQyNZS2P9aWshdTcgu38nQLYRrUYHxEKhxIh6nuyBFd8ujhJIBiUMw9piO1ogmRXUFdvRA8lUHwAqie1BAKkjtvm2XtOI0eR/O4syvpexpYFXbA/im7tCSUDf3znF9qC+yizLbI0xv5VSjT48auIm+f/04jLFl7YF5KUxZgoAC6317CC/7G67m7v4/15YyC4W1vSZ/wEC2bpucGsIagAAAABJRU5ErkJggg==); }\n        #music .M-control .center .M-voice-control .voice-no {\n          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABACAYAAACjgtGkAAADyUlEQVR4Xu3b/VXbMBAAcJ01QOkG6QTVOw9QmKBs0HQCwgS0EwATABNAJ4AF7LoTkBFgAPv6jifnKX7+kGS3tkTyt6xYv0gn6aSAOHz2BODgsS9wAGn0iNlBlFJHSZKcAcApER0JIR7yPD+fq+fOCqKUUkmS3APAygQgous8zzdzoMwGgohrALhpazQRvVRV9akoipf/jTILCCLeAMC6r7FlWZ4URfEUNQjHCynloxBCDTU0ehAdLx4BgAPn4CdqEI4XQohLWwzWihYEERnCecaIDkTHi3shxPHg+GgpEBVI1/rCBSYaEJ940QYVBYhvvIgORMcLXnWeugyLoBZmSqmV3nTxIsorMI7BWdSQmbLr+6IsBiRNU54qJ+v6QYMg4hUAnPk2Ysrn2nqIUupYSnnB30NE26qqzsfsiBHxgvMwQgjeVV9nWfaw2+1yzJBSPk/ZqDF1NUF4bSOl/N2os9DlnNIEXZtMIjrfgSypd7TtZdI0fRBCfG1BdkIZ2HEXO5A0TVl/cFs+5ld3ebbZQxDxCQC+dNRhhWKRfng1Qcjlhf912RaQDQBc9nxvL4oFBld9FwwIvy0iFgDw2RXFBoOI/lRVdRwUiM7Q89CxRnHB4BkrKBDuGS4oXH4oZVn3jHr6Dg7EBUUPrc6JoonB5YME0Si8biqEEB98AnwbRtAgGoUXa3xU4YTShRE8iA9KH0YUIC4oQxhRgSRJYnPmM7iiDTao1oHU9QBMCNGLEjSIB0bt2IkSLMgIjF6UIEEsMX7pXHDflPyUZdmJuY4JDsQS4y7LsrVOKvWuU4joNs/z7zVKUCAuGGbQHVq8mSjBgPhgOKK8XeMKBgQRn5t30Rp7mLdh0rWvsRk+nJQyQThR67Qn8NlU2T5jZswsEuC9GLY9hYh+miBdSVzbNkxarplCTNO0K8VphWGD0sy6d94KnLSllpW15FTbzoycMAZQXsuyXO3dQrTIWVo2Z3yxtoMqRPxhnDPzdHnr+016GF7xZWEAeCnLclMUxXYPxCbw+L6A63OLOdtdCspiQHR+ge+f8zkIX5abZeZZFIjZvfmA2aa7J0nCQa/veMCmml2ZxYLYtkKff1wJIb7ZPtNXLniQunE8EwDA25WFMZ9oQBhB/9OBe4t3/IkKRAdmryOCuldFB2LMVkNnsa0jK0qQGkVK6RxsowXxDbbRg7gG23cB4hJs3w2IbbB9VyA2wbYsy49j7qD6Lgpn+Vem+bKI2HaZzivx44tgPjc7iBFXNkS0AoCtTtY4XcadAoPrWATIVI2Zop4DSEPxL5YQHsqr5mdTAAAAAElFTkSuQmCC); }\n    #music .M-control .footer {\n      text-align: right; }\n  #music .M-curBar, #music .M-allBar {\n    display: block;\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    height: 4px; }\n  #music .M-curBar {\n    width: 0;\n    background-color: #00bfef; }\n  #music .M-allBar {\n    width: 100%;\n    z-index: 2;\n    cursor: pointer; }\n  #music .M-tip {\n    position: absolute;\n    bottom: 12px;\n    width: 50px;\n    height: 17px;\n    line-height: 17px;\n    font-size: 10px;\n    text-align: center;\n    background-color: #fff;\n    border: solid 1px #e5e9ef;\n    border-radius: 3px; }\n    #music .M-tip em {\n      border-width: 8px;\n      border-color: transparent;\n      border-top-color: #e5e9ef;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: 17px;\n      top: 15px; }\n    #music .M-tip i {\n      border-width: 6px;\n      border-color: transparent;\n      border-top-color: #fff;\n      border-style: dashed dashed solid;\n      position: absolute;\n      left: -6px;\n      top: -8px; }\n  #music .M-menu {\n    position: absolute;\n    left: 0;\n    bottom: 100%;\n    width: 100%;\n    height: 0;\n    background-color: #fff;\n    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.25);\n    border-radius: 0 5px 0 0;\n    transition: height .8s;\n    overflow: hidden;\n    display: flex;\n    flex-direction: column; }\n    #music .M-menu .header {\n      height: 33px;\n      background-color: #00bfef;\n      padding: 10px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center; }\n      #music .M-menu .header .list {\n        color: #fff;\n        font-size: 14px;\n        font-weight: 700; }\n      #music .M-menu .header .close {\n        width: 20px;\n        height: 20px;\n        display: block;\n        border-radius: 50%;\n        background-color: #fff;\n        color: #00bfef;\n        font-size: 20px;\n        text-align: center;\n        line-height: 20px;\n        cursor: pointer;\n        font-family: Microsoft YaHei,Arial,Helvetica,sans-serif; }\n    #music .M-menu .body {\n      overflow-y: auto;\n      flex: 1; }\n      #music .M-menu .body > div {\n        padding: 5px 10px; }\n      #music .M-menu .body .title {\n        height: 30px;\n        border-bottom: 1px solid #edece9;\n        position: relative;\n        display: flex;\n        font-size: 14px;\n        color: #333; }\n        #music .M-menu .body .title .select {\n          left: 15px;\n          top: 8px;\n          z-index: 5; }\n      #music .M-menu .body .item {\n        color: #99a2aa;\n        background-color: #fff;\n        font-size: 13px;\n        display: flex;\n        height: 30px;\n        line-height: 20px; }\n        #music .M-menu .body .item:hover {\n          background-color: #edece9;\n          color: #6d757a; }\n          #music .M-menu .body .item:hover .hover {\n            display: block; }\n        #music .M-menu .body .item .hover {\n          display: none;\n          position: absolute;\n          right: 20px;\n          top: 0;\n          height: 20px; }\n          #music .M-menu .body .item .hover .play {\n            margin-right: 5px;\n            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABSElEQVRYR+2WMW7CMBSG/0fYyw3gBnCD9iidUZFYMjQTLGmkMCARMdObhBvADcIN2gM0DxnVVdK6lg1OPJCMeXb85/fn34/g+SHP66MT0DnQqAOzMHpmxrAKOhFOmzTeyXcNC3jNAXqsnzTeb9K3p1YETMNo0uNyUBVQUu9jm8aHVgTMQs8OfDMw+sVA0SID9w6hyT1jdAxVMDFjma3ihW4RZxCqYALKPFsluV7AhYHbIXwJozWYx3Wa6b1Ks0qIah6Ijlkaz61ywPsWiEQLwA/VvwwCPq2TpFDVvkCfIu10NWcO6EBzBqEq0/t9FNKB//Le6i7QgaZjwJkDQgCBJ3WaaSdIt60x6CBIV82TtT8MqJoHoNyLs25bk02HVUNia7NMQmdbYJLbTYz5uQu8O6DLe9saES5Nh/eGxGTLjK5jkw9dO6YTcAZlW0kwunbEUgAAAABJRU5ErkJggg==); }\n          #music .M-menu .body .item .hover .menu {\n            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC0UlEQVRYR91WUVLaUBQ9N6H+1h1oV6BdQXEF1RWovx2Y4gzMQH7EjxKnpNO0pP2trqC4AuIKSlcg7gA/pUlO5wKJgaIBK9VpPt/c3Hfuueee+wSP/Mkj34//F0ChYrkgNwTomjl+co+Pe7PYXhoDxYrFiQtJt+XYB9MglgKgUK7mRYwOiDOAPgV1gTwn0M39Wtly3Xo/BrIUAMWKtQfgG4kjz2nUS6X6apC79kVkIz77JwBC4OXXZqOrl41ADLoiWDPN6EWsiaUwcNtoF8u1EkQ+gjxoObarcQmAYtlqQ/CapJ/LcT8MpQPIeoZPnLSajf10zLDSZ4MOyL5OgMDwPzvvzoYsVKvrYWhcqDZaTmN7JgCA56bJvSAwfKXrTgCpRHFcIsDJEehFEepfPtino+ngeatp5ycAPJQjFspWXQSHKjYY7Eoke8qs5ifYFsj2kgHUTkRkl4y2POfY14vfVKxNg9TzjVGhS2SgWKn5gLxqNRsTAr9tFO81BSMxyZpp8nLaYrXHJC49p/GHgMejWMoFK25sRnMD0J/D3PUhMOzpaqIZog9B2zSjo0ForJrAj7TKs7Q1FwDtoUl09GKCVzpeJHoiWCewqTYLok/AFUF92u3uApEJYFT54GJ4OXGUpi9OnBjM+IDCHe+93c6qfmIM4/UJQd9r2jvTybOqUl0EgbRV6WmrzQJx44Rj9ZL86Tn2ZgJgfJ729duSFsqWtmVtegL+qgWF8niuM2iN20Dy1HNs3YZzfZkaSFbrjF0+Yb8wvqtOFqF/biuOWQDYI8SNgHNds2Pf3wUQV7zfajZO5ip9HJTJQFJlxXIFeDsruY4myO3YepcCQJMOHTDQZSJ5CHUseyLiL1p1GuDcDCxS1SKxTwfA9Ds+CPXplPL8RcpKxaptz3qOxyEJA4VyrTt8tYJXESQ/XCoP8Gk+r2nfLK+pnE+nBQ9Q7L1SPDoDvwGgOncwDjIoMgAAAABJRU5ErkJggg==); }\n        #music .M-menu .body .item .select {\n          left: 5px;\n          top: 3px; }\n      #music .M-menu .body .left {\n        flex: 1;\n        display: flex;\n        justify-content: space-between;\n        padding-right: 100px;\n        padding-left: 30px;\n        position: relative;\n        width: 380px;\n        overflow: hidden; }\n        #music .M-menu .body .left .icon {\n          display: block;\n          width: 14px;\n          height: 14px;\n          background-repeat: no-repeat;\n          background-position: center;\n          float: left;\n          margin-right: 8px; }\n        #music .M-menu .body .left .icon-pause {\n          background-image: url(data:image/gif;base64,R0lGODlhDgAOAJEAAAAAAP///0up5v///yH5BAEAAAMALAAAAAAOAA4AAAIenI+pqyKMHDySybrusw8PrH2dM4omWYbomZIsq7YFADs=); }\n        #music .M-menu .body .left .icon-play {\n          background-image: url(data:image/gif;base64,R0lGODlhDgAOAIABAEup5v///yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkEzQUQ5MjJEQjlBMTFFMThEMDRBNjJDNENEOTY3NjYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkEzQUQ5MjFEQjlBMTFFMThEMDRBNjJDNENEOTY3NjYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmRpZDozMjFGRTgzMjhCREJFMTExQkI4Njk1NTQ5Q0Y0QUZDNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozMjFGRTgzMjhCREJFMTExQkI4Njk1NTQ5Q0Y0QUZDNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAkoAAEALAAAAAAOAA4AAAIejI+pqwCMHDySybrusw8HrH2dM4omWYbomZIsq7YFACH5BAkoAAEALAAAAAAOAA4AAAIejI+py+0IwIqHKhsoztLo7oEfJEpjdJpqynHs96oFACH5BAUoAAEALAAAAAAOAA4AAAIdjI+py+0PFQBwLmtwploHC07c+I1hiYrkqaYrUAAAOw==); }\n      #music .M-menu .body .right {\n        width: 120px;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap; }\n      #music .M-menu .body .select {\n        display: block;\n        position: absolute;\n        width: 12px;\n        height: 12px;\n        border-radius: 4px;\n        border: 1px solid #99a2aa; }\n      #music .M-menu .body .selected:before {\n        content: '';\n        position: absolute;\n        display: block;\n        left: 2px;\n        top: 2px;\n        width: 7px;\n        height: 7px;\n        border-radius: 3px;\n        background-color: #00bfef; }\n  #music .menu-show {\n    height: 500px; }\n  #music .lg-btn {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%; }\n  #music .sm-btn {\n    width: 20px;\n    height: 20px; }\n\n.M-dot {\n  margin: 0 5px;\n  font-size: 12px; }\n  .M-dot:after {\n    content: \"•\";\n    color: #99a2aa; }\n\n.M-open {\n  left: 0; }\n\n.M-close {\n  left: -541px; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -12442,6 +12538,291 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -12693,31 +13074,118 @@
 	            init: true,
 	            status: {
 	                playing: false,
-	                silent: false
+	                silent: false,
+	                menuShow: false,
+	                model: "list"
 	            },
 	            time: {
 	                cur: "00:00",
 	                all: "00:00"
-	            }
+	            },
+	            now: {},
+	            list: []
 	        };
+	    },
+	    created: function created() {
+	        var i = void 0;
+	        for (i in this.source) {
+	            this.list.push(this.source[i].id);
+	            Vue.set(this.source[i], 'playing', false);
+	            Vue.set(this.source[i], 'selected', true);
+	        }
 	    },
 	
 	    methods: {
 	        musicToggle: function musicToggle() {
-	            var box = this.$refs.box;
-	
-	            this.open ? box.style.left = "-541px" : box.style.left = "0px";
-	
 	            this.open = !this.open;
 	
 	            if (this.init) {
 	
 	                this.init = false;
 	
-	                this.$refs.audio.setAttribute('src', this.source.src);
-	
-	                this.$refs.banner.setAttribute('src', this.source.img);
+	                this.loadSource(this.source[0], false);
 	            }
+	        },
+	        musicSelect: function musicSelect(item) {
+	            if (item.id === this.now.id) return;
+	            if (item.selected) {
+	                this.list.splice(this.list.indexOf(item.id), 1);
+	            } else {
+	                this.list.push(item.id);
+	            }
+	            item.selected = !item.selected;
+	        },
+	        next: function next(bool) {
+	            if (this.status.model === 'loop') return;
+	            var length = this.list.length;
+	            if (length === 0) return;
+	            var id = this.now.id;
+	            var i = void 0,
+	                j = void 0,
+	                now = void 0;
+	            if (this.status.model === 'list') {
+	                for (i in this.list) {
+	                    if (this.list[i] === id) break;
+	                }
+	                now = this.list[bool ? i == length - 1 ? 0 : ++i : i == 0 ? --length : --i];
+	            } else {
+	                now = this.list[Math.floor(Math.random() * length + 1) - 1];
+	            }
+	            for (j in this.source) {
+	                if (this.source[j].id === now) {
+	                    this.loadSource(this.source[j]);
+	                    break;
+	                }
+	            }
+	        },
+	        selectAll: function selectAll() {
+	            var i = void 0;
+	            if (this.list.length === this.source.length) {
+	                this.list = [];
+	                for (i in this.source) {
+	                    this.source[i].selected = false;
+	                }
+	            } else {
+	                this.list = [];
+	                for (i in this.source) {
+	                    this.source[i].selected = true;
+	                    this.list.push(this.source[i].id);
+	                }
+	            }
+	        },
+	        loadSource: function loadSource(item) {
+	            var bool = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+	
+	            if (this.now.playing !== undefined) {
+	                if (this.now.id === item.id) return;
+	                this.now.playing = false;
+	            }
+	            item.playing = true;
+	            this.now = item;
+	            this.$refs.audio.setAttribute('src', this.now.src);
+	            this.$refs.banner.setAttribute('src', this.now.img);
+	            if (bool) {
+	                this.$refs.audio.play();
+	                this.status.playing = true;
+	            }
+	        },
+	        changeModel: function changeModel() {
+	            var ret = "";
+	            switch (this.status.model) {
+	                case "list":
+	                    ret = "rand";
+	                    this.$refs.audio.loop = false;
+	                    break;
+	                case "rand":
+	                    ret = "loop";
+	                    this.$refs.audio.loop = true;
+	                    break;
+	                case "loop":
+	                    ret = "list";
+	                    this.$refs.audio.loop = false;
+	                    break;
+	            }
+	            this.status.model = ret;
 	        },
 	        formatSeconds: function formatSeconds(second) {
 	            var minute = 0;
@@ -12753,6 +13221,7 @@
 	        audio.onended = function () {
 	            // console.log("onended : 音乐播放完毕");
 	            vm.status.playing = false;
+	            vm.next(true);
 	        };
 	
 	        audio.onloadedmetadata = function () {
@@ -12785,7 +13254,7 @@
 	            audio.muted = !audio.muted;
 	        };
 	
-	        vm.$refs.paused.onclick = function () {
+	        this.$refs.paused.onclick = function () {
 	            vm.status.playing = !vm.status.playing;
 	            audio.paused ? audio.play() : audio.pause();
 	        };
@@ -12819,7 +13288,7 @@
 
 	module.exports={render:function (){with(this) {
 	  return _h('div', {
-	    ref: "box",
+	    class: [open ? 'M-open' : 'M-close'],
 	    attrs: {
 	      "id": "music"
 	    }
@@ -12834,22 +13303,46 @@
 	    staticClass: "M-face"
 	  }), " ", _h('div', {
 	    staticClass: "M-control"
-	  }, [_h('div', [_h('a', [_s(source.album)]), " ", _h('a', [_s(source.player)])]), " ", _h('div', {
-	    staticClass: "center"
-	  }, [_m(0), " ", _h('button', {
-	    ref: "paused",
-	    class: [status.playing ? 'play-go' : 'play-wait'],
-	    attrs: {
-	      "id": "paused"
+	  }, [_h('div', {
+	    staticClass: "header"
+	  }, [_h('div', [_h('a', [_s(now.name)]), " ", _m(0), " ", _h('a', [_s(now.player)])]), " ", _h('button', {
+	    class: ['menu-btn', status.menuShow ? 'menu-click' : ''],
+	    on: {
+	      "click": function($event) {
+	        status.menuShow = !status.menuShow
+	      }
 	    }
-	  }), " ", _h('div', {
+	  })]), " ", _h('div', {
+	    staticClass: "center"
+	  }, [_h('div', {
+	    staticClass: "M-play-control"
+	  }, [_h('button', {
+	    staticClass: "sm-btn prev",
+	    on: {
+	      "click": function($event) {
+	        next(false)
+	      }
+	    }
+	  }), " ", _h('button', {
+	    ref: "paused",
+	    class: ['lg-btn', status.playing ? 'play-go' : 'play-wait']
+	  }), " ", _h('button', {
+	    staticClass: "sm-btn next",
+	    on: {
+	      "click": function($event) {
+	        next(true)
+	      }
+	    }
+	  }), " ", _h('button', {
+	    class: ['sm-btn', 'M-model', 'M-model-' + status.model],
+	    on: {
+	      "click": changeModel
+	    }
+	  })]), " ", _h('div', {
 	    staticClass: "M-voice-control"
 	  }, [_h('button', {
 	    ref: "muted",
-	    class: [status.silent ? 'voice-no' : 'voice-go'],
-	    attrs: {
-	      "id": "muted"
-	    }
+	    class: ['sm-btn', status.silent ? 'voice-no' : 'voice-go']
 	  }), " ", _h('span', {
 	    ref: "allvoice",
 	    staticClass: "M-all-voice"
@@ -12857,7 +13350,7 @@
 	    ref: "curvoice",
 	    staticClass: "M-cur-voice"
 	  })])])]), " ", _h('div', {
-	    staticClass: "bottom"
+	    staticClass: "footer"
 	  }, [_h('span', [_s(time.cur) + " / " + _s(time.all)])])])]), " ", _h('span', {
 	    ref: "alltime",
 	    staticClass: "M-allBar",
@@ -12877,21 +13370,105 @@
 	    }],
 	    ref: "tip",
 	    staticClass: "M-tip"
-	  }, [_s(tipText), _m(1)])]), " ", _h('button', {
+	  }, [_s(tipText), _m(1)]), " ", _h('div', {
+	    class: ['M-menu', status.menuShow ? 'menu-show' : '']
+	  }, [_h('div', {
+	    staticClass: "header"
+	  }, [_m(2), " ", _h('span', {
+	    staticClass: "close",
+	    on: {
+	      "click": function($event) {
+	        status.menuShow = false
+	      }
+	    }
+	  }, ["×"])]), " ", _h('div', {
+	    staticClass: "body"
+	  }, [_h('div', {
+	    staticClass: "title"
+	  }, [_h('a', {
+	    class: ['select', list.length === source.length ? 'selected' : ''],
+	    on: {
+	      "click": selectAll
+	    }
+	  }), " ", _m(3), " ", _m(4)]), " ", _l((source), function(item) {
+	    return _h('div', {
+	      staticClass: "item"
+	    }, [_h('div', {
+	      staticClass: "left"
+	    }, [_h('a', {
+	      class: ['select', item.selected ? 'selected' : ''],
+	      on: {
+	        "click": function($event) {
+	          musicSelect(item)
+	        }
+	      }
+	    }), " ", _h('div', [_h('span', {
+	      directives: [{
+	        name: "show",
+	        value: (item.playing),
+	        expression: "item.playing"
+	      }],
+	      class: ['icon', status.playing ? 'icon-play' : 'icon-pause']
+	    }), " ", _h('a', {
+	      on: {
+	        "click": function($event) {
+	          loadSource(item)
+	        }
+	      }
+	    }, [_s(item.name)])]), " ", _h('div', {
+	      staticClass: "hover"
+	    }, [_h('button', {
+	      staticClass: "sm-btn play",
+	      attrs: {
+	        "title": "点击播放"
+	      },
+	      on: {
+	        "click": function($event) {
+	          loadSource(item)
+	        }
+	      }
+	    }), " ", _h('button', {
+	      staticClass: "sm-btn menu",
+	      attrs: {
+	        "title": "加入列表"
+	      },
+	      on: {
+	        "click": function($event) {
+	          musicSelect(item)
+	        }
+	      }
+	    })])]), " ", _h('span', {
+	      staticClass: "right"
+	    }, [_s(item.player)])])
+	  })])])]), " ", _h('button', {
 	    staticClass: "toggle",
 	    on: {
 	      "click": musicToggle
 	    }
 	  })])
 	}},staticRenderFns: [function (){with(this) {
-	  return _h('button')
+	  return _h('span', {
+	    staticClass: "M-dot"
+	  })
 	}},function (){with(this) {
 	  return _h('em', [_h('i')])
+	}},function (){with(this) {
+	  return _h('span', {
+	    staticClass: "list"
+	  }, ["歌曲列表"])
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "left"
+	  }, ["歌曲"])
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "right"
+	  }, ["歌手"])
 	}}]}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-21", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-20", module.exports)
 	  }
 	}
 
