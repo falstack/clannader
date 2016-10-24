@@ -123,6 +123,9 @@
             init : {
                 required : true,
                 type : Object
+            },
+            id : {
+                default : undefined
             }
         },
         template:
@@ -161,7 +164,6 @@
                 order : 'desc',
                 sortby : 'updated_at',
                 limit : 10,
-                id : undefined,
                 api : null,
                 sorts : [
                     {
@@ -188,7 +190,9 @@
         },
         watch: {
             '$route' () {
-                this.getDatas(this.limit)
+                if (this.initData(this.init)) {
+                    this.getDatas(this.limit)
+                }
             }
         },
         created () {
@@ -271,9 +275,9 @@
                     this.isGet = obj.isGet
                 }
 
-                this.id = obj.id;
-
                 this.type = obj.type;
+
+                this.list = [];
 
                 return true
             },

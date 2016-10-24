@@ -100,7 +100,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <paginate :template="template" :init="init"></paginate>
+                    <paginate :template="template" :init="init" :id="$route.params.id"></paginate>
                 </div>
             </div>
         </div>
@@ -140,7 +140,6 @@
                     "</div>" +
                 "</div>",
                 init : {
-                    id : this.$route.params.id,
                     limit : 5,
                     type : 'Bangumi',
                     api : '/api/post/list'
