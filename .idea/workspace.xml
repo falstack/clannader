@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <file leaf-file-name="clannader.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/components/clannader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
-              <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+            <state relative-caret-position="564">
+              <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -86,12 +86,12 @@
         <option value="$PROJECT_DIR$/resources/components/bangumi/index.vue" />
         <option value="$PROJECT_DIR$/resources/components/vue-input/paginate.vue" />
         <option value="$PROJECT_DIR$/resources/static/sass/_normalize.scss" />
-        <option value="$PROJECT_DIR$/resources/components/clannader.vue" />
         <option value="$PROJECT_DIR$/resources/components/post/list.vue" />
         <option value="$PROJECT_DIR$/resources/components/post/show.vue" />
         <option value="$PROJECT_DIR$/resources/static/sass/_container.scss" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/resources/components/clannader.vue" />
       </list>
     </option>
   </component>
@@ -439,12 +439,12 @@
       <workItem from="1477229851863" duration="861000" />
       <workItem from="1477270718054" duration="3751000" />
       <workItem from="1477401208829" duration="282000" />
-      <workItem from="1477454260146" duration="2947000" />
+      <workItem from="1477454260146" duration="2998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1961486000" />
+    <option name="totallyTimeSpent" value="1961537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -837,57 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/components/clannader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="200" column="32" selection-start-line="200" selection-start-column="32" selection-end-line="200" selection-end-column="32" />
-          <folding>
-            <marker date="1477486787000" expanded="true" signature="36:176" ph="..." />
-            <marker date="1477486787000" expanded="true" signature="47:168" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="188:745" ph="..." />
-            <marker date="1477486787000" expanded="true" signature="207:733" ph="..." />
-            <marker date="1477486787000" expanded="true" signature="768:10350" ph="..." />
-            <marker date="1477486787000" expanded="false" signature="845:1221" ph="..." />
-            <marker date="1477486787000" expanded="true" signature="1242:10341" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="1264:1352" ph="{&quot;top&quot;: top...}" />
-            <marker date="1477486787000" expanded="true" signature="1369:1518" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="1414:1508" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="1536:8852" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="1557:8842" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="1707:8828" ph="[...]" />
-            <marker date="1477486787000" expanded="true" signature="1729:2157" ph="{&quot;id&quot;: 1...}" />
-            <marker date="1477486787000" expanded="true" signature="2179:2583" ph="{&quot;id&quot;: 2...}" />
-            <marker date="1477486787000" expanded="true" signature="2605:2993" ph="{&quot;id&quot;: 3...}" />
-            <marker date="1477486787000" expanded="true" signature="3015:3429" ph="{&quot;id&quot;: 4...}" />
-            <marker date="1477486787000" expanded="true" signature="3451:3816" ph="{&quot;id&quot;: 5...}" />
-            <marker date="1477486787000" expanded="true" signature="3838:4249" ph="{&quot;id&quot;: 6...}" />
-            <marker date="1477486787000" expanded="true" signature="4271:4655" ph="{&quot;id&quot;: 7...}" />
-            <marker date="1477486787000" expanded="true" signature="4677:5078" ph="{&quot;id&quot;: 8...}" />
-            <marker date="1477486787000" expanded="true" signature="5100:5480" ph="{&quot;id&quot;: 9...}" />
-            <marker date="1477486787000" expanded="true" signature="5502:5884" ph="{&quot;id&quot;: 10...}" />
-            <marker date="1477486787000" expanded="true" signature="5906:6288" ph="{&quot;id&quot;: 11...}" />
-            <marker date="1477486787000" expanded="true" signature="6310:6705" ph="{&quot;id&quot;: 12...}" />
-            <marker date="1477486787000" expanded="true" signature="6727:7169" ph="{&quot;id&quot;: 13...}" />
-            <marker date="1477486787000" expanded="true" signature="7191:7584" ph="{&quot;id&quot;: 14...}" />
-            <marker date="1477486787000" expanded="true" signature="7606:8000" ph="{&quot;id&quot;: 15...}" />
-            <marker date="1477486787000" expanded="true" signature="8022:8410" ph="{&quot;id&quot;: 16...}" />
-            <marker date="1477486787000" expanded="true" signature="8432:8810" ph="{&quot;id&quot;: 17...}" />
-            <marker date="1477486787000" expanded="true" signature="8873:8976" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="8995:10335" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9029:9288" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9056:9178" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9184:9274" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9315:9561" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9588:10060" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9834:10008" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="9898:9990" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="10091:10325" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="10144:10311" ph="{...}" />
-            <marker date="1477486787000" expanded="true" signature="10212:10291" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/components/post/list.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1256,6 +1205,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="844">
           <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+          <folding>
+            <marker date="1477487319000" expanded="true" signature="108:1046" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="145:269" ph="{&quot;publicPath&quot;: 'dist/img/'...}" />
+            <marker date="1477487319000" expanded="true" signature="283:655" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="302:649" ph="[...]" />
+            <marker date="1477487319000" expanded="true" signature="668:754" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="769:808" ph="[...]" />
+            <marker date="1477487319000" expanded="true" signature="826:956" ph="{&quot;vue&quot;: &quot;Vue&quot;...}" />
+            <marker date="1477487319000" expanded="true" signature="971:1044" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1092:1548" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1197:1545" ph="[...]" />
+            <marker date="1477487319000" expanded="true" signature="1232:1327" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1261:1317" ph="{&quot;NODE_ENV&quot;: '&quot;production&quot;'...}" />
+            <marker date="1477487319000" expanded="true" signature="1374:1485" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1428:1475" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1554:1601" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1623:1957" ph="{...}" />
+            <marker date="1477487319000" expanded="true" signature="1744:1935" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/components/clannader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
           <folding />
         </state>
       </provider>
