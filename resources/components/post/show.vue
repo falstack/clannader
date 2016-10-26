@@ -33,7 +33,6 @@
             text-align: right;
         }
     }
-
 </style>
 
 <template>
