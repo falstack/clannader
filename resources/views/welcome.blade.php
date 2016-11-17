@@ -15,31 +15,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 64px;
+            font-size: 14px;
             font-weight: 400;
-            animation: breath 3s ease-in infinite;
-            opacity: .15;
+            background-color: #000000;
+            color: RGB(104, 253, 254);
             font-family: -apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+        }
+
+        .light {
+            animation: breath .75s linear infinite;
         }
 
         @keyframes breath
         {
             0% {
-                opacity: .15;
-                font-size: 64px;
+                opacity: 0;
             }
             50% {
                 opacity: 1;
-                font-size: 72px;
             }
             100% {
-                opacity: .15;
-                font-size: 64px;
+                opacity: 0;
             }
         }
     </style>
 </head>
 <body>
-You know nothing jon snow
+{ do something }<span class="light">&nbsp;_</span>
 </body>
 </html>
